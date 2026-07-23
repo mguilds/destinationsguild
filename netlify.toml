@@ -1,0 +1,10 @@
+# Destinations Guild Travel — Netlify configuration
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Makes the pretty address /api/polo-polly point to the concierge helper
+[[redirects]]
+  from = "/api/polo-polly"
+  to = "/.netlify/functions/polo-polly"
+  status = 200

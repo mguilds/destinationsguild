@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#16305c">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Destinations Guild">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Dancing+Script:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<title>The Guild Travel Library — City Guides by Guild Reporters | Destinations Guild</title>
+<meta name="description" content="The Guild Travel Library: honest, original city guides written by Guild Reporters and reviewed by the Guild. Become a Reporter and write your city, or join the Guild Dispatch.">
+<link rel="canonical" href="https://destinationsguild.com/library.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Guild Travel Library — Destinations Guild">
+<meta property="og:description" content="Honest city guides written by Guild Reporters and reviewed by the Guild.">
+<meta property="og:url" content="https://destinationsguild.com/library.html">
+<meta property="og:site_name" content="Destinations Guild">
+<style>
+  :root{
+    --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd;
+    --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --card:#ffffff;
+    --polo:#12A8A0; --polly:#c0392b;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+        color:var(--ink); line-height:1.6;
+        background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center center / cover no-repeat fixed, #d8c9a0; min-height:100vh; }
+  a{ color:inherit; } img{ max-width:100%; display:block; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 20px; }
+  main.wrap{ background:rgba(249,243,226,.92); border:1px solid rgba(120,90,40,.35); border-radius:14px; box-shadow:0 8px 34px rgba(30,20,5,.3); padding:8px 28px 34px; margin-top:16px; margin-bottom:26px; }
+  .topbar{ background:#13294a; border-bottom:3px solid #6b4f2a; }
+  .topbar-inner{ max-width:1080px; margin:0 auto; padding:10px 20px; display:flex; align-items:center; justify-content:center; flex-direction:column; }
+  .tb-affil{ display:inline-block; font-size:14.5px; font-weight:700; color:#bcd6ff; text-decoration:underline; text-underline-offset:2px; margin-bottom:6px; }
+  .tb-affil:hover{ color:#fff; }
+  .tb-brand-name{ color:#fff; font-size:28px; font-weight:900; letter-spacing:.01em; text-decoration:none; }
+  .tb-nav{ display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:center; margin-top:8px; }
+  .tb-nav a{ color:#dbe8fb; font-size:14px; text-decoration:none; font-weight:600; }
+  .tb-nav a:hover{ text-decoration:underline; } .tb-nav a.here{ color:#fff; text-decoration:underline; }
+  .crumb{ font-size:13px; color:var(--muted); padding:12px 0 4px; font-family:'EB Garamond',Georgia,serif; }
+  .crumb a{ color:#1e46c8; text-decoration:none; }
+  .signwrap{ display:flex; justify-content:center; margin:10px 0 4px; }
+  .signwrap svg{ width:100%; max-width:660px; height:auto; }
+  .intro{ text-align:center; max-width:720px; margin:6px auto 8px; font-family:'EB Garamond',Georgia,serif; font-size:20px; color:#1e46c8; }
+  .librarians{ text-align:center; font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:17px; color:#5b6675; margin:0 0 20px; }
+  .librarians b{ font-style:normal; }
+  h2{ font-family:'Dancing Script',cursive; color:#1a3ec9; font-size:38px; margin:0 0 6px; letter-spacing:.3px; }
+  .lede{ font-family:'EB Garamond',Georgia,serif; color:#2a5bd8; font-size:19px; margin:0 0 16px; max-width:780px; }
+  section{ margin:30px 0; }
+  .btn{ display:inline-flex; align-items:center; gap:7px; background:var(--blue-btn); color:#fff; text-decoration:none; font-size:15px; font-weight:600; padding:12px 22px; border-radius:10px; border:none; cursor:pointer; box-shadow:0 2px 8px rgba(12,36,68,.25); transition:background .15s; white-space:nowrap; }
+  .btn:hover{ background:var(--blue-btn-hi); }
+  .shelf-unit{ margin:8px 0 6px; }
+  .shelf{ display:flex; align-items:flex-end; gap:7px; flex-wrap:wrap; padding:14px 16px 0; background:linear-gradient(#efe6cf,#e7dcc0); border:1px solid rgba(120,90,40,.3); border-radius:10px 10px 0 0; }
+  .spine{ position:relative; width:52px; height:190px; border-radius:3px 3px 0 0; box-shadow:inset -6px 0 10px rgba(0,0,0,.22), inset 6px 0 6px rgba(255,255,255,.12), 0 3px 6px rgba(0,0,0,.18); display:flex; align-items:center; justify-content:center; text-decoration:none; transition:transform .15s; cursor:default; }
+  a.spine{ cursor:pointer; } a.spine:hover{ transform:translateY(-8px); }
+  .spine .title{ writing-mode:vertical-rl; transform:rotate(180deg); font-family:'Cinzel',serif; font-weight:600; font-size:13.5px; letter-spacing:1px; color:#f4ead0; text-shadow:0 1px 1px rgba(0,0,0,.35); white-space:nowrap; }
+  .spine .band-top, .spine .band-bot{ position:absolute; left:0; right:0; height:16px; background:rgba(212,180,110,.55); border-top:1px solid rgba(255,240,200,.4); border-bottom:1px solid rgba(0,0,0,.15); }
+  .spine .band-top{ top:14px; } .spine .band-bot{ bottom:16px; }
+  .spine .dot{ position:absolute; bottom:5px; left:50%; transform:translateX(-50%); font-size:9px; color:rgba(244,234,208,.75); }
+  .shelf-board{ height:16px; background:linear-gradient(#8a6a3f,#6f5230); border-radius:0 0 10px 10px; box-shadow:0 6px 12px rgba(0,0,0,.3); border:1px solid #5c4326; border-top:none; }
+  .shelf-note{ text-align:center; font-family:'EB Garamond',Georgia,serif; font-size:15px; color:#5b6675; margin:12px 0 0; }
+  .ask{ background:linear-gradient(#efe6cf,#e7dcc0); border:1px solid rgba(120,90,40,.3); border-radius:16px; padding:18px 20px; margin:20px 0 0; }
+  .ask-inner{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; }
+  .ask-birds-big{ display:flex; gap:16px; align-items:flex-end; }
+  .bigbird{ margin:0; text-align:center; }
+  .bigbird svg{ width:64px; height:auto; display:block; margin:0 auto; }
+  .bird-cap{ font-family:'EB Garamond',Georgia,serif; font-size:13px; color:#5b6675; line-height:1.15; margin-top:4px; }
+  .bird-cap b{ font-family:'Dancing Script',cursive; font-size:19px; }
+  .bird-cap span{ font-size:11px; letter-spacing:.03em; text-transform:uppercase; color:#8a7c52; }
+  .ask-main{ flex:1; min-width:280px; }
+  .ask-title{ font-family:'Dancing Script',cursive; font-size:30px; color:#1a3ec9; margin:0 0 10px; }
+  .ask-row{ display:flex; gap:8px; }
+  .ask-row input{ flex:1; min-width:0; padding:12px 14px; border:1px solid #cbb98e; border-radius:10px; font-size:16px; font-family:'EB Garamond',Georgia,serif; background:#fffdf8; color:#1c2733; }
+  .ask-sub{ font-size:12px; color:#8a7c52; margin:9px 2px 0; }
+  .feature-exp{ background:linear-gradient(#efe6cf,#e7dcc0); border:1px solid rgba(120,90,40,.3); border-radius:14px; padding:20px 24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; }
+  .feature-exp .fx-kick{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#9a7b2e; font-weight:700; }
+  .feature-exp h3{ font-family:'Dancing Script',cursive; font-size:32px; color:#1a3ec9; margin:2px 0 4px; }
+  .feature-exp p{ font-family:'EB Garamond',Georgia,serif; font-size:18px; color:#1e46c8; margin:0; max-width:520px; }
+  .dispatch-banner{ background:#e9f1fb; border:1px solid #c9def5; border-radius:12px; padding:12px 16px; text-align:center; font-family:'EB Garamond',Georgia,serif; font-size:18px; color:#17427f; margin:6px 0 16px; }
+  .doors{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  @media(max-width:760px){ .doors{ grid-template-columns:1fr; } }
+  .door{ background:linear-gradient(#efe6cf,#e7dcc0); border:1px solid rgba(120,90,40,.3); border-radius:14px; padding:22px 22px 24px; }
+  .door.primary{ border:2px solid #4f8bd0; }
+  .door .tier{ font-size:11px; letter-spacing:.06em; text-transform:uppercase; font-weight:700; padding:3px 10px; border-radius:12px; display:inline-block; margin-bottom:8px; }
+  .door.primary .tier{ background:#e3eefb; color:#1a5aa8; } .door.simple .tier{ background:#f0f2f5; color:#5b6675; }
+  .door h3{ font-family:'Dancing Script',cursive; font-size:30px; color:#1a3ec9; margin:0 0 6px; }
+  .door p.d-lede{ font-family:'EB Garamond',Georgia,serif; font-size:17px; color:#3a4756; margin:0 0 16px; }
+  label{ display:block; font-size:12.5px; font-weight:600; color:#3a4756; margin:12px 0 4px; }
+  input[type=text],input[type=email],select,textarea{ width:100%; padding:10px 12px; border:1px solid #cbb98e; border-radius:8px; font-size:15px; font-family:'EB Garamond',Georgia,serif; background:#fffdf8; color:#1c2733; }
+  textarea{ min-height:92px; resize:vertical; }
+  .row2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:520px){ .row2{ grid-template-columns:1fr; } }
+  .consent{ display:flex; align-items:flex-start; gap:8px; margin:14px 0 4px; font-family:'EB Garamond',Georgia,serif; font-size:14px; color:#3a4756; }
+  .consent input{ margin-top:4px; }
+  .submit{ margin-top:14px; width:100%; justify-content:center; }
+  .hp{ position:absolute; left:-5000px; }
+  .form-foot{ font-size:12px; color:#8a7c52; margin-top:10px; }
+  .aff-note{ font-size:12px; color:var(--muted); background:#f0f3f8; border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin:26px 0 6px; }
+  footer{ background:var(--navy); color:#cdd8ec; margin-top:6px; }
+  .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; } .foot-inner a{ color:#9fc2f0; }
+  .pp-fab{ position:fixed; right:20px; bottom:20px; z-index:60; display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
+  .pp-btn{ display:inline-flex; align-items:center; gap:9px; background:#fffdf6; border:1.5px solid #cbb98e; border-radius:30px; padding:7px 15px 7px 8px; box-shadow:0 4px 14px rgba(30,20,5,.28); cursor:pointer; }
+  .pp-btn svg{ width:30px; height:auto; } .pp-btn .b2{ margin-left:-8px; }
+  .pp-label{ font-family:'EB Garamond',Georgia,serif; font-size:15px; font-weight:600; color:#17427f; white-space:nowrap; }
+  .pp-menu{ display:none; background:#fffdf6; border:1.5px solid #cbb98e; border-radius:14px; box-shadow:0 6px 20px rgba(30,20,5,.3); padding:12px; width:236px; }
+  .pp-menu.open{ display:block; }
+  .pp-menu .pm-head{ font-family:'Dancing Script',cursive; font-size:22px; color:#1a3ec9; margin:2px 4px 8px; }
+  .pp-menu a{ display:flex; align-items:center; gap:8px; text-decoration:none; color:#1c2733; font-family:'EB Garamond',Georgia,serif; font-size:15px; padding:9px 10px; border-radius:8px; }
+  .pp-menu a:hover{ background:#f0e9d6; } .pp-menu .who{ font-size:11px; color:#8a7c52; padding:6px 10px 2px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="tb-affil" href="https://us.trip.com/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=affiliate&amp;trip_sub3=header" target="_blank" rel="sponsored nofollow noopener">An Affiliate of Trip.com</a>
+    <a class='tb-brand-name' href='/'>&#127757; Destinations Guild Travel</a>
+    <nav class="tb-nav">
+      <a href='/'>Home</a>
+      <a class='here' href='/library'>Guild Travel Library</a>
+      <a href='/cancun-hotels'>Hotels</a>
+      <a href='/#destinations'>Destinations</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="crumb"><a href='/'>Home</a> &rsaquo; <strong>The Guild Travel Library</strong></div>
+
+  <div class="signwrap">
+    <svg viewBox="0 0 680 150" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Engraved stone sign reading The Guild Travel Library">
+      <rect x="20" y="18" width="640" height="114" rx="4" fill="#d8cdb0"/>
+      <rect x="20" y="18" width="640" height="114" rx="4" fill="none" stroke="#b3a67f" stroke-width="2.5"/>
+      <rect x="30" y="28" width="620" height="94" rx="2" fill="#e4dabf"/>
+      <rect x="30" y="28" width="620" height="94" rx="2" fill="none" stroke="#8f815b" stroke-width="1"/>
+      <line x1="150" y1="52" x2="530" y2="52" stroke="#8f815b" stroke-width="1.5"/>
+      <path d="M132 52 l12 -7 l0 14 z" fill="#8f815b"/><path d="M548 52 l-12 -7 l0 14 z" fill="#8f815b"/>
+      <text x="341" y="93" text-anchor="middle" font-family="Cinzel,serif" font-size="34" font-weight="700" letter-spacing="5" fill="#fbf4df">THE GUILD TRAVEL LIBRARY</text>
+      <text x="340" y="92" text-anchor="middle" font-family="Cinzel,serif" font-size="34" font-weight="700" letter-spacing="5" fill="#6a5b3a">THE GUILD TRAVEL LIBRARY</text>
+      <line x1="150" y1="108" x2="530" y2="108" stroke="#8f815b" stroke-width="1.5"/><circle cx="340" cy="108" r="2.6" fill="#8f815b"/>
+      <path d="M34 32 l22 0 l0 3 l-19 0 l0 15 l-3 0 z" fill="#8f815b"/><path d="M646 32 l-22 0 l0 3 l19 0 l0 15 l3 0 z" fill="#8f815b"/>
+      <path d="M34 118 l22 0 l0 -3 l-19 0 l0 -13 l-3 0 z" fill="#8f815b"/><path d="M646 118 l-22 0 l0 -3 l19 0 l0 -13 l3 0 z" fill="#8f815b"/>
+    </svg>
+  </div>
+
+  <p class="intro">Honest, original city guides &mdash; written by Guild Reporters who know their cities, and reviewed by the Guild before they ever reach the shelf.</p>
+  <p class="librarians">Tended by your librarians, <b style="color:var(--polo);">Polo</b> the Chief Navigator and <b style="color:var(--polly);">Polly</b> the Travel Concierge.</p>
+
+  <section class="shelf-unit">
+    <h2>On the shelves</h2>
+    <p class="lede">Every book is a city, written with depth and honesty. The gaps are waiting for the next Guild Travel Reporter &mdash; maybe you.</p>
+    <div class="shelf">
+      <a class='spine' href='/cancun' style='background:#7c2d2d;'><span class="band-top"></span><span class="title">CANC&Uacute;N</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+      <div class="spine" style="background:#1f5b4c;"><span class="band-top"></span><span class="title">TULUM</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#274472;"><span class="band-top"></span><span class="title">MEXICO CITY</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#9a6a15;"><span class="band-top"></span><span class="title">PLAYA</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#5b3a72;"><span class="band-top"></span><span class="title">CABO</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#2b6a7c;"><span class="band-top"></span><span class="title">VALLARTA</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#8a4a1f;"><span class="band-top"></span><span class="title">BANGKOK</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#3a5a2b;"><span class="band-top"></span><span class="title">TOKYO</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#6b2d4a;"><span class="band-top"></span><span class="title">DUBAI</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#2d4a6b;"><span class="band-top"></span><span class="title">SINGAPORE</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#7c5c1f;"><span class="band-top"></span><span class="title">LONDON</span><span class="band-bot"></span></div>
+      <div class="spine" style="background:#4a2d6b;"><span class="band-top"></span><span class="title">PARIS</span><span class="band-bot"></span></div>
+    </div>
+    <div class="shelf-board"></div>
+    <p class="shelf-note">Canc&uacute;n is open on the shelf now &mdash; tap its spine. The rest are being written.</p>
+  </section>
+
+  <div class="ask">
+    <div class="ask-inner">
+      <div class="ask-birds-big">
+        <figure class="bigbird">
+          <svg viewBox="0 0 50 86" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polly the parrot"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.6;0 0" keyTimes="0;0.5;1" dur="1.6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="rotate" values="-6 28 44;6 28 44;-6 28 44" keyTimes="0;0.5;1" dur="1.9s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><path d="M26 43 Q31 58 37 74 Q35 58 29 45 Z" fill="#E23B3B"/><path d="M28 44 Q38 62 47 78 Q41 60 31 46 Z" fill="#7A3FB0"/><path d="M24 43 Q28 55 33 67 Q31 55 27 45 Z" fill="#F2B600"/><path d="M26 43 Q33 60 44 81 Q39 60 30 45 Z" fill="#B0308A"/></g><path d="M27 41 Q31 42 33 46 Q29 48 26 45 Z" fill="#F2B600"/><ellipse cx="25" cy="33" rx="9.5" ry="14" fill="#12A8A0"/><g><animateTransform attributeName="transform" type="rotate" values="0 28 24;-24 28 24;0 28 24;-24 28 24;0 28 24;0 28 24" keyTimes="0;0.07;0.15;0.22;0.3;1" dur="2.9s" repeatCount="indefinite"/><path d="M27 22 C33 25 34 38 30 47 C28 41 26 30 27 22 Z" fill="#E23B3B"/><path d="M28 29 C31 31 31 37 30 42 C28 38 28 33 28 29 Z" fill="#F2B600"/></g><circle cx="23" cy="15" r="11.5" fill="#12A8A0"/><path d="M30 6 C33 3 36 5 34 8 C32 7 30 8 30 9 Z" fill="#12A8A0"/><ellipse cx="18" cy="16" rx="6.8" ry="7.8" fill="#ffffff"/><ellipse cx="17" cy="14" rx="2.4" ry="2.4" fill="#1a1a1a"><animate attributeName="ry" values="2.4;2.4;0.3;2.4" keyTimes="0;0.82;0.9;1" dur="3.2s" repeatCount="indefinite"/></ellipse><circle cx="17.9" cy="13.1" r="0.8" fill="#ffffff"/><path d="M15 10 C8 10 5 17 9 21 C11 23 14 22 14 19 C13 16 14 12 15 10 Z" fill="#2b2b2b"/><path d="M9 20 C10 23 14 23 14 20 C12 21 10 21 9 20 Z" fill="#8a8a8a"/></g></svg>
+          <figcaption class="bird-cap"><b style="color:var(--polo);">Polo</b><br><span>Chief Navigator</span></figcaption>
+        </figure>
+        <figure class="bigbird">
+          <svg viewBox="0 0 50 86" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polly the parrot"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.6;0 0" keyTimes="0;0.5;1" dur="1.6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="rotate" values="-6 28 44;6 28 44;-6 28 44" keyTimes="0;0.5;1" dur="1.9s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><path d="M26 43 Q31 58 37 74 Q35 58 29 45 Z" fill="#9E2A22"/><path d="M28 44 Q38 62 47 78 Q41 60 31 46 Z" fill="#7E211B"/><path d="M24 43 Q28 55 33 67 Q31 55 27 45 Z" fill="#D9534F"/><path d="M26 43 Q33 60 44 81 Q39 60 30 45 Z" fill="#B03A2E"/></g><path d="M27 41 Q31 42 33 46 Q29 48 26 45 Z" fill="#F2B600"/><ellipse cx="25" cy="33" rx="9.5" ry="14" fill="#C0392B"/><g><animateTransform attributeName="transform" type="rotate" values="0 28 24;-24 28 24;0 28 24;-24 28 24;0 28 24;0 28 24" keyTimes="0;0.07;0.15;0.22;0.3;1" dur="2.9s" repeatCount="indefinite"/><path d="M27 22 C33 25 34 38 30 47 C28 41 26 30 27 22 Z" fill="#9E2A22"/><path d="M28 29 C31 31 31 37 30 42 C28 38 28 33 28 29 Z" fill="#F2B600"/></g><circle cx="23" cy="15" r="11.5" fill="#C0392B"/><path d="M30 6 C33 3 36 5 34 8 C32 7 30 8 30 9 Z" fill="#C0392B"/><ellipse cx="18" cy="16" rx="6.8" ry="7.8" fill="#ffffff"/><ellipse cx="17" cy="14" rx="2.4" ry="2.4" fill="#1a1a1a"><animate attributeName="ry" values="2.4;2.4;0.3;2.4" keyTimes="0;0.82;0.9;1" dur="3.2s" repeatCount="indefinite"/></ellipse><circle cx="17.9" cy="13.1" r="0.8" fill="#ffffff"/><path d="M15 10 C8 10 5 17 9 21 C11 23 14 22 14 19 C13 16 14 12 15 10 Z" fill="#2b2b2b"/><path d="M9 20 C10 23 14 23 14 20 C12 21 10 21 9 20 Z" fill="#8a8a8a"/></g></svg>
+          <figcaption class="bird-cap"><b style="color:var(--polly);">Polly</b><br><span>Travel Concierge</span></figcaption>
+        </figure>
+      </div>
+      <div class="ask-main">
+        <div class="ask-title">Ask Polo &amp; Polly Anything</div>
+        <form method='POST' name='ask-polo-polly'>
+          <input type="hidden" name="form-name" value="ask-polo-polly">
+          <p class="hp"><label>Leave blank<input name="bot-field"></label></p>
+          <div class="ask-row">
+            <input type="text" name="question" placeholder="Where should I go in October? Is Tulum safe? Best time for Paris?" required>
+            <button type="submit" class="btn">Ask</button>
+          </div>
+          <p class="ask-sub">Your travel question goes straight to the Guild. Live answers from Polo &amp; Polly are coming soon &mdash; for now we read every question and reply.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="feature-exp">
+      <div>
+        <div class="fx-kick">Featured Expedition</div>
+        <h3>Boundless Global Expeditions</h3>
+        <p>The Guild's flagship journeys &mdash; hand-picked, far-reaching, and booked through Trip.com. Where the shelf begins.</p>
+      </div>
+      <a class="btn" href="https://us.trip.com/things-to-do/list?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=library&amp;trip_sub3=boundless" target="_blank" rel="sponsored nofollow noopener">Explore Expeditions</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Join the Guild</h2>
+    <div class="dispatch-banner">Everyone here is part of the <strong>Destinations Guild Travel Dispatch</strong>. Choose how you want to belong.</div>
+    <div class="doors">
+
+      <div class="door primary">
+        <span class="tier">Full member &middot; Guild Travel Reporter</span>
+        <h3>Write your city</h3>
+        <p class="d-lede">A <strong>Guild Travel Reporter</strong> writes the guide for a city they know well &mdash; an honest, original guide built on the Guild template: what to see, where to stay, when to go, and the real story of the place. You work with the Guild's editors, your guide is reviewed and approved before it joins the shelf, and it carries your name. Reporters are full members of the Destinations Guild Travel Dispatch.</p>
+        <p class="d-lede" style="margin-bottom:14px;"><strong>What we look for:</strong> real knowledge of your city, a clear honest voice, and a willingness to follow the Guild Guide Standard. No professional writing experience required &mdash; just a place you know and care about.</p>
+        <form method='POST' name='guild-reporter'>
+          <input type="hidden" name="form-name" value="guild-reporter">
+          <p class="hp"><label>Leave blank<input name="bot-field"></label></p>
+          <div class="row2"><div><label>Your name</label><input type="text" name="name" required></div><div><label>Email</label><input type="email" name="email" required></div></div>
+          <div class="row2"><div><label>City or town you want to write about</label><input type="text" name="city" required></div><div><label>Country / region</label><input type="text" name="country"></div></div>
+          <div class="row2">
+            <div><label>Your connection to this place</label><select name="connection"><option>I live here now</option><option>I lived here before</option><option>I visit often</option><option>I know it very well</option><option>Other</option></select></div>
+            <div><label>How well do you know it?</label><select name="familiarity"><option>Like the back of my hand</option><option>Very well</option><option>Well enough to guide others</option></select></div>
+          </div>
+          <label>Why does this city deserve a Guild guide? (a short pitch)</label>
+          <textarea name="pitch" required></textarea>
+          <label>A link to a writing sample, blog, or social profile (optional)</label>
+          <input type="text" name="sample_link">
+          <label>Have you written travel content before? (optional)</label>
+          <input type="text" name="experience">
+          <div class="consent"><input type="checkbox" name="agrees_standard" required><span>I understand my guide follows the Guild Guide Standard and must be reviewed and approved by the Guild before it appears in the Library.</span></div>
+          <div class="consent"><input type="checkbox" name="joins_dispatch" checked><span>Add me to the Guild Dispatch so I hear back and stay in the loop.</span></div>
+          <button type="submit" class="btn submit">Apply to become a Guild Travel Reporter</button>
+          <p class="form-foot">We only ask about you and the city you want to write &mdash; never payment or personal ID details.</p>
+        </form>
+      </div>
+
+      <div class="door simple">
+        <span class="tier">Keep me posted</span>
+        <h3>Destinations Guild Travel Dispatch</h3>
+        <p class="d-lede">Just want to be kept informed? Leave your email and we'll send travel news, new guides, and deals. No application &mdash; one field and you're in.</p>
+        <form method='POST' name='dispatch-updates'>
+          <input type="hidden" name="form-name" value="dispatch-updates">
+          <p class="hp"><label>Leave blank<input name="bot-field"></label></p>
+          <label>First name (optional)</label><input type="text" name="name">
+          <label>Email</label><input type="email" name="email" required>
+          <div class="consent"><input type="checkbox" name="consent" required><span>Yes, send me Guild Dispatch travel updates. I can unsubscribe anytime.</span></div>
+          <button type="submit" class="btn submit" style="background:#4f8bd0;">Join Destinations Guild Travel Dispatch</button>
+          <p class="form-foot">Just travel news. We never share your email.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="aff-note">Destinations Guild is a proud travel partner of Trip.com. Booking through our links helps support the Guild and keep the Library free, at no additional cost to you.</div>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <strong style="color:#fff;">Destinations Guild Travel</strong> &mdash; A Division of Guild Companies USA<br>
+    An Affiliate of Trip.com &middot; <a href='/'>Home</a> &middot; <a href='/library'>Guild Travel Library</a> &middot; <a href='/#destinations'>All Destinations</a><br>
+    <span style="color:#8ea4c8; font-size:12px;">&copy; 2026 Destinations Guild. All rights reserved.</span>
+  </div>
+</footer>
+
+<div class="pp-fab">
+  <div class="pp-menu" id="ppMenu">
+    <div class="pm-head">How can we help?</div>
+    <div class="who">Polo &middot; Chief Navigator</div>
+    <a href="#" onclick="document.querySelector('form[name=guild-reporter] input[name=name]').focus();document.getElementById('ppMenu').classList.remove('open');return false;">&#9998;&nbsp; Write your city (become a Reporter)</a>
+    <div class="who">Polly &middot; Travel Concierge</div>
+    <a href="#" onclick="document.querySelector('form[name=ask-polo-polly] input[name=question]').focus();document.getElementById('ppMenu').classList.remove('open');return false;">&#9993;&nbsp; Ask a travel question</a>
+    <a href="https://us.trip.com/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=library&amp;trip_sub3=fab" target="_blank" rel="sponsored nofollow noopener">&#128205;&nbsp; Browse &amp; book on Trip.com</a>
+  </div>
+  <div class="pp-btn" onclick="document.getElementById('ppMenu').classList.toggle('open');">
+    <svg class="b1" viewBox="0 0 50 86" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polly the parrot"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.6;0 0" keyTimes="0;0.5;1" dur="1.6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="rotate" values="-6 28 44;6 28 44;-6 28 44" keyTimes="0;0.5;1" dur="1.9s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><path d="M26 43 Q31 58 37 74 Q35 58 29 45 Z" fill="#E23B3B"/><path d="M28 44 Q38 62 47 78 Q41 60 31 46 Z" fill="#7A3FB0"/><path d="M24 43 Q28 55 33 67 Q31 55 27 45 Z" fill="#F2B600"/><path d="M26 43 Q33 60 44 81 Q39 60 30 45 Z" fill="#B0308A"/></g><path d="M27 41 Q31 42 33 46 Q29 48 26 45 Z" fill="#F2B600"/><ellipse cx="25" cy="33" rx="9.5" ry="14" fill="#12A8A0"/><g><animateTransform attributeName="transform" type="rotate" values="0 28 24;-24 28 24;0 28 24;-24 28 24;0 28 24;0 28 24" keyTimes="0;0.07;0.15;0.22;0.3;1" dur="2.9s" repeatCount="indefinite"/><path d="M27 22 C33 25 34 38 30 47 C28 41 26 30 27 22 Z" fill="#E23B3B"/><path d="M28 29 C31 31 31 37 30 42 C28 38 28 33 28 29 Z" fill="#F2B600"/></g><circle cx="23" cy="15" r="11.5" fill="#12A8A0"/><path d="M30 6 C33 3 36 5 34 8 C32 7 30 8 30 9 Z" fill="#12A8A0"/><ellipse cx="18" cy="16" rx="6.8" ry="7.8" fill="#ffffff"/><ellipse cx="17" cy="14" rx="2.4" ry="2.4" fill="#1a1a1a"><animate attributeName="ry" values="2.4;2.4;0.3;2.4" keyTimes="0;0.82;0.9;1" dur="3.2s" repeatCount="indefinite"/></ellipse><circle cx="17.9" cy="13.1" r="0.8" fill="#ffffff"/><path d="M15 10 C8 10 5 17 9 21 C11 23 14 22 14 19 C13 16 14 12 15 10 Z" fill="#2b2b2b"/><path d="M9 20 C10 23 14 23 14 20 C12 21 10 21 9 20 Z" fill="#8a8a8a"/></g></svg><svg class="b2" viewBox="0 0 50 86" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polly the parrot"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.6;0 0" keyTimes="0;0.5;1" dur="1.6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="rotate" values="-6 28 44;6 28 44;-6 28 44" keyTimes="0;0.5;1" dur="1.9s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><path d="M26 43 Q31 58 37 74 Q35 58 29 45 Z" fill="#9E2A22"/><path d="M28 44 Q38 62 47 78 Q41 60 31 46 Z" fill="#7E211B"/><path d="M24 43 Q28 55 33 67 Q31 55 27 45 Z" fill="#D9534F"/><path d="M26 43 Q33 60 44 81 Q39 60 30 45 Z" fill="#B03A2E"/></g><path d="M27 41 Q31 42 33 46 Q29 48 26 45 Z" fill="#F2B600"/><ellipse cx="25" cy="33" rx="9.5" ry="14" fill="#C0392B"/><g><animateTransform attributeName="transform" type="rotate" values="0 28 24;-24 28 24;0 28 24;-24 28 24;0 28 24;0 28 24" keyTimes="0;0.07;0.15;0.22;0.3;1" dur="2.9s" repeatCount="indefinite"/><path d="M27 22 C33 25 34 38 30 47 C28 41 26 30 27 22 Z" fill="#9E2A22"/><path d="M28 29 C31 31 31 37 30 42 C28 38 28 33 28 29 Z" fill="#F2B600"/></g><circle cx="23" cy="15" r="11.5" fill="#C0392B"/><path d="M30 6 C33 3 36 5 34 8 C32 7 30 8 30 9 Z" fill="#C0392B"/><ellipse cx="18" cy="16" rx="6.8" ry="7.8" fill="#ffffff"/><ellipse cx="17" cy="14" rx="2.4" ry="2.4" fill="#1a1a1a"><animate attributeName="ry" values="2.4;2.4;0.3;2.4" keyTimes="0;0.82;0.9;1" dur="3.2s" repeatCount="indefinite"/></ellipse><circle cx="17.9" cy="13.1" r="0.8" fill="#ffffff"/><path d="M15 10 C8 10 5 17 9 21 C11 23 14 22 14 19 C13 16 14 12 15 10 Z" fill="#2b2b2b"/><path d="M9 20 C10 23 14 23 14 20 C12 21 10 21 9 20 Z" fill="#8a8a8a"/></g></svg>
+    <span class="pp-label">Polo &amp; Polly</span>
+  </div>
+</div>
+
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
+</body>
+</html>
