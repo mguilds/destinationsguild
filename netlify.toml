@@ -1,17 +1,10 @@
-{
-  "id": "/",
-  "name": "Destinations Guild",
-  "short_name": "Destinations",
-  "description": "Global travel, hotels, cruises & expeditions — search and book worldwide.",
-  "start_url": "/?source=pwa",
-  "scope": "/",
-  "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#16305c",
-  "theme_color": "#16305c",
-  "icons": [
-    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
-  ]
-}
+# Destinations Guild Travel - Netlify configuration
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Makes the pretty address /api/polo-polly point to the concierge helper
+[[redirects]]
+  from = "/api/polo-polly"
+  to = "/.netlify/functions/polo-polly"
+  status = 200
