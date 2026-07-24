@@ -1551,5 +1551,24 @@ document.querySelectorAll('.ccard').forEach(card => {
 })();
 </script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
+<style id="dg-starry-skin">
+  /* ===== Night-sky homepage skin (v1) ===== */
+  :root{ --txt:#e9eefc; --txt2:#c3cee7; }
+  body{
+    background:
+      linear-gradient(180deg, rgba(6,10,26,.58) 0%, rgba(6,10,26,.26) 22%, rgba(6,10,26,.26) 70%, rgba(6,10,26,.64) 100%),
+      url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2400&q=85') center center / cover no-repeat fixed,
+      #05070f !important;
+  }
+  .page{
+    background:rgba(11,17,38,.60) !important;
+    border:1px solid rgba(150,175,220,.20) !important;
+    box-shadow:0 14px 54px rgba(0,0,0,.55) !important;
+    -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
+  }
+  /* Wordmark + hero text to light so they read on the sky */
+  .mh-name .dest, .mh-name .gold, .mh-name .travel{ color:#f4f8ff !important; }
+  .hero-title{ color:#eaf1ff !important; }
+</style>
 </body>
 </html>
