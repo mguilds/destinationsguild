@@ -1554,17 +1554,20 @@ document.querySelectorAll('.ccard').forEach(card => {
 <style id="dg-starry-skin">
   /* ===== Night-sky homepage skin (v1) ===== */
   :root{ --txt:#e9eefc; --txt2:#c3cee7; }
+  /* Map stays as the page (margin) background */
   body{
     background:
-      linear-gradient(180deg, rgba(6,10,26,.58) 0%, rgba(6,10,26,.26) 22%, rgba(6,10,26,.26) 70%, rgba(6,10,26,.64) 100%),
-      url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2400&q=85') center center / cover no-repeat fixed,
-      #05070f !important;
+      url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center center / cover no-repeat fixed,
+      radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f) !important;
+    min-height:100vh;
   }
+  /* Parchment content panel replaced by the night sky */
   .page{
-    background:rgba(11,17,38,.60) !important;
-    border:1px solid rgba(150,175,220,.20) !important;
-    box-shadow:0 14px 54px rgba(0,0,0,.55) !important;
-    -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);
+    background:
+      linear-gradient(rgba(8,12,30,.48), rgba(8,12,30,.40)),
+      url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2000&q=85') center center / cover no-repeat !important;
+    border:1px solid rgba(150,175,220,.28) !important;
+    box-shadow:0 14px 54px rgba(0,0,0,.5) !important;
   }
   /* Wordmark + hero text to light so they read on the sky */
   .mh-name .dest, .mh-name .gold, .mh-name .travel{ color:#f4f8ff !important; }
