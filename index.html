@@ -1561,13 +1561,25 @@ document.querySelectorAll('.ccard').forEach(card => {
       radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f) !important;
     min-height:100vh;
   }
-  /* Parchment content panel replaced by the night sky */
+  /* Parchment content panel replaced by the night sky (vibrant, edges faded into the map) */
   .page{
+    position:relative;
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+  }
+  .page > *{ position:relative; z-index:1; }
+  .page::before{
+    content:''; position:absolute; inset:0; z-index:0; pointer-events:none; border-radius:16px;
     background:
-      linear-gradient(rgba(8,12,30,.48), rgba(8,12,30,.40)),
-      url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2000&q=85') center center / cover no-repeat !important;
-    border:1px solid rgba(150,175,220,.28) !important;
-    box-shadow:0 14px 54px rgba(0,0,0,.5) !important;
+      linear-gradient(rgba(6,10,26,.28), rgba(6,10,26,.32)),
+      url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2880&q=90') center center / cover no-repeat;
+    filter:saturate(1.42) contrast(1.12) brightness(1.04);
+    -webkit-mask:
+      linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
+      linear-gradient(to bottom, transparent 0, #000 5%, #000 95%, transparent 100%);
+    -webkit-mask-composite:source-in;
+    mask-composite:intersect;
   }
   /* Wordmark + hero text to light so they read on the sky */
   .mh-name .dest, .mh-name .gold, .mh-name .travel{ color:#f4f8ff !important; }
