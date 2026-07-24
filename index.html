@@ -1598,6 +1598,10 @@ document.querySelectorAll('.ccard').forEach(card => {
   .logbook .ltitle{ color:#eef3ff !important; }
   .logbook .lexcerpt{ color:#c2cee6 !important; }
   .logbook .lcard{ background:rgba(11,17,38,.5) !important; border-color:rgba(150,175,220,.18) !important; }
+  /* Popular Destinations: 4 cards per row (was auto-filling to 5) */
+  .dest-grid{ grid-template-columns:repeat(4,1fr) !important; }
+  @media(max-width:900px){ .dest-grid{ grid-template-columns:repeat(2,1fr) !important; } }
+  @media(max-width:560px){ .dest-grid{ grid-template-columns:1fr !important; } }
 </style>
 </body>
 </html>
