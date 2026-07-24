@@ -1569,6 +1569,18 @@ document.querySelectorAll('.ccard').forEach(card => {
   /* Wordmark + hero text to light so they read on the sky */
   .mh-name .dest, .mh-name .gold, .mh-name .travel{ color:#f4f8ff !important; }
   .hero-title{ color:#eaf1ff !important; }
+  /* Darken the two warm panels (Guild Travel Library + Travel Log) to match the night theme */
+  .gtl-sec, .logbook{
+    background:rgba(11,17,38,.60) !important;
+    border:1px solid rgba(150,175,220,.20) !important;
+    box-shadow:0 12px 46px rgba(0,0,0,.52) !important;
+  }
+  .logbook::before{ opacity:.10 !important; }
+  .gtl-lede, .gtl-note{ color:#c9d4ec !important; }
+  .logbook-title{ color:#eef3ff !important; }
+  .logbook .ldate, .logbook .llink{ color:#e6c079 !important; }
+  .logbook .lauthor{ color:#b9c4dd !important; }
+  /* article cards (.lcard) stay white with their dark text — already readable */
 </style>
 </body>
 </html>
