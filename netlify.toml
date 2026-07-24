@@ -1,10 +1,32 @@
-# Destinations Guild Travel - Netlify configuration
+# Destinations Guild Travel — Netlify configuration
 [build]
   publish = "."
   functions = "netlify/functions"
 
-# Makes the pretty address /api/polo-polly point to the concierge helper
+# Concierge helper: pretty address /api/polo-polly -> function
 [[redirects]]
   from = "/api/polo-polly"
   to = "/.netlify/functions/polo-polly"
   status = 200
+
+# Safety blocks for any stray private files from earlier deploys (harmless once files are gone)
+[[redirects]]
+  from = "/guild_project_profile.md"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/files.zip"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/_city-template.html"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/guildwebsitedeployjul18*"
+  to = "/404.html"
+  status = 404
+  force = true
