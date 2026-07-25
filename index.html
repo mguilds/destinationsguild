@@ -1607,6 +1607,9 @@ document.querySelectorAll('.ccard').forEach(card => {
   .searchrow .search-wrap{ width:100%; max-width:820px; margin:44vh auto 0 !important; }
   .searchrow .mh-globe{ position:absolute !important; top:16px !important; left:16px !important; bottom:auto !important; right:auto !important; transform:none !important; margin:0 !important; z-index:2; }
   .masthead{ margin-top:26px !important; }
+  /* Lift the "Where do you want to go today?" heading above the card, in white */
+  .searchrow .search-wrap{ overflow:visible !important; }
+  .searchrow .search-wrap > h2{ position:absolute !important; left:0 !important; right:0 !important; bottom:calc(100% + 16px) !important; margin:0 !important; color:#ffffff !important; text-shadow:0 2px 16px rgba(0,0,0,.6), 0 1px 4px rgba(0,0,0,.55) !important; }
   @media(max-width:680px){ .searchrow .search-wrap{ margin-top:38vh !important; } .searchrow .mh-globe{ top:8px !important; left:8px !important; } }
 </style>
 </body>
