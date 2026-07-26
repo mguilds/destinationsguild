@@ -579,6 +579,22 @@ footer { border-top:.5px solid var(--border); padding-top:.85rem; display:flex; 
   @keyframes pollyHoverAbove{0%,100%{transform:translateX(-50%) translateY(0) rotate(-3deg);}50%{transform:translateX(-50%) translateY(-9px) rotate(3deg);}}
   @media(max-width:680px){.masthead{padding-top:1.2rem !important;} .mh-polly{width:76px !important; height:100px !important;}}
 </style>
+<header class="dg-nav"><div class="dg-nav-in">
+  <a class="dg-brand" href="index.html">&#127757; Destinations Guild</a>
+  <nav class="dg-nav-links">
+    <a href="index.html">Home</a>
+    <a href="library.html">The Guild Travel Library</a>
+    <a href="italy.html">Italy</a>
+    <a href="thailand.html">Thailand</a>
+    <a href="usa.html">USA</a>
+  </nav>
+  <span class="lang-group noi18n">
+    <a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Espanol">ES</a>
+    <a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="English">EN</a>
+    <a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Francais">FR</a>
+  </span>
+</div></header>
+
 <div class="page">
 
   <!-- 02 SEARCH -->
@@ -1629,6 +1645,31 @@ document.querySelectorAll('.ccard').forEach(card => {
   @media(max-width:1100px){ .page{ padding-left:90px !important; padding-right:90px !important; } }
   @media(max-width:820px){ .page{ padding-left:48px !important; padding-right:48px !important; padding-bottom:72px !important; } }
   @media(max-width:520px){ .page{ padding-left:20px !important; padding-right:20px !important; } }
+  /* ===== Homepage v2 — clean nav + search hero + mobile fit (Jul 25) ===== */
+  .dg-nav{ position:relative; z-index:30; background:#2F93E2; border-bottom:4px solid #C9A84C; }
+  .dg-nav-in{ max-width:1120px; margin:0 auto; padding:9px 20px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .dg-brand{ font-weight:800; font-size:22px; color:#fff; text-decoration:none; letter-spacing:.02em; white-space:nowrap; }
+  .dg-nav-links{ display:flex; gap:4px; flex-wrap:wrap; }
+  .dg-nav-links a{ color:#eaf4ff; font-size:14.5px; font-weight:600; text-decoration:none; padding:5px 11px; border-radius:6px; }
+  .dg-nav-links a:hover{ background:rgba(255,255,255,.16); }
+  .dg-nav .lang-group{ margin-left:auto; display:inline-flex; gap:6px; }
+  .lang-float{ display:none !important; }
+  /* retire the decorative masthead + floating globe (brand now lives in the nav) */
+  .masthead{ display:none !important; }
+  .searchrow .mh-globe{ display:none !important; }
+  /* hero fit — dynamic viewport height so mobile browser bars don't cause jumps */
+  .searchrow{ height:calc(100vh - 66px) !important; height:calc(100dvh - 66px) !important; min-height:460px !important; }
+  .searchrow .search-wrap{ margin-top:26vh !important; }
+  .searchrow .search-wrap > h2{ bottom:calc(100% + 12px) !important; }
+  /* MOBILE: fix the iOS background-attachment:fixed blow-up, and tighten the hero */
+  @media(max-width:820px){ body{ background-attachment:scroll !important; } }
+  @media(max-width:680px){
+    .dg-brand{ font-size:18px; }
+    .dg-nav-links a{ font-size:13.5px; padding:4px 8px; }
+    .searchrow{ height:calc(100dvh - 58px) !important; min-height:400px !important; }
+    .searchrow .search-wrap{ margin-top:14vh !important; }
+    .searchrow .search-wrap > h2{ font-size:clamp(1.9rem,7vw,2.5rem) !important; bottom:calc(100% + 8px) !important; }
+  }
 </style>
 </body>
 </html>
