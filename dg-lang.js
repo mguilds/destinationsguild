@@ -177,3 +177,6 @@
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
 })();
+
+/* DG affiliate-click tracking -> GA4 */
+(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();
