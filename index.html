@@ -718,6 +718,10 @@ footer { border-top:.5px solid var(--border); padding-top:.85rem; display:flex; 
     .gtl-sec{max-width:1000px;margin:26px auto;padding:26px 22px 30px;background:linear-gradient(#f4eeda,#efe7cf);border:1px solid #d8cba6;border-radius:16px;box-shadow:0 3px 16px rgba(60,45,15,.12);font-family:'EB Garamond',Georgia,serif;}
     .gtl-signwrap{display:flex;justify-content:center;margin:2px 0 10px;}
     .gtl-signwrap svg{width:100%;max-width:560px;height:auto;}
+    .gtl-sign-c{background:#fbf7ee;border-radius:14px;padding:22px 24px;text-align:center;box-shadow:0 5px 16px rgba(0,0,0,.42);max-width:560px;margin:0 auto;width:100%;}
+    .gtl-sign-c .gtl-sc-main{font:800 clamp(23px,6vw,33px)/1.14 -apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#16203a;letter-spacing:.2px;margin:0;}
+    .gtl-sign-c .gtl-sc-rule{height:4px;width:100px;background:#2F76D8;border-radius:2px;margin:13px auto 0;}
+    .gtl-sign-c .gtl-sc-sub{font:600 clamp(15px,3.7vw,18px)/1.35 -apple-system,'Segoe UI',Roboto,sans-serif;color:#4f5c72;margin:11px 0 0;font-style:italic;}
     .gtl-lede{text-align:center;font-size:18px;color:#4a5766;font-style:italic;max-width:660px;margin:0 auto 18px;line-height:1.4;}
     .gtl-shelf{display:flex;align-items:flex-end;justify-content:center;gap:7px;flex-wrap:wrap;padding:16px 16px 0;background:linear-gradient(#efe6cf,#e7dcc0);border:1px solid rgba(120,90,40,.3);border-radius:10px 10px 0 0;}
     .gtl-spine{position:relative;width:50px;height:196px;border-radius:3px 3px 0 0;box-shadow:inset -6px 0 10px rgba(0,0,0,.22),inset 6px 0 6px rgba(255,255,255,.12),0 3px 6px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s;cursor:default;}
@@ -736,29 +740,11 @@ footer { border-top:.5px solid var(--border); padding-top:.85rem; display:flex; 
   </style>
   <section class="gtl-sec noi18n">
     <div class="gtl-signwrap">
-      <svg viewBox="0 0 680 176" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Granite plaque deeply chiselled: The Guild Travel Library">
-        <defs>
-          <linearGradient id="gtxslab" x1="0" y1="0" x2="0.15" y2="1"><stop offset="0" stop-color="#9a9ca0"/><stop offset="0.45" stop-color="#77797e"/><stop offset="1" stop-color="#54565b"/></linearGradient>
-          <linearGradient id="gtxpanel" x1="0" y1="0" x2="0.1" y2="1"><stop offset="0" stop-color="#6b6e73"/><stop offset="1" stop-color="#4a4c51"/></linearGradient>
-          <filter id="gtxgrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="5" seed="14" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-          <filter id="gtxcoarse"><feTurbulence type="fractalNoise" baseFrequency="0.32" numOctaves="3" seed="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-        </defs>
-        <rect x="8" y="10" width="664" height="156" rx="12" fill="url(#gtxslab)"/>
-        <rect x="8" y="10" width="664" height="156" rx="12" fill="#000" opacity="0.30" filter="url(#gtxcoarse)"/>
-        <rect x="8" y="10" width="664" height="156" rx="12" fill="#000" opacity="0.16" filter="url(#gtxgrain)"/>
-        <rect x="8.5" y="10.5" width="663" height="155" rx="12" fill="none" stroke="#c7cacd" stroke-opacity="0.55" stroke-width="1.6"/>
-        <rect x="8" y="10" width="664" height="156" rx="12" fill="none" stroke="#34363a" stroke-width="3"/>
-        <rect x="26" y="28" width="628" height="120" rx="8" fill="url(#gtxpanel)"/>
-        <rect x="26" y="28" width="628" height="120" rx="8" fill="#000" opacity="0.34" filter="url(#gtxgrain)"/>
-        <rect x="26" y="28" width="628" height="120" rx="8" fill="none" stroke="#303236" stroke-width="2.5"/>
-        <rect x="28" y="30" width="624" height="116" rx="7" fill="none" stroke="#cfd2d6" stroke-opacity="0.4" stroke-width="1.2"/>
-        <line x1="150" y1="60" x2="530" y2="60" stroke="#2b2d31" stroke-width="2.4"/><line x1="150" y1="62" x2="530" y2="62" stroke="#d0d3d7" stroke-opacity="0.45" stroke-width="1"/>
-        <line x1="150" y1="118" x2="530" y2="118" stroke="#2b2d31" stroke-width="2.4"/><line x1="150" y1="120" x2="530" y2="120" stroke="#d0d3d7" stroke-opacity="0.45" stroke-width="1"/>
-        <circle cx="340" cy="60" r="2.4" fill="#26282c"/><circle cx="340" cy="118" r="2.4" fill="#26282c"/>
-        <text x="342.6" y="102.8" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="33" font-weight="800" letter-spacing="3.5" fill="#e3e6ea" opacity="0.9">THE GUILD TRAVEL LIBRARY</text>
-        <text x="337.6" y="97.4" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="33" font-weight="800" letter-spacing="3.5" fill="#3a3c40" opacity="0.7">THE GUILD TRAVEL LIBRARY</text>
-        <text x="340" y="100" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="33" font-weight="800" letter-spacing="3.5" fill="#0a0b0d">THE GUILD TRAVEL LIBRARY</text>
-      </svg>
+      <div class="gtl-sign-c">
+        <p class="gtl-sc-main">The Guild Travel Library</p>
+        <div class="gtl-sc-rule"></div>
+        <p class="gtl-sc-sub">Adventures await in every country.</p>
+      </div>
     </div>
     <p class="gtl-lede">Every book is a country &mdash; and inside, a guide for every city. Tap a book and Polly will pull it off the shelf for you.</p>
     <div class="gtl-shelf">
@@ -780,7 +766,7 @@ footer { border-top:.5px solid var(--border); padding-top:.85rem; display:flex; 
     
     </div>
     <div class="gtl-board"></div>
-    <p class="gtl-note">Three books are open on the shelf today &mdash; the United States, Mexico and Thailand. The rest are being written.</p>
+    <p class="gtl-note">Eight books are open on the shelf today &mdash; the United States, Mexico, Thailand, Italy, France, the United Kingdom, Germany and Australia. More are being written every week.</p>
     <div class="gtl-cta"><a href="library.html">Step inside the full Library &rsaquo;</a></div>
   </section><!-- 03b DESTINATIONS (Trip.com Library) -->
   <div class="sec-hdr" id="library"><div><h2 class="slbl" style="margin-bottom:0;">Popular Destinations &mdash; Plan Your Next Journey</h2>
