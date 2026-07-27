@@ -55,12 +55,21 @@ exports.handler = async (event) => {
                  data.data.mainKeywordList.keywords;
     if (!Array.isArray(list) || !list.length) return json(200, { error: 'not_found' });
 
-    // Prefer the first destination-type match (city / region), matching what
-    // Trip's own search box selects by default.
+    // Pick the best match. Prefer an EXACT name match to what the traveler
+    // typed (so "Salina" -> Salina, Kansas, not "Salinas", California), then
+    // fall back to Trip's top-ranked result.
+    const qLower = q.toLowerCase();
+    const idOf = (item) => item && item.keyword && item.keyword.keywordContentInfo;
     let info = null;
     for (const item of list) {
-      const k = item && item.keyword && item.keyword.keywordContentInfo;
-      if (k && k.keywordId) { info = k; break; }
+      const k = idOf(item);
+      if (k && k.keywordId && String(k.keyword || '').toLowerCase() === qLower) { info = k; break; }
+    }
+    if (!info) {
+      for (const item of list) {
+        const k = idOf(item);
+        if (k && k.keywordId) { info = k; break; }
+      }
     }
     if (!info) return json(200, { error: 'not_found' });
 
