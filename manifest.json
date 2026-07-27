@@ -1,7 +1,7 @@
 {
   "id": "/",
   "name": "Destinations Guild",
-  "short_name": "Destinations",
+  "short_name": "Destinations Search",
   "description": "Global travel, hotels, cruises & expeditions — search and book worldwide.",
   "start_url": "/?source=pwa",
   "scope": "/",
