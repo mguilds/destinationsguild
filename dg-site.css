@@ -81,3 +81,31 @@
   .lang-tgl{ font-size:11px; }
   .topbar-inner{ padding:10px 1rem; }
 }
+
+/* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
+@media (max-width: 820px){
+  .dg-nav-links a, .tb-links a, .tb-nav a, .pagenav a, .crumb a, .foot a, .tb-affil,
+  .lang-tgl, .hbtn, .btn, .srch-btn, .map-book-btn, .book-btn, .cview-btn, .ci-btn,
+  .jump a, .chip, .dcity-lnk, .a250-btn, .cattab {
+    min-height:44px !important; display:inline-flex !important; align-items:center !important;
+    justify-content:center !important; padding-top:10px !important; padding-bottom:10px !important;
+  }
+  .cities li{ padding:9px 0 !important; min-height:44px !important; }
+  .cities a{ display:inline-flex !important; align-items:center !important; min-height:44px !important; }
+  .faq summary{ padding:15px 2px !important; min-height:44px !important; }
+  .inp, .sel, input, select, textarea{ min-height:48px !important; font-size:16px !important; }
+  .dg-nav-links{ gap:6px 10px !important; }
+  .tb-links{ gap:4px 8px !important; }
+  .tb-nav{ gap:6px 14px !important; }
+  /* legible captions (>=14px floor) */
+  .hero-cap, .fx-note, .catnote, .powered, .aff-note, .shelf-note, .ch-note, .foot, .gtl-note, .disc, .hcard-brand, .cport, .lauthor, .ldate{ font-size:14px !important; line-height:1.5 !important; }
+  .lede, .box p, .wcard p, .tcard p{ font-size:15.5px !important; }
+  /* modest contrast lift on light-background captions */
+  .hero-cap{ color:#6b5d38 !important; }
+  /* clear focus for keyboard / switch-device users */
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible{
+    outline:3px solid #2F76D8 !important; outline-offset:2px !important;
+  }
+  /* leave room for the sticky action bar */
+  body.dg-has-bar{ padding-bottom:68px !important; }
+}

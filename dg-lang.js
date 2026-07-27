@@ -180,3 +180,37 @@
 
 /* DG affiliate-click tracking -> GA4 */
 (function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();
+
+/* Destinations Guild — sticky mobile action bar (one-thumb primary action). Idempotent. */
+(function(){
+  if(window.__dgBar) return; window.__dgBar=1;
+  function run(){
+    try{
+      if(!window.matchMedia || !window.matchMedia('(max-width:820px)').matches) return;
+      if(document.querySelector('.dg-sticky-cta')) return;
+      var href='', label='';
+      if(document.querySelector('.searchrow')){            // homepage
+        href='https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=stickybar';
+        label='Find your stay';
+      } else {
+        var band=document.querySelector('.band a.btn[href*="trip.com"]')
+              || document.querySelector('a.btn[href*="us.trip.com/hotels"]')
+              || document.querySelector('a.hbtn[href*="trip.com"]')
+              || document.querySelector('a[href*="us.trip.com"]');
+        if(band){ href=band.href; label='Book on Trip.com'; }
+      }
+      if(!href) return;
+      var a=document.createElement('a');
+      a.className='dg-sticky-cta'; a.href=href; a.target='_blank';
+      a.rel='sponsored nofollow noopener'; a.textContent=label; a.setAttribute('aria-label',label);
+      a.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9998;display:flex;align-items:center;'
+        +'justify-content:center;min-height:56px;background:#2F76D8;color:#fff;'
+        +'font:700 17px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;'
+        +'text-decoration:none;box-shadow:0 -3px 14px rgba(0,0,0,.28);';
+      document.body.appendChild(a);
+      document.body.classList.add('dg-has-bar');
+      document.body.style.paddingBottom='68px';
+    }catch(e){}
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
+})();
