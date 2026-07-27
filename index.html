@@ -1726,6 +1726,17 @@ document.querySelectorAll('.ccard').forEach(card => {
     .searchrow .search-wrap{ margin-top:14vh !important; }
     .searchrow .search-wrap > h2{ font-size:clamp(1.9rem,7vw,2.5rem) !important; bottom:calc(100% + 8px) !important; }
   }
+  /* ===== Fix (Jul 27): keep the tall search card fully inside the hero on phones so the
+     Check Availability button can't be covered, and drop the Guild Travel Library sign
+     at least ~1.5in below it. Mobile-only; desktop layout unchanged. ===== */
+  @media(max-width:820px){
+    .searchrow{ height:auto !important; min-height:calc(100dvh - 66px) !important; padding-bottom:28px !important; }
+    .gtl-sec{ margin-top:150px !important; }
+  }
+  @media(max-width:680px){
+    .searchrow{ height:auto !important; min-height:calc(100dvh - 58px) !important; }
+    .gtl-sec{ margin-top:150px !important; }
+  }
 </style>
 <script>/* DG affiliate-click tracking -> GA4 */(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();</script>
 <script id="dg-mobile-sticky">/* Destinations Guild — sticky mobile action bar (one-thumb primary action). Idempotent. */
