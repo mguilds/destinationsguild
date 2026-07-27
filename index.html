@@ -760,23 +760,24 @@ footer { border-top:.5px solid var(--border); padding-top:.85rem; display:flex; 
         <text x="340" y="100" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="33" font-weight="800" letter-spacing="3.5" fill="#0a0b0d">THE GUILD TRAVEL LIBRARY</text>
       </svg>
     </div>
-    <p class="gtl-lede">Every book is a country &mdash; and inside each, a travel guide for every city. Open a book that&rsquo;s on the shelf; the rest are being written.</p>
+    <p class="gtl-lede">Every book is a country &mdash; and inside, a guide for every city. Tap a book and Polly will pull it off the shelf for you.</p>
     <div class="gtl-shelf">
-      <a class="gtl-spine" href="usa.html" style="background:#22406e;"><span class="gtl-band-top"></span><span class="gtl-title">UNITED STATES</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine" href="mexico.html" style="background:#7c2d2d;"><span class="gtl-band-top"></span><span class="gtl-title">MEXICO</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine" href="thailand.html" style="background:#b8791f;"><span class="gtl-band-top"></span><span class="gtl-title">THAILAND</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <div class="gtl-spine" style="background:#b23b3b;"><span class="gtl-band-top"></span><span class="gtl-title">CANADA</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#1f6f6a;"><span class="gtl-band-top"></span><span class="gtl-title">DOM. REPUBLIC</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#2e6b2e;"><span class="gtl-band-top"></span><span class="gtl-title">JAMAICA</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#1f5b4c;"><span class="gtl-band-top"></span><span class="gtl-title">ITALY</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#274a86;"><span class="gtl-band-top"></span><span class="gtl-title">FRANCE</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#4a2d6b;"><span class="gtl-band-top"></span><span class="gtl-title">UNITED KINGDOM</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#3a3a3a;"><span class="gtl-band-top"></span><span class="gtl-title">GERMANY</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#b5651d;"><span class="gtl-band-top"></span><span class="gtl-title">NETHERLANDS</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#2b6a9a;"><span class="gtl-band-top"></span><span class="gtl-title">GREECE</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#8a4a1f;"><span class="gtl-band-top"></span><span class="gtl-title">AUSTRALIA</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#8c2f39;"><span class="gtl-band-top"></span><span class="gtl-title">JAPAN</span><span class="gtl-band-bot"></span></div>
-      <div class="gtl-spine" style="background:#6b5b1f;"><span class="gtl-band-top"></span><span class="gtl-title">TANZANIA</span><span class="gtl-band-bot"></span></div>
+      <a class="gtl-spine" href="usa.html" data-book="United States" style="background:#22406e;"><span class="gtl-band-top"></span><span class="gtl-title">UNITED STATES</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine" href="mexico.html" data-book="Mexico" style="background:#7c2d2d;"><span class="gtl-band-top"></span><span class="gtl-title">MEXICO</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine" href="thailand.html" data-book="Thailand" style="background:#b8791f;"><span class="gtl-band-top"></span><span class="gtl-title">THAILAND</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine is-soon" href="library.html" data-book="Canada" data-soon="1" style="background:#b23b3b;"><span class="gtl-band-top"></span><span class="gtl-title">CANADA</span><span class="gtl-band-bot"></span></a>
+      <a class="gtl-spine is-soon" href="library.html" data-book="Dominican Republic" data-soon="1" style="background:#1f6f6a;"><span class="gtl-band-top"></span><span class="gtl-title">DOM. REPUBLIC</span><span class="gtl-band-bot"></span></a>
+      <a class="gtl-spine is-soon" href="library.html" data-book="Jamaica" data-soon="1" style="background:#2e6b2e;"><span class="gtl-band-top"></span><span class="gtl-title">JAMAICA</span><span class="gtl-band-bot"></span></a>
+      <a class="gtl-spine" href="italy.html" data-book="Italy" style="background:#1f5b4c;"><span class="gtl-band-top"></span><span class="gtl-title">ITALY</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine" href="france.html" data-book="France" style="background:#274a86;"><span class="gtl-band-top"></span><span class="gtl-title">FRANCE</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine" href="united-kingdom.html" data-book="United Kingdom" style="background:#4a2d6b;"><span class="gtl-band-top"></span><span class="gtl-title">UNITED KINGDOM</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine" href="germany.html" data-book="Germany" style="background:#3a3a3a;"><span class="gtl-band-top"></span><span class="gtl-title">GERMANY</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine is-soon" href="library.html" data-book="Netherlands" data-soon="1" style="background:#b5651d;"><span class="gtl-band-top"></span><span class="gtl-title">NETHERLANDS</span><span class="gtl-band-bot"></span></a>
+      <a class="gtl-spine is-soon" href="library.html" data-book="Greece" data-soon="1" style="background:#2b6a9a;"><span class="gtl-band-top"></span><span class="gtl-title">GREECE</span><span class="gtl-band-bot"></span></a>
+      <a class="gtl-spine" href="australia.html" data-book="Australia" style="background:#8a4a1f;"><span class="gtl-band-top"></span><span class="gtl-title">AUSTRALIA</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine is-soon" href="library.html" data-book="Japan" data-soon="1" style="background:#8c2f39;"><span class="gtl-band-top"></span><span class="gtl-title">JAPAN</span><span class="gtl-band-bot"></span></a>
+      <a class="gtl-spine is-soon" href="library.html" data-book="Tanzania" data-soon="1" style="background:#6b5b1f;"><span class="gtl-band-top"></span><span class="gtl-title">TANZANIA</span><span class="gtl-band-bot"></span></a>
+    
     </div>
     <div class="gtl-board"></div>
     <p class="gtl-note">Three books are open on the shelf today &mdash; the United States, Mexico and Thailand. The rest are being written.</p>
@@ -1773,5 +1774,141 @@ document.querySelectorAll('.ccard').forEach(card => {
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
 })();
 </script>
+
+<!-- ===== Polly's Bookshelf — tap a book, Polly pulls it off the shelf (Jul 27) ===== -->
+<style>
+  #pollyBook{position:fixed;inset:0;z-index:10050;display:none;}
+  #pollyBook.open{display:block;}
+  #pollyBook .pb-scrim{position:absolute;inset:0;background:rgba(6,10,24,.88);opacity:0;transition:opacity .35s ease;}
+  #pollyBook.open .pb-scrim{opacity:1;}
+  #pollyBook .pb-stage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:22px;}
+  #pollyBook .pb-polly{width:104px;height:auto;transform:translate(78px,150px) rotate(14deg);opacity:0;
+     transition:transform .62s cubic-bezier(.2,.85,.25,1),opacity .45s ease;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45));}
+  #pollyBook.pulling .pb-polly{transform:translate(96px,-4px) rotate(-7deg);opacity:1;}
+  #pollyBook .pb-polly svg{width:100%;height:auto;display:block;}
+  #pollyBook .pb-book{position:relative;width:236px;height:322px;perspective:1500px;
+     transform:translateY(46px) scale(.9);opacity:0;transition:transform .58s cubic-bezier(.2,.85,.25,1),opacity .45s ease;}
+  #pollyBook.pulling .pb-book{transform:translateY(0) scale(1);opacity:1;}
+  #pollyBook .pb-page{position:absolute;inset:0;background:#fbf7ec;border-radius:6px 13px 13px 6px;
+     box-shadow:0 26px 66px rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;
+     gap:16px;padding:26px 24px;text-align:center;font-family:'EB Garamond',Georgia,serif;}
+  #pollyBook .pb-msg{font-size:21px;line-height:1.35;color:#2a3342;margin:0;font-weight:600;}
+  #pollyBook .pb-sub{font-size:16px;color:#5a6472;margin:0;}
+  #pollyBook .pb-actions{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:4px;}
+  #pollyBook .pb-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 18px;border-radius:12px;
+     font:600 17px/1.1 'EB Garamond',Georgia,serif;text-decoration:none;cursor:pointer;border:0;}
+  #pollyBook .pb-btn.primary{background:#173a78;color:#fff;box-shadow:0 3px 10px rgba(12,36,68,.3);}
+  #pollyBook .pb-btn.ghost{background:#efe7d4;color:#3a4250;}
+  #pollyBook .pb-cover{position:absolute;inset:0;border-radius:6px 13px 13px 6px;transform-origin:left center;
+     transform:rotateY(0deg);transition:transform .82s cubic-bezier(.32,.5,.18,1);box-shadow:0 26px 66px rgba(0,0,0,.55);
+     backface-visibility:hidden;-webkit-backface-visibility:hidden;}
+  #pollyBook.opening .pb-cover{transform:rotateY(-158deg);}
+  #pollyBook .pb-cover-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+     gap:16px;border-radius:6px 13px 13px 6px;color:#fff;padding:22px;
+     box-shadow:inset 10px 0 22px rgba(0,0,0,.28),inset -4px 0 10px rgba(255,255,255,.08);}
+  #pollyBook .pb-cover-in::before{content:"";position:absolute;left:9px;top:12px;bottom:12px;width:3px;background:rgba(212,180,110,.7);border-radius:2px;}
+  #pollyBook .pb-emblem{font-size:34px;line-height:1;}
+  #pollyBook .pb-ctry{font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:26px;letter-spacing:1px;text-shadow:0 2px 5px rgba(0,0,0,.4);}
+  #pollyBook .pb-brand{font-family:'Cinzel',Georgia,serif;font-size:12px;letter-spacing:3px;opacity:.85;}
+  #pollyBook .pb-gold{width:56px;height:2px;background:rgba(212,180,110,.85);}
+  #pollyBook .pb-close{position:absolute;top:16px;right:16px;width:46px;height:46px;border-radius:50%;border:0;
+     background:rgba(255,255,255,.16);color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  @media(prefers-reduced-motion:reduce){
+    #pollyBook .pb-polly,#pollyBook .pb-book,#pollyBook .pb-cover{transition:none !important;}
+  }
+</style>
+<div id="pollyBook" aria-hidden="true" role="dialog" aria-label="Opening travel book">
+  <div class="pb-scrim" data-close="1"></div>
+  <button class="pb-close" data-close="1" aria-label="Close">&times;</button>
+  <div class="pb-stage">
+    <div class="pb-polly"></div>
+    <div class="pb-book">
+      <div class="pb-page">
+        <p class="pb-msg"></p>
+        <p class="pb-sub"></p>
+        <div class="pb-actions"></div>
+      </div>
+      <div class="pb-cover">
+        <div class="pb-cover-in">
+          <span class="pb-emblem">&#127760;</span>
+          <span class="pb-gold"></span>
+          <span class="pb-ctry"></span>
+          <span class="pb-brand">DESTINATIONS GUILD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var AFF='Allianceid=8217189&SID=317113714';
+  var ov=document.getElementById('pollyBook');
+  if(!ov) return;
+  var polly=ov.querySelector('.pb-polly'),
+      cover=ov.querySelector('.pb-cover-in'),
+      ctry=ov.querySelector('.pb-ctry'),
+      msg=ov.querySelector('.pb-msg'),
+      sub=ov.querySelector('.pb-sub'),
+      actions=ov.querySelector('.pb-actions'),
+      coverEl=ov.querySelector('.pb-cover');
+  // Reuse the existing Polly artwork
+  var src=document.querySelector('.gi-polly svg, .polly-bird svg, .mh-polly svg');
+  if(src){ polly.appendChild(src.cloneNode(true)); } else { polly.textContent='🦜'; }
+  var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var timers=[];
+  function clearTimers(){ timers.forEach(clearTimeout); timers=[]; }
+  function close(){ clearTimers(); ov.classList.remove('open','pulling','opening'); ov.setAttribute('aria-hidden','true'); document.body.style.overflow=''; coverEl.style.display=''; }
+  ov.addEventListener('click',function(e){ if(e.target.getAttribute && e.target.getAttribute('data-close')) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && ov.classList.contains('open')) close(); });
+
+  function go(href){ window.location.href=href; }
+
+  function showSoon(name, slug){
+    coverEl.style.display='none';           // cover has swung open; reveal page
+    msg.textContent = name + "'s book is still being written.";
+    sub.textContent = "Polly can still find you a place to stay tonight.";
+    actions.innerHTML='';
+    var a=document.createElement('a');
+    a.className='pb-btn primary'; a.textContent='Find '+name+' stays';
+    a.href='https://us.trip.com/hotels/?keyword='+encodeURIComponent(name)+'&'+AFF+'&trip_sub1=library&trip_sub3=soon-'+slug;
+    a.target='_blank'; a.rel='sponsored nofollow noopener';
+    // Upgrade to a resolved city link so the destination is correct (no Chicago default)
+    try{
+      fetch('/.netlify/functions/resolve-city?q='+encodeURIComponent(name)).then(function(r){return r.json();}).then(function(d){
+        if(d&&d.cityId){ a.href='https://us.trip.com/hotels/list?cityId='+d.cityId+'&crn=1&adult=2&curr=USD&locale=en-US&'+AFF+'&trip_sub1=library&trip_sub3=soon-'+slug; }
+      }).catch(function(){});
+    }catch(e){}
+    var b=document.createElement('button');
+    b.className='pb-btn ghost'; b.textContent='Back to the shelf'; b.setAttribute('data-close','1');
+    actions.appendChild(a); actions.appendChild(b);
+  }
+
+  function open(name, href, soon, color){
+    var slug=name.toLowerCase().replace(/[^a-z]+/g,'-').replace(/^-|-$/g,'');
+    cover.parentNode.style.background=color;      // color the cover
+    ctry.textContent=name;
+    msg.textContent='Opening your '+name+' guide…';
+    sub.textContent=''; actions.innerHTML=''; coverEl.style.display='';
+    ov.classList.remove('pulling','opening');
+    ov.classList.add('open'); ov.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+    if(RM){ if(soon){ showSoon(name,slug); } else { go(href); } return; }
+    // choreograph: Polly pulls the book up, then the cover opens
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ ov.classList.add('pulling'); }); });
+    timers.push(setTimeout(function(){ ov.classList.add('opening'); }, 700));
+    if(soon){ timers.push(setTimeout(function(){ showSoon(name,slug); }, 1450)); }
+    else    { timers.push(setTimeout(function(){ go(href); }, 1650)); }
+  }
+
+  var spines=document.querySelectorAll('.gtl-shelf .gtl-spine[data-book]');
+  spines.forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var color=a.style.background || getComputedStyle(a).backgroundColor || '#22406e';
+      open(a.getAttribute('data-book'), a.getAttribute('href'), a.hasAttribute('data-soon'), color);
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
