@@ -1143,8 +1143,15 @@ document.getElementById('searchBtn').addEventListener('click', () => {
   const nav = (url) => { if (w) { w.location.href = url; } else { window.location.href = url; } };
 
   // Fast path: destinations we already carry an ID for (no lookup needed).
+  // Their numeric city ID is the trailing number in the slug, so we can use the
+  // same dated deep-link the resolver uses and keep dates reliable.
   if (KNOWN[key]) {
-    nav('https://us.trip.com/hotels/' + KNOWN[key] + '/?' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + slug + '-search&adult=' + guests + dates);
+    const m = String(KNOWN[key]).match(/-(\d+)$/);
+    if (m) {
+      nav('https://us.trip.com/hotels/list?cityId=' + m[1] + '&crn=1&adult=' + guests + '&curr=USD&locale=en-US&' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + slug + dates);
+    } else {
+      nav('https://us.trip.com/hotels/' + KNOWN[key] + '/?' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + slug + '-search&adult=' + guests + dates);
+    }
     return;
   }
   if (!raw) { nav('https://us.trip.com/hotels/?' + AFF + '&trip_sub1=sitesearch&trip_sub3=empty'); return; }
