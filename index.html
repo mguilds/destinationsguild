@@ -1697,12 +1697,7 @@ document.querySelectorAll('.ccard').forEach(card => {
     box-shadow:none !important;
   }
   .page > *{ position:relative; z-index:1; }
-  .page::before{
-    content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
-    background:
-      linear-gradient(rgba(6,10,26,.30), rgba(6,10,26,.36)),
-      url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2880&q=90') center center / cover no-repeat;
-  }
+  .page::before{ content:none; }  /* sky no longer covers the whole page; map shows below the hero */
   /* Wordmark + hero text to light so they read on the sky */
   .mh-name .dest, .mh-name .gold, .mh-name .travel{ color:#f4f8ff !important; }
   .hero-title{ color:#eaf1ff !important; }
@@ -1776,10 +1771,11 @@ document.querySelectorAll('.ccard').forEach(card => {
     .searchrow{ height:auto !important; min-height:calc(100dvh - 58px) !important; }
     .gtl-sec{ margin-top:150px !important; }
   }
-  /* ===== Background B spans the whole page (fixed); search card sits in the lower third (Jul 28) ===== */
-  .searchrow{ align-items:flex-end !important; }
-  .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:7vh !important; }
-  @media(max-width:680px){ .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:6vh !important; } }
+  /* ===== Sky (B) behind the HERO only; the rest of the site shows the antique map. Search lifted a little. (Jul 28) ===== */
+  .searchrow{ align-items:flex-end !important;
+    background:linear-gradient(rgba(6,10,26,.34), rgba(6,10,26,.44)), url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2880&q=90') center center / cover no-repeat !important; }
+  .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:13vh !important; }
+  @media(max-width:680px){ .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:10vh !important; } }
 </style>
 <script>/* DG affiliate-click tracking -> GA4 */(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();</script>
 <script id="dg-mobile-sticky">/* Destinations Guild — sticky mobile action bar (one-thumb primary action). Idempotent. */
