@@ -729,31 +729,44 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     <!-- ===== OUR STORY / ABOUT OUR EXPLORERS (added Jul 28) ===== -->
   <style>
     .dg-story{max-width:1000px;margin:26px auto;padding:30px 26px 34px;background:linear-gradient(#f6efdc,#efe6cf);border:1px solid #d8cba6;border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.45);position:relative;z-index:1;font-family:'EB Garamond',Georgia,serif;}
-    .dg-story-lockup{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;border-bottom:2px solid rgba(201,168,76,.55);padding-bottom:20px;margin-bottom:22px;}
-    .dg-story .ds-globe{width:150px;height:150px;display:flex;align-items:center;justify-content:center;}
-    .dg-story .ds-globe .mh-globe{width:150px !important;height:150px !important;display:flex !important;}
+    .dg-story-lockup{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;border-bottom:2px solid rgba(201,168,76,.55);padding-bottom:20px;margin-bottom:22px;min-height:150px;cursor:pointer;}
+    .dg-story .ds-center{display:flex;flex-direction:column;align-items:center;gap:6px;}
+    /* globe: 10% smaller (135px), tucked up to the LEFT */
+    .dg-story .ds-globe{position:absolute;left:6px;top:0;width:135px;height:135px;display:flex;align-items:center;justify-content:center;z-index:2;}
+    .dg-story .ds-globe .mh-globe{width:135px !important;height:135px !important;display:flex !important;}
+    /* Polly: repositioned to the UPPER RIGHT */
+    .dg-story .ds-polly{position:absolute;right:14px;top:2px;width:78px;height:108px;z-index:2;}
+    .dg-story .ds-polly svg{width:100%;height:100%;display:block;}
     .dg-story .ds-word{font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:clamp(1.55rem,4.6vw,2.4rem);letter-spacing:.06em;color:#173a78;margin-top:4px;}
     .dg-story .ds-word span{color:#C9A84C;}
     .dg-story .ds-flags{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:6px;}
+    /* the word ON TOP of the flags — the old logo lockup, restored */
+    .dg-story .ds-flword-top{font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:clamp(1.05rem,2.6vw,1.4rem);letter-spacing:.34em;color:#173a78;text-indent:.34em;line-height:1;margin-bottom:2px;}
     .dg-story .ds-flags-row{display:inline-flex;gap:7px;align-items:center;}
     .dg-story .ds-flags-row svg{width:42px;height:28px;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.25);}
     .dg-story .ds-flags-cap{font-size:12.5px;font-style:italic;color:#6b5d38;letter-spacing:.06em;}
-    .dg-story .ds-polly{width:78px;height:108px;}
-    .dg-story .ds-polly svg{width:100%;height:100%;display:block;}
+    @media(max-width:680px){
+      .dg-story .ds-globe{width:104px;height:104px;left:2px;} .dg-story .ds-globe .mh-globe{width:104px !important;height:104px !important;}
+      .dg-story .ds-polly{width:60px;height:84px;right:6px;}
+      .dg-story .ds-center{margin-top:118px;}   /* clear the top-corner globe & Polly on narrow phones */
+    }
     .dg-story-body{max-width:770px;margin:0 auto;}
     .dg-story .ds-h{font-family:'Cinzel',Georgia,serif;color:#173a78;font-size:clamp(1.4rem,3.6vw,1.95rem);margin:20px 0 10px;text-align:center;}
     .dg-story-body p{font-size:18px;line-height:1.66;color:#2a3444;margin:0 0 15px;}
     @media(max-width:680px){.dg-story{padding:24px 18px 28px;} .dg-story .ds-flags-row svg{width:34px;height:23px;} .dg-story-body p{font-size:17px;}}
   </style>
   <section class="dg-story noi18n">
-    <div class="dg-story-lockup">
+    <div class="dg-story-lockup" id="dsLockup" title="Tap to watch Polly release the Explorers">
       <div class="ds-globe" id="dsGlobe"></div>
-      <div class="ds-word">DESTINATIONS <span>GUILD</span></div>
-      <div class="ds-flags">
-        <div class="ds-flags-row" id="dsFlags"></div>
-        <div class="ds-flags-cap">T &middot; R &middot; A &middot; V &middot; E &middot; L &mdash; International Maritime Signal Flags</div>
-      </div>
       <div class="ds-polly" id="dsPolly"></div>
+      <div class="ds-center">
+        <div class="ds-word">DESTINATIONS <span>GUILD</span></div>
+        <div class="ds-flags">
+          <div class="ds-flword-top" id="dsFlwordTop">TRAVEL</div>
+          <div class="ds-flags-row" id="dsFlags"></div>
+          <div class="ds-flags-cap">&ldquo;Travel&rdquo; in the International Maritime Signal Code</div>
+        </div>
+      </div>
     </div>
     <div class="dg-story-body">
       <h2 class="ds-h">Our Story</h2>
@@ -2094,7 +2107,8 @@ document.querySelectorAll('.ccard').forEach(card => {
 (function(){
   var story=document.querySelector('.dg-story'); if(!story) return;
   var globeBox=document.getElementById('dsGlobe'), flagBox=document.getElementById('dsFlags'),
-      pollyBox=document.getElementById('dsPolly'), capEl=document.querySelector('.dg-story .ds-flags-cap');
+      pollyBox=document.getElementById('dsPolly'), capEl=document.querySelector('.dg-story .ds-flags-cap'),
+      flwordTop=document.getElementById('dsFlwordTop');
 
   var g=document.querySelector('.mh-globe'); if(g && globeBox && !globeBox.children.length) globeBox.appendChild(g.cloneNode(true));
   var ps=document.querySelector('.mh-polly svg, .gi-polly svg'); if(ps && pollyBox && !pollyBox.children.length) pollyBox.appendChild(ps.cloneNode(true));
@@ -2117,9 +2131,45 @@ document.querySelectorAll('.ccard').forEach(card => {
   function renderWord(w){
     var h=''; for(var i=0;i<w.length;i++){ h+=flag(w.charAt(i)); }
     flagBox.innerHTML=h;
-    if(capEl){ capEl.innerHTML=w.split('').join(' &middot; ')+' &mdash; &ldquo;Travel&rdquo; in '+LANG[w]+', in Maritime Signal Flags'; }
+    if(flwordTop){ flwordTop.textContent=w; }
+    if(capEl){ capEl.innerHTML='&ldquo;Travel&rdquo; in '+LANG[w]+' &mdash; International Maritime Signal Code'; }
   }
   renderWord('TRAVEL');
+
+  /* ---- Polly's voice: a synthesized macaw squawk (3-4 calls), no audio file needed ---- */
+  var actx=null;
+  function ensureCtx(){
+    try{ if(!actx) actx=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ return null; }
+    if(actx && actx.state==='suspended'){ try{ actx.resume(); }catch(e){} }
+    return actx;
+  }
+  function squawk(t0,dur){
+    var ctx=actx, f0=720+Math.random()*220;
+    var osc=ctx.createOscillator(); osc.type='sawtooth';
+    osc.frequency.setValueAtTime(f0,t0);
+    osc.frequency.linearRampToValueAtTime(f0*1.55,t0+dur*0.22);
+    osc.frequency.linearRampToValueAtTime(f0*0.68,t0+dur);
+    var lfo=ctx.createOscillator(); lfo.type='square'; lfo.frequency.value=42+Math.random()*34;
+    var lfoG=ctx.createGain(); lfoG.gain.value=130; lfo.connect(lfoG); lfoG.connect(osc.frequency);
+    var bp=ctx.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=1500; bp.Q.value=6;
+    var g=ctx.createGain();
+    g.gain.setValueAtTime(0.0001,t0);
+    g.gain.linearRampToValueAtTime(0.26,t0+0.018);
+    g.gain.setValueAtTime(0.24,t0+dur*0.62);
+    g.gain.exponentialRampToValueAtTime(0.0008,t0+dur);
+    osc.connect(bp); bp.connect(g); g.connect(ctx.destination);
+    osc.start(t0); osc.stop(t0+dur+0.03);
+    lfo.start(t0); lfo.stop(t0+dur+0.03);
+  }
+  function macawCall(){
+    var ctx=ensureCtx(); if(!ctx || ctx.state!=='running') return;
+    var n=3+Math.floor(Math.random()*2), t=ctx.currentTime+0.03;   // 3 or 4 squawks
+    for(var i=0;i<n;i++){ var d=0.15+Math.random()*0.12; squawk(t,d); t+=d+0.075+Math.random()*0.06; }
+  }
+  /* unlock audio on the first user gesture so the squawk can sound */
+  ['pointerdown','touchstart','keydown'].forEach(function(ev){
+    window.addEventListener(ev,function once(){ ensureCtx(); window.removeEventListener(ev,once); },{once:true,passive:true});
+  });
 
   var PARROT='<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M34 24 C40 27 41 33 38 35 C36 31 34 28 33 26 Z" fill="#1E54A8"/><path d="M30 7 C34 3 38 6 35 10 C32 8 30 10 30 11 Z" fill="#29B34E"/><circle cx="22" cy="20" r="14" fill="#29B34E"/><ellipse cx="24" cy="20" rx="6" ry="9" fill="#128241"/><ellipse cx="15" cy="21" rx="8" ry="9" fill="#ffffff"/><circle cx="13.5" cy="18" r="3" fill="#1a1a1a"/><circle cx="14.6" cy="16.9" r="1" fill="#ffffff"/><path d="M11 14 C3 14 1 23 6 27 C9 29 13 27 13 23 C12 19 12 16 11 14 Z" fill="#2b2b2b"/><path d="M6 26 C8 30 13 29 13 25 C11 27 8 27 6 26 Z" fill="#8a8a8a"/></svg>';
 
@@ -2145,6 +2195,7 @@ document.querySelectorAll('.ccard').forEach(card => {
   function playPolly(){
     var gr=globeBox.getBoundingClientRect(), pr=pollyBox.getBoundingClientRect();
     if(!gr.width||!pr.width) return;
+    macawCall();                        // Polly squawks as she takes flight
     var dx=(gr.left+gr.width/2)-(pr.left+pr.width/2), dy=(gr.top+gr.height/2)-(pr.top+pr.height/2);
     pollyBox.style.willChange='transform,opacity';
     pollyBox.animate([
@@ -2168,8 +2219,11 @@ document.querySelectorAll('.ccard').forEach(card => {
   }
 
   var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  var played=false;
-  function onView(){ if(played) return; played=true; if(reduce) return; cycleFlags(); setTimeout(playPolly, 500); }
+  var played=false, busy=false;
+  function runShow(){ if(busy) return; busy=true; renderWord('TRAVEL'); flagBox.style.opacity='1'; cycleFlags(); setTimeout(playPolly,500); setTimeout(function(){ busy=false; },5200); }
+  function onView(){ if(played) return; played=true; if(reduce) return; runShow(); }
+  var lockup=document.getElementById('dsLockup');
+  if(lockup){ lockup.addEventListener('click',function(){ ensureCtx(); if(!reduce) runShow(); }); }
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ onView(); io.disconnect(); } }); },{threshold:.35});
     io.observe(story);
@@ -2179,14 +2233,15 @@ document.querySelectorAll('.ccard').forEach(card => {
 
 <style id="dg-section-gaps">
   /* ===== Float the panels: show a strip of antique map between sections (Jul 28) ===== */
-  .dg-story{ margin-top:34px !important; margin-bottom:56px !important; }
+  .dg-story{ margin-top:104px !important; margin-bottom:56px !important; }  /* wider antique-map gap between the hero and Our Story */
   .gtl-sec{ margin-top:56px !important; margin-bottom:56px !important; }
   .sec-hdr{ margin-top:58px !important; }
   .guides{ margin-top:46px !important; }
   .a250{ margin-top:46px !important; margin-bottom:6px !important; }
   .logbook{ margin-top:56px !important; margin-bottom:46px !important; }
   @media(max-width:680px){
-    .dg-story,.gtl-sec,.logbook{ margin-top:34px !important; margin-bottom:34px !important; }
+    .dg-story{ margin-top:66px !important; margin-bottom:34px !important; }
+    .gtl-sec,.logbook{ margin-top:34px !important; margin-bottom:34px !important; }
     .sec-hdr{ margin-top:38px !important; } .guides,.a250{ margin-top:30px !important; }
   }
 </style>
