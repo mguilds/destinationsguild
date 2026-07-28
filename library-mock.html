@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Guild Travel Library — Europe (preview)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=EB+Garamond:ital@0;1&family=Cormorant+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  :root{--navy:#173a78;--gold:#C9A84C;--ink:#26324a;--parch:#f6efdc;--wood:#4a3018;}
+  body{font-family:'EB Garamond',Georgia,serif;color:var(--ink);background:#1a120a;}
+
+  /* ===== antique bookshelf backdrop ===== */
+  .lib-bg{position:fixed;inset:0;z-index:-2;
+    background:linear-gradient(rgba(20,12,4,.55),rgba(20,12,4,.72)),
+      url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2400&q=85') center center / cover no-repeat fixed,
+      #241609;}
+
+  /* ===== nav ===== */
+  .nav{background:#2f8fe0;color:#fff;padding:14px 22px;display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+  .nav .brand{font-weight:800;font-size:20px;}
+  .nav a{color:#fff;text-decoration:none;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-weight:600;font-size:15px;}
+  .nav .sp{flex:1;}
+
+  .wrap{max-width:1120px;margin:0 auto;padding:0 18px 60px;}
+
+  /* ===== hero sign over the shelves ===== */
+  .hero{padding:52px 20px 30px;text-align:center;}
+  .sign{display:inline-block;background:linear-gradient(#fffdf6,#f3ead2);border:1px solid #d8c79a;border-top:5px solid var(--gold);border-radius:14px;padding:20px 40px;box-shadow:0 18px 50px rgba(0,0,0,.55);}
+  .sign h1{font-family:'Cinzel',serif;color:var(--navy);font-size:clamp(1.8rem,5vw,3rem);letter-spacing:.02em;}
+  .sign .tag{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.1rem,2.6vw,1.5rem);color:#6b5d38;margin-top:4px;}
+
+  /* ===== Polly search ===== */
+  .search{max-width:640px;margin:22px auto 0;background:rgba(255,253,246,.97);border:1px solid #d8c79a;border-radius:44px;box-shadow:0 12px 34px rgba(0,0,0,.5);display:flex;align-items:center;gap:10px;padding:8px 8px 8px 18px;}
+  .search .pollybtn{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .search .pollybtn svg{width:100%;height:100%;}
+  .search input{flex:1;border:0;background:transparent;font-size:18px;font-family:inherit;color:var(--ink);outline:none;padding:8px 4px;}
+  .search .go{flex:0 0 auto;border:0;background:var(--navy);color:#fff;font-weight:700;font-size:16px;border-radius:34px;padding:11px 22px;cursor:pointer;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;}
+  .search-note{max-width:640px;margin:8px auto 0;text-align:center;color:#f3ead2;font-size:14.5px;font-style:italic;}
+
+  /* ===== 7 continents (big) ===== */
+  .cont-h{color:#fff;text-align:center;font-family:'Cinzel',serif;font-size:clamp(1.1rem,2.6vw,1.4rem);letter-spacing:.14em;margin:44px 0 16px;text-shadow:0 2px 10px rgba(0,0,0,.6);}
+  .continents{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;}
+  .cont{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:118px;border-radius:14px;text-decoration:none;
+    background:linear-gradient(#255a9a,#173a78);border:1px solid rgba(255,255,255,.18);box-shadow:0 10px 26px rgba(0,0,0,.45);color:#fff;padding:14px 8px;transition:.15s;}
+  .cont:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(0,0,0,.55);}
+  .cont .em{font-size:34px;line-height:1;}
+  .cont .nm{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-weight:700;font-size:14px;text-align:center;}
+  .cont .ct{font-size:12px;opacity:.82;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;}
+  .cont.on{background:linear-gradient(#e9b949,#c9902a);color:#3a2a06;border-color:#f4d27a;}
+  .cont.on .ct{opacity:.9;color:#4a3407;}
+  @media(max-width:900px){.continents{grid-template-columns:repeat(4,1fr);}}
+  @media(max-width:560px){.continents{grid-template-columns:repeat(2,1fr);gap:10px;} .cont{min-height:104px;} .cont .em{font-size:30px;}}
+
+  /* ===== continent section: book-cover cards ===== */
+  .sec{background:rgba(246,239,220,.96);border-radius:16px;border:1px solid #d8c79a;box-shadow:0 16px 44px rgba(0,0,0,.5);margin:34px 0 0;padding:26px 24px 30px;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:2px solid rgba(201,168,76,.5);padding-bottom:14px;margin-bottom:20px;}
+  .sec-head h2{font-family:'Cinzel',serif;color:var(--navy);font-size:clamp(1.5rem,4vw,2.1rem);}
+  .sec-head .meta{color:#6b5d38;font-style:italic;font-size:16px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;}
+
+  .book{position:relative;display:block;text-decoration:none;color:inherit;border-radius:10px;overflow:hidden;
+    background:#fff;border:1px solid #e2d9c0;box-shadow:0 6px 16px rgba(60,40,10,.18);min-height:176px;transition:.16s;}
+  .book .spine{position:absolute;left:0;top:0;bottom:0;width:9px;}
+  .book .body{padding:16px 14px 14px 20px;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;}
+  .book .flag{font-size:44px;line-height:1;filter:drop-shadow(0 2px 3px rgba(0,0,0,.25));}
+  .book .cty{font-family:'Cinzel',serif;font-weight:700;color:var(--navy);text-align:center;font-size:16px;line-height:1.15;}
+  .book .status{margin-top:auto;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;}
+  .book.live{cursor:pointer;}
+  .book.live:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(60,40,10,.32);}
+  .book.live .status{color:#1f7a43;}
+  .book.live .ribbon{position:absolute;top:9px;right:-30px;transform:rotate(45deg);background:#1f7a43;color:#fff;font:800 10px -apple-system,sans-serif;letter-spacing:.08em;padding:3px 34px;box-shadow:0 2px 5px rgba(0,0,0,.3);}
+  .book.soon{opacity:.62;background:repeating-linear-gradient(45deg,#f3ead6,#f3ead6 8px,#efe3ca 8px,#efe3ca 16px);}
+  .book.soon .cty{color:#6b5d47;}
+  .book.soon .status{color:#9a7a3a;}
+  .book.soon .flag{filter:grayscale(.55) opacity(.85);}
+
+  /* ===== card catalog (A–Z) ===== */
+  .catalog{background:rgba(28,20,10,.9);border-radius:16px;margin:34px 0 0;padding:24px 22px 26px;color:#f3ead2;border:1px solid #5c4326;box-shadow:0 16px 44px rgba(0,0,0,.5);}
+  .catalog h2{font-family:'Cinzel',serif;color:var(--gold);font-size:clamp(1.3rem,3.4vw,1.8rem);text-align:center;}
+  .catalog .sub{text-align:center;font-style:italic;color:#d8c79a;margin:6px 0 18px;font-size:15.5px;}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:9px;}
+  .cardf{display:flex;align-items:center;gap:10px;background:#fbf6e9;color:#3a2c12;border-radius:7px;padding:9px 12px;border-left:5px solid var(--navy);text-decoration:none;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;box-shadow:0 3px 8px rgba(0,0,0,.35);}
+  .cardf .fl{font-size:20px;}
+  .cardf .nm{font-weight:700;font-size:14.5px;flex:1;}
+  .cardf .tk{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#1f7a43;}
+  .cardf.soon{opacity:.6;border-left-color:#8a6a3f;}
+  .cardf.soon .tk{color:#8a6a3f;}
+  .cardf.hide{display:none;}
+
+  .foot{color:#e9dcc0;text-align:center;font-style:italic;margin:34px 0 0;font-size:15px;}
+  .disclaimer{position:fixed;left:0;right:0;bottom:0;background:#b8860b;color:#241a06;text-align:center;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-weight:700;font-size:13px;padding:7px;z-index:50;}
+</style>
+</head>
+<body>
+<div class="lib-bg"></div>
+
+<div class="nav">
+  <span class="brand">&#127757; Destinations Guild</span>
+  <a href="index.html">Home</a>
+  <a href="library.html">The Guild Travel Library</a>
+  <span class="sp"></span>
+  <a href="index.html">Search</a>
+</div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="sign">
+      <h1>The Guild Travel Library</h1>
+      <div class="tag">Adventures await in every country.</div>
+    </div>
+
+    <div class="search">
+      <span class="pollybtn" id="pollyBtn" title="Ask Polly">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="20" fill="#173a78"/><g transform="translate(6,5) scale(.72)"><path d="M34 24 C40 27 41 33 38 35 C36 31 34 28 33 26 Z" fill="#1E54A8"/><circle cx="22" cy="20" r="14" fill="#29B34E"/><ellipse cx="24" cy="20" rx="6" ry="9" fill="#128241"/><ellipse cx="15" cy="21" rx="8" ry="9" fill="#fff"/><circle cx="13.5" cy="18" r="3" fill="#1a1a1a"/><circle cx="14.6" cy="16.9" r="1" fill="#fff"/><path d="M11 14 C3 14 1 23 6 27 C9 29 13 27 13 23 C12 19 12 16 11 14 Z" fill="#2b2b2b"/></g></svg>
+      </span>
+      <input id="q" type="text" placeholder="Search any country&hellip; ask Polly to find your next book" autocomplete="off">
+      <button class="go" id="goBtn">Find it</button>
+    </div>
+    <p class="search-note">Type a country and Polly filters the shelves instantly &mdash; e.g. &ldquo;France&rdquo;, &ldquo;Japan&rdquo;, &ldquo;Kenya&rdquo;.</p>
+  </div>
+
+  <div class="cont-h">BROWSE BY CONTINENT &mdash; ALL SEVEN, ALL 200+ COUNTRIES</div>
+  <div class="continents" id="continents"></div>
+
+  <section class="sec" id="europe">
+    <div class="sec-head">
+      <h2>Europe</h2>
+      <span class="meta" id="euMeta"></span>
+    </div>
+    <div class="grid" id="euGrid"></div>
+  </section>
+
+  <div class="catalog">
+    <h2>The Card Catalog</h2>
+    <div class="sub">Every country, A&ndash;Z &mdash; the whole world in one drawer (Europe shown as a sample)</div>
+    <div class="cards" id="catalog"></div>
+  </div>
+
+  <p class="foot">This is a preview of one continent. The other six work the same way, all drawn from a single master country list &mdash; as the Guild Explorers finish each book, it turns from &ldquo;coming soon&rdquo; into an open book automatically.</p>
+</div>
+
+<div class="disclaimer">PREVIEW / MOCK-UP &mdash; not linked from the live site</div>
+
+<script>
+/* Continents (the 7, shown big). Counts are illustrative for the mock. */
+var CONTINENTS=[
+  {nm:'Africa',em:'🌍',n:54,open:0},
+  {nm:'Asia',em:'🌏',n:48,open:1},
+  {nm:'Europe',em:'🌍',n:44,open:6,on:true},
+  {nm:'N. America',em:'🌎',n:23,open:3},
+  {nm:'S. America',em:'🌎',n:12,open:1},
+  {nm:'Oceania',em:'🌏',n:14,open:1},
+  {nm:'Antarctica',em:'❄️',n:1,open:0}
+];
+var ch='';
+CONTINENTS.forEach(function(c){
+  ch+='<a class="cont'+(c.on?' on':'')+'" href="#'+(c.on?'europe':'')+'"><span class="em">'+c.em+'</span><span class="nm">'+c.nm+'</span><span class="ct">'+c.open+' open &middot; '+c.n+' books</span></a>';
+});
+document.getElementById('continents').innerHTML=ch;
+
+/* Europe country list — the master-list rows for this continent.
+   live:href => an open book; otherwise "coming soon". Spine color varies. */
+var SPINES=['#7c2d2d','#1f5b4c','#274472','#9a6a15','#5b3a72','#2b6a7c','#8a4a1f','#3a5a2b','#6b2d4a','#2d4a6b','#7c5c1f','#4a2d6b'];
+var EUROPE=[
+  ['Albania','🇦🇱'],['Andorra','🇦🇩'],['Austria','🇦🇹'],
+  ['Belgium','🇧🇪'],['Bosnia & Herzegovina','🇧🇦'],['Bulgaria','🇧🇬'],
+  ['Croatia','🇭🇷'],['Czechia','🇨🇿'],['Denmark','🇩🇰'],
+  ['Estonia','🇪🇪'],['Finland','🇫🇮'],['France','🇫🇷','france.html'],
+  ['Germany','🇩🇪','germany.html'],['Greece','🇬🇷','greece.html'],['Hungary','🇭🇺'],
+  ['Iceland','🇮🇸'],['Ireland','🇮🇪'],['Italy','🇮🇹','italy.html'],
+  ['Latvia','🇱🇻'],['Lithuania','🇱🇹'],['Luxembourg','🇱🇺'],
+  ['Malta','🇲🇹'],['Monaco','🇲🇨'],['Montenegro','🇲🇪'],
+  ['Netherlands','🇳🇱'],['North Macedonia','🇲🇰'],['Norway','🇳🇴'],
+  ['Poland','🇵🇱'],['Portugal','🇵🇹'],['Romania','🇷🇴'],
+  ['San Marino','🇸🇲'],['Serbia','🇷🇸'],['Slovakia','🇸🇰'],
+  ['Slovenia','🇸🇮'],['Spain','🇪🇸','spain.html'],['Sweden','🇸🇪'],
+  ['Switzerland','🇨🇭'],['Ukraine','🇺🇦'],['United Kingdom','🇬🇧','united-kingdom.html'],
+  ['Vatican City','🇻🇦']
+];
+
+function buildBooks(){
+  var g='',open=0;
+  EUROPE.forEach(function(row,i){
+    var nm=row[0],fl=row[1],href=row[2],spine=SPINES[i%SPINES.length];
+    if(href){open++;
+      g+='<a class="book live" data-nm="'+nm.toLowerCase()+'" href="'+href+'"><span class="spine" style="background:'+spine+'"></span><span class="ribbon">OPEN</span><span class="body"><span class="flag">'+fl+'</span><span class="cty">'+nm+'</span><span class="status">Open &middot; Read now</span></span></a>';
+    } else {
+      g+='<div class="book soon" data-nm="'+nm.toLowerCase()+'"><span class="spine" style="background:#b7a98a"></span><span class="body"><span class="flag">'+fl+'</span><span class="cty">'+nm+'</span><span class="status">Being written</span></span></div>';
+    }
+  });
+  document.getElementById('euGrid').innerHTML=g;
+  document.getElementById('euMeta').innerHTML=EUROPE.length+' countries &middot; '+open+' open now &middot; '+(EUROPE.length-open)+' being written';
+}
+function buildCatalog(){
+  var rows=EUROPE.slice().sort(function(a,b){return a[0]<b[0]?-1:1;});
+  var c='';
+  rows.forEach(function(row){
+    var nm=row[0],fl=row[1],href=row[2];
+    if(href){ c+='<a class="cardf" data-nm="'+nm.toLowerCase()+'" href="'+href+'"><span class="fl">'+fl+'</span><span class="nm">'+nm+'</span><span class="tk">Open</span></a>'; }
+    else { c+='<span class="cardf soon" data-nm="'+nm.toLowerCase()+'"><span class="fl">'+fl+'</span><span class="nm">'+nm+'</span><span class="tk">Soon</span></span>'; }
+  });
+  document.getElementById('catalog').innerHTML=c;
+}
+buildBooks();buildCatalog();
+
+/* Polly search: live-filter the shelves and the catalog */
+function filter(){
+  var v=document.getElementById('q').value.trim().toLowerCase();
+  document.querySelectorAll('#euGrid .book').forEach(function(b){ b.style.display=(!v||b.dataset.nm.indexOf(v)>-1)?'':'none'; });
+  document.querySelectorAll('#catalog .cardf').forEach(function(b){ b.classList.toggle('hide', !(!v||b.dataset.nm.indexOf(v)>-1)); });
+}
+document.getElementById('q').addEventListener('input',filter);
+document.getElementById('goBtn').addEventListener('click',function(){
+  var hit=document.querySelector('#euGrid .book.live[style=""], #euGrid .book.live:not([style*="none"])');
+  if(hit && hit.href) window.location.href=hit.href; else document.getElementById('europe').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('q').addEventListener('keydown',function(e){ if(e.key==='Enter') document.getElementById('goBtn').click(); });
+</script>
+</body>
+</html>
