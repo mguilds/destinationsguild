@@ -742,8 +742,8 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     .dg-story .ds-polly svg{width:100%;height:100%;display:block;}
     .dg-story-body{max-width:770px;margin:0 auto;}
     .dg-story .ds-h{font-family:'Cinzel',Georgia,serif;color:#173a78;font-size:clamp(1.4rem,3.6vw,1.95rem);margin:20px 0 10px;text-align:center;}
-    .dg-story-body p{font-size:16.5px;line-height:1.62;color:#2c3444;margin:0 0 14px;}
-    @media(max-width:680px){.dg-story{padding:24px 18px 28px;} .dg-story .ds-flags-row svg{width:34px;height:23px;} .dg-story-body p{font-size:16px;}}
+    .dg-story-body p{font-size:18px;line-height:1.66;color:#2a3444;margin:0 0 15px;}
+    @media(max-width:680px){.dg-story{padding:24px 18px 28px;} .dg-story .ds-flags-row svg{width:34px;height:23px;} .dg-story-body p{font-size:17px;}}
   </style>
   <section class="dg-story noi18n">
     <div class="dg-story-lockup">
@@ -759,7 +759,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
       <h2 class="ds-h">Our Story</h2>
       <p>Destinations Guild began with a simple belief &mdash; that planning a trip should feel like opening a great book: full of possibility, easy to follow, and honest about what you&rsquo;ll find. Our founder has spent more than two decades in travel reservations, going back to the earliest days of booking hotels online, and built the Guild to carry that hard-won craft into a new era.</p>
       <p>Today the Guild is a curated gateway to the whole world &mdash; hotels, flights, cruises, and experiences across every continent &mdash; with real guidance instead of noise. We&rsquo;re an independent travel company and a proud partner of Trip.com: you book on trusted, secure platforms, and we earn a small commission that keeps the Guild free to use. Our promise is simple &mdash; make the world easy to explore, for everyone.</p>
-      <p>Those six flags above spell <strong>T&#8209;R&#8209;A&#8209;V&#8209;E&#8209;L</strong> in the international maritime signal code &mdash; our tip of the hat to the navigators and explorers who charted the world long before us.</p>
+      <p>Those flags above spell <strong>TRAVEL</strong> &mdash; and, in turn, <strong>VIAJE</strong> and <strong>VOYAGE</strong> &mdash; in the international maritime signal code, a tip of the hat to the navigators and explorers who charted the world long before us.</p>
       <h2 class="ds-h">About Our Explorers</h2>
       <p>Every guide in our Library is the work of the <strong>Guild Explorers</strong> &mdash; our dedicated research team. They range across the globe, gather the current facts, prices, and seasons for each country, and write it all up so you don&rsquo;t have to dig. Every book is signed <em>&ldquo;Curated by Our Guild Explorers&rdquo;</em> and kept up to date.</p>
       <p>And keep an eye out for <strong>Polly</strong> &mdash; our resident parrot and travel concierge. She&rsquo;s online any time you&rsquo;d like to ask a question, plan a trip, or find a place to stay &mdash; always free.</p>
@@ -1973,16 +1973,90 @@ document.querySelectorAll('.ccard').forEach(card => {
 </style>
 
 <script>
+/* ===== Our Story band: globe + Polly + 3-language TRAVEL flags, animated on scroll-in ===== */
 (function(){
   var story=document.querySelector('.dg-story'); if(!story) return;
-  try{
-    var g=document.querySelector('.mh-globe'); if(g){ document.getElementById('dsGlobe').appendChild(g.cloneNode(true)); }
-    var flags=document.querySelectorAll('.masthead #mhFlags .mh-flag svg, .masthead .mh-flags .mh-flag svg');
-    var fr=document.getElementById('dsFlags');
-    flags.forEach(function(sv){ fr.appendChild(sv.cloneNode(true)); });
-    var p=document.querySelector('.masthead .mh-polly svg') || document.querySelector('.gi-polly svg, .polly-bird svg');
-    if(p){ document.getElementById('dsPolly').appendChild(p.cloneNode(true)); }
-  }catch(e){}
+  var globeBox=document.getElementById('dsGlobe'), flagBox=document.getElementById('dsFlags'),
+      pollyBox=document.getElementById('dsPolly'), capEl=document.querySelector('.dg-story .ds-flags-cap');
+
+  var g=document.querySelector('.mh-globe'); if(g && globeBox && !globeBox.children.length) globeBox.appendChild(g.cloneNode(true));
+  var ps=document.querySelector('.mh-polly svg, .gi-polly svg'); if(ps && pollyBox && !pollyBox.children.length) pollyBox.appendChild(ps.cloneNode(true));
+
+  var ICS={
+    A:'<rect width="60" height="40" fill="#ffffff"/><polygon points="30,0 60,0 48,20 60,40 30,40" fill="#0A3D91"/>',
+    E:'<rect width="60" height="20" fill="#0A3D91"/><rect y="20" width="60" height="20" fill="#CE1126"/>',
+    G:'<rect width="60" height="40" fill="#FFD200"/><rect x="10" width="10" height="40" fill="#0A3D91"/><rect x="30" width="10" height="40" fill="#0A3D91"/><rect x="50" width="10" height="40" fill="#0A3D91"/>',
+    I:'<rect width="60" height="40" fill="#FFD200"/><circle cx="30" cy="20" r="10" fill="#111111"/>',
+    J:'<rect width="60" height="40" fill="#0A3D91"/><rect y="13.5" width="60" height="13" fill="#ffffff"/>',
+    L:'<rect width="30" height="20" fill="#FFD200"/><rect x="30" width="30" height="20" fill="#111111"/><rect y="20" width="30" height="20" fill="#111111"/><rect x="30" y="20" width="30" height="20" fill="#FFD200"/>',
+    O:'<rect width="60" height="40" fill="#FFD200"/><polygon points="0,0 60,0 0,40" fill="#CE1126"/>',
+    R:'<rect width="60" height="40" fill="#FFD200"/><rect x="24" width="12" height="40" fill="#CE1126"/><rect y="14" width="60" height="12" fill="#CE1126"/>',
+    T:'<rect width="20" height="40" fill="#CE1126"/><rect x="20" width="20" height="40" fill="#ffffff"/><rect x="40" width="20" height="40" fill="#0A3D91"/>',
+    V:'<rect width="60" height="40" fill="#ffffff"/><line x1="0" y1="0" x2="60" y2="40" stroke="#CE1126" stroke-width="11"/><line x1="0" y1="40" x2="60" y2="0" stroke="#CE1126" stroke-width="11"/>',
+    Y:'<rect width="60" height="40" fill="#FFD200"/><g stroke="#CE1126" stroke-width="7"><line x1="-20" y1="40" x2="40" y2="-20"/><line x1="0" y1="40" x2="60" y2="-20"/><line x1="20" y1="40" x2="80" y2="-20"/><line x1="40" y1="40" x2="100" y2="-20"/></g>'
+  };
+  var LANG={TRAVEL:'English', VIAJE:'Spanish', VOYAGE:'French'};
+  function flag(letter){ return '<span class="mh-flag" style="display:inline-flex;flex-direction:column;align-items:center;gap:3px;"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" style="width:44px;height:29px;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.25);">'+(ICS[letter]||'')+'<rect x="0.6" y="0.6" width="58.8" height="38.8" fill="none" stroke="#0d2a4a" stroke-width="1.2"/></svg><span style="font:700 11px -apple-system,sans-serif;color:#6b5d38;">'+letter+'</span></span>'; }
+  function renderWord(w){
+    var h=''; for(var i=0;i<w.length;i++){ h+=flag(w.charAt(i)); }
+    flagBox.innerHTML=h;
+    if(capEl){ capEl.innerHTML=w.split('').join(' &middot; ')+' &mdash; &ldquo;Travel&rdquo; in '+LANG[w]+', in Maritime Signal Flags'; }
+  }
+  renderWord('TRAVEL');
+
+  var PARROT='<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M34 24 C40 27 41 33 38 35 C36 31 34 28 33 26 Z" fill="#1E54A8"/><path d="M30 7 C34 3 38 6 35 10 C32 8 30 10 30 11 Z" fill="#29B34E"/><circle cx="22" cy="20" r="14" fill="#29B34E"/><ellipse cx="24" cy="20" rx="6" ry="9" fill="#128241"/><ellipse cx="15" cy="21" rx="8" ry="9" fill="#ffffff"/><circle cx="13.5" cy="18" r="3" fill="#1a1a1a"/><circle cx="14.6" cy="16.9" r="1" fill="#ffffff"/><path d="M11 14 C3 14 1 23 6 27 C9 29 13 27 13 23 C12 19 12 16 11 14 Z" fill="#2b2b2b"/><path d="M6 26 C8 30 13 29 13 25 C11 27 8 27 6 26 Z" fill="#8a8a8a"/></svg>';
+
+  function releaseExplorers(gr){
+    var gcx=gr.left+gr.width/2, gcy=gr.top+gr.height/2;
+    [45,-45,132,-132].forEach(function(base,fi){
+      for(var i=0;i<4;i++){ (function(i){
+        var b=document.createElement('div');
+        b.style.cssText='position:fixed;left:0;top:0;width:32px;height:32px;z-index:9990;pointer-events:none;opacity:0;will-change:transform,opacity;';
+        b.innerHTML=PARROT;
+        var faceR=Math.sin(base*Math.PI/180)>0; if(faceR && b.firstChild) b.firstChild.style.transform='scaleX(-1)';
+        document.body.appendChild(b);
+        var ang=(base+(i-1.5)*11)*Math.PI/180, dist=240+Math.random()*140;
+        var ex=gcx+Math.sin(ang)*dist, ey=gcy-Math.cos(ang)*dist*0.72-8, mx=(gcx+ex)/2, my=(gcy+ey)/2;
+        b.animate([
+          {transform:'translate('+(gcx-16)+'px,'+(gcy-16)+'px) scale(.28)',opacity:0},
+          {transform:'translate('+(mx-16)+'px,'+(my-16)+'px) scale(.85)',opacity:1,offset:.5},
+          {transform:'translate('+(ex-16)+'px,'+(ey-16)+'px) scale(.5)',opacity:0}
+        ],{duration:2200+Math.random()*420,easing:'cubic-bezier(.4,.05,.45,1)',delay:fi*200+i*95,fill:'forwards'}).onfinish=function(){ b.remove(); };
+      })(i); }
+    });
+  }
+  function playPolly(){
+    var gr=globeBox.getBoundingClientRect(), pr=pollyBox.getBoundingClientRect();
+    if(!gr.width||!pr.width) return;
+    var dx=(gr.left+gr.width/2)-(pr.left+pr.width/2), dy=(gr.top+gr.height/2)-(pr.top+pr.height/2);
+    pollyBox.style.willChange='transform,opacity';
+    pollyBox.animate([
+      {transform:'translate(0,0) scale(1) rotate(0deg)',opacity:1},
+      {transform:'translate('+(dx*0.5)+'px,'+(dy*0.5-16)+'px) scale(1.06) rotate(-18deg)',opacity:1,offset:.4},
+      {transform:'translate('+dx+'px,'+dy+'px) scale(.72) rotate(-90deg)',opacity:1,offset:.82},
+      {transform:'translate('+dx+'px,'+(dy+4)+'px) scale(.6) rotate(-92deg)',opacity:0,offset:1}
+    ],{duration:1800,easing:'cubic-bezier(.34,.02,.28,1)',fill:'forwards'});
+    setTimeout(function(){ releaseExplorers(globeBox.getBoundingClientRect()); }, 1500);
+    setTimeout(function(){ pollyBox.animate([
+      {transform:'translate('+dx+'px,'+(dy+4)+'px) scale(.6) rotate(-92deg)',opacity:0},
+      {transform:'none',opacity:1}
+    ],{duration:900,easing:'cubic-bezier(.2,.7,.3,1)',fill:'forwards'}); }, 3700);
+  }
+  function cycleFlags(){
+    var seq=['VIAJE','VOYAGE','TRAVEL'], step=0;
+    var t=setInterval(function(){
+      flagBox.style.transition='opacity .4s ease'; flagBox.style.opacity='0';
+      setTimeout(function(){ renderWord(seq[step]); flagBox.style.opacity='1'; step++; if(step>=seq.length) clearInterval(t); }, 430);
+    }, 2700);
+  }
+
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var played=false;
+  function onView(){ if(played) return; played=true; if(reduce) return; cycleFlags(); setTimeout(playPolly, 500); }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ onView(); io.disconnect(); } }); },{threshold:.35});
+    io.observe(story);
+  } else { onView(); }
 })();
 </script>
 
