@@ -1774,8 +1774,8 @@ document.querySelectorAll('.ccard').forEach(card => {
   /* ===== Sky (B) behind the HERO only; the rest of the site shows the antique map. Search lifted a little. (Jul 28) ===== */
   .searchrow{ align-items:flex-end !important;
     background:linear-gradient(rgba(6,10,26,.34), rgba(6,10,26,.44)), url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2880&q=90') center center / cover no-repeat !important; }
-  .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:13vh !important; }
-  @media(max-width:680px){ .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:10vh !important; } }
+  .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:13vh !important; max-width:600px !important; }
+  @media(max-width:680px){ .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:10vh !important; max-width:none !important; } }
 </style>
 <script>/* DG affiliate-click tracking -> GA4 */(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();</script>
 <script id="dg-mobile-sticky">/* Destinations Guild — sticky mobile action bar (one-thumb primary action). Idempotent. */
