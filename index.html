@@ -1795,9 +1795,9 @@ document.querySelectorAll('.ccard').forEach(card => {
   .cattab .ls{ display:none; }
   @media(max-width:680px){ .cattab .lf{ display:none; } .cattab .ls{ display:inline; } }
 
-  /* ===== Keep Polly from covering the reservation fields on phones (Jul 28) ===== */
+  /* ===== Keep Polly from covering the reservation fields (Jul 28) ===== */
+  #pollyHi{ display:none !important; }                  /* retire the auto-popup bubble everywhere; the "Ask Polly" button already explains her */
   @media(max-width:680px){
-    #pollyHi{ display:none !important; }               /* intro bubble no longer overlaps Guests / Check-out */
     .chat-fab .fab-label{ display:none !important; }    /* compact round button, tucks into the corner */
     .chat-fab .chat-fab-btn{ padding:6px !important; border-radius:50% !important; }
     .chat-fab .fab-parrot{ width:44px !important; height:44px !important; }
