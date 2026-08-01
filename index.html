@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XY1WMZLK0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-3XY1WMZLK0');
-</script>
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#16305c">
-<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Destinations Search">
-<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16.png">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destinations Guild | Global Travel, Hotels &amp; Expeditions</title>
@@ -378,20 +360,6 @@ footer { border-top:.5px solid var(--border); padding-top:.85rem; display:flex; 
 .chat-fab-btn:hover { transform:scale(1.08); }
 .chat-fab-btn img { width:100%; height:100%; object-fit:cover; }
 .chat-fab-badge { position:absolute; top:-4px; right:-4px; width:18px; height:18px; border-radius:50%; background:#22C55E; border:2px solid #fff; font-size:9px; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; }
-.chat-fab{ display:flex; flex-direction:column; align-items:flex-end; gap:10px; }
-.chat-fab .chat-fab-btn{ width:auto; height:auto; border-radius:34px; padding:7px 18px 7px 7px; gap:11px; }
-.chat-fab .fab-parrot{ width:46px; height:46px; border-radius:50%; overflow:hidden; flex:0 0 auto; display:block; }
-.chat-fab .fab-parrot svg{ width:100%; height:100%; display:block; }
-.chat-fab .fab-label{ color:#fff; font:800 16px/1 -apple-system,'Segoe UI',Roboto,sans-serif; white-space:nowrap; letter-spacing:.2px; }
-.polly-hi{ position:relative; max-width:252px; background:#fff; color:#1c2a44; border-radius:15px; padding:14px 16px 14px 15px; font:500 15px/1.42 -apple-system,'Segoe UI',Roboto,sans-serif; box-shadow:0 12px 32px rgba(0,0,0,.3); border:1px solid rgba(20,40,80,.1); display:none; }
-.polly-hi.show{ display:block; animation:pollyPop .3s ease; }
-.polly-hi strong{ color:#173a78; }
-.polly-hi::after{ content:''; position:absolute; right:28px; bottom:-9px; width:16px; height:16px; background:#fff; border-right:1px solid rgba(20,40,80,.1); border-bottom:1px solid rgba(20,40,80,.1); transform:rotate(45deg); }
-.polly-hi-x{ position:absolute; top:5px; right:8px; border:0; background:transparent; font-size:22px; line-height:1; color:#8a93a5; cursor:pointer; min-height:auto; padding:0; }
-@keyframes pollyPop{ from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
-@media(prefers-reduced-motion:reduce){ .polly-hi.show{ animation:none; } }
-body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
-@media(max-width:520px){ .chat-fab .fab-label{ font-size:15px; } .polly-hi{ max-width:214px; font-size:14px; } }
 .chat-panel { position:fixed; bottom:6rem; right:2rem; width:370px; max-height:min(520px,72vh); border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,.18); display:none; flex-direction:column; z-index:1000; overflow:hidden; background:var(--card); }
 .chat-panel.open { display:flex; }
 .chat-ph { background:var(--navy); padding:1rem 1.25rem; display:flex; align-items:center; gap:10px; position:relative; }
@@ -443,20 +411,6 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 .guides-cta i { color:var(--gold-mid); font-size:16px; margin-top:1px; flex-shrink:0; }
 .guide-bar { display:flex; align-items:center; gap:12px; width:100%; text-align:left; background:#fff; border:.5px solid var(--border); border-radius:14px; padding:9px 12px; cursor:pointer; font-family:inherit; transition:transform .15s,border-color .15s,box-shadow .15s; }
 .guide-bar:hover { transform:translateY(-1px); border-color:var(--gold); box-shadow:0 6px 16px rgba(27,58,107,.13); }
-
-/* GET INVOLVED CTA */
-.gi-cta{ position:relative; overflow:hidden; display:flex; align-items:center; gap:1.4rem; margin:1.5rem 0; padding:1.5rem 1.8rem; border-radius:16px; background:linear-gradient(135deg,#173a78,#2f6bb0); box-shadow:0 8px 24px rgba(20,40,70,.20); text-decoration:none; border:1px solid rgba(247,216,120,.35); }
-.gi-cta::before{ content:''; position:absolute; inset:0; opacity:.06; pointer-events:none; background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 1px,transparent 50%); background-size:12px 12px; }
-.gi-cta > *{ position:relative; z-index:1; }
-.gi-polly{ flex-shrink:0; width:74px; height:auto; filter:drop-shadow(0 5px 9px rgba(0,0,0,.28)); }
-.gi-polly svg{ width:100%; height:auto; display:block; }
-.gi-copy{ flex:1; min-width:190px; }
-.gi-copy h2{ font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(1.5rem,3vw,2.05rem); line-height:1.1; margin:0 0 .35rem; color:#fff; }
-.gi-copy p{ font-family:'DM Sans',sans-serif; font-size:13.5px; line-height:1.5; margin:0; color:#e7f0fb; }
-.gi-go{ flex-shrink:0; display:inline-block; white-space:nowrap; font-family:'DM Sans',sans-serif; font-weight:700; font-size:14px; color:#173a78; background:#F7D878; padding:12px 24px; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,.22); transition:transform .15s, background .15s; }
-.gi-cta:hover .gi-go{ transform:translateY(-1px); background:#ffe79a; }
-@media(max-width:620px){ .gi-cta{ flex-direction:column; text-align:center; } .gi-copy{ min-width:0; } }
-
 .guide-badge { width:44px; height:44px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:25px; line-height:1; overflow:hidden; background:#EAF2FB; box-shadow:0 0 0 2px #fff, 0 0 0 3.5px var(--gold); }
 .guide-badge.globe { background:none; box-shadow:none; font-size:2.5rem; }
 .guide-badge img { width:100%; height:100%; object-fit:cover; object-position:center; }
@@ -573,35 +527,6 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 .tb-tagline a:hover{color:#EBC976;text-decoration-color:#EBC976;}
 @media(max-width:680px){.tb-tagline{padding:2px 4px;}.tb-brand-name{font-size:17px;}.tb-affil{font-size:12px;}.tb-links a{font-size:14px;padding:4px 9px;}.lang-tgl{font-size:11px;}.topbar-inner{padding:10px 1rem;}}
 </style>
-<style id="dg-mobile-inline">
-/* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
-@media (max-width: 820px){
-  .dg-nav-links a, .tb-links a, .tb-nav a, .pagenav a, .crumb a, .foot a, .tb-affil,
-  .lang-tgl, .hbtn, .btn, .srch-btn, .map-book-btn, .book-btn, .cview-btn, .ci-btn,
-  .jump a, .chip, .dcity-lnk, .a250-btn, .cattab {
-    min-height:44px !important; display:inline-flex !important; align-items:center !important;
-    justify-content:center !important; padding-top:10px !important; padding-bottom:10px !important;
-  }
-  .cities li{ padding:9px 0 !important; min-height:44px !important; }
-  .cities a{ display:inline-flex !important; align-items:center !important; min-height:44px !important; }
-  .faq summary{ padding:15px 2px !important; min-height:44px !important; }
-  .inp, .sel, input, select, textarea{ min-height:48px !important; font-size:16px !important; }
-  .dg-nav-links{ gap:6px 10px !important; }
-  .tb-links{ gap:4px 8px !important; }
-  .tb-nav{ gap:6px 14px !important; }
-  /* legible captions (>=14px floor) */
-  .hero-cap, .fx-note, .catnote, .powered, .aff-note, .shelf-note, .ch-note, .foot, .gtl-note, .disc, .hcard-brand, .cport, .lauthor, .ldate{ font-size:14px !important; line-height:1.5 !important; }
-  .lede, .box p, .wcard p, .tcard p{ font-size:15.5px !important; }
-  /* modest contrast lift on light-background captions */
-  .hero-cap{ color:#6b5d38 !important; }
-  /* clear focus for keyboard / switch-device users */
-  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible{
-    outline:3px solid #2F76D8 !important; outline-offset:2px !important;
-  }
-  /* leave room for the sticky action bar */
-  body.dg-has-bar{ padding-bottom:68px !important; }
-}
-</style>
 </head>
 <body>
 <div class="lang-float noi18n"><a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Cambiar a Español"><svg class="mxflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#ffffff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg>ES</a><a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="Switch to English"><svg class="usflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="24" height="1.85" fill="#B22234"/><rect width="24" height="1.85" y="3.7" fill="#B22234"/><rect width="24" height="1.85" y="7.4" fill="#B22234"/><rect width="24" height="1.85" y="11.1" fill="#B22234"/><rect width="24" height="1.85" y="14.15" fill="#B22234"/><rect width="11" height="8.6" fill="#3C3B6E"/></svg>EN</a><a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Passer au français (Canada)"><svg class="caflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#ffffff"/><rect width="6" height="16" fill="#D52B1E"/><rect x="18" width="6" height="16" fill="#D52B1E"/><path d="M12 3.2l.7 1.7 1.8-.4-.8 1.5 1.3.7-1.6.5.3 1.8-1.5-1-1.5 1 .3-1.8-1.6-.5 1.3-.7-.8-1.5 1.8.4z" fill="#D52B1E"/></svg>FR</a></div>
@@ -622,22 +547,6 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   @keyframes pollyHoverAbove{0%,100%{transform:translateX(-50%) translateY(0) rotate(-3deg);}50%{transform:translateX(-50%) translateY(-9px) rotate(3deg);}}
   @media(max-width:680px){.masthead{padding-top:1.2rem !important;} .mh-polly{width:76px !important; height:100px !important;}}
 </style>
-<header class="dg-nav"><div class="dg-nav-in">
-  <a class="dg-brand" href="index.html">&#127757; Destinations Guild</a>
-  <nav class="dg-nav-links">
-    <a href="index.html">Home</a>
-    <a href="library.html">The Guild Travel Library</a>
-    <a href="italy.html">Italy</a>
-    <a href="thailand.html">Thailand</a>
-    <a href="usa.html">USA</a>
-  </nav>
-  <span class="lang-group noi18n">
-    <a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Espanol">ES</a>
-    <a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="English">EN</a>
-    <a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Francais">FR</a>
-  </span>
-</div></header>
-
 <div class="page">
 
   <!-- 02 SEARCH -->
@@ -684,17 +593,9 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
           </div>
         </div></div>
   <div class="search-wrap">
-    <h2 style="text-align:center;margin:2px 0 12px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:700;font-size:clamp(2.4rem,5.5vw,3.4rem);color:#1B3A6B;">Where do you want to go today?</h2>
-    <style>
-      .catrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:0 0 18px;}
-      .catrow .cattab{flex:1 1 92px;max-width:112px;min-width:82px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:12px 6px;border:1px solid #e2e8f4;border-radius:12px;background:#fff;text-decoration:none;transition:.15s;}
-      .catrow .cattab:hover{border-color:#2F76D8;box-shadow:0 6px 16px rgba(47,118,216,.18);transform:translateY(-2px);}
-      .catrow .cattab.on{background:#eef4ff;border-color:#2F76D8;box-shadow:inset 0 -3px 0 #2F76D8;}
-      .catrow .cattab svg{width:28px;height:28px;stroke:#2F76D8;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
-      .catrow .cattab span{font-size:12px;font-weight:600;color:#1b2c4d;line-height:1.1;text-align:center;}
-      @media(max-width:560px){.catrow .cattab{flex:1 1 27%;max-width:none;}}
-    </style>
-    <div class="catrow"><a class="cattab on" href="https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-hotels" target="_blank" rel="sponsored nofollow noopener"><svg viewBox="0 0 24 24"><path d="M3 21V7l9-4 9 4v14"/><path d="M3 21h18"/><rect x="9" y="12" width="6" height="9"/><path d="M7 9h.01M12 9h.01M17 9h.01"/></svg><span>Hotels</span></a><a class="cattab" href="https://us.trip.com/flights/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-flights" target="_blank" rel="sponsored nofollow noopener"><svg viewBox="0 0 24 24"><path d="M10 21l1.5-6L3 12l1-2 8 1 4-6 2 .5-2 6 6 3-1 2-6-1-3 5z"/></svg><span>Flights</span></a><a class="cattab" href="https://us.trip.com/things-to-do/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-things" target="_blank" rel="sponsored nofollow noopener"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9l-3.5 1.5L10 15l3.5-1.5L15 9z"/></svg><span><span class="lf">Things to Do</span><span class="ls">Tours</span></span></a><a class="cattab" href="https://us.trip.com/trains/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-trains" target="_blank" rel="sponsored nofollow noopener"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14"/><path d="M9 7h6"/><circle cx="8.5" cy="14" r="1"/><circle cx="15.5" cy="14" r="1"/><path d="M7 21l2-3M17 21l-2-3"/></svg><span>Trains</span></a><a class="cattab" href="https://us.trip.com/carhire/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-cars" target="_blank" rel="sponsored nofollow noopener"><svg viewBox="0 0 24 24"><path d="M5 16l1-5 2-4h8l2 4 1 5"/><path d="M3 16h18v3h-2v-3M5 19v-3M5 19H3v-3"/><circle cx="7.5" cy="16.5" r="1.3"/><circle cx="16.5" cy="16.5" r="1.3"/></svg><span>Cars</span></a><a class="cattab" href="https://us.trip.com/packages/?sourceFrom=IBUBundle_home&Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-packages" target="_blank" rel="sponsored nofollow noopener"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg><span><span class="lf">Flights+Hotels</span><span class="ls">Bundle</span></span></a><a class="cattab" href="https://us.trip.com/cruises/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-cruises" target="_blank" rel="sponsored nofollow noopener"><svg viewBox="0 0 24 24"><path d="M3 17l2-6h14l2 6"/><path d="M4 17c1.5 1.2 3 1.2 4.5 0s3-1.2 4.5 0 3 1.2 4.5 0"/><path d="M12 11V5l4 2-4 1"/></svg><span>Cruises</span></a></div>
+    <h2 style="text-align:center;margin:2px 0 12px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:700;font-size:clamp(1.7rem,4vw,2.3rem);color:#1B3A6B;">Where do you want to go today?</h2>
+    <style>.chips .chip{background:#000000 !important;color:#ffffff !important;border:1px solid #000000 !important;text-decoration:none !important;font-weight:800 !important;letter-spacing:.01em;}</style>
+    <div class="chips" style="justify-content:center;margin:0 0 18px;"><a class="chip" href="https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-hotels" target="_blank" rel="sponsored nofollow noopener">&#127976; Hotels</a><a class="chip" href="https://us.trip.com/flights/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-flights" target="_blank" rel="sponsored nofollow noopener">&#9992;&#65039; Flights</a><a class="chip" href="https://us.trip.com/things-to-do/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-things" target="_blank" rel="sponsored nofollow noopener">&#127957; Things to Do</a><a class="chip" href="https://us.trip.com/trains/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-trains" target="_blank" rel="sponsored nofollow noopener">&#128649; Trains</a><a class="chip" href="https://us.trip.com/carhire/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-cars" target="_blank" rel="sponsored nofollow noopener">&#128663; Cars</a><a class="chip" href="https://us.trip.com/packages/?sourceFrom=IBUBundle_home&Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-packages" target="_blank" rel="sponsored nofollow noopener">&#129666; Flights+Hotels</a><a class="chip" href="https://us.trip.com/cruises/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=chip-cruises" target="_blank" rel="sponsored nofollow noopener">&#128674; Cruises</a></div>
     <div class="tripbox-wrap" style="display:none"><iframe class="tb-en-desktop noi18n" src="https://www.trip.com/partners/ad/S18300361?Allianceid=8217189&SID=317113714&trip_sub1=" id="S18300361" title="Trip.com search — Destinations Guild" frameborder="0" scrolling="no"></iframe><iframe class="tb-en-phone noi18n" src="https://www.trip.com/partners/ad/S18300837?Allianceid=8217189&SID=317113714&trip_sub1=" id="S18300837" title="Trip.com search (mobile) — Destinations Guild" frameborder="0" scrolling="no"></iframe><iframe class="tb-es-desktop noi18n" src="https://es.trip.com/partners/ad/S18302972?Allianceid=8217189&SID=317113714&trip_sub1=" id="S18302972" title="Búsqueda Trip.com — Destinations Guild" frameborder="0" scrolling="no"></iframe><iframe class="tb-es-phone noi18n" src="https://es.trip.com/partners/ad/S18303014?Allianceid=8217189&SID=317113714&trip_sub1=" id="S18303014" title="Búsqueda Trip.com (móvil) — Destinations Guild" frameborder="0" scrolling="no"></iframe></div>
     <style>.legacy-search{zoom:1.18;}</style>
     <div class="legacy-search">
@@ -726,69 +627,12 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     </div>
   </div>
 
-    <!-- ===== OUR STORY / ABOUT OUR EXPLORERS (added Jul 28) ===== -->
-  <style>
-    .dg-story{max-width:1000px;margin:26px auto;padding:30px 26px 34px;background:linear-gradient(#f6efdc,#efe6cf);border:1px solid #d8cba6;border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.45);position:relative;z-index:1;font-family:'EB Garamond',Georgia,serif;}
-    .dg-story-lockup{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;border-bottom:2px solid rgba(201,168,76,.55);padding-bottom:20px;margin-bottom:22px;min-height:150px;cursor:pointer;}
-    .dg-story .ds-center{display:flex;flex-direction:column;align-items:center;gap:6px;}
-    /* globe: 10% smaller (135px), tucked up to the LEFT */
-    .dg-story .ds-globe{position:absolute;left:6px;top:0;width:135px;height:135px;display:flex;align-items:center;justify-content:center;z-index:2;}
-    .dg-story .ds-globe .mh-globe{width:135px !important;height:135px !important;display:flex !important;}
-    /* Polly: repositioned to the UPPER RIGHT */
-    .dg-story .ds-polly{position:absolute;right:14px;top:2px;width:78px;height:108px;z-index:2;}
-    .dg-story .ds-polly svg{width:100%;height:100%;display:block;}
-    .dg-story .ds-word{font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:clamp(1.55rem,4.6vw,2.4rem);letter-spacing:.06em;color:#173a78;margin-top:4px;}
-    .dg-story .ds-word span{color:#C9A84C;}
-    .dg-story .ds-flags{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:6px;}
-    /* the word ON TOP of the flags — the old logo lockup, restored */
-    .dg-story .ds-flword-top{font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:clamp(1.05rem,2.6vw,1.4rem);letter-spacing:.34em;color:#173a78;text-indent:.34em;line-height:1;margin-bottom:2px;}
-    .dg-story .ds-flags-row{display:inline-flex;gap:7px;align-items:center;}
-    .dg-story .ds-flags-row svg{width:42px;height:28px;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.25);}
-    .dg-story .ds-flags-cap{font-size:12.5px;font-style:italic;color:#6b5d38;letter-spacing:.06em;}
-    @media(max-width:680px){
-      .dg-story .ds-globe{width:104px;height:104px;left:2px;} .dg-story .ds-globe .mh-globe{width:104px !important;height:104px !important;}
-      .dg-story .ds-polly{width:60px;height:84px;right:6px;}
-      .dg-story .ds-center{margin-top:118px;}   /* clear the top-corner globe & Polly on narrow phones */
-    }
-    .dg-story-body{max-width:770px;margin:0 auto;}
-    .dg-story .ds-h{font-family:'Cinzel',Georgia,serif;color:#173a78;font-size:clamp(1.4rem,3.6vw,1.95rem);margin:20px 0 10px;text-align:center;}
-    .dg-story-body p{font-size:18px;line-height:1.66;color:#2a3444;margin:0 0 15px;}
-    @media(max-width:680px){.dg-story{padding:24px 18px 28px;} .dg-story .ds-flags-row svg{width:34px;height:23px;} .dg-story-body p{font-size:17px;}}
-  </style>
-  <section class="dg-story noi18n">
-    <div class="dg-story-lockup" id="dsLockup" title="Tap to watch Polly release the Explorers">
-      <div class="ds-globe" id="dsGlobe"></div>
-      <div class="ds-polly" id="dsPolly"></div>
-      <div class="ds-center">
-        <div class="ds-word">DESTINATIONS <span>GUILD</span></div>
-        <div class="ds-flags">
-          <div class="ds-flword-top" id="dsFlwordTop">TRAVEL</div>
-          <div class="ds-flags-row" id="dsFlags"></div>
-          <div class="ds-flags-cap">&ldquo;Travel&rdquo; in the International Maritime Signal Code</div>
-        </div>
-      </div>
-    </div>
-    <div class="dg-story-body">
-      <h2 class="ds-h">Our Story</h2>
-      <p>Destinations Guild began with a simple belief &mdash; that planning a trip should feel like opening a great book: full of possibility, easy to follow, and honest about what you&rsquo;ll find. Our founder has spent more than two decades in travel reservations, going back to the earliest days of booking hotels online, and built the Guild to carry that hard-won craft into a new era.</p>
-      <p>Today the Guild is a curated gateway to the whole world &mdash; hotels, flights, cruises, and experiences across every continent &mdash; with real guidance instead of noise. We&rsquo;re an independent travel company and a proud partner of Trip.com: you book on trusted, secure platforms, and we earn a small commission that keeps the Guild free to use. Our promise is simple &mdash; make the world easy to explore, for everyone.</p>
-      <p>Those flags above spell <strong>TRAVEL</strong> &mdash; and, in turn, <strong>VIAJE</strong> and <strong>VOYAGE</strong> &mdash; in the international maritime signal code, a tip of the hat to the navigators and explorers who charted the world long before us.</p>
-      <h2 class="ds-h">About Our Explorers</h2>
-      <p>Every guide in our Library is the work of the <strong>Guild Explorers</strong> &mdash; our dedicated research team. They range across the globe, gather the current facts, prices, and seasons for each country, and write it all up so you don&rsquo;t have to dig. Every book is signed <em>&ldquo;Curated by Our Guild Explorers&rdquo;</em> and kept up to date.</p>
-      <p>And keep an eye out for <strong>Polly</strong> &mdash; our resident parrot and travel concierge. She&rsquo;s online any time you&rsquo;d like to ask a question, plan a trip, or find a place to stay &mdash; always free.</p>
-    </div>
-  </section>
-
   <!-- ===== GUILD TRAVEL LIBRARY — bookcase (added Jul 18) ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
     .gtl-sec{max-width:1000px;margin:26px auto;padding:26px 22px 30px;background:linear-gradient(#f4eeda,#efe7cf);border:1px solid #d8cba6;border-radius:16px;box-shadow:0 3px 16px rgba(60,45,15,.12);font-family:'EB Garamond',Georgia,serif;}
     .gtl-signwrap{display:flex;justify-content:center;margin:2px 0 10px;}
     .gtl-signwrap svg{width:100%;max-width:560px;height:auto;}
-    .gtl-sign-c{background:#fbf7ee;border-radius:14px;padding:22px 24px;text-align:center;box-shadow:0 5px 16px rgba(0,0,0,.42);max-width:560px;margin:0 auto;width:100%;}
-    .gtl-sign-c .gtl-sc-main{font:800 clamp(23px,6vw,33px)/1.14 -apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#16203a;letter-spacing:.2px;margin:0;}
-    .gtl-sign-c .gtl-sc-rule{height:4px;width:100px;background:#2F76D8;border-radius:2px;margin:13px auto 0;}
-    .gtl-sign-c .gtl-sc-sub{font:600 clamp(15px,3.7vw,18px)/1.35 -apple-system,'Segoe UI',Roboto,sans-serif;color:#4f5c72;margin:11px 0 0;font-style:italic;}
     .gtl-lede{text-align:center;font-size:18px;color:#4a5766;font-style:italic;max-width:660px;margin:0 auto 18px;line-height:1.4;}
     .gtl-shelf{display:flex;align-items:flex-end;justify-content:center;gap:7px;flex-wrap:wrap;padding:16px 16px 0;background:linear-gradient(#efe6cf,#e7dcc0);border:1px solid rgba(120,90,40,.3);border-radius:10px 10px 0 0;}
     .gtl-spine{position:relative;width:50px;height:196px;border-radius:3px 3px 0 0;box-shadow:inset -6px 0 10px rgba(0,0,0,.22),inset 6px 0 6px rgba(255,255,255,.12),0 3px 6px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s;cursor:default;}
@@ -807,33 +651,42 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   </style>
   <section class="gtl-sec noi18n">
     <div class="gtl-signwrap">
-      <div class="gtl-sign-c">
-        <p class="gtl-sc-main">The Guild Travel Library</p>
-        <div class="gtl-sc-rule"></div>
-        <p class="gtl-sc-sub">Adventures await in every country.</p>
-      </div>
+      <svg viewBox="0 0 680 176" role="img" xmlns="http://www.w3.org/2000/svg" aria-label="Granite plaque deeply chiselled: The Guild Travel Library">
+        <defs>
+          <linearGradient id="gtxslab" x1="0" y1="0" x2="0.15" y2="1"><stop offset="0" stop-color="#9a9ca0"/><stop offset="0.45" stop-color="#77797e"/><stop offset="1" stop-color="#54565b"/></linearGradient>
+          <linearGradient id="gtxpanel" x1="0" y1="0" x2="0.1" y2="1"><stop offset="0" stop-color="#6b6e73"/><stop offset="1" stop-color="#4a4c51"/></linearGradient>
+          <filter id="gtxgrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="5" seed="14" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+          <filter id="gtxcoarse"><feTurbulence type="fractalNoise" baseFrequency="0.32" numOctaves="3" seed="4" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+        </defs>
+        <rect x="8" y="10" width="664" height="156" rx="12" fill="url(#gtxslab)"/>
+        <rect x="8" y="10" width="664" height="156" rx="12" fill="#000" opacity="0.30" filter="url(#gtxcoarse)"/>
+        <rect x="8" y="10" width="664" height="156" rx="12" fill="#000" opacity="0.16" filter="url(#gtxgrain)"/>
+        <rect x="8.5" y="10.5" width="663" height="155" rx="12" fill="none" stroke="#c7cacd" stroke-opacity="0.55" stroke-width="1.6"/>
+        <rect x="8" y="10" width="664" height="156" rx="12" fill="none" stroke="#34363a" stroke-width="3"/>
+        <rect x="26" y="28" width="628" height="120" rx="8" fill="url(#gtxpanel)"/>
+        <rect x="26" y="28" width="628" height="120" rx="8" fill="#000" opacity="0.34" filter="url(#gtxgrain)"/>
+        <rect x="26" y="28" width="628" height="120" rx="8" fill="none" stroke="#303236" stroke-width="2.5"/>
+        <rect x="28" y="30" width="624" height="116" rx="7" fill="none" stroke="#cfd2d6" stroke-opacity="0.4" stroke-width="1.2"/>
+        <line x1="150" y1="60" x2="530" y2="60" stroke="#2b2d31" stroke-width="2.4"/><line x1="150" y1="62" x2="530" y2="62" stroke="#d0d3d7" stroke-opacity="0.45" stroke-width="1"/>
+        <line x1="150" y1="118" x2="530" y2="118" stroke="#2b2d31" stroke-width="2.4"/><line x1="150" y1="120" x2="530" y2="120" stroke="#d0d3d7" stroke-opacity="0.45" stroke-width="1"/>
+        <circle cx="340" cy="60" r="2.4" fill="#26282c"/><circle cx="340" cy="118" r="2.4" fill="#26282c"/>
+        <text x="342.6" y="102.8" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="33" font-weight="800" letter-spacing="3.5" fill="#e3e6ea" opacity="0.9">THE GUILD TRAVEL LIBRARY</text>
+        <text x="337.6" y="97.4" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="33" font-weight="800" letter-spacing="3.5" fill="#3a3c40" opacity="0.7">THE GUILD TRAVEL LIBRARY</text>
+        <text x="340" y="100" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-size="33" font-weight="800" letter-spacing="3.5" fill="#0a0b0d">THE GUILD TRAVEL LIBRARY</text>
+      </svg>
     </div>
-    <p class="gtl-lede">Every book is a country &mdash; and inside, a guide for every city. Tap a book and Polly will pull it off the shelf for you.</p>
+    <p class="gtl-lede">Every book is a continent &mdash; and inside each, the countries, each with a travel guide for its cities. Open a continent that&rsquo;s on the shelf; the rest are being written.</p>
     <div class="gtl-shelf">
-      <a class="gtl-spine" href="usa.html" data-book="United States" style="background:#22406e;"><span class="gtl-band-top"></span><span class="gtl-title">UNITED STATES</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine" href="mexico.html" data-book="Mexico" style="background:#7c2d2d;"><span class="gtl-band-top"></span><span class="gtl-title">MEXICO</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine" href="thailand.html" data-book="Thailand" style="background:#b8791f;"><span class="gtl-band-top"></span><span class="gtl-title">THAILAND</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine is-soon" href="library.html" data-book="Canada" data-soon="1" style="background:#b23b3b;"><span class="gtl-band-top"></span><span class="gtl-title">CANADA</span><span class="gtl-band-bot"></span></a>
-      <a class="gtl-spine is-soon" href="library.html" data-book="Dominican Republic" data-soon="1" style="background:#1f6f6a;"><span class="gtl-band-top"></span><span class="gtl-title">DOM. REPUBLIC</span><span class="gtl-band-bot"></span></a>
-      <a class="gtl-spine is-soon" href="library.html" data-book="Jamaica" data-soon="1" style="background:#2e6b2e;"><span class="gtl-band-top"></span><span class="gtl-title">JAMAICA</span><span class="gtl-band-bot"></span></a>
-      <a class="gtl-spine" href="italy.html" data-book="Italy" style="background:#1f5b4c;"><span class="gtl-band-top"></span><span class="gtl-title">ITALY</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine" href="france.html" data-book="France" style="background:#274a86;"><span class="gtl-band-top"></span><span class="gtl-title">FRANCE</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine" href="united-kingdom.html" data-book="United Kingdom" style="background:#4a2d6b;"><span class="gtl-band-top"></span><span class="gtl-title">UNITED KINGDOM</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine" href="germany.html" data-book="Germany" style="background:#3a3a3a;"><span class="gtl-band-top"></span><span class="gtl-title">GERMANY</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine is-soon" href="library.html" data-book="Netherlands" data-soon="1" style="background:#b5651d;"><span class="gtl-band-top"></span><span class="gtl-title">NETHERLANDS</span><span class="gtl-band-bot"></span></a>
-      <a class="gtl-spine is-soon" href="library.html" data-book="Greece" data-soon="1" style="background:#2b6a9a;"><span class="gtl-band-top"></span><span class="gtl-title">GREECE</span><span class="gtl-band-bot"></span></a>
-      <a class="gtl-spine" href="australia.html" data-book="Australia" style="background:#8a4a1f;"><span class="gtl-band-top"></span><span class="gtl-title">AUSTRALIA</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
-      <a class="gtl-spine is-soon" href="library.html" data-book="Japan" data-soon="1" style="background:#8c2f39;"><span class="gtl-band-top"></span><span class="gtl-title">JAPAN</span><span class="gtl-band-bot"></span></a>
-      <a class="gtl-spine is-soon" href="library.html" data-book="Tanzania" data-soon="1" style="background:#6b5b1f;"><span class="gtl-band-top"></span><span class="gtl-title">TANZANIA</span><span class="gtl-band-bot"></span></a>
-    
+      <a class="gtl-spine" href="north-america.html" style="background:#22406e;"><span class="gtl-band-top"></span><span class="gtl-title">NORTH AMERICA</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <a class="gtl-spine" href="asia.html" style="background:#b8791f;"><span class="gtl-band-top"></span><span class="gtl-title">ASIA</span><span class="gtl-band-bot"></span><span class="gtl-dot">&#9670;</span></a>
+      <div class="gtl-spine" style="background:#2e6b2e;"><span class="gtl-band-top"></span><span class="gtl-title">SOUTH AMERICA</span><span class="gtl-band-bot"></span></div>
+      <div class="gtl-spine" style="background:#4a2d6b;"><span class="gtl-band-top"></span><span class="gtl-title">EUROPE</span><span class="gtl-band-bot"></span></div>
+      <div class="gtl-spine" style="background:#8a4a1f;"><span class="gtl-band-top"></span><span class="gtl-title">AFRICA</span><span class="gtl-band-bot"></span></div>
+      <div class="gtl-spine" style="background:#1f6f6a;"><span class="gtl-band-top"></span><span class="gtl-title">AUSTRALIA &amp; OCEANIA</span><span class="gtl-band-bot"></span></div>
+      <div class="gtl-spine" style="background:#5a6675;"><span class="gtl-band-top"></span><span class="gtl-title">ANTARCTICA</span><span class="gtl-band-bot"></span></div>
     </div>
     <div class="gtl-board"></div>
-    <p class="gtl-note">Eight books are open on the shelf today &mdash; the United States, Mexico, Thailand, Italy, France, the United Kingdom, Germany and Australia. More are being written every week.</p>
+    <p class="gtl-note">Two continents are open on the shelf today &mdash; North America (the United States &amp; Mexico) and Asia (Thailand). The rest are being written.</p>
     <div class="gtl-cta"><a href="library.html">Step inside the full Library &rsaquo;</a></div>
   </section><!-- 03b DESTINATIONS (Trip.com Library) -->
   <div class="sec-hdr" id="library"><div><h2 class="slbl" style="margin-bottom:0;">Popular Destinations &mdash; Plan Your Next Journey</h2>
@@ -866,13 +719,6 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
       <span class="guide-ask"><i class="ti ti-message-2"></i> <span>Ask me anything</span></span>
     </button>
   </div>
-
-  <!-- 04b GET INVOLVED (features Polly) -->
-  <a class="gi-cta" href="get-involved.html" aria-label="Get involved with the Guild">
-    <span class="gi-polly"><svg viewBox="0 0 50 86" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polly the parrot"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.6;0 0" keyTimes="0;0.5;1" dur="1.6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="rotate" values="-6 28 44;6 28 44;-6 28 44" keyTimes="0;0.5;1" dur="1.9s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><path d="M26 43 Q31 58 37 74 Q35 58 29 45 Z" fill="#2D6BC4"/><path d="M28 44 Q38 62 47 78 Q41 60 31 46 Z" fill="#1E54A8"/><path d="M24 43 Q28 55 33 67 Q31 55 27 45 Z" fill="#3F7FD6"/><path d="M26 43 Q33 60 44 81 Q39 60 30 45 Z" fill="#128241"/></g><path d="M27 41 Q31 42 33 46 Q29 48 26 45 Z" fill="#F2B600"/><ellipse cx="25" cy="33" rx="9.5" ry="14" fill="#29B34E"/><g><animateTransform attributeName="transform" type="rotate" values="0 28 24;-24 28 24;0 28 24;-24 28 24;0 28 24;0 28 24" keyTimes="0;0.07;0.15;0.22;0.3;1" dur="2.9s" repeatCount="indefinite"/><path d="M27 22 C33 25 34 38 30 47 C28 41 26 30 27 22 Z" fill="#2D6BC4"/><path d="M28 29 C31 31 31 37 30 42 C28 38 28 33 28 29 Z" fill="#F2B600"/></g><circle cx="23" cy="15" r="11.5" fill="#29B34E"/><path d="M30 6 C33 3 36 5 34 8 C32 7 30 8 30 9 Z" fill="#29B34E"/><ellipse cx="18" cy="16" rx="6.8" ry="7.8" fill="#ffffff"/><ellipse cx="17" cy="14" rx="2.4" ry="2.4" fill="#1a1a1a"><animate attributeName="ry" values="2.4;2.4;0.3;2.4" keyTimes="0;0.82;0.9;1" dur="3.2s" repeatCount="indefinite"/></ellipse><circle cx="17.9" cy="13.1" r="0.8" fill="#ffffff"/><path d="M15 10 C8 10 5 17 9 21 C11 23 14 22 14 19 C13 16 14 12 15 10 Z" fill="#2b2b2b"/><path d="M9 20 C10 23 14 23 14 20 C12 21 10 21 9 20 Z" fill="#8a8a8a"/></g></svg></span>
-    <span class="gi-copy"><h2>Join the Guild</h2><p>Write for us as a Guild Reporter, ask Polo &amp; Polly a question, or get Dispatches the moment new city guides go live.</p></span>
-    <span class="gi-go">Get Involved &rsaquo;</span>
-  </a>
 
   <!-- 02d GO THAILAND — rainy-season deal (affiliate) -->
   <style>
@@ -1077,8 +923,8 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
       </div>
       <div class="nl-form">
         <p class="nl-lbl">Join the Guild &mdash; it's free</p>
-        <form name="dispatch-updates" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="nl-row" id="nlForm">
-          <input type="hidden" name="form-name" value="dispatch-updates">
+        <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="nl-row" id="nlForm">
+          <input type="hidden" name="form-name" value="newsletter">
           <p style="display:none;"><label>Leave blank: <input name="bot-field"></label></p>
           <input class="nl-inp" type="email" name="email" placeholder="Your email address..." required>
           <button class="nl-btn" type="submit">Subscribe</button>
@@ -1092,7 +938,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   <footer>
     <div style="display:flex;flex-direction:column;gap:7px;">
       <p class="ft-txt"><i class="ti ti-shield-check" style="vertical-align:-2px;margin-right:4px;"></i>Destinations Guild &copy; 2026 &middot; A Division of Guild Companies USA &middot; Curated independent travel partners</p>
-      <div class="ft-links"><a href="library.html">The Guild Travel Library</a><span class="ft-sep">&middot;</span><a href="get-involved.html">Get Involved</a><span class="ft-sep">&middot;</span><a onclick="openLegal('about')">About</a><span class="ft-sep">&middot;</span><a onclick="openLegal('disclosure')">Affiliate Disclosure</a><span class="ft-sep">&middot;</span><a onclick="openLegal('privacy')">Privacy</a><span class="ft-sep">&middot;</span><a onclick="openLegal('terms')">Terms</a><span class="ft-sep">&middot;</span><a onclick="openLegal('contact')">Contact</a></div>
+      <div class="ft-links"><a href="library.html">The Guild Travel Library</a><span class="ft-sep">&middot;</span><a onclick="openLegal('about')">About</a><span class="ft-sep">&middot;</span><a onclick="openLegal('disclosure')">Affiliate Disclosure</a><span class="ft-sep">&middot;</span><a onclick="openLegal('privacy')">Privacy</a><span class="ft-sep">&middot;</span><a onclick="openLegal('terms')">Terms</a><span class="ft-sep">&middot;</span><a onclick="openLegal('contact')">Contact</a></div>
       <p class="ft-disc">Destinations Guild may earn a commission when you book through our partner links, at no extra cost to you. <a onclick="openLegal('disclosure')">Learn more</a>.</p>
     </div>
     <span class="ft-tag">&#127757; Worldwide travel</span>
@@ -1104,15 +950,8 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 </div><!-- /page -->
 
 <!-- POLO & POLLY FLOATING CHAT WIDGET -->
-<div class="chat-fab" id="pollyFab">
-  <div class="polly-hi" id="pollyHi" role="status">
-    <button class="polly-hi-x" onclick="dismissPollyHi(event)" aria-label="Dismiss">&times;</button>
-    <strong>Hi, I&rsquo;m Polly!</strong> Your free travel guide &mdash; tap me to plan a trip, find a hotel, or ask me anything.
-  </div>
-  <button class="chat-fab-btn" onclick="dismissPollyHi();toggleChat()" aria-label="Ask Polly, your free travel concierge">
-    <span class="fab-parrot"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polly"><rect width="40" height="40" fill="#DCEFEA"/><path d="M30 7 C34 3 38 6 35 10 C32 8 30 10 30 11 Z" fill="#29B34E"/><circle cx="22" cy="20" r="14" fill="#29B34E"/><ellipse cx="15" cy="21" rx="8" ry="9" fill="#ffffff"/><circle cx="13.5" cy="18" r="3" fill="#1a1a1a"/><circle cx="14.6" cy="16.9" r="1" fill="#ffffff"/><path d="M11 14 C3 14 1 23 6 27 C9 29 13 27 13 23 C12 19 12 16 11 14 Z" fill="#2b2b2b"/><path d="M6 26 C8 30 13 29 13 25 C11 27 8 27 6 26 Z" fill="#8a8a8a"/></svg></span>
-    <span class="fab-label">Ask Polly</span>
-  </button>
+<div class="chat-fab">
+  <div class="chat-fab-btn" onclick="toggleChat()" title="Chat with Polly"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polly"><rect width="40" height="40" fill="#DCEFEA"/><path d="M30 7 C34 3 38 6 35 10 C32 8 30 10 30 11 Z" fill="#29B34E"/><circle cx="22" cy="20" r="14" fill="#29B34E"/><ellipse cx="15" cy="21" rx="8" ry="9" fill="#ffffff"/><circle cx="13.5" cy="18" r="3" fill="#1a1a1a"/><circle cx="14.6" cy="16.9" r="1" fill="#ffffff"/><path d="M11 14 C3 14 1 23 6 27 C9 29 13 27 13 23 C12 19 12 16 11 14 Z" fill="#2b2b2b"/><path d="M6 26 C8 30 13 29 13 25 C11 27 8 27 6 26 Z" fill="#8a8a8a"/></svg><div class="chat-fab-badge">2</div></div>
 </div>
 
 <div class="chat-panel" id="chatPanel">
@@ -1192,44 +1031,17 @@ document.getElementById('searchBtn').addEventListener('click', () => {
   const raw = (window.__pickedCity || document.getElementById('dest').value || '').trim();
   const key = raw.split(',')[0].trim().toLowerCase();
   const guests = document.getElementById('guests').value;
-  const slug = key.replace(/\s+/g,'-');
-  let dates = '';
-  if (ci.value) dates += '&checkin=' + ci.value;
-  if (co.value) dates += '&checkout=' + co.value;
-  try { if (window.gtag) window.gtag('event','site_search',{ destination: key || '(any)' }); } catch(e){}
-
-  // Open the results tab synchronously so popup blockers don't kill it, then
-  // fill in the destination once we've resolved it.
-  const w = window.open('about:blank', '_blank');
-  const nav = (url) => { if (w) { w.location.href = url; } else { window.location.href = url; } };
-
-  // Fast path: destinations we already carry an ID for (no lookup needed).
-  // Their numeric city ID is the trailing number in the slug, so we can use the
-  // same dated deep-link the resolver uses and keep dates reliable.
-  if (KNOWN[key]) {
-    const m = String(KNOWN[key]).match(/-(\d+)$/);
-    if (m) {
-      nav('https://us.trip.com/hotels/list?cityId=' + m[1] + '&crn=1&adult=' + guests + '&curr=USD&locale=en-US&' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + slug + dates);
-    } else {
-      nav('https://us.trip.com/hotels/' + KNOWN[key] + '/?' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + slug + '-search&adult=' + guests + dates);
-    }
-    return;
+  let url;
+  let cityId = KNOWN[key];
+  if (cityId) {
+    url = 'https://us.trip.com/hotels/' + cityId + '/?' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + key.replace(/\s+/g,'-') + '-search&adult=' + guests;
+  } else {
+    const q = encodeURIComponent(raw || 'hotels');
+    url = 'https://us.trip.com/hotels/?keyword=' + q + '&' + AFF + '&trip_sub1=sitesearch&adult=' + guests;
   }
-  if (!raw) { nav('https://us.trip.com/hotels/?' + AFF + '&trip_sub1=sitesearch&trip_sub3=empty'); return; }
-
-  // Resolve the typed city to Trip.com's numeric ID, then deep-link to real
-  // results with the traveler's dates. Falls back to a pre-filled Trip search.
-  const kwFallback = 'https://us.trip.com/hotels/list?searchWord=' + encodeURIComponent(raw) + '&searchType=D&crn=1&adult=' + guests + '&curr=USD&locale=en-US&' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + slug + '-kw' + dates;
-  const ctrl = new AbortController();
-  const to = setTimeout(() => ctrl.abort(), 4000);
-  fetch('/.netlify/functions/resolve-city?q=' + encodeURIComponent(key), { signal: ctrl.signal })
-    .then(r => r.json())
-    .then(d => { clearTimeout(to);
-      if (d && d.cityId) {
-        nav('https://us.trip.com/hotels/list?cityId=' + d.cityId + '&crn=1&adult=' + guests + '&curr=USD&locale=en-US&' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + slug + dates);
-      } else { nav(kwFallback); }
-    })
-    .catch(() => { clearTimeout(to); nav(kwFallback); });
+  if (ci.value) url += '&checkin=' + ci.value;
+  if (co.value) url += '&checkout=' + co.value;
+  var w = window.open(url, '_blank'); if(!w){ window.location.href = url; }
 });
 
 // ── STAY22 FILTERS ──
@@ -1691,559 +1503,6 @@ document.querySelectorAll('.ccard').forEach(card => {
   if(document.readyState==='complete') start(); else window.addEventListener('load',start);
 })();
 </script>
-<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
-<style id="dg-starry-skin">
-  /* ===== Night-sky homepage skin (v1) ===== */
-  :root{ --txt:#e9eefc; --txt2:#c3cee7; }
-  /* Map stays as the page (margin) background */
-  body{
-    background:
-      url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center center / cover no-repeat fixed,
-      radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f) !important;
-    min-height:100vh;
-  }
-  /* Parchment content panel replaced by the night sky (vibrant, edges faded into the map) */
-  .page{
-    position:relative;
-    background:transparent !important;
-    border:none !important;
-    box-shadow:none !important;
-  }
-  .page > *{ position:relative; z-index:1; }
-  .page::before{ content:none; }  /* sky no longer covers the whole page; map shows below the hero */
-  /* Wordmark + hero text to light so they read on the sky */
-  .mh-name .dest, .mh-name .gold, .mh-name .travel{ color:#f4f8ff !important; }
-  .hero-title{ color:#eaf1ff !important; }
-  /* Darken the two warm panels (Guild Travel Library + Travel Log) to match the night theme */
-  .gtl-sec, .logbook{
-    background:rgba(11,17,38,.60) !important;
-    border:1px solid rgba(150,175,220,.20) !important;
-    box-shadow:0 12px 46px rgba(0,0,0,.52) !important;
-  }
-  .logbook::before{ opacity:.10 !important; }
-  .gtl-lede, .gtl-note{ color:#c9d4ec !important; }
-  .logbook-title{ color:#eef3ff !important; }
-  .logbook .ldate, .logbook .llink{ color:#e6c079 !important; }
-  .logbook .lauthor{ color:#b9c4dd !important; }
-  .logbook .ltitle{ color:#eef3ff !important; }
-  .logbook .lexcerpt{ color:#c2cee6 !important; }
-  .logbook .lcard{ background:rgba(11,17,38,.5) !important; border-color:rgba(150,175,220,.18) !important; }
-  /* Popular Destinations: 4 cards per row (was auto-filling to 5) */
-  .dest-grid{ grid-template-columns:repeat(4,1fr) !important; }
-  @media(max-width:900px){ .dest-grid{ grid-template-columns:repeat(2,1fr) !important; } }
-  @media(max-width:560px){ .dest-grid{ grid-template-columns:1fr !important; } }
-  /* Hero: make the search box the only thing on the first screen; globe + TRAVEL flags + wordmark + library all drop below the fold */
-  .searchrow{ position:relative !important; height:calc(100vh - 20px) !important; min-height:0 !important; display:flex !important; align-items:flex-start !important; justify-content:center; padding:0 !important; }
-  .searchrow .search-wrap{ width:100%; max-width:820px; margin:44vh auto 0 !important; }
-  .searchrow .mh-globe{ position:absolute !important; top:16px !important; left:16px !important; bottom:auto !important; right:auto !important; transform:none !important; margin:0 !important; z-index:2; }
-  .masthead{ margin-top:26px !important; }
-  /* Remove Polly's parting "dream cloud" speech bubble */
-  .dream-cloud{ display:none !important; }
-  /* Lift the "Where do you want to go today?" heading above the card, in white */
-  .searchrow .search-wrap{ overflow:visible !important; }
-  .searchrow .search-wrap > h2{ position:absolute !important; left:0 !important; right:0 !important; bottom:calc(100% + 16px) !important; margin:0 !important; color:#ffffff !important; text-shadow:0 2px 16px rgba(0,0,0,.6), 0 1px 4px rgba(0,0,0,.55) !important; }
-  @media(max-width:680px){ .searchrow .search-wrap{ margin-top:38vh !important; } .searchrow .mh-globe{ top:8px !important; left:8px !important; } }
-  /* Give every element a clear gutter inside the sky's edge (>=3/4in / ~72px), clearing the 55px edge-fade so nothing crowds the sky border; responsive so it never crushes content on narrow screens */
-  .page{ padding-left:128px !important; padding-right:128px !important; padding-bottom:110px !important; }
-  @media(max-width:1100px){ .page{ padding-left:90px !important; padding-right:90px !important; } }
-  @media(max-width:820px){ .page{ padding-left:48px !important; padding-right:48px !important; padding-bottom:72px !important; } }
-  @media(max-width:520px){ .page{ padding-left:20px !important; padding-right:20px !important; } }
-  /* ===== Homepage v2 — clean nav + search hero + mobile fit (Jul 25) ===== */
-  .dg-nav{ position:relative; z-index:30; background:#2F93E2; border-bottom:4px solid #C9A84C; }
-  .dg-nav-in{ max-width:1120px; margin:0 auto; padding:9px 20px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
-  .dg-brand{ font-weight:800; font-size:22px; color:#fff; text-decoration:none; letter-spacing:.02em; white-space:nowrap; }
-  .dg-nav-links{ display:flex; gap:4px; flex-wrap:wrap; }
-  .dg-nav-links a{ color:#eaf4ff; font-size:14.5px; font-weight:600; text-decoration:none; padding:5px 11px; border-radius:6px; }
-  .dg-nav-links a:hover{ background:rgba(255,255,255,.16); }
-  .dg-nav .lang-group{ margin-left:auto; display:inline-flex; gap:6px; }
-  .lang-float{ display:none !important; }
-  /* retire the decorative masthead + floating globe (brand now lives in the nav) */
-  .masthead{ display:none !important; }
-  .searchrow .mh-globe{ display:none !important; }
-  /* hero fit — dynamic viewport height so mobile browser bars don't cause jumps */
-  .searchrow{ height:calc(100vh - 66px) !important; height:calc(100dvh - 66px) !important; min-height:460px !important; }
-  .searchrow .search-wrap{ margin-top:26vh !important; }
-  .searchrow .search-wrap > h2{ bottom:calc(100% + 12px) !important; }
-  /* MOBILE: fix the iOS background-attachment:fixed blow-up, and tighten the hero */
-  @media(max-width:820px){ body{ background-attachment:scroll !important; } }
-  @media(max-width:680px){
-    .dg-brand{ font-size:18px; }
-    .dg-nav-links a{ font-size:13.5px; padding:4px 8px; }
-    .searchrow{ height:calc(100dvh - 58px) !important; min-height:400px !important; }
-    .searchrow .search-wrap{ margin-top:14vh !important; }
-    .searchrow .search-wrap > h2{ font-size:clamp(1.9rem,7vw,2.5rem) !important; bottom:calc(100% + 8px) !important; }
-  }
-  /* ===== Fix (Jul 27): keep the tall search card fully inside the hero on phones so the
-     Check Availability button can't be covered, and drop the Guild Travel Library sign
-     at least ~1.5in below it. Mobile-only; desktop layout unchanged. ===== */
-  @media(max-width:820px){
-    .searchrow{ height:auto !important; min-height:calc(100dvh - 66px) !important; padding-bottom:28px !important; }
-    .gtl-sec{ margin-top:150px !important; }
-  }
-  @media(max-width:680px){
-    .searchrow{ height:auto !important; min-height:calc(100dvh - 58px) !important; }
-    .gtl-sec{ margin-top:150px !important; }
-  }
-  /* ===== Sky (B) behind the HERO only; the rest of the site shows the antique map. Search lifted a little. (Jul 28) ===== */
-  html,body{ overflow-x:hidden; }
-  .searchrow{ align-items:flex-end !important; width:100vw !important; max-width:none !important; margin-left:calc(50% - 50vw) !important; margin-right:calc(50% - 50vw) !important; margin-top:-30px !important; padding-left:20px !important; padding-right:20px !important; padding-top:34px !important;
-    background-color:#0a1230 !important;
-    background:linear-gradient(rgba(6,10,26,.34), rgba(6,10,26,.44)), url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2880&q=90') #0a1230 center center / cover no-repeat !important; }
-  .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:13vh !important; max-width:760px !important; position:relative; z-index:3; }
-  @media(max-width:680px){ .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:10vh !important; max-width:none !important; } }
-
-  /* ===== Category icons on ONE line (Jul 28) ===== */
-  /* Desktop / tablet: all 7 tiles share one non-wrapping row */
-  @media(min-width:681px){
-    .catrow{ flex-wrap:nowrap !important; gap:7px !important; }
-    .catrow .cattab{ flex:1 1 0 !important; min-width:0 !important; max-width:none !important; padding:11px 4px !important; }
-  }
-  /* Phone: still one line, tiles shrink to fit, short labels for the two long ones */
-  @media(max-width:680px){
-    .catrow{ flex-wrap:nowrap !important; gap:5px !important; justify-content:center !important; }
-    .catrow .cattab{ flex:1 1 0 !important; min-width:0 !important; max-width:none !important; padding:9px 2px !important; gap:4px !important; }
-    .catrow .cattab svg{ width:22px !important; height:22px !important; }
-    .catrow .cattab span{ font-size:10.5px !important; }
-  }
-  .cattab .ls{ display:none; }
-  @media(max-width:680px){ .cattab .lf{ display:none; } .cattab .ls{ display:inline; } }
-
-  /* ===== Keep Polly from covering the reservation fields (Jul 28) ===== */
-  #pollyHi{ display:none !important; }                  /* retire the auto-popup bubble everywhere; the "Ask Polly" button already explains her */
-  @media(max-width:680px){
-    .chat-fab .fab-label{ display:none !important; }    /* compact round button, tucks into the corner */
-    .chat-fab .chat-fab-btn{ padding:6px !important; border-radius:50% !important; }
-    .chat-fab .fab-parrot{ width:44px !important; height:44px !important; }
-  }
-
-  /* ===== Deep-space starfield: extra stars + Milky Way + planets over the hero (Jul 28) ===== */
-  .searchrow{ position:relative; }
-  .dg-starfield{ position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden; }
-  /* Milky Way — soft luminous band across the sky */
-  .dg-starfield .mw{ position:absolute; left:-20%; right:-20%; top:8%; height:52%;
-    background:
-      radial-gradient(60% 120% at 30% 50%, rgba(150,180,255,.16), rgba(150,180,255,0) 70%),
-      radial-gradient(55% 120% at 62% 45%, rgba(210,180,255,.15), rgba(210,180,255,0) 70%),
-      radial-gradient(70% 130% at 48% 55%, rgba(255,255,255,.10), rgba(255,255,255,0) 72%);
-    transform:rotate(-19deg); filter:blur(2px); }
-  /* dense dusty star grains inside the Milky Way band */
-  .dg-starfield .mw::after{ content:""; position:absolute; inset:0;
-    background-image:
-      radial-gradient(1px 1px at 10% 40%, rgba(255,255,255,.9), transparent),
-      radial-gradient(1px 1px at 24% 62%, rgba(255,255,255,.7), transparent),
-      radial-gradient(1px 1px at 38% 30%, rgba(255,255,255,.85), transparent),
-      radial-gradient(1px 1px at 52% 66%, rgba(255,255,255,.7), transparent),
-      radial-gradient(1px 1px at 66% 42%, rgba(255,255,255,.9), transparent),
-      radial-gradient(1px 1px at 80% 58%, rgba(255,255,255,.75), transparent),
-      radial-gradient(1px 1px at 90% 36%, rgba(255,255,255,.85), transparent),
-      radial-gradient(1px 1px at 16% 24%, rgba(255,255,255,.6), transparent),
-      radial-gradient(1px 1px at 44% 78%, rgba(255,255,255,.65), transparent),
-      radial-gradient(1px 1px at 72% 20%, rgba(255,255,255,.7), transparent);
-    opacity:.85; }
-  /* three layered star fields (different densities) for depth */
-  .dg-starfield .stars{ position:absolute; inset:0;
-    background-image:
-      radial-gradient(1.4px 1.4px at 12% 18%, #fff, transparent),
-      radial-gradient(1.4px 1.4px at 28% 62%, #fff, transparent),
-      radial-gradient(1.2px 1.2px at 47% 12%, #eef4ff, transparent),
-      radial-gradient(1.6px 1.6px at 63% 74%, #fff, transparent),
-      radial-gradient(1.2px 1.2px at 82% 22%, #fff, transparent),
-      radial-gradient(1.4px 1.4px at 91% 55%, #eaf0ff, transparent),
-      radial-gradient(1.2px 1.2px at 7% 82%, #fff, transparent),
-      radial-gradient(1.5px 1.5px at 36% 88%, #fff, transparent),
-      radial-gradient(1.2px 1.2px at 55% 40%, #fff, transparent),
-      radial-gradient(1.3px 1.3px at 74% 46%, #fff, transparent),
-      radial-gradient(1.2px 1.2px at 20% 44%, #fff, transparent),
-      radial-gradient(1.4px 1.4px at 88% 82%, #fff, transparent); }
-  .dg-starfield .stars.s2{ background-image:
-      radial-gradient(1px 1px at 18% 30%, rgba(255,255,255,.85), transparent),
-      radial-gradient(1px 1px at 33% 8%, rgba(255,255,255,.8), transparent),
-      radial-gradient(1px 1px at 42% 52%, rgba(255,255,255,.75), transparent),
-      radial-gradient(1px 1px at 58% 20%, rgba(255,255,255,.85), transparent),
-      radial-gradient(1px 1px at 69% 64%, rgba(255,255,255,.7), transparent),
-      radial-gradient(1px 1px at 78% 34%, rgba(255,255,255,.8), transparent),
-      radial-gradient(1px 1px at 5% 60%, rgba(255,255,255,.7), transparent),
-      radial-gradient(1px 1px at 26% 76%, rgba(255,255,255,.8), transparent),
-      radial-gradient(1px 1px at 50% 84%, rgba(255,255,255,.7), transparent),
-      radial-gradient(1px 1px at 84% 68%, rgba(255,255,255,.75), transparent),
-      radial-gradient(1px 1px at 95% 14%, rgba(255,255,255,.8), transparent),
-      radial-gradient(1px 1px at 62% 92%, rgba(255,255,255,.7), transparent);
-    animation:dgtwinkle 4.2s ease-in-out infinite alternate; }
-  .dg-starfield .stars.s3{ background-image:
-      radial-gradient(2px 2px at 22% 26%, #fff, transparent),
-      radial-gradient(2.2px 2.2px at 70% 30%, #fff, transparent),
-      radial-gradient(2px 2px at 40% 70%, #fff, transparent),
-      radial-gradient(2.4px 2.4px at 85% 60%, #fff, transparent),
-      radial-gradient(2px 2px at 14% 66%, #fff, transparent);
-    filter:drop-shadow(0 0 3px rgba(255,255,255,.7));
-    animation:dgtwinkle 6s ease-in-out infinite alternate-reverse; }
-  @keyframes dgtwinkle{ from{opacity:.55;} to{opacity:1;} }
-  /* planets */
-  .dg-starfield .planet{ position:absolute; border-radius:50%; }
-  .dg-starfield .p1{ width:74px; height:74px; top:14%; right:9%;
-    background:radial-gradient(circle at 34% 30%, #ffd9a6 0%, #e6a15a 42%, #b96a2e 78%, #8a4a1e 100%);
-    box-shadow:0 0 24px rgba(233,160,90,.45), inset -8px -6px 14px rgba(0,0,0,.35); }
-  .dg-starfield .p1::after{ content:""; position:absolute; left:-26%; right:-26%; top:44%; height:14px;
-    background:linear-gradient(rgba(255,229,190,.85), rgba(200,150,90,.5)); border-radius:50%;
-    transform:rotate(-18deg); box-shadow:0 0 6px rgba(255,220,170,.4); }
-  .dg-starfield .p2{ width:34px; height:34px; top:63%; left:11%;
-    background:radial-gradient(circle at 36% 32%, #cfe4ff 0%, #7fa8e6 46%, #46689e 82%, #2c456e 100%);
-    box-shadow:0 0 16px rgba(120,160,230,.4), inset -5px -4px 9px rgba(0,0,0,.35); }
-  /* one gentle shooting star */
-  .dg-starfield .shoot{ position:absolute; top:20%; left:60%; width:2px; height:2px; background:#fff; border-radius:50%;
-    box-shadow:0 0 6px 1px rgba(255,255,255,.9); opacity:0;
-    animation:dgshoot 9s linear infinite; }
-  .dg-starfield .shoot::before{ content:""; position:absolute; right:2px; top:50%; width:90px; height:1px;
-    background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.8)); transform:translateY(-50%); }
-  @keyframes dgshoot{ 0%,72%{ opacity:0; transform:translate(0,0);} 74%{opacity:1;} 86%{opacity:1; transform:translate(-220px,120px);} 88%,100%{opacity:0; transform:translate(-220px,120px);} }
-  @media(max-width:680px){ .dg-starfield .p1{ width:52px; height:52px; } .dg-starfield .p2{ width:26px; height:26px; } }
-</style>
-<script id="dg-starfield-inject">/* Destinations Guild — inject deep-space starfield into hero. Idempotent. */
-(function(){
-  function run(){
-    var row=document.querySelector('.searchrow');
-    if(!row || document.querySelector('.dg-starfield')) return;
-    var sf=document.createElement('div');
-    sf.className='dg-starfield';
-    sf.setAttribute('aria-hidden','true');
-    sf.innerHTML='<div class="mw"></div><div class="stars"></div><div class="stars s2"></div><div class="stars s3"></div><div class="planet p1"></div><div class="planet p2"></div><div class="shoot"></div>';
-    row.insertBefore(sf, row.firstChild);
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
-})();</script>
-<script>/* DG affiliate-click tracking -> GA4 */(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();</script>
-<script id="dg-mobile-sticky">/* Destinations Guild — sticky mobile action bar (one-thumb primary action). Idempotent. */
-(function(){
-  if(window.__dgBar) return; window.__dgBar=1;
-  function run(){
-    try{
-      if(!window.matchMedia || !window.matchMedia('(max-width:820px)').matches) return;
-      if(document.querySelector('.dg-sticky-cta')) return;
-      var href='', label='';
-      if(document.querySelector('.searchrow')){            // homepage
-        href='https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=stickybar';
-        label='Find your stay';
-      } else {
-        var band=document.querySelector('.band a.btn[href*="trip.com"]')
-              || document.querySelector('a.btn[href*="us.trip.com/hotels"]')
-              || document.querySelector('a.hbtn[href*="trip.com"]')
-              || document.querySelector('a[href*="us.trip.com"]');
-        if(band){ href=band.href; label='Book on Trip.com'; }
-      }
-      if(!href) return;
-      var a=document.createElement('a');
-      a.className='dg-sticky-cta'; a.href=href; a.target='_blank';
-      a.rel='sponsored nofollow noopener'; a.textContent=label; a.setAttribute('aria-label',label);
-      a.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9998;display:flex;align-items:center;'
-        +'justify-content:center;min-height:56px;background:#2F76D8;color:#fff;'
-        +'font:700 17px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;'
-        +'text-decoration:none;box-shadow:0 -3px 14px rgba(0,0,0,.28);';
-      document.body.appendChild(a);
-      document.body.classList.add('dg-has-bar');
-      document.body.style.paddingBottom='68px';
-    }catch(e){}
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
-})();
-</script>
-
-<!-- ===== Polly's Bookshelf — tap a book, Polly pulls it off the shelf (Jul 27) ===== -->
-<style>
-  #pollyBook{position:fixed;inset:0;z-index:10050;display:none;}
-  #pollyBook.open{display:block;}
-  #pollyBook .pb-scrim{position:absolute;inset:0;background:rgba(6,10,24,.88);opacity:0;transition:opacity .35s ease;}
-  #pollyBook.open .pb-scrim{opacity:1;}
-  #pollyBook .pb-stage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:22px;}
-  #pollyBook .pb-polly{width:104px;height:auto;transform:translate(78px,150px) rotate(14deg);opacity:0;
-     transition:transform .62s cubic-bezier(.2,.85,.25,1),opacity .45s ease;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45));}
-  #pollyBook.pulling .pb-polly{transform:translate(96px,-4px) rotate(-7deg);opacity:1;}
-  #pollyBook .pb-polly svg{width:100%;height:auto;display:block;}
-  #pollyBook .pb-book{position:relative;width:236px;height:322px;perspective:1500px;
-     transform:translateY(46px) scale(.9);opacity:0;transition:transform .58s cubic-bezier(.2,.85,.25,1),opacity .45s ease;}
-  #pollyBook.pulling .pb-book{transform:translateY(0) scale(1);opacity:1;}
-  #pollyBook .pb-page{position:absolute;inset:0;background:#fbf7ec;border-radius:6px 13px 13px 6px;
-     box-shadow:0 26px 66px rgba(0,0,0,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;
-     gap:16px;padding:26px 24px;text-align:center;font-family:'EB Garamond',Georgia,serif;}
-  #pollyBook .pb-msg{font-size:21px;line-height:1.35;color:#2a3342;margin:0;font-weight:600;}
-  #pollyBook .pb-sub{font-size:16px;color:#5a6472;margin:0;}
-  #pollyBook .pb-actions{display:flex;flex-direction:column;gap:10px;width:100%;margin-top:4px;}
-  #pollyBook .pb-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 18px;border-radius:12px;
-     font:600 17px/1.1 'EB Garamond',Georgia,serif;text-decoration:none;cursor:pointer;border:0;}
-  #pollyBook .pb-btn.primary{background:#173a78;color:#fff;box-shadow:0 3px 10px rgba(12,36,68,.3);}
-  #pollyBook .pb-btn.ghost{background:#efe7d4;color:#3a4250;}
-  #pollyBook .pb-cover{position:absolute;inset:0;border-radius:6px 13px 13px 6px;transform-origin:left center;
-     transform:rotateY(0deg);transition:transform .82s cubic-bezier(.32,.5,.18,1);box-shadow:0 26px 66px rgba(0,0,0,.55);
-     backface-visibility:hidden;-webkit-backface-visibility:hidden;}
-  #pollyBook.opening .pb-cover{transform:rotateY(-158deg);}
-  #pollyBook .pb-cover-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
-     gap:16px;border-radius:6px 13px 13px 6px;color:#fff;padding:22px;
-     box-shadow:inset 10px 0 22px rgba(0,0,0,.28),inset -4px 0 10px rgba(255,255,255,.08);}
-  #pollyBook .pb-cover-in::before{content:"";position:absolute;left:9px;top:12px;bottom:12px;width:3px;background:rgba(212,180,110,.7);border-radius:2px;}
-  #pollyBook .pb-emblem{font-size:34px;line-height:1;}
-  #pollyBook .pb-ctry{font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:26px;letter-spacing:1px;text-shadow:0 2px 5px rgba(0,0,0,.4);}
-  #pollyBook .pb-brand{font-family:'Cinzel',Georgia,serif;font-size:12px;letter-spacing:3px;opacity:.85;}
-  #pollyBook .pb-gold{width:56px;height:2px;background:rgba(212,180,110,.85);}
-  #pollyBook .pb-close{position:absolute;top:16px;right:16px;width:46px;height:46px;border-radius:50%;border:0;
-     background:rgba(255,255,255,.16);color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-  @media(prefers-reduced-motion:reduce){
-    #pollyBook .pb-polly,#pollyBook .pb-book,#pollyBook .pb-cover{transition:none !important;}
-  }
-</style>
-<div id="pollyBook" aria-hidden="true" role="dialog" aria-label="Opening travel book">
-  <div class="pb-scrim" data-close="1"></div>
-  <button class="pb-close" data-close="1" aria-label="Close">&times;</button>
-  <div class="pb-stage">
-    <div class="pb-polly"></div>
-    <div class="pb-book">
-      <div class="pb-page">
-        <p class="pb-msg"></p>
-        <p class="pb-sub"></p>
-        <div class="pb-actions"></div>
-      </div>
-      <div class="pb-cover">
-        <div class="pb-cover-in">
-          <span class="pb-emblem">&#127760;</span>
-          <span class="pb-gold"></span>
-          <span class="pb-ctry"></span>
-          <span class="pb-brand">DESTINATIONS GUILD</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
-(function(){
-  var AFF='Allianceid=8217189&SID=317113714';
-  var ov=document.getElementById('pollyBook');
-  if(!ov) return;
-  var polly=ov.querySelector('.pb-polly'),
-      cover=ov.querySelector('.pb-cover-in'),
-      ctry=ov.querySelector('.pb-ctry'),
-      msg=ov.querySelector('.pb-msg'),
-      sub=ov.querySelector('.pb-sub'),
-      actions=ov.querySelector('.pb-actions'),
-      coverEl=ov.querySelector('.pb-cover');
-  // Reuse the existing Polly artwork
-  var src=document.querySelector('.gi-polly svg, .polly-bird svg, .mh-polly svg');
-  if(src){ polly.appendChild(src.cloneNode(true)); } else { polly.textContent='🦜'; }
-  var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var timers=[];
-  function clearTimers(){ timers.forEach(clearTimeout); timers=[]; }
-  function close(){ clearTimers(); ov.classList.remove('open','pulling','opening'); ov.setAttribute('aria-hidden','true'); document.body.style.overflow=''; coverEl.style.display=''; }
-  ov.addEventListener('click',function(e){ if(e.target.getAttribute && e.target.getAttribute('data-close')) close(); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && ov.classList.contains('open')) close(); });
-
-  function go(href){ window.location.href=href; }
-
-  function showSoon(name, slug){
-    coverEl.style.display='none';           // cover has swung open; reveal page
-    msg.textContent = name + "'s book is still being written.";
-    sub.textContent = "Polly can still find you a place to stay tonight.";
-    actions.innerHTML='';
-    var a=document.createElement('a');
-    a.className='pb-btn primary'; a.textContent='Find '+name+' stays';
-    a.href='https://us.trip.com/hotels/?keyword='+encodeURIComponent(name)+'&'+AFF+'&trip_sub1=library&trip_sub3=soon-'+slug;
-    a.target='_blank'; a.rel='sponsored nofollow noopener';
-    // Upgrade to a resolved city link so the destination is correct (no Chicago default)
-    try{
-      fetch('/.netlify/functions/resolve-city?q='+encodeURIComponent(name)).then(function(r){return r.json();}).then(function(d){
-        if(d&&d.cityId){ a.href='https://us.trip.com/hotels/list?cityId='+d.cityId+'&crn=1&adult=2&curr=USD&locale=en-US&'+AFF+'&trip_sub1=library&trip_sub3=soon-'+slug; }
-      }).catch(function(){});
-    }catch(e){}
-    var b=document.createElement('button');
-    b.className='pb-btn ghost'; b.textContent='Back to the shelf'; b.setAttribute('data-close','1');
-    actions.appendChild(a); actions.appendChild(b);
-  }
-
-  function open(name, href, soon, color){
-    var slug=name.toLowerCase().replace(/[^a-z]+/g,'-').replace(/^-|-$/g,'');
-    cover.parentNode.style.background=color;      // color the cover
-    ctry.textContent=name;
-    msg.textContent='Opening your '+name+' guide…';
-    sub.textContent=''; actions.innerHTML=''; coverEl.style.display='';
-    ov.classList.remove('pulling','opening');
-    ov.classList.add('open'); ov.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
-    if(RM){ if(soon){ showSoon(name,slug); } else { go(href); } return; }
-    // choreograph: Polly pulls the book up, then the cover opens
-    requestAnimationFrame(function(){ requestAnimationFrame(function(){ ov.classList.add('pulling'); }); });
-    timers.push(setTimeout(function(){ ov.classList.add('opening'); }, 700));
-    if(soon){ timers.push(setTimeout(function(){ showSoon(name,slug); }, 1450)); }
-    else    { timers.push(setTimeout(function(){ go(href); }, 1650)); }
-  }
-
-  var spines=document.querySelectorAll('.gtl-shelf .gtl-spine[data-book]');
-  spines.forEach(function(a){
-    a.addEventListener('click',function(e){
-      e.preventDefault();
-      var color=a.style.background || getComputedStyle(a).backgroundColor || '#22406e';
-      open(a.getAttribute('data-book'), a.getAttribute('href'), a.hasAttribute('data-soon'), color);
-    });
-  });
-})();
-</script>
-
-
-<script>
-(function(){
-  var hi=document.getElementById('pollyHi');
-  window.dismissPollyHi=function(e){ if(e&&e.stopPropagation)e.stopPropagation(); if(hi) hi.classList.remove('show'); };
-  if(!hi) return;
-  setTimeout(function(){ if(!window.chatOpen) hi.classList.add('show'); }, 1900);
-  setTimeout(function(){ hi.classList.remove('show'); }, 14000);
-})();
-</script>
-
-<style id="dg-lib-readable">
-  /* Senior-readable Library panel: soft blue card, dark high-contrast text (Jul 27) */
-  .gtl-sec{ background:linear-gradient(#eaf1fb,#dde8f6) !important; border:1px solid #b7cbea !important;
-            box-shadow:0 14px 44px rgba(10,20,45,.42) !important; }
-  .gtl-lede{ color:#22314a !important; }
-  .gtl-note{ color:#33435e !important; }
-  .gtl-shelf{ background:linear-gradient(#efe6cf,#e7dcc0) !important; }
-</style>
-
-<script>
-/* ===== Our Story band: globe + Polly + 3-language TRAVEL flags, animated on scroll-in ===== */
-(function(){
-  var story=document.querySelector('.dg-story'); if(!story) return;
-  var globeBox=document.getElementById('dsGlobe'), flagBox=document.getElementById('dsFlags'),
-      pollyBox=document.getElementById('dsPolly'), capEl=document.querySelector('.dg-story .ds-flags-cap'),
-      flwordTop=document.getElementById('dsFlwordTop');
-
-  var g=document.querySelector('.mh-globe'); if(g && globeBox && !globeBox.children.length) globeBox.appendChild(g.cloneNode(true));
-  var ps=document.querySelector('.mh-polly svg, .gi-polly svg'); if(ps && pollyBox && !pollyBox.children.length) pollyBox.appendChild(ps.cloneNode(true));
-
-  var ICS={
-    A:'<rect width="60" height="40" fill="#ffffff"/><polygon points="30,0 60,0 48,20 60,40 30,40" fill="#0A3D91"/>',
-    E:'<rect width="60" height="20" fill="#0A3D91"/><rect y="20" width="60" height="20" fill="#CE1126"/>',
-    G:'<rect width="60" height="40" fill="#FFD200"/><rect x="10" width="10" height="40" fill="#0A3D91"/><rect x="30" width="10" height="40" fill="#0A3D91"/><rect x="50" width="10" height="40" fill="#0A3D91"/>',
-    I:'<rect width="60" height="40" fill="#FFD200"/><circle cx="30" cy="20" r="10" fill="#111111"/>',
-    J:'<rect width="60" height="40" fill="#0A3D91"/><rect y="13.5" width="60" height="13" fill="#ffffff"/>',
-    L:'<rect width="30" height="20" fill="#FFD200"/><rect x="30" width="30" height="20" fill="#111111"/><rect y="20" width="30" height="20" fill="#111111"/><rect x="30" y="20" width="30" height="20" fill="#FFD200"/>',
-    O:'<rect width="60" height="40" fill="#FFD200"/><polygon points="0,0 60,0 0,40" fill="#CE1126"/>',
-    R:'<rect width="60" height="40" fill="#FFD200"/><rect x="24" width="12" height="40" fill="#CE1126"/><rect y="14" width="60" height="12" fill="#CE1126"/>',
-    T:'<rect width="20" height="40" fill="#CE1126"/><rect x="20" width="20" height="40" fill="#ffffff"/><rect x="40" width="20" height="40" fill="#0A3D91"/>',
-    V:'<rect width="60" height="40" fill="#ffffff"/><line x1="0" y1="0" x2="60" y2="40" stroke="#CE1126" stroke-width="11"/><line x1="0" y1="40" x2="60" y2="0" stroke="#CE1126" stroke-width="11"/>',
-    Y:'<rect width="60" height="40" fill="#FFD200"/><g stroke="#CE1126" stroke-width="7"><line x1="-20" y1="40" x2="40" y2="-20"/><line x1="0" y1="40" x2="60" y2="-20"/><line x1="20" y1="40" x2="80" y2="-20"/><line x1="40" y1="40" x2="100" y2="-20"/></g>'
-  };
-  var LANG={TRAVEL:'English', VIAJE:'Spanish', VOYAGE:'French'};
-  function flag(letter){ return '<span class="mh-flag" style="display:inline-flex;flex-direction:column;align-items:center;gap:3px;"><svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" style="width:44px;height:29px;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.25);">'+(ICS[letter]||'')+'<rect x="0.6" y="0.6" width="58.8" height="38.8" fill="none" stroke="#0d2a4a" stroke-width="1.2"/></svg><span style="font:700 11px -apple-system,sans-serif;color:#6b5d38;">'+letter+'</span></span>'; }
-  function renderWord(w){
-    var h=''; for(var i=0;i<w.length;i++){ h+=flag(w.charAt(i)); }
-    flagBox.innerHTML=h;
-    if(flwordTop){ flwordTop.textContent=w; }
-    if(capEl){ capEl.innerHTML='&ldquo;Travel&rdquo; in '+LANG[w]+' &mdash; International Maritime Signal Code'; }
-  }
-  renderWord('TRAVEL');
-
-  /* ---- Polly's voice: a synthesized macaw squawk (3-4 calls), no audio file needed ---- */
-  var actx=null;
-  function ensureCtx(){
-    try{ if(!actx) actx=new (window.AudioContext||window.webkitAudioContext)(); }catch(e){ return null; }
-    if(actx && actx.state==='suspended'){ try{ actx.resume(); }catch(e){} }
-    return actx;
-  }
-  function squawk(t0,dur){
-    var ctx=actx, f0=720+Math.random()*220;
-    var osc=ctx.createOscillator(); osc.type='sawtooth';
-    osc.frequency.setValueAtTime(f0,t0);
-    osc.frequency.linearRampToValueAtTime(f0*1.55,t0+dur*0.22);
-    osc.frequency.linearRampToValueAtTime(f0*0.68,t0+dur);
-    var lfo=ctx.createOscillator(); lfo.type='square'; lfo.frequency.value=42+Math.random()*34;
-    var lfoG=ctx.createGain(); lfoG.gain.value=130; lfo.connect(lfoG); lfoG.connect(osc.frequency);
-    var bp=ctx.createBiquadFilter(); bp.type='bandpass'; bp.frequency.value=1500; bp.Q.value=6;
-    var g=ctx.createGain();
-    g.gain.setValueAtTime(0.0001,t0);
-    g.gain.linearRampToValueAtTime(0.26,t0+0.018);
-    g.gain.setValueAtTime(0.24,t0+dur*0.62);
-    g.gain.exponentialRampToValueAtTime(0.0008,t0+dur);
-    osc.connect(bp); bp.connect(g); g.connect(ctx.destination);
-    osc.start(t0); osc.stop(t0+dur+0.03);
-    lfo.start(t0); lfo.stop(t0+dur+0.03);
-  }
-  function macawCall(){
-    var ctx=ensureCtx(); if(!ctx || ctx.state!=='running') return;
-    var n=3+Math.floor(Math.random()*2), t=ctx.currentTime+0.03;   // 3 or 4 squawks
-    for(var i=0;i<n;i++){ var d=0.15+Math.random()*0.12; squawk(t,d); t+=d+0.075+Math.random()*0.06; }
-  }
-  /* unlock audio on the first user gesture so the squawk can sound */
-  ['pointerdown','touchstart','keydown'].forEach(function(ev){
-    window.addEventListener(ev,function once(){ ensureCtx(); window.removeEventListener(ev,once); },{once:true,passive:true});
-  });
-
-  var PARROT='<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M34 24 C40 27 41 33 38 35 C36 31 34 28 33 26 Z" fill="#1E54A8"/><path d="M30 7 C34 3 38 6 35 10 C32 8 30 10 30 11 Z" fill="#29B34E"/><circle cx="22" cy="20" r="14" fill="#29B34E"/><ellipse cx="24" cy="20" rx="6" ry="9" fill="#128241"/><ellipse cx="15" cy="21" rx="8" ry="9" fill="#ffffff"/><circle cx="13.5" cy="18" r="3" fill="#1a1a1a"/><circle cx="14.6" cy="16.9" r="1" fill="#ffffff"/><path d="M11 14 C3 14 1 23 6 27 C9 29 13 27 13 23 C12 19 12 16 11 14 Z" fill="#2b2b2b"/><path d="M6 26 C8 30 13 29 13 25 C11 27 8 27 6 26 Z" fill="#8a8a8a"/></svg>';
-
-  function releaseExplorers(gr){
-    var gcx=gr.left+gr.width/2, gcy=gr.top+gr.height/2;
-    [45,-45,132,-132].forEach(function(base,fi){
-      for(var i=0;i<4;i++){ (function(i){
-        var b=document.createElement('div');
-        b.style.cssText='position:fixed;left:0;top:0;width:32px;height:32px;z-index:9990;pointer-events:none;opacity:0;will-change:transform,opacity;';
-        b.innerHTML=PARROT;
-        var faceR=Math.sin(base*Math.PI/180)>0; if(faceR && b.firstChild) b.firstChild.style.transform='scaleX(-1)';
-        document.body.appendChild(b);
-        var ang=(base+(i-1.5)*11)*Math.PI/180, dist=240+Math.random()*140;
-        var ex=gcx+Math.sin(ang)*dist, ey=gcy-Math.cos(ang)*dist*0.72-8, mx=(gcx+ex)/2, my=(gcy+ey)/2;
-        b.animate([
-          {transform:'translate('+(gcx-16)+'px,'+(gcy-16)+'px) scale(.28)',opacity:0},
-          {transform:'translate('+(mx-16)+'px,'+(my-16)+'px) scale(.85)',opacity:1,offset:.5},
-          {transform:'translate('+(ex-16)+'px,'+(ey-16)+'px) scale(.5)',opacity:0}
-        ],{duration:2200+Math.random()*420,easing:'cubic-bezier(.4,.05,.45,1)',delay:fi*200+i*95,fill:'forwards'}).onfinish=function(){ b.remove(); };
-      })(i); }
-    });
-  }
-  function playPolly(){
-    var gr=globeBox.getBoundingClientRect(), pr=pollyBox.getBoundingClientRect();
-    if(!gr.width||!pr.width) return;
-    macawCall();                        // Polly squawks as she takes flight
-    var dx=(gr.left+gr.width/2)-(pr.left+pr.width/2), dy=(gr.top+gr.height/2)-(pr.top+pr.height/2);
-    pollyBox.style.willChange='transform,opacity';
-    pollyBox.animate([
-      {transform:'translate(0,0) scale(1) rotate(0deg)',opacity:1},
-      {transform:'translate('+(dx*0.5)+'px,'+(dy*0.5-16)+'px) scale(1.06) rotate(-18deg)',opacity:1,offset:.4},
-      {transform:'translate('+dx+'px,'+dy+'px) scale(.72) rotate(-90deg)',opacity:1,offset:.82},
-      {transform:'translate('+dx+'px,'+(dy+4)+'px) scale(.6) rotate(-92deg)',opacity:0,offset:1}
-    ],{duration:1800,easing:'cubic-bezier(.34,.02,.28,1)',fill:'forwards'});
-    setTimeout(function(){ releaseExplorers(globeBox.getBoundingClientRect()); }, 1500);
-    setTimeout(function(){ pollyBox.animate([
-      {transform:'translate('+dx+'px,'+(dy+4)+'px) scale(.6) rotate(-92deg)',opacity:0},
-      {transform:'none',opacity:1}
-    ],{duration:900,easing:'cubic-bezier(.2,.7,.3,1)',fill:'forwards'}); }, 3700);
-  }
-  function cycleFlags(){
-    var seq=['VIAJE','VOYAGE','TRAVEL'], step=0;
-    var t=setInterval(function(){
-      flagBox.style.transition='opacity .4s ease'; flagBox.style.opacity='0';
-      setTimeout(function(){ renderWord(seq[step]); flagBox.style.opacity='1'; step++; if(step>=seq.length) clearInterval(t); }, 430);
-    }, 2700);
-  }
-
-  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  var played=false, busy=false;
-  function runShow(){ if(busy) return; busy=true; renderWord('TRAVEL'); flagBox.style.opacity='1'; cycleFlags(); setTimeout(playPolly,500); setTimeout(function(){ busy=false; },5200); }
-  function onView(){ if(played) return; played=true; if(reduce) return; runShow(); }
-  var lockup=document.getElementById('dsLockup');
-  if(lockup){ lockup.addEventListener('click',function(){ ensureCtx(); if(!reduce) runShow(); }); }
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ onView(); io.disconnect(); } }); },{threshold:.35});
-    io.observe(story);
-  } else { onView(); }
-})();
-</script>
-
-<style id="dg-section-gaps">
-  /* ===== Float the panels: show a strip of antique map between sections (Jul 28) ===== */
-  .dg-story{ margin-top:104px !important; margin-bottom:56px !important; }  /* wider antique-map gap between the hero and Our Story */
-  .gtl-sec{ margin-top:56px !important; margin-bottom:56px !important; }
-  .sec-hdr{ margin-top:58px !important; }
-  .guides{ margin-top:46px !important; }
-  .a250{ margin-top:46px !important; margin-bottom:6px !important; }
-  .logbook{ margin-top:56px !important; margin-bottom:46px !important; }
-  @media(max-width:680px){
-    .dg-story{ margin-top:66px !important; margin-bottom:34px !important; }
-    .gtl-sec,.logbook{ margin-top:34px !important; margin-bottom:34px !important; }
-    .sec-hdr{ margin-top:38px !important; } .guides,.a250{ margin-top:30px !important; }
-  }
-</style>
+<div id="buildtag" style="position:fixed;left:6px;bottom:6px;z-index:3000;font:700 10px/1 system-ui,sans-serif;color:#fff;background:rgba(27,58,107,.78);padding:4px 8px;border-radius:6px;pointer-events:none;letter-spacing:.03em;">DG build Jul20-PILLS-FIXED (search-first + map skin)</div>
 </body>
 </html>

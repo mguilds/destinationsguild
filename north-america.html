@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>North America Travel Guides — Countries &amp; Cities | Destinations Guild</title>
+<meta name="description" content="The Guild's North America shelf: browse the countries of North America, each with its own travel guide of cities. Compare hotels and flights and plan your trip.">
+<link rel="canonical" href="https://destinationsguild.com/north-america.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Destinations Guild">
+<meta property="og:title" content="North America — Destinations Guild">
+<meta property="og:description" content="Browse the countries of North America, each with its own Guild travel guide.">
+<meta property="og:url" content="https://destinationsguild.com/north-america.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Home","item":"https://destinationsguild.com/"},
+ {"@type":"ListItem","position":2,"name":"The Guild Travel Library","item":"https://destinationsguild.com/library.html"},
+ {"@type":"ListItem","position":3,"name":"North America","item":"https://destinationsguild.com/north-america.html"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B3A6B; --blue:#2F93E2; --gold:#C9A84C; --gold-mid:#BA7517; --gold-light:#FAEEDA;
+  --teal:#0F6E56; --rose:#993556;
+  --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff;
+  --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;}
+img{display:block;width:100%;object-fit:cover;}
+
+/* ── TOPBAR (matches homepage) ── */
+.topbar{background:var(--blue);width:100%;border-bottom:4px solid var(--gold);}
+.topbar-inner{max-width:1000px;margin:0 auto;padding:12px 1.5rem;display:flex;flex-direction:column;align-items:flex-start;gap:9px;}
+.tb-line1{display:flex;align-items:center;gap:14px;flex-wrap:wrap;width:100%;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,.22);}
+.tb-brand{display:flex;flex-direction:column;align-items:center;line-height:1.12;}
+.tb-brand a{text-decoration:none;color:inherit;}
+.tb-affil{display:inline-block;margin-bottom:6px;font-size:12.5px;font-weight:700;color:#000;background:#fff;border:1px solid #bcd6f2;border-radius:12px;padding:3px 12px;letter-spacing:.02em;box-shadow:0 1px 3px rgba(0,0,0,.22);text-decoration:none;}
+.tc-name{color:#000;font-weight:800;}
+.tb-brand-name{font-size:25px;font-weight:800;color:#fff;display:flex;align-items:center;gap:6px;letter-spacing:.02em;margin-top:6px;}
+.lang-group{margin-left:auto;display:inline-flex;align-items:center;gap:6px;}
+.lang-tgl{cursor:pointer;background:#fff;color:#12467f;border:1px solid #cfe0f2;border-radius:11px;padding:2px 9px;font-weight:700;font-size:12px;letter-spacing:.03em;display:inline-flex;align-items:center;gap:4px;line-height:1;box-shadow:0 1px 2px rgba(0,0,0,.18);text-decoration:none;}
+.lang-tgl:hover{background:#eef5fd;border-color:#9cc2ea;}
+.lang-tgl.active{border-color:#12467f;box-shadow:inset 0 0 0 1px #12467f,0 1px 2px rgba(0,0,0,.18);}
+.lang-tgl svg{border-radius:2px;flex-shrink:0;box-shadow:0 0 0 .5px rgba(0,0,0,.25);}
+.tb-links{display:flex;flex-wrap:wrap;align-items:center;gap:4px;width:100%;}
+.tb-links a{font-size:15px;color:#fff;font-weight:600;cursor:pointer;text-decoration:none;padding:4px 11px;border-radius:6px;transition:background .12s;white-space:nowrap;}
+.tb-links a:hover{background:rgba(255,255,255,.16);}
+@media(max-width:680px){.tb-brand-name{font-size:19px;}.tb-links a{font-size:14px;padding:4px 9px;}.lang-tgl{font-size:11px;}.topbar-inner{padding:10px 1rem;}}
+
+.pagenav{background:#173a78;text-align:center;padding:8px 12px;font-size:13px;}
+.pagenav a{color:#eaf4ff;text-decoration:none;margin:0 12px;font-weight:600;}
+.pagenav a:hover{color:#FFE08A;}
+
+.page{max-width:980px;margin:0 auto;padding:1.4rem 1.5rem 4rem;}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:1.2rem;}
+.crumb a{color:var(--blue-btn);text-decoration:none;}
+.crumb a:hover{text-decoration:underline;}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,#A51931 0%,#7a2547 42%,#2D2A4A 100%);border-radius:16px;padding:2.3rem 2rem;color:#fff;position:relative;overflow:hidden;margin-bottom:1.6rem;}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(180deg,#A51931 0 20%,#fff 20% 33%,#2D2A4A 33% 66%,#fff 66% 80%,#A51931 80% 100%);}
+.hero-flag{position:absolute;right:22px;top:26px;width:96px;height:64px;opacity:.95;box-shadow:0 3px 10px rgba(0,0,0,.3);border-radius:3px;}
+.h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.1rem,5.4vw,3.3rem);font-weight:700;line-height:1.05;margin-bottom:.5rem;text-shadow:0 2px 8px rgba(0,0,0,.28);}
+.hero p{font-size:15.5px;max-width:640px;text-shadow:0 1px 4px rgba(0,0,0,.3);}
+.hero-btns{display:flex;flex-wrap:wrap;gap:9px;margin-top:1.2rem;}
+.hbtn{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:#8d1533;background:#fff;padding:9px 15px;border-radius:9px;text-decoration:none;cursor:pointer;transition:transform .12s;box-shadow:0 2px 8px rgba(0,0,0,.22);border:none;}
+.hbtn:hover{transform:translateY(-2px);}
+.hbtn.alt{background:var(--gold-light);}
+
+.hero-img{width:100%;height:clamp(200px,38vw,340px);object-fit:cover;border-radius:16px;margin-bottom:1.6rem;box-shadow:0 3px 14px rgba(0,0,0,.14);}
+.hero-cap{font-size:11.5px;color:#9a8a63;text-align:right;margin:-1.2rem 0 1.6rem;}
+
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);font-weight:700;color:var(--navy);margin:2.2rem 0 .3rem;}
+.lede{color:var(--muted);font-size:15px;margin-bottom:1rem;}
+
+/* ── WHY CARDS ── */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;}
+.wcard{background:var(--card);border:.5px solid var(--line);border-left:3px solid var(--gold-mid);border-radius:12px;padding:1rem 1.1rem;}
+.wcard h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:.25rem;}
+.wcard p{font-size:13.5px;color:var(--muted);}
+
+/* ── FACT BOX ── */
+.facts{background:#fffdf6;border:1px solid #e0d3ad;border-radius:12px;padding:1.1rem 1.3rem;margin:1.2rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.5rem 1.6rem;}
+.facts .ft{font-size:14px;color:#2b3a4a;display:flex;gap:8px;align-items:baseline;padding:5px 0;border-bottom:1px solid #efe6cf;}
+.facts .ft:last-child,.facts .ft:nth-last-child(2){border-bottom:none;}
+.facts .ft b{color:#8a6a1f;font-weight:700;min-width:104px;display:inline-block;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;}
+
+/* ── CURRENCY WIDGET ── */
+.fx{background:#fffdf6;border:1px solid #e0d3ad;border-radius:12px;padding:1.1rem 1.3rem;margin:1.2rem 0 0;}
+.fx-t{font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:#173a78;margin-bottom:.4rem;}
+.fx-rates{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:16px;color:#12467f;margin-bottom:.7rem;}
+.fx-row{display:flex;flex-wrap:wrap;align-items:center;gap:9px;font-size:15px;color:#2b3a4a;}
+.fx-row input{width:110px;padding:7px 10px;border:1px solid #cbb98e;border-radius:8px;font-size:15px;}
+.fx-row select{padding:8px;border:1px solid #cbb98e;border-radius:8px;font-size:14px;background:#fff;}
+.fx-note{font-size:12px;color:#9a8a63;margin-top:.6rem;}
+
+/* ── REGION CHAPTERS ── */
+.chapters{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+.chapter{background:var(--card);border:.5px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;box-shadow:0 2px 10px rgba(27,58,107,.06);}
+.ch-top{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid #eee;padding-bottom:8px;margin-bottom:10px;}
+.ch-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.3rem;color:var(--navy);}
+.ch-no{font-size:11px;color:var(--gold-mid);font-weight:700;letter-spacing:.08em;}
+.ch-note{font-size:13px;color:var(--muted);margin-bottom:.7rem;}
+.cities{list-style:none;}
+.cities li{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 0;font-size:15px;border-bottom:1px solid #f4f4f2;}
+.cities li:last-child{border-bottom:none;}
+.cities a{color:var(--blue-btn);text-decoration:none;font-weight:600;}
+.cities a:hover{text-decoration:underline;color:var(--gold-mid);}
+.soon{font-size:10.5px;color:#9a8a63;background:#f6efdc;border:1px solid #e6dcc0;border-radius:20px;padding:2px 9px;white-space:nowrap;}
+.live{font-size:10.5px;color:#0f6e56;background:#dcf1e8;border:1px solid #b6e0d0;border-radius:20px;padding:2px 9px;font-weight:700;white-space:nowrap;}
+
+/* ── LISTS ── */
+.things{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
+.tcard{background:var(--card);border:.5px solid var(--line);border-radius:12px;padding:1rem 1.1rem;}
+.tcard h3{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy);margin-bottom:.25rem;}
+.tcard p{font-size:13.5px;color:var(--muted);}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:700px){.split{grid-template-columns:1fr;}}
+.box{background:var(--card);border:.5px solid var(--line);border-radius:12px;padding:1.1rem 1.2rem;}
+.box h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--navy);margin-bottom:.4rem;}
+.box p{font-size:14px;color:var(--muted);margin-bottom:.5rem;}
+.box p:last-child{margin-bottom:0;}
+
+/* ── FAQ ── */
+.faq{background:var(--card);border:.5px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;}
+.faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+.faq details:last-child{border-bottom:none;}
+.faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15px;list-style:none;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::before{content:"+";color:var(--gold-mid);font-weight:800;margin-right:8px;}
+.faq details[open] summary::before{content:"–";}
+.faq p{font-size:14px;color:var(--muted);margin-top:.5rem;padding-left:18px;}
+
+/* ── CTA ── */
+.cta{background:linear-gradient(135deg,#8d1533,#b31942);border:2px solid #EBC976;border-radius:16px;padding:1.7rem;color:#fff;text-align:center;margin-top:2.2rem;}
+.cta h2{color:#fff;margin:0 0 .3rem;}
+.cta p{font-size:14px;margin-bottom:1rem;}
+.cta .hbtn{margin:0 4px;}
+
+.foot{text-align:center;font-size:12px;color:#7a6f52;margin-top:2.4rem;line-height:1.8;}
+.foot .disc{display:block;max-width:640px;margin:8px auto 0;color:#8b8069;}
+.foot a{color:var(--blue-btn);text-decoration:none;}
+</style>
+<link rel="stylesheet" href="dg-site.css">
+</head>
+<body>
+
+<header class="topbar"><div class="topbar-inner">
+  <div class="tb-line1">
+    <span class="tb-brand">
+      <a class="tb-affil" href="https://us.trip.com/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=north-america&amp;trip_sub3=header" target="_blank" rel="sponsored nofollow noopener">An Affiliate of <strong class="tc-name">Trip.com</strong></a>
+      <a href="index.html"><span class="tb-brand-name">&#127757; Destinations Guild Travel</span></a>
+    </span>
+    <span class="lang-group noi18n">
+      <a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Cambiar a Español"><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg>ES</a>
+      <a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="Switch to English"><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="24" height="1.85" fill="#B22234"/><rect width="24" height="1.85" y="3.7" fill="#B22234"/><rect width="24" height="1.85" y="7.4" fill="#B22234"/><rect width="24" height="1.85" y="11.1" fill="#B22234"/><rect width="24" height="1.85" y="14.15" fill="#B22234"/><rect width="11" height="8.6" fill="#3C3B6E"/></svg>EN</a>
+      <a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Passer au français (Canada)"><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="6" height="16" fill="#D52B1E"/><rect x="18" width="6" height="16" fill="#D52B1E"/><path d="M12 3.2l.7 1.7 1.8-.4-.8 1.5 1.3.7-1.6.5.3 1.8-1.5-1-1.5 1 .3-1.8-1.6-.5 1.3-.7-.8-1.5 1.8.4z" fill="#D52B1E"/></svg>FR</a>
+    </span>
+  </div>
+  <nav class="tb-links">
+    <a href="index.html">Home</a>
+    <a href="library.html">The Guild Travel Library</a>
+    <a href="north-america.html">North America</a>
+  </nav>
+</div></header>
+
+<div class="pagenav">
+  <a href="index.html">Home</a>
+  <a href="library.html">The Guild Travel Library</a>
+  <a href="north-america.html">North America</a>
+</div>
+
+<div class="page">
+  <p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="library.html">The Guild Travel Library</a> &rsaquo; <strong>North America</strong></p>
+
+  <div class="hero" style="background:linear-gradient(135deg,#1B3A6B 0%,#22406e 45%,#0F6E56 100%);">
+    <h1 class="h1">North America</h1>
+    <p>From the national parks and city lights of the United States to the beaches and pyramids of Mexico and the islands of the Caribbean &mdash; the Guild's chapter on North America.</p>
+    <div class="hero-btns">
+      <a class="hbtn" onclick="window.open('https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=north-america&trip_sub3=hero-hotels','_blank')">Find hotels in North America</a>
+      <a class="hbtn alt" onclick="window.open('https://us.trip.com/flights/?Allianceid=8217189&SID=317113714&trip_sub1=north-america&trip_sub3=hero-flights','_blank')">Search flights</a>
+    </div>
+  </div>
+
+  <h2>The countries of North America</h2>
+  <p class="lede">Two countries have a full Guild guide today; the rest are being written.</p>
+  <div class="chapters">
+    <div class="chapter">
+      <div class="ch-top"><span class="ch-name">Countries on the shelf</span><span class="ch-no">NORTH AMERICA</span></div>
+      <p class="ch-note">Open a country marked <b>Book</b> for its full Guild guide; the rest are on their way.</p>
+      <ul class="cities">
+        <li><a href="usa.html">United States</a> <span class="live">Book</span></li>
+        <li><a href="mexico.html">Mexico</a> <span class="live">Book</span></li>
+        <li><a href="https://us.trip.com/hotels/?keyword=Canada&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=north-america&amp;trip_sub3=canada" target="_blank" rel="sponsored nofollow noopener">Canada</a> <span class="soon">soon</span></li>
+        <li><a href="https://us.trip.com/hotels/?keyword=Dominican%20Republic&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=north-america&amp;trip_sub3=dominican-republic" target="_blank" rel="sponsored nofollow noopener">Dominican Republic</a> <span class="soon">soon</span></li>
+        <li><a href="https://us.trip.com/hotels/?keyword=Jamaica&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=north-america&amp;trip_sub3=jamaica" target="_blank" rel="sponsored nofollow noopener">Jamaica</a> <span class="soon">soon</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot">
+    North America &middot; a shelf of the <a href="library.html">The Guild Travel Library</a><br>
+    Destinations Guild &copy; 2026 &middot; A Division of Guild Companies USA
+    <span class="disc">Destinations Guild may earn a commission when you book through our partner links, at no extra cost to you. Always confirm visa, entry and passport requirements with the relevant official authority before you travel.</span>
+  </div>
+</div>
+
+<script src="dg-lang.js" defer></script>
+</body>
+</html>
