@@ -124,6 +124,39 @@
   .pp-menu .pm-head{ font-family:'Dancing Script',cursive; font-size:22px; color:#1a3ec9; margin:2px 4px 8px; }
   .pp-menu a{ display:flex; align-items:center; gap:8px; text-decoration:none; color:#1c2733; font-family:'EB Garamond',Georgia,serif; font-size:15px; padding:9px 10px; border-radius:8px; }
   .pp-menu a:hover{ background:#f0e9d6; } .pp-menu .who{ font-size:11px; color:#8a7c52; padding:6px 10px 2px; }
+
+  /* ===== Consolidated Library: locator, bookcase, card catalog ===== */
+  .lib-locator{ margin:18px 0 6px; }
+  .loc-card{ background:linear-gradient(#fbf7ee,#f3ead3); border:1px solid rgba(120,90,40,.35); border-radius:16px; box-shadow:0 5px 16px rgba(60,45,15,.14); padding:18px 20px 20px; max-width:760px; margin:0 auto; }
+  .loc-title{ font-family:'Dancing Script',cursive; font-size:28px; color:#1a3ec9; text-align:center; margin:0 0 12px; }
+  .loc-search{ display:flex; align-items:center; gap:10px; background:#fffdf8; border:1.6px solid #cbb98e; border-radius:12px; padding:10px 14px; }
+  .loc-ic{ font-size:19px; opacity:.7; }
+  #libSearch{ flex:1; min-width:0; border:none; outline:none; background:transparent; font-size:17px; font-family:'EB Garamond',Georgia,serif; color:#1c2733; }
+  .loc-count{ font-size:12.5px; color:#8a7c52; white-space:nowrap; }
+  .loc-chips{ display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:14px; }
+  .lib-chip{ font-family:'EB Garamond',Georgia,serif; font-size:14px; font-weight:600; color:#17427f; background:#eaf1fb; border:1px solid #cADDF5; border-radius:20px; padding:6px 13px; cursor:pointer; text-decoration:none; transition:background .15s; }
+  .lib-chip:hover{ background:#d8e6f8; } .lib-chip.alt{ background:#f4ecd6; border-color:#d8c79a; color:#8a5a12; }
+  .lib-cont{ margin:26px 0 6px; }
+  .cont-h{ font-family:'Cinzel',serif; font-weight:700; font-size:26px; color:#173a78; margin:0 0 4px; letter-spacing:.02em; }
+  .cont-n{ font-family:'EB Garamond',Georgia,serif; font-size:14px; font-weight:400; font-style:italic; color:#8a7c52; margin-left:8px; }
+  .shelf-label{ font-family:'EB Garamond',Georgia,serif; font-size:16px; color:#3a4756; margin:12px 0 0; }
+  .shelf-label a{ text-decoration:none; color:#1e46c8; } .shelf-label a:hover strong{ text-decoration:underline; }
+  .shelf-label.soon-label{ color:#8a7c52; }
+  .spine.cover{ width:60px; background-image:linear-gradient(90deg, rgba(255,255,255,.12), rgba(0,0,0,.12)); box-shadow:inset -7px 0 12px rgba(0,0,0,.28), inset 7px 0 8px rgba(255,255,255,.16), 0 3px 8px rgba(0,0,0,.22); }
+  .spine .cflag{ position:absolute; top:20px; left:50%; transform:translateX(-50%); font-size:15px; line-height:1; }
+  .spine.cover .title{ font-size:14.5px; font-weight:700; margin-top:14px; }
+  .spine.soon{ background:repeating-linear-gradient(180deg,#cdbf9f,#cdbf9f 8px,#c4b593 8px,#c4b593 16px); width:44px; height:172px; cursor:default; opacity:.9; }
+  .spine.soon .title{ color:#6b5b38; font-size:12px; }
+  .soon-tag{ position:absolute; bottom:6px; left:50%; transform:translateX(-50%); font:600 8.5px/1 -apple-system,sans-serif; text-transform:uppercase; letter-spacing:.06em; color:#7a6a45; }
+  .soon-shelf{ opacity:.92; }
+  .cardcat{ margin:30px 0 6px; }
+  .cat-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:8px; }
+  .catf{ display:flex; align-items:center; gap:9px; background:#fffdf8; border:1px solid #ddd0ad; border-radius:10px; padding:9px 12px; text-decoration:none; color:#1c2733; transition:border-color .15s, transform .1s, box-shadow .15s; }
+  .catf:hover{ border-color:#4f8bd0; transform:translateY(-1px); box-shadow:0 3px 10px rgba(20,40,70,.12); }
+  .cf-flag{ font-size:17px; } .cf-name{ font-family:'EB Garamond',Georgia,serif; font-size:16px; font-weight:600; flex:1; }
+  .cf-parent{ font-size:11px; color:#8a7c52; text-transform:uppercase; letter-spacing:.04em; }
+  .lib-empty{ text-align:center; color:#8a7c52; font-family:'EB Garamond',Georgia,serif; font-size:17px; padding:20px; display:none; }
+
 </style>
 </head>
 <body>
@@ -131,12 +164,12 @@
 <header class="topbar">
   <div class="topbar-inner">
     <a class="tb-affil" href="https://us.trip.com/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=affiliate&amp;trip_sub3=header" target="_blank" rel="sponsored nofollow noopener">An Affiliate of Trip.com</a>
-    <a class="tb-brand-name" href="index.html">&#127757; Destinations Guild</a>
+    <a class="tb-brand-name" href="index.html">&#127757; Destinations Guild Travel</a>
     <nav class="tb-nav">
       <a href="index.html">Home</a>
       <a href="library.html" class="here">Guild Travel Library</a>
       <a href="seven-wonders.html">Seven Wonders</a>
-      <a href="library-bookcase-classic.html">Bookcase View</a>
+      <a href="#bookcase">Bookcase</a>
       <a href="cancun-hotels.html">Hotels</a>
       <a href="index.html#destinations">Destinations</a>
     </nav>
@@ -166,36 +199,431 @@
   <p class="intro">Honest, original city guides &mdash; written by Guild Reporters who know their cities, and reviewed by the Guild before they ever reach the shelf.</p>
   <p class="librarians">Tended by your librarians, <b style="color:var(--polo);">Polo</b> the Chief Navigator and <b style="color:var(--polly);">Polly</b> the Travel Concierge.</p>
 
-  <section class="shelf-unit">
-    <h2>On the shelves</h2>
-    <p class="lede">Every book is a city, written with depth and honesty. The gaps are waiting for the next Guild Travel Reporter &mdash; maybe you.</p>
-    <div class="shelf">
-      <a class="spine" href="cancun.html" style="background:#7c2d2d;"><span class="band-top"></span><span class="title">CANC&Uacute;N</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
-      <div class="spine" style="background:#1f5b4c;"><span class="band-top"></span><span class="title">TULUM</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#274472;"><span class="band-top"></span><span class="title">MEXICO CITY</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#9a6a15;"><span class="band-top"></span><span class="title">PLAYA</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#5b3a72;"><span class="band-top"></span><span class="title">CABO</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#2b6a7c;"><span class="band-top"></span><span class="title">VALLARTA</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#8a4a1f;"><span class="band-top"></span><span class="title">BANGKOK</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#3a5a2b;"><span class="band-top"></span><span class="title">TOKYO</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#6b2d4a;"><span class="band-top"></span><span class="title">DUBAI</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#2d4a6b;"><span class="band-top"></span><span class="title">SINGAPORE</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#7c5c1f;"><span class="band-top"></span><span class="title">LONDON</span><span class="band-bot"></span></div>
-      <div class="spine" style="background:#4a2d6b;"><span class="band-top"></span><span class="title">PARIS</span><span class="band-bot"></span></div>
+  <!-- ===== THE LIBRARY LOCATOR (search + card catalog) ===== -->
+
+  <section class="lib-locator">
+  <div class="loc-card">
+    <div class="loc-title">&#128218; Find any book in the Library</div>
+    <div class="loc-search"><span class="loc-ic">&#128269;</span><input id="libSearch" type="text" autocomplete="off" spellcheck="false" placeholder="Search a country or city &mdash; Rome, Thailand, Canc&uacute;n&hellip;"><span id="libCount" class="loc-count"></span></div>
+    <div class="loc-chips"><button type="button" class="lib-chip" data-go="all">All</button>
+      <button type="button" class="lib-chip" data-go="asia">🌏 Asia</button>
+      <button type="button" class="lib-chip" data-go="europe">🌍 Europe</button>
+      <button type="button" class="lib-chip" data-go="north-america">🌎 North America</button>
+      <button type="button" class="lib-chip" data-go="south-america">🌎 South America</button>
+      <button type="button" class="lib-chip" data-go="africa">🌍 Africa &amp; Middle East</button>
+      <button type="button" class="lib-chip" data-go="oceania">🌏 Oceania</button>
+      <a class="lib-chip alt" href="seven-wonders.html">&#9733; Seven Wonders</a></div>
+  </div>
+</section>
+
+  <div id="bookcase"></div>
+
+  <div id="lib-root">
+
+  <section class="lib-cont" id="cont-asia">
+
+    <h2 class="cont-h">🌏 Asia <span class="cont-n">9 open</span></h2>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="thailand.html">🇹🇭 <strong>Thailand</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="thailand asia guide" data-open="1" href="thailand.html" style="background:#2b6a7c;"><span class="cflag">🇹🇭</span><span class="band-top"></span><span class="title">THAILAND</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="bangkok thailand asia" data-open="1" href="bangkok.html" style="background:#6b3a1f;"><span class="band-top"></span><span class="title">BANGKOK</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="chiang mai thailand asia" data-open="1" href="chiang-mai.html" style="background:#1f5b4c;"><span class="band-top"></span><span class="title">CHIANG MAI</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="phuket thailand asia" data-open="1" href="phuket.html" style="background:#1f5b4c;"><span class="band-top"></span><span class="title">PHUKET</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="krabi thailand asia" data-open="1" href="krabi.html" style="background:#2d4a6b;"><span class="band-top"></span><span class="title">KRABI</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="koh samui thailand asia" data-open="1" href="koh-samui.html" style="background:#1f5b4c;"><span class="band-top"></span><span class="title">KOH SAMUI</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="pattaya thailand asia" data-open="1" href="pattaya.html" style="background:#5b3a72;"><span class="band-top"></span><span class="title">PATTAYA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
     </div>
-    <div class="shelf-board"></div>
-    <p class="shelf-note">Canc&uacute;n is open on the shelf now &mdash; tap its spine. The rest are being written.</p>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="japan.html">🇯🇵 <strong>Japan</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="japan asia guide" data-open="1" href="japan.html" style="background:#7c5c1f;"><span class="cflag">🇯🇵</span><span class="band-top"></span><span class="title">JAPAN</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="hongkong.html">🇭🇰 <strong>Hong Kong</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="hong kong asia guide" data-open="1" href="hongkong.html" style="background:#4a2d6b;"><span class="cflag">🇭🇰</span><span class="band-top"></span><span class="title">HONG KONG</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label soon-label">More of Asia &mdash; <em>in the works</em></div>
+
+      <div class="shelf soon-shelf">
+
+        <div class="spine soon" data-nm="china asia" data-open="0"><span class="title">CHINA</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="vietnam asia" data-open="0"><span class="title">VIETNAM</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="india asia" data-open="0"><span class="title">INDIA</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="indonesia (bali) asia" data-open="0"><span class="title">INDONESIA (BALI)</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="singapore asia" data-open="0"><span class="title">SINGAPORE</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="uae (dubai) asia" data-open="0"><span class="title">UAE (DUBAI)</span><span class="soon-tag">soon</span></div>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
   </section>
 
-  <section class="shelf-unit">
-    <h2>Special collections</h2>
-    <p class="lede">Shelves that gather the world's wonders in one place &mdash; open now and free to browse.</p>
-    <div class="shelf">
-      <a class="spine" href="seven-wonders.html" style="background:#6a5b3a;"><span class="band-top"></span><span class="title">SEVEN WONDERS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+  <section class="lib-cont" id="cont-europe">
+
+    <h2 class="cont-h">🌍 Europe <span class="cont-n">16 open</span></h2>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="italy.html">🇮🇹 <strong>Italy</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="italy europe guide" data-open="1" href="italy.html" style="background:#9a6a15;"><span class="cflag">🇮🇹</span><span class="band-top"></span><span class="title">ITALY</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="rome italy europe" data-open="1" href="rome-hotels.html" style="background:#9a6a15;"><span class="band-top"></span><span class="title">ROME</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="venice italy europe" data-open="1" href="venice-hotels.html" style="background:#7c5c1f;"><span class="band-top"></span><span class="title">VENICE</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="amalfi coast italy europe" data-open="1" href="amalfi-coast-hotels.html" style="background:#5b3a72;"><span class="band-top"></span><span class="title">AMALFI COAST</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
     </div>
-    <div class="shelf-board"></div>
-    <p class="shelf-note">The New Seven Wonders and the Ancient Seven &mdash; tap the spine to open the shelf.</p>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="france.html">🇫🇷 <strong>France</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="france europe guide" data-open="1" href="france.html" style="background:#5b1f3a;"><span class="cflag">🇫🇷</span><span class="band-top"></span><span class="title">FRANCE</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="paris france europe" data-open="1" href="paris-hotels.html" style="background:#5b1f3a;"><span class="band-top"></span><span class="title">PARIS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="nice &amp; riviera france europe" data-open="1" href="nice-hotels.html" style="background:#3a5a2b;"><span class="band-top"></span><span class="title">NICE &amp; RIVIERA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="spain.html">🇪🇸 <strong>Spain</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="spain europe guide" data-open="1" href="spain.html" style="background:#4a2d6b;"><span class="cflag">🇪🇸</span><span class="band-top"></span><span class="title">SPAIN</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="barcelona spain europe" data-open="1" href="barcelona-hotels.html" style="background:#3a5a2b;"><span class="band-top"></span><span class="title">BARCELONA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="madrid spain europe" data-open="1" href="madrid-hotels.html" style="background:#1f5b4c;"><span class="band-top"></span><span class="title">MADRID</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="germany.html">🇩🇪 <strong>Germany</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="germany europe guide" data-open="1" href="germany.html" style="background:#9a6a15;"><span class="cflag">🇩🇪</span><span class="band-top"></span><span class="title">GERMANY</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="berlin germany europe" data-open="1" href="berlin-hotels.html" style="background:#3d6b2d;"><span class="band-top"></span><span class="title">BERLIN</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="munich germany europe" data-open="1" href="munich-hotels.html" style="background:#5b3a72;"><span class="band-top"></span><span class="title">MUNICH</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="united-kingdom.html">🇬🇧 <strong>United Kingdom</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="united kingdom europe guide" data-open="1" href="united-kingdom.html" style="background:#274472;"><span class="cflag">🇬🇧</span><span class="band-top"></span><span class="title">UNITED KINGDOM</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="london united kingdom europe" data-open="1" href="london-hotels.html" style="background:#7c5c1f;"><span class="band-top"></span><span class="title">LONDON</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="edinburgh united kingdom europe" data-open="1" href="edinburgh-hotels.html" style="background:#6b2d4a;"><span class="band-top"></span><span class="title">EDINBURGH</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label soon-label">More of Europe &mdash; <em>in the works</em></div>
+
+      <div class="shelf soon-shelf">
+
+        <div class="spine soon" data-nm="greece europe" data-open="0"><span class="title">GREECE</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="portugal europe" data-open="0"><span class="title">PORTUGAL</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="netherlands europe" data-open="0"><span class="title">NETHERLANDS</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="switzerland europe" data-open="0"><span class="title">SWITZERLAND</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="ireland europe" data-open="0"><span class="title">IRELAND</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="croatia europe" data-open="0"><span class="title">CROATIA</span><span class="soon-tag">soon</span></div>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
   </section>
+
+  <section class="lib-cont" id="cont-north-america">
+
+    <h2 class="cont-h">🌎 North America <span class="cont-n">12 open</span></h2>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="usa.html">🇺🇸 <strong>United States</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="united states north america guide" data-open="1" href="usa.html" style="background:#6b3a1f;"><span class="cflag">🇺🇸</span><span class="band-top"></span><span class="title">UNITED STATES</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="orlando united states north america" data-open="1" href="orlando.html" style="background:#5b1f3a;"><span class="band-top"></span><span class="title">ORLANDO</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="las vegas united states north america" data-open="1" href="las-vegas.html" style="background:#8a4a1f;"><span class="band-top"></span><span class="title">LAS VEGAS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="niagara falls united states north america" data-open="1" href="niagara-falls-usa.html" style="background:#2b6a7c;"><span class="band-top"></span><span class="title">NIAGARA FALLS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="mexico.html">🇲🇽 <strong>Mexico</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="mexico north america guide" data-open="1" href="mexico.html" style="background:#2b6a7c;"><span class="cflag">🇲🇽</span><span class="band-top"></span><span class="title">MEXICO</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="cancún mexico north america" data-open="1" href="cancun.html" style="background:#6b3a1f;"><span class="band-top"></span><span class="title">CANCÚN</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="playa del carmen mexico north america" data-open="1" href="playa-del-carmen.html" style="background:#274472;"><span class="band-top"></span><span class="title">PLAYA DEL CARMEN</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="tulum mexico north america" data-open="1" href="tulum.html" style="background:#3a5a2b;"><span class="band-top"></span><span class="title">TULUM</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="cozumel mexico north america" data-open="1" href="cozumel.html" style="background:#5b1f3a;"><span class="band-top"></span><span class="title">COZUMEL</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="mexico city mexico north america" data-open="1" href="mexico-city.html" style="background:#2d5b6b;"><span class="band-top"></span><span class="title">MEXICO CITY</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="los cabos mexico north america" data-open="1" href="los-cabos.html" style="background:#8a4a1f;"><span class="band-top"></span><span class="title">LOS CABOS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+        <a class="spine" data-nm="puerto vallarta mexico north america" data-open="1" href="puerto-vallarta.html" style="background:#8a4a1f;"><span class="band-top"></span><span class="title">PUERTO VALLARTA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label soon-label">More of North America &mdash; <em>in the works</em></div>
+
+      <div class="shelf soon-shelf">
+
+        <div class="spine soon" data-nm="canada north america" data-open="0"><span class="title">CANADA</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="costa rica north america" data-open="0"><span class="title">COSTA RICA</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="dominican republic north america" data-open="0"><span class="title">DOMINICAN REPUBLIC</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="jamaica north america" data-open="0"><span class="title">JAMAICA</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="cuba north america" data-open="0"><span class="title">CUBA</span><span class="soon-tag">soon</span></div>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+  </section>
+
+  <section class="lib-cont" id="cont-south-america">
+
+    <h2 class="cont-h">🌎 South America <span class="cont-n">1 open</span></h2>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="brazil.html">🇧🇷 <strong>Brazil</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="brazil south america guide" data-open="1" href="brazil.html" style="background:#5b3a72;"><span class="cflag">🇧🇷</span><span class="band-top"></span><span class="title">BRAZIL</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label soon-label">More of South America &mdash; <em>in the works</em></div>
+
+      <div class="shelf soon-shelf">
+
+        <div class="spine soon" data-nm="argentina south america" data-open="0"><span class="title">ARGENTINA</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="peru south america" data-open="0"><span class="title">PERU</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="chile south america" data-open="0"><span class="title">CHILE</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="colombia south america" data-open="0"><span class="title">COLOMBIA</span><span class="soon-tag">soon</span></div>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+  </section>
+
+  <section class="lib-cont" id="cont-africa">
+
+    <h2 class="cont-h">🌍 Africa &amp; Middle East <span class="cont-n">0 open</span></h2>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label soon-label">More of Africa &amp; Middle East &mdash; <em>in the works</em></div>
+
+      <div class="shelf soon-shelf">
+
+        <div class="spine soon" data-nm="egypt africa &amp; middle east" data-open="0"><span class="title">EGYPT</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="morocco africa &amp; middle east" data-open="0"><span class="title">MOROCCO</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="south africa africa &amp; middle east" data-open="0"><span class="title">SOUTH AFRICA</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="kenya africa &amp; middle east" data-open="0"><span class="title">KENYA</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="tanzania africa &amp; middle east" data-open="0"><span class="title">TANZANIA</span><span class="soon-tag">soon</span></div>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+  </section>
+
+  <section class="lib-cont" id="cont-oceania">
+
+    <h2 class="cont-h">🌏 Oceania <span class="cont-n">1 open</span></h2>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label"><a href="australia.html">🇦🇺 <strong>Australia</strong></a></div>
+
+      <div class="shelf">
+
+        <a class="spine cover" data-nm="australia oceania guide" data-open="1" href="australia.html" style="background:#8a4a1f;"><span class="cflag">🇦🇺</span><span class="band-top"></span><span class="title">AUSTRALIA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+    <div class="shelf-unit">
+
+      <div class="shelf-label soon-label">More of Oceania &mdash; <em>in the works</em></div>
+
+      <div class="shelf soon-shelf">
+
+        <div class="spine soon" data-nm="new zealand oceania" data-open="0"><span class="title">NEW ZEALAND</span><span class="soon-tag">soon</span></div>
+
+        <div class="spine soon" data-nm="fiji oceania" data-open="0"><span class="title">FIJI</span><span class="soon-tag">soon</span></div>
+
+      </div><div class="shelf-board"></div>
+
+    </div>
+
+  </section>
+
+  </div>
+
+  <section class="shelf-unit lib-special">
+  <h2>Special collections</h2>
+  <p class="lede">Shelves that gather the world&rsquo;s wonders in one place &mdash; open now and free to browse.</p>
+  <div class="shelf"><a class="spine cover" href="seven-wonders.html" style="background:#6a5b3a;"><span class="cflag">&#9733;</span><span class="band-top"></span><span class="title">SEVEN WONDERS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a></div>
+  <div class="shelf-board"></div>
+</section>
+
+  <section id="lib-catalog" class="cardcat">
+  <h2>The Card Catalog</h2>
+  <p class="lede">Every open book, A&ndash;Z. Tap a card and Polly will pull it off the shelf. <strong>39 guides on the shelf today.</strong></p>
+  <div class="cat-grid">
+    <a class="catf" data-nm="amalfi coast italy" href="amalfi-coast-hotels.html"><span class="cf-flag">🇮🇹</span><span class="cf-name">Amalfi Coast</span><span class="cf-parent">Italy</span></a>
+    <a class="catf" data-nm="australia oceania" href="australia.html"><span class="cf-flag">🇦🇺</span><span class="cf-name">Australia</span><span class="cf-parent">Oceania</span></a>
+    <a class="catf" data-nm="bangkok thailand" href="bangkok.html"><span class="cf-flag">🇹🇭</span><span class="cf-name">Bangkok</span><span class="cf-parent">Thailand</span></a>
+    <a class="catf" data-nm="barcelona spain" href="barcelona-hotels.html"><span class="cf-flag">🇪🇸</span><span class="cf-name">Barcelona</span><span class="cf-parent">Spain</span></a>
+    <a class="catf" data-nm="berlin germany" href="berlin-hotels.html"><span class="cf-flag">🇩🇪</span><span class="cf-name">Berlin</span><span class="cf-parent">Germany</span></a>
+    <a class="catf" data-nm="brazil south america" href="brazil.html"><span class="cf-flag">🇧🇷</span><span class="cf-name">Brazil</span><span class="cf-parent">South America</span></a>
+    <a class="catf" data-nm="cancún mexico" href="cancun.html"><span class="cf-flag">🇲🇽</span><span class="cf-name">Cancún</span><span class="cf-parent">Mexico</span></a>
+    <a class="catf" data-nm="chiang mai thailand" href="chiang-mai.html"><span class="cf-flag">🇹🇭</span><span class="cf-name">Chiang Mai</span><span class="cf-parent">Thailand</span></a>
+    <a class="catf" data-nm="cozumel mexico" href="cozumel.html"><span class="cf-flag">🇲🇽</span><span class="cf-name">Cozumel</span><span class="cf-parent">Mexico</span></a>
+    <a class="catf" data-nm="edinburgh united kingdom" href="edinburgh-hotels.html"><span class="cf-flag">🇬🇧</span><span class="cf-name">Edinburgh</span><span class="cf-parent">United Kingdom</span></a>
+    <a class="catf" data-nm="france europe" href="france.html"><span class="cf-flag">🇫🇷</span><span class="cf-name">France</span><span class="cf-parent">Europe</span></a>
+    <a class="catf" data-nm="germany europe" href="germany.html"><span class="cf-flag">🇩🇪</span><span class="cf-name">Germany</span><span class="cf-parent">Europe</span></a>
+    <a class="catf" data-nm="hong kong asia" href="hongkong.html"><span class="cf-flag">🇭🇰</span><span class="cf-name">Hong Kong</span><span class="cf-parent">Asia</span></a>
+    <a class="catf" data-nm="italy europe" href="italy.html"><span class="cf-flag">🇮🇹</span><span class="cf-name">Italy</span><span class="cf-parent">Europe</span></a>
+    <a class="catf" data-nm="japan asia" href="japan.html"><span class="cf-flag">🇯🇵</span><span class="cf-name">Japan</span><span class="cf-parent">Asia</span></a>
+    <a class="catf" data-nm="koh samui thailand" href="koh-samui.html"><span class="cf-flag">🇹🇭</span><span class="cf-name">Koh Samui</span><span class="cf-parent">Thailand</span></a>
+    <a class="catf" data-nm="krabi thailand" href="krabi.html"><span class="cf-flag">🇹🇭</span><span class="cf-name">Krabi</span><span class="cf-parent">Thailand</span></a>
+    <a class="catf" data-nm="las vegas united states" href="las-vegas.html"><span class="cf-flag">🇺🇸</span><span class="cf-name">Las Vegas</span><span class="cf-parent">United States</span></a>
+    <a class="catf" data-nm="london united kingdom" href="london-hotels.html"><span class="cf-flag">🇬🇧</span><span class="cf-name">London</span><span class="cf-parent">United Kingdom</span></a>
+    <a class="catf" data-nm="los cabos mexico" href="los-cabos.html"><span class="cf-flag">🇲🇽</span><span class="cf-name">Los Cabos</span><span class="cf-parent">Mexico</span></a>
+    <a class="catf" data-nm="madrid spain" href="madrid-hotels.html"><span class="cf-flag">🇪🇸</span><span class="cf-name">Madrid</span><span class="cf-parent">Spain</span></a>
+    <a class="catf" data-nm="mexico north america" href="mexico.html"><span class="cf-flag">🇲🇽</span><span class="cf-name">Mexico</span><span class="cf-parent">North America</span></a>
+    <a class="catf" data-nm="mexico city mexico" href="mexico-city.html"><span class="cf-flag">🇲🇽</span><span class="cf-name">Mexico City</span><span class="cf-parent">Mexico</span></a>
+    <a class="catf" data-nm="munich germany" href="munich-hotels.html"><span class="cf-flag">🇩🇪</span><span class="cf-name">Munich</span><span class="cf-parent">Germany</span></a>
+    <a class="catf" data-nm="niagara falls united states" href="niagara-falls-usa.html"><span class="cf-flag">🇺🇸</span><span class="cf-name">Niagara Falls</span><span class="cf-parent">United States</span></a>
+    <a class="catf" data-nm="nice &amp; riviera france" href="nice-hotels.html"><span class="cf-flag">🇫🇷</span><span class="cf-name">Nice &amp; Riviera</span><span class="cf-parent">France</span></a>
+    <a class="catf" data-nm="orlando united states" href="orlando.html"><span class="cf-flag">🇺🇸</span><span class="cf-name">Orlando</span><span class="cf-parent">United States</span></a>
+    <a class="catf" data-nm="paris france" href="paris-hotels.html"><span class="cf-flag">🇫🇷</span><span class="cf-name">Paris</span><span class="cf-parent">France</span></a>
+    <a class="catf" data-nm="pattaya thailand" href="pattaya.html"><span class="cf-flag">🇹🇭</span><span class="cf-name">Pattaya</span><span class="cf-parent">Thailand</span></a>
+    <a class="catf" data-nm="phuket thailand" href="phuket.html"><span class="cf-flag">🇹🇭</span><span class="cf-name">Phuket</span><span class="cf-parent">Thailand</span></a>
+    <a class="catf" data-nm="playa del carmen mexico" href="playa-del-carmen.html"><span class="cf-flag">🇲🇽</span><span class="cf-name">Playa del Carmen</span><span class="cf-parent">Mexico</span></a>
+    <a class="catf" data-nm="puerto vallarta mexico" href="puerto-vallarta.html"><span class="cf-flag">🇲🇽</span><span class="cf-name">Puerto Vallarta</span><span class="cf-parent">Mexico</span></a>
+    <a class="catf" data-nm="rome italy" href="rome-hotels.html"><span class="cf-flag">🇮🇹</span><span class="cf-name">Rome</span><span class="cf-parent">Italy</span></a>
+    <a class="catf" data-nm="spain europe" href="spain.html"><span class="cf-flag">🇪🇸</span><span class="cf-name">Spain</span><span class="cf-parent">Europe</span></a>
+    <a class="catf" data-nm="thailand asia" href="thailand.html"><span class="cf-flag">🇹🇭</span><span class="cf-name">Thailand</span><span class="cf-parent">Asia</span></a>
+    <a class="catf" data-nm="tulum mexico" href="tulum.html"><span class="cf-flag">🇲🇽</span><span class="cf-name">Tulum</span><span class="cf-parent">Mexico</span></a>
+    <a class="catf" data-nm="united kingdom europe" href="united-kingdom.html"><span class="cf-flag">🇬🇧</span><span class="cf-name">United Kingdom</span><span class="cf-parent">Europe</span></a>
+    <a class="catf" data-nm="united states north america" href="usa.html"><span class="cf-flag">🇺🇸</span><span class="cf-name">United States</span><span class="cf-parent">North America</span></a>
+    <a class="catf" data-nm="venice italy" href="venice-hotels.html"><span class="cf-flag">🇮🇹</span><span class="cf-name">Venice</span><span class="cf-parent">Italy</span></a>
+  </div>
+</section>
 
   <div class="ask">
     <div class="ask-inner">
@@ -312,6 +740,35 @@
   </div>
 </div>
 
+<script>
+/* Consolidated Library: live locator search + continent chips */
+(function(){
+  var q=document.getElementById('libSearch'); if(!q) return;
+  var count=document.getElementById('libCount');
+  var spines=[].slice.call(document.querySelectorAll('#lib-root [data-nm]'));
+  var cards=[].slice.call(document.querySelectorAll('#lib-catalog [data-nm]'));
+  var units=[].slice.call(document.querySelectorAll('#lib-root .shelf-unit'));
+  var conts=[].slice.call(document.querySelectorAll('#lib-root .lib-cont'));
+  function run(){
+    var v=(q.value||'').toLowerCase().trim();
+    spines.forEach(function(el){ el.style.display=(!v||el.getAttribute('data-nm').indexOf(v)>-1)?'':'none'; });
+    var shown=0;
+    cards.forEach(function(el){ var m=(!v||el.getAttribute('data-nm').indexOf(v)>-1); el.style.display=m?'':'none'; if(m)shown++; });
+    units.forEach(function(u){ var any=false; u.querySelectorAll('[data-nm]').forEach(function(s){ if(s.style.display!=='none')any=true; }); u.style.display=any?'':'none'; });
+    conts.forEach(function(c){ var any=false; c.querySelectorAll('.shelf-unit').forEach(function(u){ if(u.style.display!=='none')any=true; }); c.style.display=any?'':'none'; });
+    if(count) count.textContent = v ? (shown+' found') : '';
+  }
+  q.addEventListener('input',run);
+  [].slice.call(document.querySelectorAll('.lib-chip[data-go]')).forEach(function(ch){
+    ch.addEventListener('click',function(){
+      q.value=''; run();
+      var g=ch.getAttribute('data-go');
+      if(g==='all'){ document.getElementById('bookcase').scrollIntoView({behavior:'smooth'}); return; }
+      var sec=document.getElementById('cont-'+g); if(sec) sec.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+})();
+</script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 <script>/* DG affiliate-click tracking -> GA4 */(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();</script>
 </body>

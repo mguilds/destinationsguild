@@ -608,7 +608,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 <style>
   body{background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center center / cover no-repeat fixed, radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f); min-height:100vh;}
   .page{background:rgba(249,243,226,.93); border:1px solid rgba(120,90,40,.35); border-radius:16px; box-shadow:0 10px 38px rgba(30,20,5,.32); padding:12px 26px 34px; margin:18px auto 34px; max-width:1120px;}
-  .search-wrap{background:#ffffff !important; border-top:4px solid #C9A84C; border-radius:16px; box-shadow:0 10px 30px rgba(20,40,70,.16); padding:18px 20px 20px !important;}
+  .search-wrap{zoom:0.82;background:#ffffff !important; border-top:4px solid #C9A84C; border-radius:16px; box-shadow:0 10px 30px rgba(20,40,70,.16); padding:18px 20px 20px !important;}
   .legacy-search{background:transparent !important;}
   .legacy-search .inp, .legacy-search .sel{border:1.6px solid #1c1c1c !important;}
   /* Header removed — compact floating language switch, top-right */
@@ -623,13 +623,10 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   @media(max-width:680px){.masthead{padding-top:1.2rem !important;} .mh-polly{width:76px !important; height:100px !important;}}
 </style>
 <header class="dg-nav"><div class="dg-nav-in">
-  <a class="dg-brand" href="index.html">&#127757; Destinations Guild</a>
+  <a class="dg-brand" href="index.html">&#127757; Destinations Guild Travel</a>
   <nav class="dg-nav-links">
     <a href="index.html">Home</a>
     <a href="library.html">The Guild Travel Library</a>
-    <a href="italy.html">Italy</a>
-    <a href="thailand.html">Thailand</a>
-    <a href="usa.html">USA</a>
   </nav>
   <span class="lang-group noi18n">
     <a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Espanol">ES</a>
@@ -810,7 +807,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
       <div class="gtl-sign-c">
         <p class="gtl-sc-main">The Guild Travel Library</p>
         <div class="gtl-sc-rule"></div>
-        <p class="gtl-sc-sub">Adventures await in every country.</p>
+        <p class="gtl-sc-sub">Adventures Await on Every Continent.</p>
       </div>
     </div>
     <p class="gtl-lede">Every book is a country &mdash; and inside, a guide for every city. Tap a book and Polly will pull it off the shelf for you.</p>
@@ -1466,8 +1463,7 @@ document.querySelectorAll('.ccard').forEach(card => {
     setTimeout(function(){
       render(seq[step][0], seq[step][1]);
       host.style.opacity='1';
-      step++;
-      if(step>=seq.length){ clearInterval(timer); }
+      step=(step+1)%seq.length;
     }, 560);
   }, 3400);
 })();
@@ -2135,6 +2131,17 @@ document.querySelectorAll('.ccard').forEach(card => {
     if(capEl){ capEl.innerHTML='&ldquo;Travel&rdquo; in '+LANG[w]+' &mdash; International Maritime Signal Code'; }
   }
   renderWord('TRAVEL');
+  /* Guild edit: cycle the signal flags through TRAVEL / VIAJE / VOYAGE continually */
+  (function(){
+    var _reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if(_reduce) return;
+    var _words=['VIAJE','VOYAGE','TRAVEL'], _i=0;
+    flagBox.style.transition='opacity .5s ease';
+    setInterval(function(){
+      flagBox.style.opacity='0';
+      setTimeout(function(){ renderWord(_words[_i]); flagBox.style.opacity='1'; _i=(_i+1)%_words.length; }, 500);
+    }, 3400);
+  })();
 
   /* ---- Polly's voice: a synthesized macaw squawk (3-4 calls), no audio file needed ---- */
   var actx=null;
