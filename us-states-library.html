@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XY1WMZLK0"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3XY1WMZLK0');</script>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#16305c">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The United States, State by State — The Guild Travel Library | Destinations Guild</title>
+<meta name="description" content="Pull any state off the shelf: a Bohdi &amp; Nolie travel guide to all 50 states, Washington D.C. and the U.S. territories, shelf by shelf.">
+<link rel="canonical" href="https://destinationsguild.com/us-states-library.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B3A6B;--gold:#BA7517;--ink:#1c2733;--muted:#5b6675;--line:#e3e7ee;--bg:#FAF9F6;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;}
+.pagenav{background:#173a78;text-align:center;padding:8px 12px;font-size:13px;}
+.page{max-width:1040px;margin:0 auto;padding:1.2rem 1.2rem 4rem;}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:1rem;}
+.crumb a{color:#4f8bd0;text-decoration:none;}
+
+/* ---- Bohdi & Nolie greeting ---- */
+.greet{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;background:linear-gradient(135deg,#12401f,#1f5b2e);
+  border:2px solid #d4b46e;border-radius:16px;padding:1.2rem 1.3rem;margin:0 auto 1.4rem;color:#fdf7e7;}
+.guide{display:flex;align-items:center;gap:11px;max-width:430px;}
+.guide .badge{flex:0 0 auto;}
+.guide .say b{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:#ffe9a8;display:block;line-height:1.1;}
+.guide .say span{font-size:13.5px;color:#eadfbf;}
+
+/* ---- library section ---- */
+.lib-sec{background:linear-gradient(#f4eeda,#efe7cf);border:1px solid #d8cba6;border-radius:16px;
+  box-shadow:0 3px 16px rgba(60,45,15,.12);padding:24px 20px 28px;}
+.us-title{text-align:center;margin:8px 0 6px;}
+.us-title-main{font-family:'Cinzel',serif;font-weight:700;letter-spacing:.14em;font-size:clamp(3rem,10vw,6rem);line-height:1;color:#16305c;margin:0;text-shadow:0 2px 0 #e9dfc4;}
+.us-title-sub{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(1.05rem,2.8vw,1.6rem);color:#6a5b3a;letter-spacing:.03em;margin:.4rem 0 0;}
+.lib-lede{text-align:center;font-family:'EB Garamond',serif;font-size:18px;color:#4a5766;font-style:italic;max-width:680px;margin:0 auto 20px;}
+.shelf-unit{margin:6px 0 20px;}
+.shelf-label{font-family:'Cinzel',serif;font-size:14px;letter-spacing:2px;color:#6a5b3a;margin:0 0 6px 4px;text-transform:uppercase;}
+.shelf-label span{font-family:'EB Garamond',serif;letter-spacing:0;text-transform:none;font-style:italic;color:#9a8a63;font-size:14px;}
+.shelf{display:flex;align-items:flex-end;justify-content:flex-start;gap:7px;flex-wrap:wrap;
+  padding:16px 14px 0;background:linear-gradient(#efe6cf,#e7dcc0);border:1px solid rgba(120,90,40,.3);border-radius:10px 10px 0 0;}
+.spine{position:relative;width:50px;height:184px;border-radius:3px 3px 0 0;
+  box-shadow:inset -6px 0 10px rgba(0,0,0,.22),inset 6px 0 6px rgba(255,255,255,.12),0 3px 6px rgba(0,0,0,.18);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .15s ease;cursor:pointer;}
+.spine:hover{transform:translateY(-10px);}
+.spine .title{writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Cinzel',serif;font-weight:600;
+  font-size:12px;letter-spacing:.6px;color:#f4ead0;text-shadow:0 1px 1px rgba(0,0,0,.35);white-space:nowrap;}
+.spine .band-top,.spine .band-bot{position:absolute;left:0;right:0;height:15px;background:rgba(212,180,110,.55);
+  border-top:1px solid rgba(255,240,200,.4);border-bottom:1px solid rgba(0,0,0,.15);}
+.spine .band-top{top:13px;} .spine .band-bot{bottom:15px;}
+.spine .dot{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);font-size:9px;color:rgba(244,234,208,.9);}
+.shelf-board{height:16px;background:linear-gradient(#8a6a3f,#6f5230);border-radius:0 0 10px 10px;
+  box-shadow:0 6px 12px rgba(0,0,0,.3);border:1px solid #5c4326;border-top:none;}
+.shelf-note{text-align:center;font-family:'EB Garamond',serif;font-size:15px;color:#5b6675;margin:16px 0 0;}
+.lib-cta{text-align:center;margin:18px 0 0;}
+.lib-cta a{display:inline-block;background:#173a78;color:#fff;text-decoration:none;font-family:'EB Garamond',serif;
+  font-size:16px;font-weight:600;padding:10px 22px;border-radius:10px;box-shadow:0 2px 8px rgba(12,36,68,.25);margin:0 5px;}
+.lib-cta a:hover{background:#1e4fb0;}
+.foot{text-align:center;font-size:12px;color:#7a6f52;margin-top:2.4rem;line-height:1.8;}
+.foot a{color:#4f8bd0;text-decoration:none;}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <div class="tb-line1">
+    <span class="tb-brand">
+      <a class="tb-affil" href="https://us.trip.com/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=affiliate&amp;trip_sub3=header" target="_blank" rel="sponsored nofollow noopener">An Affiliate of <strong class="tc-name">Trip.com</strong></a>
+      <a href="index.html"><span class="tb-brand-name">&#127757; Destinations Guild</span></a>
+    </span>
+    <span class="lang-group noi18n">
+      <a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Cambiar a Español"><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg>ES</a>
+      <a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="Switch to English"><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="24" height="1.85" fill="#B22234"/><rect width="24" height="1.85" y="3.7" fill="#B22234"/><rect width="24" height="1.85" y="7.4" fill="#B22234"/><rect width="24" height="1.85" y="11.1" fill="#B22234"/><rect width="24" height="1.85" y="14.15" fill="#B22234"/><rect width="11" height="8.6" fill="#3C3B6E"/></svg>EN</a>
+      <a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Passer au français (Canada)"><svg viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="6" height="16" fill="#D52B1E"/><rect x="18" width="6" height="16" fill="#D52B1E"/><path d="M12 3.2l.7 1.7 1.8-.4-.8 1.5 1.3.7-1.6.5.3 1.8-1.5-1-1.5 1 .3-1.8-1.6-.5 1.3-.7-.8-1.5 1.8.4z" fill="#D52B1E"/></svg>FR</a>
+    </span>
+  </div>
+  <nav class="tb-links">
+    <a href="index.html">Home</a>
+    <a href="library.html">The Guild Travel Library</a>
+    <a href="usa.html">United States</a>
+    <a href="mexico.html">Mexico</a>
+  </nav>
+</div></header>
+
+<div class="page">
+  <p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="library.html">The Guild Travel Library</a> &rsaquo; <a href="usa.html">United States</a> &rsaquo; <strong>State by State</strong></p>
+
+  <!-- Bohdi & Nolie greeting -->
+  <div class="greet">
+    <div class="guide">
+      <span class="badge"><svg width="46" height="52" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23 2 L43 9 V26 C43 39 34 47 23 50 C12 47 3 39 3 26 V9 Z" fill="#c9a84c" stroke="#8a6a1e" stroke-width="1.5"/><path d="M23 7 L38 12 V26 C38 36 31 42 23 45 C15 42 8 36 8 26 V12 Z" fill="#14401f"/><ellipse cx="23" cy="30" rx="15" ry="3.4" fill="#2f6b3a"/><path d="M14 30 q0 -10 9 -10 q9 0 9 10 Z" fill="#2f6b3a"/><rect x="14.5" y="27.5" width="17" height="2.4" fill="#0d2a14"/><text x="23" y="19" text-anchor="middle" font-family="Cinzel,serif" font-size="8" font-weight="700" fill="#ffe9a8">B</text></svg></span>
+      <span class="say"><b>Howdy — Bohdi here, and that's Nolie.</b><span>Where are we headed today?</span></span>
+    </div>
+    <div class="guide">
+      <span class="badge"><svg width="46" height="52" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23 2 L43 9 V26 C43 39 34 47 23 50 C12 47 3 39 3 26 V9 Z" fill="#c9a84c" stroke="#8a6a1e" stroke-width="1.5"/><path d="M23 7 L38 12 V26 C38 36 31 42 23 45 C15 42 8 36 8 26 V12 Z" fill="#14401f"/><ellipse cx="23" cy="30" rx="15" ry="3.4" fill="#2f6b3a"/><path d="M14 30 q0 -10 9 -10 q9 0 9 10 Z" fill="#2f6b3a"/><rect x="14.5" y="27.5" width="17" height="2.4" fill="#0d2a14"/><text x="23" y="19" text-anchor="middle" font-family="Cinzel,serif" font-size="8" font-weight="700" fill="#ffe9a8">N</text></svg></span>
+      <span class="say"><b>Give us a state, a road, or just a feeling.</b><span>We'll take it from there.</span></span>
+    </div>
+  </div>
+
+  <section class="lib-sec">
+    <div class="us-title">
+      <h1 class="us-title-main">AMERICA</h1>
+      <p class="us-title-sub">The United States, State by State</p>
+    </div>
+    <p class="lib-lede">Every book is a state. Pull one off the shelf and Bohdi &amp; Nolie will take you inside &mdash; the story, the road, and where to stop for the pie.</p>
+
+    <div class="shelf-unit">
+      <p class="shelf-label">The West <span>&middot; Big skies, deserts and the Rockies</span></p>
+      <div class="shelf">
+        <a class="spine" href="alaska.html" style="background:#12506b;" title="Alaska"><span class="band-top"></span><span class="title">ALASKA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="arizona.html" style="background:#b3541e;" title="Arizona"><span class="band-top"></span><span class="title">ARIZONA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="california.html" style="background:#c27b12;" title="California"><span class="band-top"></span><span class="title">CALIFORNIA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="colorado.html" style="background:#1f5fa6;" title="Colorado"><span class="band-top"></span><span class="title">COLORADO</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="hawaii.html" style="background:#0f7a6b;" title="Hawaii"><span class="band-top"></span><span class="title">HAWAII</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="idaho.html" style="background:#2e6b4a;" title="Idaho"><span class="band-top"></span><span class="title">IDAHO</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="montana.html" style="background:#2e5a7a;" title="Montana"><span class="band-top"></span><span class="title">MONTANA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="nevada.html" style="background:#8a2e5a;" title="Nevada"><span class="band-top"></span><span class="title">NEVADA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="new-mexico.html" style="background:#b3541e;" title="New Mexico"><span class="band-top"></span><span class="title">NEW MEXICO</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="oregon.html" style="background:#1f6b5a;" title="Oregon"><span class="band-top"></span><span class="title">OREGON</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="utah.html" style="background:#b3541e;" title="Utah"><span class="band-top"></span><span class="title">UTAH</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="washington.html" style="background:#1f5a6b;" title="Washington"><span class="band-top"></span><span class="title">WASHINGTON</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="wyoming.html" style="background:#2e5a7a;" title="Wyoming"><span class="band-top"></span><span class="title">WYOMING</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+      </div>
+      <div class="shelf-board"></div>
+    </div>
+    <div class="shelf-unit">
+      <p class="shelf-label">The Midwest <span>&middot; The Great Lakes and the heartland</span></p>
+      <div class="shelf">
+        <a class="spine" href="illinois.html" style="background:#2b4a8a;" title="Illinois"><span class="band-top"></span><span class="title">ILLINOIS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="indiana.html" style="background:#8a5a1e;" title="Indiana"><span class="band-top"></span><span class="title">INDIANA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="iowa.html" style="background:#3a6b2e;" title="Iowa"><span class="band-top"></span><span class="title">IOWA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="kansas.html" style="background:#b3841c;" title="Kansas"><span class="band-top"></span><span class="title">KANSAS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="michigan.html" style="background:#1f4a7a;" title="Michigan"><span class="band-top"></span><span class="title">MICHIGAN</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="minnesota.html" style="background:#2e6b6b;" title="Minnesota"><span class="band-top"></span><span class="title">MINNESOTA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="missouri.html" style="background:#8a5a2e;" title="Missouri"><span class="band-top"></span><span class="title">MISSOURI</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="nebraska.html" style="background:#6b5a1e;" title="Nebraska"><span class="band-top"></span><span class="title">NEBRASKA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="north-dakota.html" style="background:#3a6b4a;" title="North Dakota"><span class="band-top"></span><span class="title">NORTH DAKOTA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="ohio.html" style="background:#8a3a2e;" title="Ohio"><span class="band-top"></span><span class="title">OHIO</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="south-dakota.html" style="background:#6b4a2e;" title="South Dakota"><span class="band-top"></span><span class="title">SOUTH DAKOTA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="wisconsin.html" style="background:#3a6b4a;" title="Wisconsin"><span class="band-top"></span><span class="title">WISCONSIN</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+      </div>
+      <div class="shelf-board"></div>
+    </div>
+    <div class="shelf-unit">
+      <p class="shelf-label">The South <span>&middot; From the Gulf to the Blue Ridge</span></p>
+      <div class="shelf">
+        <a class="spine" href="alabama.html" style="background:#9c1b2e;" title="Alabama"><span class="band-top"></span><span class="title">ALABAMA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="arkansas.html" style="background:#2e6e3a;" title="Arkansas"><span class="band-top"></span><span class="title">ARKANSAS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="florida.html" style="background:#d07a1c;" title="Florida"><span class="band-top"></span><span class="title">FLORIDA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="georgia.html" style="background:#7a2e3a;" title="Georgia"><span class="band-top"></span><span class="title">GEORGIA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="kentucky.html" style="background:#5a3a7a;" title="Kentucky"><span class="band-top"></span><span class="title">KENTUCKY</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="louisiana.html" style="background:#5a2e6b;" title="Louisiana"><span class="band-top"></span><span class="title">LOUISIANA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="mississippi.html" style="background:#7a3a2e;" title="Mississippi"><span class="band-top"></span><span class="title">MISSISSIPPI</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="north-carolina.html" style="background:#2e5a8a;" title="North Carolina"><span class="band-top"></span><span class="title">NORTH CAROLINA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="oklahoma.html" style="background:#8a5a1e;" title="Oklahoma"><span class="band-top"></span><span class="title">OKLAHOMA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="south-carolina.html" style="background:#2e6b5a;" title="South Carolina"><span class="band-top"></span><span class="title">SOUTH CAROLINA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="tennessee.html" style="background:#5a3a7a;" title="Tennessee"><span class="band-top"></span><span class="title">TENNESSEE</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="texas.html" style="background:#8a3a2e;" title="Texas"><span class="band-top"></span><span class="title">TEXAS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="virginia.html" style="background:#3a4a7a;" title="Virginia"><span class="band-top"></span><span class="title">VIRGINIA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="west-virginia.html" style="background:#2e5a4a;" title="West Virginia"><span class="band-top"></span><span class="title">WEST VIRGINIA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+      </div>
+      <div class="shelf-board"></div>
+    </div>
+    <div class="shelf-unit">
+      <p class="shelf-label">The Northeast <span>&middot; Founding history and fall colour</span></p>
+      <div class="shelf">
+        <a class="spine" href="connecticut.html" style="background:#3a4a7a;" title="Connecticut"><span class="band-top"></span><span class="title">CONNECTICUT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="delaware.html" style="background:#1c6a95;" title="Delaware"><span class="band-top"></span><span class="title">DELAWARE</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="maine.html" style="background:#1f5a6b;" title="Maine"><span class="band-top"></span><span class="title">MAINE</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="maryland.html" style="background:#8a3a2e;" title="Maryland"><span class="band-top"></span><span class="title">MARYLAND</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="massachusetts.html" style="background:#7a1f2e;" title="Massachusetts"><span class="band-top"></span><span class="title">MASSACHUSETTS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="new-hampshire.html" style="background:#2e5a6b;" title="New Hampshire"><span class="band-top"></span><span class="title">NEW HAMPSHIRE</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="new-jersey.html" style="background:#5a3a7a;" title="New Jersey"><span class="band-top"></span><span class="title">NEW JERSEY</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="new-york.html" style="background:#7a1f2e;" title="New York"><span class="band-top"></span><span class="title">NEW YORK</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="pennsylvania.html" style="background:#3a4a7a;" title="Pennsylvania"><span class="band-top"></span><span class="title">PENNSYLVANIA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="rhode-island.html" style="background:#1f5a7a;" title="Rhode Island"><span class="band-top"></span><span class="title">RHODE ISLAND</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="vermont.html" style="background:#2e6b3a;" title="Vermont"><span class="band-top"></span><span class="title">VERMONT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+      </div>
+      <div class="shelf-board"></div>
+    </div>
+    <div class="shelf-unit">
+      <p class="shelf-label">Federal District <span>&middot; The nation&#x27;s capital</span></p>
+      <div class="shelf">
+        <a class="spine" href="washington-dc.html" style="background:#3a4a7a;" title="Washington, D.C."><span class="band-top"></span><span class="title">WASHINGTON, D.C.</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+      </div>
+      <div class="shelf-board"></div>
+    </div>
+    <div class="shelf-unit">
+      <p class="shelf-label">U.S. Territories <span>&middot; Caribbean and Pacific islands</span></p>
+      <div class="shelf">
+        <a class="spine" href="puerto-rico.html" style="background:#0f7a8a;" title="Puerto Rico"><span class="band-top"></span><span class="title">PUERTO RICO</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="guam.html" style="background:#0f7a6b;" title="Guam"><span class="band-top"></span><span class="title">GUAM</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="us-virgin-islands.html" style="background:#0f7a8a;" title="U.S. Virgin Islands"><span class="band-top"></span><span class="title">U.S. VIRGIN ISLANDS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="american-samoa.html" style="background:#1f6b5a;" title="American Samoa"><span class="band-top"></span><span class="title">AMERICAN SAMOA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" href="northern-mariana-islands.html" style="background:#0f6b8a;" title="Northern Mariana Islands"><span class="band-top"></span><span class="title">NORTHERN MARIANA ISLANDS</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+      </div>
+      <div class="shelf-board"></div>
+    </div>
+
+    <p class="shelf-note">All fifty states, the nation's capital, and the U.S. territories are open on the shelves &mdash; 56 guides in all.</p>
+    <div class="lib-cta">
+      <a href="usa.html">United States &mdash; a Canadian's Guide &rsaquo;</a>
+      <a href="library.html">The full Guild Library &rsaquo;</a>
+    </div>
+  </section>
+
+  <div class="foot">
+    <span>&#127757; Destinations Guild &middot; An affiliate of Trip.com</span><br>
+    <span>Bohdi &amp; Nolie are the Guild's Travel Guides. Details change &mdash; confirm with official sources before you travel.</span><br>
+    <span><a href="index.html">Home</a> &middot; <a href="library.html">Library</a> &middot; <a href="usa.html">United States</a></span>
+  </div>
+</div>
+<script src="dg-lang.js" defer></script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
+</body>
+</html>
