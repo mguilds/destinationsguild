@@ -1783,8 +1783,8 @@ document.querySelectorAll('.ccard').forEach(card => {
   /* ===== Sky (B) behind the HERO only; the rest of the site shows the antique map. Search lifted a little. (Jul 28) ===== */
   html,body{ overflow-x:hidden; }
   .searchrow{ align-items:flex-end !important; width:100vw !important; max-width:none !important; margin-left:calc(50% - 50vw) !important; margin-right:calc(50% - 50vw) !important; margin-top:-30px !important; padding-left:20px !important; padding-right:20px !important; padding-top:34px !important;
-    background-color:#0a1230 !important;
-    background:linear-gradient(rgba(6,10,26,.34), rgba(6,10,26,.44)), url('https://images.unsplash.com/photo-1570284613060-766c33850e00?auto=format&fit=crop&w=2880&q=90') #0a1230 center center / cover no-repeat !important; }
+    background-color:#241d10 !important;
+    background:linear-gradient(rgba(22,28,46,.40), rgba(22,28,46,.52)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') #241d10 center center / cover no-repeat !important; }
   .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:13vh !important; max-width:760px !important; position:relative; z-index:3; }
   @media(max-width:680px){ .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:10vh !important; max-width:none !important; } }
 
@@ -1814,7 +1814,7 @@ document.querySelectorAll('.ccard').forEach(card => {
 
   /* ===== Deep-space starfield: extra stars + Milky Way + planets over the hero (Jul 28) ===== */
   .searchrow{ position:relative; }
-  .dg-starfield{ position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden; }
+  .dg-starfield{ position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden; display:none !important; }
   /* Milky Way — soft luminous band across the sky */
   .dg-starfield .mw{ position:absolute; left:-20%; right:-20%; top:8%; height:52%;
     background:
