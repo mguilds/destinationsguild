@@ -149,8 +149,8 @@ img { display:block; width:100%; object-fit:cover; }
 .searchrow .search-wrap{margin:0;}
 .searchrow .mh-globe{position:absolute;right:100%;top:0;margin-right:1.3rem;}
 @media(max-width:1080px){.searchrow{display:flex;flex-direction:column;align-items:center;}.searchrow .mh-globe{position:static;margin:0 auto .6rem;}}
-.search-wrap { background:linear-gradient(160deg,#f3ead0,#e7d9b4); position:relative; overflow:hidden; border:0.5px solid #c7a86a; border-radius:14px; padding:1.5rem 1.75rem; margin:2.4rem auto 1.5rem; max-width:800px; }
-.search-wrap::before { content:''; position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.06; background-image:repeating-linear-gradient(45deg,#0c2444 0,#0c2444 1px,transparent 1px,transparent 50%); background-size:12px 12px; }
+.search-wrap { background:linear-gradient(rgba(250,246,236,.30),rgba(244,238,222,.34)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat; position:relative; overflow:hidden; border:0.5px solid #c7a86a; border-radius:14px; padding:1.5rem 1.75rem; margin:2.4rem auto 1.5rem; max-width:800px; }
+.search-wrap::before { content:''; position:absolute; inset:0; z-index:0; pointer-events:none; opacity:0; }
 .search-wrap > * { position:relative; z-index:1; }
 .search-hdr { color:#0c2444; font-size:1.7rem; font-weight:700; margin-bottom:1rem; display:flex; align-items:center; gap:.5rem; font-family:'Cormorant Garamond',serif; }
 .search-hdr i { color:var(--gold-mid); font-size:20px; }
@@ -608,7 +608,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 <style>
   body{background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center center / cover no-repeat fixed, radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f); min-height:100vh;}
   .page{background:rgba(249,243,226,.93); border:1px solid rgba(120,90,40,.35); border-radius:16px; box-shadow:0 10px 38px rgba(30,20,5,.32); padding:12px 26px 34px; margin:18px auto 34px; max-width:1120px;}
-  .search-wrap{zoom:0.82;background:linear-gradient(rgba(247,238,214,.90),rgba(236,222,186,.93)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat !important; border:1px solid #c7a86a !important; border-top:4px solid #C9A84C; border-radius:16px; box-shadow:0 10px 30px rgba(20,40,70,.16); padding:18px 20px 20px !important;}
+  .search-wrap{zoom:0.82;background:linear-gradient(rgba(250,246,236,.32),rgba(244,238,222,.38)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat !important; border:1px solid #c7a86a !important; border-top:4px solid #C9A84C; border-radius:16px; box-shadow:0 10px 30px rgba(20,40,70,.16); padding:18px 20px 20px !important;}
   .legacy-search{background:transparent !important;}
   .legacy-search .inp, .legacy-search .sel{border:1.6px solid #1c1c1c !important;}
   /* Header removed — compact floating language switch, top-right */
@@ -627,6 +627,8 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   <nav class="dg-nav-links">
     <a href="index.html">Home</a>
     <a href="library.html">The Guild Travel Library</a>
+    <a href="our-story.html">Our Story</a>
+    <a href="index.html#site-index">The Chart Room</a>
   </nav>
   <span class="lang-group noi18n">
     <a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Espanol">ES</a>
@@ -639,6 +641,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 
   <!-- 02 SEARCH -->
   <div class="searchrow">
+    <img class="searchrow-map" referrerpolicy="no-referrer" alt="Antique world map" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600" onerror="this.style.display='none'">
     <div class="mh-globe"><div class="globe-wrap">
           <div class="globe-glow"></div>
           <div class="globe">
@@ -752,29 +755,52 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     .dg-story-body p{font-size:18px;line-height:1.66;color:#2a3444;margin:0 0 15px;}
     @media(max-width:680px){.dg-story{padding:24px 18px 28px;} .dg-story .ds-flags-row svg{width:34px;height:23px;} .dg-story-body p{font-size:17px;}}
   </style>
-  <section class="dg-story noi18n">
-    <div class="dg-story-lockup" id="dsLockup" title="Tap to watch Polly release the Explorers">
-      <div class="ds-globe" id="dsGlobe"></div>
-      <div class="ds-polly" id="dsPolly"></div>
-      <div class="ds-center">
-        <div class="ds-word">DESTINATIONS <span>GUILD</span></div>
-        <div class="ds-flags">
-          <div class="ds-flword-top" id="dsFlwordTop">TRAVEL</div>
-          <div class="ds-flags-row" id="dsFlags"></div>
-          <div class="ds-flags-cap">&ldquo;Travel&rdquo; in the International Maritime Signal Code</div>
+    <!-- ===== THE CHART ROOM — full site index as a pull-open chart drawer (auto-built from site pages) ===== -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    .chart-chest{max-width:1000px;margin:26px auto;background:linear-gradient(#6e4a28,#5a3b20);border:2px solid #3f2a16;border-radius:14px;padding:14px;box-shadow:0 18px 44px rgba(30,18,6,.4);text-align:left;font-family:'EB Garamond',Georgia,serif;}
+    .chart-chest .cr-intro{color:#f0e2c4;text-align:center;font-style:italic;font-size:14.5px;margin:2px 0 12px;}
+    .cr-drawer{display:block;margin:0 0 12px;border-radius:8px;overflow:hidden;border:1px solid #3f2a16;text-decoration:none;background:repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 7px),linear-gradient(#8a5f34,#754e29);box-shadow:inset 0 2px 5px rgba(255,220,170,.18),inset 0 -6px 12px rgba(0,0,0,.28);}
+    .cr-front{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:18px;height:70px;position:relative;}
+    .cr-front::-webkit-details-marker{display:none;}
+    .cr-pull{width:54px;height:16px;border-radius:8px;background:linear-gradient(#f2d68a,#b98b34);box-shadow:0 2px 4px rgba(0,0,0,.4),inset 0 1px 1px rgba(255,255,255,.6);flex-shrink:0;}
+    .cr-plate{background:linear-gradient(#f4dc92,#c79a3e);border:1px solid #8a6a1f;border-radius:5px;padding:7px 22px;text-align:center;box-shadow:0 2px 5px rgba(0,0,0,.3),inset 0 1px 2px rgba(255,255,255,.5);}
+    .cr-plate .cr-t{font-family:'Cinzel',serif;font-weight:700;letter-spacing:.13em;color:#3c2c07;font-size:17px;}
+    .cr-plate .cr-s{font-size:11.5px;font-style:italic;color:#5b4718;}
+    details.cr-drawer[open] .cr-front{height:46px;border-bottom:3px solid #3f2a16;}
+    .cr-tray{background:linear-gradient(rgba(250,246,236,.55),rgba(244,238,222,.6)),repeating-linear-gradient(0deg,rgba(120,85,35,.05) 0 1px,transparent 1px 5px);background-color:#efe6cf;padding:16px 18px 18px;max-height:62vh;overflow:auto;}
+    .cr-tray-h{font-family:'Cinzel',serif;font-size:12px;font-weight:700;letter-spacing:.05em;color:#8a6a1f;text-transform:uppercase;border-bottom:1px solid rgba(201,168,76,.5);padding-bottom:5px;margin:0 0 12px;}
+    .cr-cols{columns:3;column-gap:24px;}
+    @media(max-width:820px){.cr-cols{columns:2;}}
+    @media(max-width:520px){.cr-cols{columns:1;}}
+    .cr-grp{break-inside:avoid;margin:0 0 15px;}
+    .cr-grp h4{font-family:'Cinzel',serif;font-size:12.5px;color:#173a78;margin:0 0 5px;letter-spacing:.03em;border-bottom:1px solid rgba(201,168,76,.4);padding-bottom:3px;}
+    .cr-grp .cr-n{color:#9a8a63;font-size:11px;}
+    .cr-grp a{display:block;color:#1c4587;text-decoration:none;font-size:15px;line-height:1.55;}
+    .cr-grp a:hover{color:#b8860b;text-decoration:underline;}
+  </style>
+  <section class="chart-chest noi18n" id="site-index">
+    <p class="cr-intro">The Chart Room &mdash; every chart in the Guild, in one chest. Pull a drawer to browse.</p>
+
+    <details class="cr-drawer">
+      <summary class="cr-front"><span class="cr-pull"></span><span class="cr-plate"><span class="cr-t">THE&nbsp;CHART&nbsp;ROOM</span><br><span class="cr-s">Every chart in the Guild &middot; 143 destinations</span></span><span class="cr-pull"></span></summary>
+      <div class="cr-tray">
+        <div class="cr-tray-h">&#9758; Open &mdash; tap any chart to sail there</div>
+        <div class="cr-cols">
+        <div class="cr-grp"><h4>About the Guild <span class="cr-n">6</span></h4><a href="index.html">Home</a><a href="our-story.html">Our Story</a><a href="get-involved.html">Get Involved</a><a href="library.html">The Guild Travel Library</a><a href="thank-you.html">Thank you</a><a href="us-states-library.html">The United States, State by State</a></div>
+        <div class="cr-grp"><h4>Country Guides <span class="cr-n">18</span></h4><a href="australia.html">Australia Travel Guide</a><a href="brazil.html">Brazil Travel Guide</a><a href="china.html">China Travel Guide</a><a href="egypt.html">Egypt Travel Guide</a><a href="france.html">France Travel Guide</a><a href="germany.html">Germany Travel Guide</a><a href="hongkong.html">Hong Kong Travel Guide</a><a href="italy.html">Italy Travel Guide</a><a href="japan.html">Japan Travel Guide</a><a href="mexico.html">Mexico Travel Guide</a><a href="morocco.html">Morocco Travel Guide</a><a href="singapore.html">Singapore Travel Guide</a><a href="south-africa.html">South Africa Travel Guide</a><a href="south-korea.html">South Korea Travel Guide</a><a href="spain.html">Spain Travel Guide</a><a href="thailand.html">Thailand Travel Guide</a><a href="united-kingdom.html">United Kingdom Travel Guide</a><a href="usa.html">USA Travel Guide for Canadians</a></div>
+        <div class="cr-grp"><h4>City & Where-to-Stay Guides <span class="cr-n">48</span></h4><a href="amalfi-coast-hotels.html">Amalfi Coast Hotels</a><a href="bangkok.html">Bangkok Travel Guide</a><a href="barcelona-hotels.html">Where to Stay in Barcelona</a><a href="beijing-hotels.html">Where to Stay in Beijing</a><a href="berlin-hotels.html">Where to Stay in Berlin</a><a href="busan-hotels.html">Where to Stay in Busan</a><a href="cairo-hotels.html">Where to Stay in Cairo</a><a href="cancun-hotels.html">Best Cancún Hotels</a><a href="cancun.html">Cancún Travel Guide</a><a href="cape-town-hotels.html">Where to Stay in Cape Town</a><a href="chengdu-hotels.html">Where to Stay in Chengdu</a><a href="chiang-mai.html">Chiang Mai Travel Guide</a><a href="cozumel.html">Cozumel Travel Guide</a><a href="durban-hotels.html">Where to Stay in Durban</a><a href="edinburgh-hotels.html">Where to Stay in Edinburgh</a><a href="guangzhou-hotels.html">Where to Stay in Guangzhou</a><a href="hiroshima-hotels.html">Where to Stay in Hiroshima</a><a href="johannesburg-hotels.html">Where to Stay in Johannesburg</a><a href="koh-samui.html">Koh Samui Travel Guide</a><a href="krabi.html">Krabi Travel Guide</a><a href="kyoto-hotels.html">Where to Stay in Kyoto</a><a href="las-vegas.html">Las Vegas Travel Guide for Canadians</a><a href="london-hotels.html">Where to Stay in London</a><a href="los-cabos.html">Los Cabos Travel Guide</a><a href="madrid-hotels.html">Where to Stay in Madrid</a><a href="marrakech-hotels.html">Where to Stay in Marrakech</a><a href="mexico-city.html">Mexico City Travel Guide</a><a href="munich-hotels.html">Where to Stay in Munich</a><a href="niagara-falls-usa.html">Niagara Falls, New York</a><a href="nice-hotels.html">Where to Stay in Nice &amp; the French Riviera</a><a href="orlando.html">Orlando Travel Guide for Canadians</a><a href="osaka-hotels.html">Where to Stay in Osaka</a><a href="paris-hotels.html">Where to Stay in Paris</a><a href="pattaya.html">Pattaya Travel Guide</a><a href="phuket.html">Phuket Travel Guide</a><a href="playa-del-carmen.html">Playa del Carmen Travel Guide</a><a href="pretoria-hotels.html">Where to Stay in Pretoria</a><a href="puerto-vallarta.html">Puerto Vallarta Travel Guide</a><a href="rome-hotels.html">Where to Stay in Rome</a><a href="sapporo-hotels.html">Where to Stay in Sapporo</a><a href="seoul-hotels.html">Where to Stay in Seoul</a><a href="shanghai-hotels.html">Where to Stay in Shanghai</a><a href="singapore-hotels.html">Where to Stay in Singapore</a><a href="stellenbosch-hotels.html">Where to Stay in Stellenbosch</a><a href="tokyo-hotels.html">Where to Stay in Tokyo</a><a href="tulum.html">Tulum Travel Guide</a><a href="venice-hotels.html">Where to Stay in Venice</a><a href="xian-hotels.html">Where to Stay in Xi'an</a></div>
+        <div class="cr-grp"><h4>Best Time to Visit <span class="cr-n">12</span></h4><a href="best-time-to-visit-china.html">Best Time to Visit China</a><a href="best-time-to-visit-egypt.html">Best Time to Visit Egypt</a><a href="best-time-to-visit-france.html">Best Time to Visit France</a><a href="best-time-to-visit-germany.html">Best Time to Visit Germany</a><a href="best-time-to-visit-italy.html">Best Time to Visit Italy</a><a href="best-time-to-visit-japan.html">Best Time to Visit Japan</a><a href="best-time-to-visit-morocco.html">Best Time to Visit Morocco</a><a href="best-time-to-visit-singapore.html">Best Time to Visit Singapore</a><a href="best-time-to-visit-south-africa.html">Best Time to Visit South Africa</a><a href="best-time-to-visit-south-korea.html">Best Time to Visit South Korea</a><a href="best-time-to-visit-spain.html">Best Time to Visit Spain</a><a href="best-time-to-visit-uk.html">Best Time to Visit United Kingdom</a></div>
+        <div class="cr-grp"><h4>United States, State by State <span class="cr-n">56</span></h4><a href="alabama.html">Alabama Travel Guide</a><a href="alaska.html">Alaska Travel Guide</a><a href="american-samoa.html">American Samoa Travel Guide</a><a href="arizona.html">Arizona Travel Guide</a><a href="arkansas.html">Arkansas Travel Guide</a><a href="california.html">California Travel Guide</a><a href="colorado.html">Colorado Travel Guide</a><a href="connecticut.html">Connecticut Travel Guide</a><a href="delaware.html">Delaware Travel Guide</a><a href="florida.html">Florida Travel Guide</a><a href="georgia.html">Georgia Travel Guide</a><a href="guam.html">Guam Travel Guide</a><a href="hawaii.html">Hawaii Travel Guide</a><a href="idaho.html">Idaho Travel Guide</a><a href="illinois.html">Illinois Travel Guide</a><a href="indiana.html">Indiana Travel Guide</a><a href="iowa.html">Iowa Travel Guide</a><a href="kansas.html">Kansas Travel Guide</a><a href="kentucky.html">Kentucky Travel Guide</a><a href="louisiana.html">Louisiana Travel Guide</a><a href="maine.html">Maine Travel Guide</a><a href="maryland.html">Maryland Travel Guide</a><a href="massachusetts.html">Massachusetts Travel Guide</a><a href="michigan.html">Michigan Travel Guide</a><a href="minnesota.html">Minnesota Travel Guide</a><a href="mississippi.html">Mississippi Travel Guide</a><a href="missouri.html">Missouri Travel Guide</a><a href="montana.html">Montana Travel Guide</a><a href="nebraska.html">Nebraska Travel Guide</a><a href="nevada.html">Nevada Travel Guide</a><a href="new-hampshire.html">New Hampshire Travel Guide</a><a href="new-jersey.html">New Jersey Travel Guide</a><a href="new-mexico.html">New Mexico Travel Guide</a><a href="new-york.html">New York Travel Guide</a><a href="north-carolina.html">North Carolina Travel Guide</a><a href="north-dakota.html">North Dakota Travel Guide</a><a href="northern-mariana-islands.html">Northern Mariana Islands Travel Guide</a><a href="ohio.html">Ohio Travel Guide</a><a href="oklahoma.html">Oklahoma Travel Guide</a><a href="oregon.html">Oregon Travel Guide</a><a href="pennsylvania.html">Pennsylvania Travel Guide</a><a href="puerto-rico.html">Puerto Rico Travel Guide</a><a href="rhode-island.html">Rhode Island Travel Guide</a><a href="south-carolina.html">South Carolina Travel Guide</a><a href="south-dakota.html">South Dakota Travel Guide</a><a href="tennessee.html">Tennessee Travel Guide</a><a href="texas.html">Texas Travel Guide</a><a href="us-virgin-islands.html">U.S. Virgin Islands Travel Guide</a><a href="utah.html">Utah Travel Guide</a><a href="vermont.html">Vermont Travel Guide</a><a href="virginia.html">Virginia Travel Guide</a><a href="washington-dc.html">Washington, D.C. Travel Guide</a><a href="washington.html">Washington Travel Guide</a><a href="west-virginia.html">West Virginia Travel Guide</a><a href="wisconsin.html">Wisconsin Travel Guide</a><a href="wyoming.html">Wyoming Travel Guide</a></div>
+        <div class="cr-grp"><h4>Regions & Features <span class="cr-n">3</span></h4><a href="asia.html">Asia Travel Guides</a><a href="north-america.html">North America Travel Guides</a><a href="seven-wonders.html">The Seven Wonders of the World</a></div>
         </div>
       </div>
-    </div>
-    <div class="dg-story-body">
-      <h2 class="ds-h">Our Story</h2>
-      <p>Destinations Guild began with a simple belief &mdash; that planning a trip should feel like opening a great book: full of possibility, easy to follow, and honest about what you&rsquo;ll find. Our founder has spent more than two decades in travel reservations, going back to the earliest days of booking hotels online, and built the Guild to carry that hard-won craft into a new era.</p>
-      <p>Today the Guild is a curated gateway to the whole world &mdash; hotels, flights, cruises, and experiences across every continent &mdash; with real guidance instead of noise. We&rsquo;re an independent travel company and a proud partner of Trip.com: you book on trusted, secure platforms, and we earn a small commission that keeps the Guild free to use. Our promise is simple &mdash; make the world easy to explore, for everyone.</p>
-      <p>Those flags above spell <strong>TRAVEL</strong> &mdash; and, in turn, <strong>VIAJE</strong> and <strong>VOYAGE</strong> &mdash; in the international maritime signal code, a tip of the hat to the navigators and explorers who charted the world long before us.</p>
-      <h2 class="ds-h">About Our Explorers</h2>
-      <p>Every guide in our Library is the work of the <strong>Guild Explorers</strong> &mdash; our dedicated research team. They range across the globe, gather the current facts, prices, and seasons for each country, and write it all up so you don&rsquo;t have to dig. Every book is signed <em>&ldquo;Curated by Our Guild Explorers&rdquo;</em> and kept up to date.</p>
-      <p>And keep an eye out for <strong>Polly</strong> &mdash; our resident parrot and travel concierge. She&rsquo;s online any time you&rsquo;d like to ask a question, plan a trip, or find a place to stay &mdash; always free.</p>
-    </div>
+    </details>
+
+    <a class="cr-drawer" href="library.html"><span class="cr-front"><span class="cr-pull"></span><span class="cr-plate"><span class="cr-t">THE&nbsp;GUILD&nbsp;TRAVEL&nbsp;LIBRARY</span></span><span class="cr-pull"></span></span></a>
+    <a class="cr-drawer" href="us-states-library.html"><span class="cr-front"><span class="cr-pull"></span><span class="cr-plate"><span class="cr-t">THE&nbsp;UNITED&nbsp;STATES,&nbsp;STATE&nbsp;BY&nbsp;STATE</span></span><span class="cr-pull"></span></span></a>
   </section>
+
 
   <!-- ===== GUILD TRAVEL LIBRARY — bookcase (added Jul 18) ===== -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -1737,7 +1763,7 @@ document.querySelectorAll('.ccard').forEach(card => {
   .dream-cloud{ display:none !important; }
   /* Lift the "Where do you want to go today?" heading above the card, in white */
   .searchrow .search-wrap{ overflow:visible !important; }
-  .searchrow .search-wrap > h2{ position:absolute !important; left:0 !important; right:0 !important; bottom:calc(100% + 16px) !important; margin:0 !important; color:#ffffff !important; text-shadow:0 2px 16px rgba(0,0,0,.6), 0 1px 4px rgba(0,0,0,.55) !important; }
+  .searchrow .search-wrap > h2{ position:absolute !important; left:0 !important; right:0 !important; bottom:calc(100% + 16px) !important; margin:0 !important; color:#173a78 !important; text-shadow:0 1px 2px rgba(255,255,255,.7) !important; }
   @media(max-width:680px){ .searchrow .search-wrap{ margin-top:38vh !important; } .searchrow .mh-globe{ top:8px !important; left:8px !important; } }
   /* Give every element a clear gutter inside the sky's edge (>=3/4in / ~72px), clearing the 55px edge-fade so nothing crowds the sky border; responsive so it never crushes content on narrow screens */
   .page{ padding-left:128px !important; padding-right:128px !important; padding-bottom:110px !important; }
@@ -1780,11 +1806,13 @@ document.querySelectorAll('.ccard').forEach(card => {
     .searchrow{ height:auto !important; min-height:calc(100dvh - 58px) !important; }
     .gtl-sec{ margin-top:150px !important; }
   }
-  /* ===== Sky (B) behind the HERO only; the rest of the site shows the antique map. Search lifted a little. (Jul 28) ===== */
+.searchrow-map{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;}
+  .searchrow > .search-wrap{position:relative;z-index:3;}
+    /* ===== Sky (B) behind the HERO only; the rest of the site shows the antique map. Search lifted a little. (Jul 28) ===== */
   html,body{ overflow-x:hidden; }
   .searchrow{ align-items:flex-end !important; width:100vw !important; max-width:none !important; margin-left:calc(50% - 50vw) !important; margin-right:calc(50% - 50vw) !important; margin-top:-30px !important; padding-left:20px !important; padding-right:20px !important; padding-top:34px !important;
-    background-color:#241d10 !important;
-    background:linear-gradient(rgba(22,28,46,.40), rgba(22,28,46,.52)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') #241d10 center center / cover no-repeat !important; }
+    background-color:#e6d7b6 !important;
+    background:radial-gradient(circle at 30% 20%, #efe2c2, #e2d0a9 70%) !important; }
   .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:13vh !important; max-width:760px !important; position:relative; z-index:3; }
   @media(max-width:680px){ .searchrow .search-wrap{ margin-top:0 !important; margin-bottom:10vh !important; max-width:none !important; } }
 
