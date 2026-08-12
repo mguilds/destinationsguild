@@ -87,17 +87,63 @@ body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(
 <div class="page">
   <p class="crumb"><a href="index.html">Home</a> &rsaquo; <a href="library.html">The Guild Travel Library</a> &rsaquo; <a href="usa.html">United States</a> &rsaquo; <strong>State by State</strong></p>
 
-  <!-- Bodhi & Nolie greeting -->
-  <div class="greet">
-    <div class="guide">
-      <span class="badge"><svg width="46" height="52" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23 2 L43 9 V26 C43 39 34 47 23 50 C12 47 3 39 3 26 V9 Z" fill="#c9a84c" stroke="#8a6a1e" stroke-width="1.5"/><path d="M23 7 L38 12 V26 C38 36 31 42 23 45 C15 42 8 36 8 26 V12 Z" fill="#14401f"/><ellipse cx="23" cy="30" rx="15" ry="3.4" fill="#2f6b3a"/><path d="M14 30 q0 -10 9 -10 q9 0 9 10 Z" fill="#2f6b3a"/><rect x="14.5" y="27.5" width="17" height="2.4" fill="#0d2a14"/><text x="23" y="19" text-anchor="middle" font-family="Cinzel,serif" font-size="8" font-weight="700" fill="#ffe9a8">B</text></svg></span>
-      <span class="say"><b>Howdy — Bodhi here, and that's Nolie.</b><span>Where are we headed today?</span></span>
+  <!-- Meet your guides — Bodhi & Nolie (forest scene + National Park sign) -->
+  <style>
+  .bn-meet{position:relative;overflow:hidden;isolation:isolate;border:2px solid #d4b46e;border-radius:16px;padding:30px 22px 28px;margin:1.8rem auto 0;color:#fdf7e7;}
+  .bn-scene{position:absolute;inset:0;z-index:0;background:#14301f url('bn-redwoods.jpg') center/cover no-repeat;}
+  .bn-scene svg{width:100%;height:100%;display:block;}
+  .bn-meet::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(9,26,15,.46),rgba(9,26,15,.72) 72%);}
+  .bn-inner{position:relative;z-index:2;}
+  /* National Park routed wooden sign */
+  .bn-sign{max-width:600px;margin:0 auto 20px;text-align:center;position:relative;padding:16px 26px 15px;border-radius:14px;
+    background:linear-gradient(#6f4c2c,#49301a);border:3px solid #e7cf9c;
+    box-shadow:0 10px 24px rgba(0,0,0,.45),inset 0 2px 8px rgba(255,214,150,.18),inset 0 -3px 10px rgba(0,0,0,.35);}
+  .bn-sign::before{content:"";position:absolute;inset:6px;border:2px solid rgba(240,216,160,.5);border-radius:9px;pointer-events:none;}
+  .bn-kicker{font-family:'Cinzel',serif;letter-spacing:.24em;text-transform:uppercase;font-size:12px;color:#f0d9a6;margin:0 0 3px;}
+  .bn-title{font-family:'Cinzel',serif;font-weight:700;font-size:clamp(1.5rem,4.6vw,2.15rem);color:#fbeecb;letter-spacing:.07em;margin:0;text-shadow:0 1px 0 rgba(0,0,0,.5),0 2px 4px rgba(0,0,0,.4);}
+  .bn-lede{font-family:'EB Garamond',serif;font-style:italic;font-size:17px;color:#eee3c4;max-width:640px;margin:0 auto 18px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.55);}
+  .bn-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:680px){.bn-cards{grid-template-columns:1fr;}}
+  .bn-card{background:rgba(255,253,245,.97);border:1px solid #d8cba6;border-radius:14px;padding:18px 20px 16px;color:#26221a;box-shadow:0 8px 20px rgba(0,0,0,.32);}
+  .bn-card.b{border-top:5px solid #2f6b3a;} .bn-card.n{border-top:5px solid #b5532a;}
+  .bn-row{display:flex;align-items:center;gap:12px;margin-bottom:6px;}
+  .bn-name{font-family:'Cinzel',serif;font-weight:700;font-size:1.28rem;margin:0;color:#16305c;line-height:1.1;}
+  .bn-role{display:block;font-family:'EB Garamond',serif;font-style:italic;font-size:13.5px;color:#6a5b3a;}
+  .bn-card p{font-size:15px;color:#3a352a;margin:.25em 0 0;}
+  .bn-catch{margin-top:11px !important;font-family:'EB Garamond',serif;font-style:italic;font-size:16px;border-left:3px solid #d4b46e;padding-left:10px;}
+  .bn-card.b .bn-catch{color:#2f6b3a;} .bn-card.n .bn-catch{color:#b5532a;}
+  .bn-look{margin:18px auto 0;text-align:center;font-family:'EB Garamond',serif;font-size:15px;color:#eee3c4;max-width:660px;text-shadow:0 1px 3px rgba(0,0,0,.55);}
+  .bn-look b{color:#ffe1a0;font-weight:600;}
+  </style>
+  <section class="bn-meet" aria-label="Meet your travel guides">
+    <div class="bn-scene"></div>
+    <div class="bn-inner">
+    <div class="bn-sign">
+      <p class="bn-kicker">Meet your Travel Guides</p>
+      <h2 class="bn-title">Bodhi &amp; Nolie</h2>
     </div>
-    <div class="guide">
-      <span class="badge"><svg width="46" height="52" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23 2 L43 9 V26 C43 39 34 47 23 50 C12 47 3 39 3 26 V9 Z" fill="#c9a84c" stroke="#8a6a1e" stroke-width="1.5"/><path d="M23 7 L38 12 V26 C38 36 31 42 23 45 C15 42 8 36 8 26 V12 Z" fill="#14401f"/><ellipse cx="23" cy="30" rx="15" ry="3.4" fill="#2f6b3a"/><path d="M14 30 q0 -10 9 -10 q9 0 9 10 Z" fill="#2f6b3a"/><rect x="14.5" y="27.5" width="17" height="2.4" fill="#0d2a14"/><text x="23" y="19" text-anchor="middle" font-family="Cinzel,serif" font-size="8" font-weight="700" fill="#ffe9a8">N</text></svg></span>
-      <span class="say"><b>Give us a state, a road, or just a feeling.</b><span>We'll take it from there.</span></span>
+    <p class="bn-lede">Two ranger-hatted guides who ride shotgun through every state &mdash; so each book reads like a road trip with friends, not a wall of listings.</p>
+    <div class="bn-cards">
+      <div class="bn-card b">
+        <div class="bn-row">
+          <span class="badge"><svg width="46" height="52" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23 2 L43 9 V26 C43 39 34 47 23 50 C12 47 3 39 3 26 V9 Z" fill="#c9a84c" stroke="#8a6a1e" stroke-width="1.5"/><path d="M23 7 L38 12 V26 C38 36 31 42 23 45 C15 42 8 36 8 26 V12 Z" fill="#14401f"/><ellipse cx="23" cy="30" rx="15" ry="3.4" fill="#2f6b3a"/><path d="M14 30 q0 -10 9 -10 q9 0 9 10 Z" fill="#2f6b3a"/><rect x="14.5" y="27.5" width="17" height="2.4" fill="#0d2a14"/><text x="23" y="19" text-anchor="middle" font-family="Cinzel,serif" font-size="8" font-weight="700" fill="#ffe9a8">B</text></svg></span>
+          <span><h3 class="bn-name">Bodhi</h3><span class="bn-role">The Head &middot; the story &amp; the map</span></span>
+        </div>
+        <p>He's driven every back road twice and knows why the town got its name. Bodhi brings the <em>why</em> &mdash; the history, the route, and the fact that makes a place click.</p>
+        <p class="bn-catch">&ldquo;Now here's the good part&hellip;&rdquo;</p>
+      </div>
+      <div class="bn-card n">
+        <div class="bn-row">
+          <span class="badge"><svg width="46" height="52" viewBox="0 0 46 52" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23 2 L43 9 V26 C43 39 34 47 23 50 C12 47 3 39 3 26 V9 Z" fill="#c9a84c" stroke="#8a6a1e" stroke-width="1.5"/><path d="M23 7 L38 12 V26 C38 36 31 42 23 45 C15 42 8 36 8 26 V12 Z" fill="#14401f"/><ellipse cx="23" cy="30" rx="15" ry="3.4" fill="#2f6b3a"/><path d="M14 30 q0 -10 9 -10 q9 0 9 10 Z" fill="#2f6b3a"/><rect x="14.5" y="27.5" width="17" height="2.4" fill="#0d2a14"/><text x="23" y="19" text-anchor="middle" font-family="Cinzel,serif" font-size="8" font-weight="700" fill="#ffe9a8">N</text></svg></span>
+          <span><h3 class="bn-name">Nolie</h3><span class="bn-role">The Heart &middot; the feel &amp; the secret</span></span>
+        </div>
+        <p>Where Bodhi has the map, Nolie has the <em>feel</em> &mdash; which overlook at golden hour, where the locals actually eat, and which &ldquo;tourist trap&rdquo; is secretly worth it.</p>
+        <p class="bn-catch">&ldquo;Trust me on this one.&rdquo;</p>
+      </div>
     </div>
-  </div>
+    <p class="bn-look">You'll know them the same way every time &mdash; the evergreen <b>flat-brim ranger hat</b>, the <b>gold badge</b>, and the hand-stitched <b>&ldquo;Hi, I'm ___&rdquo; nametag</b>. An affectionate tip of the hat to the great park guides &mdash; never the official article.</p>
+    </div>
+  </section>
 
   <section class="lib-sec">
     <div class="us-title">
