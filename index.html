@@ -149,7 +149,7 @@ img { display:block; width:100%; object-fit:cover; }
 .searchrow .search-wrap{margin:0;}
 .searchrow .mh-globe{position:absolute;right:100%;top:0;margin-right:1.3rem;}
 @media(max-width:1080px){.searchrow{display:flex;flex-direction:column;align-items:center;}.searchrow .mh-globe{position:static;margin:0 auto .6rem;}}
-.search-wrap { background:linear-gradient(rgba(250,246,236,.30),rgba(244,238,222,.34)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat; position:relative; overflow:hidden; border:0.5px solid #c7a86a; border-radius:14px; padding:1.5rem 1.75rem; margin:2.4rem auto 1.5rem; max-width:800px; }
+.search-wrap { background:linear-gradient(rgba(245,236,214,.93),rgba(238,228,203,.95)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat; position:relative; overflow:hidden; border:0.5px solid #c7a86a; border-radius:14px; padding:1.5rem 1.75rem; margin:2.4rem auto 1.5rem; max-width:800px; }
 .search-wrap::before { content:''; position:absolute; inset:0; z-index:0; pointer-events:none; opacity:0; }
 .search-wrap > * { position:relative; z-index:1; }
 .search-hdr { color:#0c2444; font-size:1.7rem; font-weight:700; margin-bottom:1rem; display:flex; align-items:center; gap:.5rem; font-family:'Cormorant Garamond',serif; }
@@ -608,7 +608,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 <style>
   body{background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center center / cover no-repeat fixed, radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f); min-height:100vh;}
   .page{background:rgba(249,243,226,.93); border:1px solid rgba(120,90,40,.35); border-radius:16px; box-shadow:0 10px 38px rgba(30,20,5,.32); padding:12px 26px 34px; margin:18px auto 34px; max-width:1120px;}
-  .search-wrap{zoom:0.82;background:linear-gradient(rgba(250,246,236,.32),rgba(244,238,222,.38)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat !important; border:1px solid #c7a86a !important; border-top:4px solid #C9A84C; border-radius:16px; box-shadow:0 10px 30px rgba(20,40,70,.16); padding:18px 20px 20px !important;}
+  .search-wrap{zoom:0.82;background:linear-gradient(rgba(245,236,214,.94),rgba(238,228,203,.96)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat !important; border:1px solid #c7a86a !important; border-top:4px solid #C9A84C; border-radius:16px; box-shadow:0 10px 30px rgba(20,40,70,.16); padding:18px 20px 20px !important; transform:translateY(-104px) !important;}
   .legacy-search{background:transparent !important;}
   .legacy-search .inp, .legacy-search .sel{border:1.6px solid #1c1c1c !important;}
   /* Header removed — compact floating language switch, top-right */
@@ -1763,7 +1763,7 @@ document.querySelectorAll('.ccard').forEach(card => {
   .dream-cloud{ display:none !important; }
   /* Lift the "Where do you want to go today?" heading above the card, in white */
   .searchrow .search-wrap{ overflow:visible !important; }
-  .searchrow .search-wrap > h2{ position:absolute !important; left:0 !important; right:0 !important; bottom:calc(100% + 16px) !important; margin:0 !important; color:#173a78 !important; text-shadow:0 1px 2px rgba(255,255,255,.7) !important; }
+  .searchrow .search-wrap > h2{ position:absolute !important; left:50% !important; right:auto !important; transform:translateX(-50%) !important; bottom:calc(100% + 16px) !important; width:max-content !important; max-width:92vw !important; margin:0 !important; padding:6px 30px 10px !important; color:#173a78 !important; background:linear-gradient(rgba(245,236,214,.96),rgba(238,228,203,.98)) !important; border:1px solid #c7a86a !important; border-radius:14px !important; box-shadow:0 6px 18px rgba(20,40,70,.16) !important; }
   @media(max-width:680px){ .searchrow .search-wrap{ margin-top:38vh !important; } .searchrow .mh-globe{ top:8px !important; left:8px !important; } }
   /* Give every element a clear gutter inside the sky's edge (>=3/4in / ~72px), clearing the 55px edge-fade so nothing crowds the sky border; responsive so it never crushes content on narrow screens */
   .page{ padding-left:128px !important; padding-right:128px !important; padding-bottom:110px !important; }
