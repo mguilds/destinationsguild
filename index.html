@@ -721,6 +721,52 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   </div>
   </div>
 
+  <!-- 05 CRUISES -->
+  <div class="sec-hdr" id="cruises" style="scroll-margin-top:14px;">
+    <div><h2 class="slbl" style="margin-bottom:0;">Featured Cruises</h2><p style="font-size:12px;color:var(--txt2);margin-top:3px;">Sail with the world&rsquo;s favorite cruise lines &mdash; Caribbean, Bahamas &amp; the Gulf of Mexico</p></div>
+    <span style="font-size:22px;">&#9875;</span>
+  </div>
+  <div class="cruise-grid">
+    <div class="ccard" onclick="window.open('https://us.trip.com/cruises/?keyword=Royal%20Caribbean&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=royal-caribbean','_blank')">
+      <div class="ccard-img" style="background:linear-gradient(135deg,#0a3d7a,#1565d8);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/RCI%20Sovereign%20of%20the%20Seas.jpg?width=640" alt="Royal Caribbean cruise ship" onerror="this.style.display='none'"><span class="cline-badge">Royal Caribbean</span><span class="cnights">7 nights</span></div>
+      <div class="ccard-body"><p class="cname">Caribbean &amp; Bahamas</p><p class="croute">Miami &rarr; Perfect Day CocoCay &rarr; Nassau &rarr; Miami</p>
+        <div class="cports"><span class="cport hi">Nassau</span><span class="cport hi">CocoCay</span><span class="cport ">Miami</span></div>
+        <div class="ccard-ft"><div><p class="cprice">From $629</p><p class="csub">per person</p></div><button class="cview-btn">View sailings</button></div></div>
+    </div>
+    <div class="ccard" onclick="window.open('https://us.trip.com/cruises/?keyword=Disney%20Cruise%20Line&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=disney-cruise','_blank')">
+      <div class="ccard-img" style="background:linear-gradient(135deg,#0b1f57,#2a63c4);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Disney%20Dream%20cruise%20ship.jpg?width=680" alt="Disney Cruise Line ship" onerror="this.style.display='none'"><span class="cline-badge">Disney Cruise Line</span><span class="cnights">4 nights</span></div>
+      <div class="ccard-body"><p class="cname">Bahamian Magic</p><p class="croute">Port Canaveral &rarr; Nassau &rarr; Castaway Cay &rarr; Port Canaveral</p>
+        <div class="cports"><span class="cport hi">Nassau</span><span class="cport hi">Castaway Cay</span><span class="cport ">Orlando</span></div>
+        <div class="ccard-ft"><div><p class="cprice">From $749</p><p class="csub">per person</p></div><button class="cview-btn">View sailings</button></div></div>
+    </div>
+    <div class="ccard" onclick="window.open('https://us.trip.com/cruises/?keyword=Carnival%20Cruise%20Galveston&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=gulf-of-mexico','_blank')">
+      <div class="ccard-img" style="background:linear-gradient(135deg,#8e1414,#e0621e);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carnival%20Vista%20ship.jpg?width=680" alt="Carnival cruise ship, Gulf of Mexico" onerror="this.style.display='none'"><span class="cline-badge">Carnival Cruise Line</span><span class="cnights">5 nights</span></div>
+      <div class="ccard-body"><p class="cname">Gulf of Mexico Getaway</p><p class="croute">Galveston &rarr; Cozumel &rarr; Progreso &rarr; Galveston</p>
+        <div class="cports"><span class="cport hi">Cozumel</span><span class="cport hi">Progreso</span><span class="cport ">Galveston</span></div>
+        <div class="ccard-ft"><div><p class="cprice">From $449</p><p class="csub">per person</p></div><button class="cview-btn">View sailings</button></div></div>
+    </div>
+  </div>
+  <div class="cruise-info">
+    <div class="ci-ico"><i class="ti ti-anchor"></i></div>
+    <div class="ci-txt"><h4>One Voyage, Many Worlds</h4><p>From the Mediterranean's ancient ports to the Caribbean's beaches and the Baltic's capitals &mdash; many itineraries weave several countries into a single sailing.</p></div>
+    <button class="ci-btn" onclick="window.open('https://us.trip.com/cruises/?Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=all-sailings','_blank')">View all sailings &rarr;</button>
+  </div>
+
+  <!-- 06b WHERE TO STAY — PORT HOTELS MAP -->
+  <div style="margin-top:1.6rem;">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:.35rem;">
+      <h2 class="slbl" style="margin-bottom:0;">Where to Stay the Night Before You Sail</h2>
+      <span style="font-size:22px;">&#127976;</span>
+    </div>
+    <p style="font-size:12px;color:var(--txt2);margin:0 0 .8rem;">Hand-picked hotels near each cruise port &mdash; tap a pin to see details and book.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:.7rem;">
+      <button class="port-tab active" data-port="barcelona">&#9875; Barcelona</button>
+      <button class="port-tab" data-port="miami">&#9875; Miami</button>
+      <button class="port-tab" data-port="copenhagen">&#9875; Copenhagen</button>
+    </div>
+    <div id="portMap" style="height:380px;border-radius:14px;border:.5px solid var(--border);overflow:hidden;z-index:0;"></div>
+  </div>
+
   <!-- 01 HERO -->
   <div class="masthead">
     <div class="mh-word">
@@ -993,52 +1039,6 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
         <div class="feats"><span class="feat">&#127963;&#65039; Historic sites</span><span class="feat">&#128276; Freedom Trail</span><span class="feat">&#9875; Harbor</span></div>
         <div class="hcard-ft"><div><p class="price">From $188</p><p class="price-sub">per night</p></div><button class="book-btn">Book now</button></div></div>
     </div>
-  </div>
-
-  <!-- 05 CRUISES -->
-  <div class="sec-hdr" id="cruises" style="scroll-margin-top:14px;">
-    <div><h2 class="slbl" style="margin-bottom:0;">Featured Cruises</h2><p style="font-size:12px;color:var(--txt2);margin-top:3px;">Sail with the world&rsquo;s favorite cruise lines &mdash; Caribbean, Bahamas &amp; the Gulf of Mexico</p></div>
-    <span style="font-size:22px;">&#9875;</span>
-  </div>
-  <div class="cruise-grid">
-    <div class="ccard" onclick="window.open('https://us.trip.com/cruises/?keyword=Royal%20Caribbean&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=royal-caribbean','_blank')">
-      <div class="ccard-img" style="background:linear-gradient(135deg,#0a3d7a,#1565d8);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/RCI%20Sovereign%20of%20the%20Seas.jpg?width=640" alt="Royal Caribbean cruise ship" onerror="this.style.display='none'"><span class="cline-badge">Royal Caribbean</span><span class="cnights">7 nights</span></div>
-      <div class="ccard-body"><p class="cname">Caribbean &amp; Bahamas</p><p class="croute">Miami &rarr; Perfect Day CocoCay &rarr; Nassau &rarr; Miami</p>
-        <div class="cports"><span class="cport hi">Nassau</span><span class="cport hi">CocoCay</span><span class="cport ">Miami</span></div>
-        <div class="ccard-ft"><div><p class="cprice">From $629</p><p class="csub">per person</p></div><button class="cview-btn">View sailings</button></div></div>
-    </div>
-    <div class="ccard" onclick="window.open('https://us.trip.com/cruises/?keyword=Disney%20Cruise%20Line&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=disney-cruise','_blank')">
-      <div class="ccard-img" style="background:linear-gradient(135deg,#0b1f57,#2a63c4);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Disney%20Dream%20cruise%20ship.jpg?width=680" alt="Disney Cruise Line ship" onerror="this.style.display='none'"><span class="cline-badge">Disney Cruise Line</span><span class="cnights">4 nights</span></div>
-      <div class="ccard-body"><p class="cname">Bahamian Magic</p><p class="croute">Port Canaveral &rarr; Nassau &rarr; Castaway Cay &rarr; Port Canaveral</p>
-        <div class="cports"><span class="cport hi">Nassau</span><span class="cport hi">Castaway Cay</span><span class="cport ">Orlando</span></div>
-        <div class="ccard-ft"><div><p class="cprice">From $749</p><p class="csub">per person</p></div><button class="cview-btn">View sailings</button></div></div>
-    </div>
-    <div class="ccard" onclick="window.open('https://us.trip.com/cruises/?keyword=Carnival%20Cruise%20Galveston&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=gulf-of-mexico','_blank')">
-      <div class="ccard-img" style="background:linear-gradient(135deg,#8e1414,#e0621e);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carnival%20Vista%20ship.jpg?width=680" alt="Carnival cruise ship, Gulf of Mexico" onerror="this.style.display='none'"><span class="cline-badge">Carnival Cruise Line</span><span class="cnights">5 nights</span></div>
-      <div class="ccard-body"><p class="cname">Gulf of Mexico Getaway</p><p class="croute">Galveston &rarr; Cozumel &rarr; Progreso &rarr; Galveston</p>
-        <div class="cports"><span class="cport hi">Cozumel</span><span class="cport hi">Progreso</span><span class="cport ">Galveston</span></div>
-        <div class="ccard-ft"><div><p class="cprice">From $449</p><p class="csub">per person</p></div><button class="cview-btn">View sailings</button></div></div>
-    </div>
-  </div>
-  <div class="cruise-info">
-    <div class="ci-ico"><i class="ti ti-anchor"></i></div>
-    <div class="ci-txt"><h4>One Voyage, Many Worlds</h4><p>From the Mediterranean's ancient ports to the Caribbean's beaches and the Baltic's capitals &mdash; many itineraries weave several countries into a single sailing.</p></div>
-    <button class="ci-btn" onclick="window.open('https://us.trip.com/cruises/?Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=all-sailings','_blank')">View all sailings &rarr;</button>
-  </div>
-
-  <!-- 06b WHERE TO STAY — PORT HOTELS MAP -->
-  <div style="margin-top:1.6rem;">
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:.35rem;">
-      <h2 class="slbl" style="margin-bottom:0;">Where to Stay the Night Before You Sail</h2>
-      <span style="font-size:22px;">&#127976;</span>
-    </div>
-    <p style="font-size:12px;color:var(--txt2);margin:0 0 .8rem;">Hand-picked hotels near each cruise port &mdash; tap a pin to see details and book.</p>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:.7rem;">
-      <button class="port-tab active" data-port="barcelona">&#9875; Barcelona</button>
-      <button class="port-tab" data-port="miami">&#9875; Miami</button>
-      <button class="port-tab" data-port="copenhagen">&#9875; Copenhagen</button>
-    </div>
-    <div id="portMap" style="height:380px;border-radius:14px;border:.5px solid var(--border);overflow:hidden;z-index:0;"></div>
   </div>
 
   <!-- 07 TRAVEL LOG -->
