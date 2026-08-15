@@ -626,8 +626,12 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   <a class="dg-brand" href="index.html">&#127757; Destinations Guild Travel</a>
   <nav class="dg-nav-links">
     <a href="index.html">Home</a>
-    <a href="library.html">The Guild Travel Library</a>
+    <a href="https://us.trip.com/hotels/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=home&amp;trip_sub3=nav-hotels" target="_blank" rel="sponsored nofollow noopener">Hotels</a>
     <a href="cruises.html">Cruises</a>
+    <a href="vacation-homes.html">Vacation Homes</a>
+    <a href="library.html">The Guild Travel Library</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="travel-essentials.html">Travel Essentials</a>
     <a href="our-story.html">Our Story</a>
     <a href="index.html#site-index">The Chart Room</a>
   </nav>
@@ -721,6 +725,140 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   </div>
   </div>
 
+
+  <!-- 02b THE FOUR DOORS (preview v2) -->
+  <style id="dg-doors-css">
+    .dg-doors{max-width:1000px;margin:0 auto 1.6rem;}
+    .dg-doors-lede{text-align:center;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;
+      font-size:clamp(1.35rem,2.6vw,1.85rem);color:#1B3A6B;margin:.2rem 0 .9rem;}
+
+    .dg-door{display:block;position:relative;overflow:hidden;border-radius:16px;text-decoration:none;
+      box-shadow:0 8px 24px rgba(20,40,70,.13);background:#0d2547;}
+    .dg-door img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
+    .dg-door:hover img{transform:scale(1.04);}
+
+    /* SLIM frame: colour stays, darkness only where the words sit */
+    .dg-door .dg-door-veil{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(8,20,40,0) 40%,rgba(8,20,40,.30) 68%,rgba(8,20,40,.72) 100%);}
+    .dg-door .dg-door-txt{position:absolute;left:0;right:0;bottom:0;padding:16px 22px 20px;color:#fff;}
+    .dg-door .dg-door-name{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;
+      line-height:1.05;margin:0;text-shadow:0 2px 16px rgba(0,0,0,.6);}
+    .dg-door .dg-door-sub{font-family:'DM Sans',Arial,sans-serif;font-size:13px;font-weight:400;
+      opacity:.95;margin:5px 0 0;text-shadow:0 1px 12px rgba(0,0,0,.7);}
+    .dg-door .dg-door-rule{display:block;width:44px;height:3px;background:#C9A84C;border-radius:2px;margin-bottom:9px;}
+
+    /* the big one - 30% taller */
+    .dg-door.hero{height:442px;margin-bottom:14px;border-radius:18px;}
+    .dg-door.hero .dg-door-name{font-size:clamp(2.4rem,5.4vw,3.7rem);}
+    .dg-door.hero .dg-door-sub{font-size:15.5px;max-width:60ch;}
+    .dg-door.hero .dg-door-txt{padding:20px 30px 26px;}
+    .dg-cta{display:inline-block;margin-top:14px;background:#C9A84C;color:#17253d;
+      font:700 14.5px/1 'DM Sans',Arial,sans-serif;letter-spacing:.02em;
+      padding:13px 24px;border-radius:24px;box-shadow:0 4px 14px rgba(0,0,0,.34);}
+    .dg-door.hero:hover .dg-cta{background:#dcbb59;}
+
+    /* the three */
+    .dg-doorrow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+    .dg-doorrow .dg-door,.dg-bookcase{height:250px;}
+    .dg-doorrow .dg-door-name{font-size:clamp(1.3rem,2.3vw,1.65rem);}
+
+    /* ---- the bookcase ---- */
+    .dg-bookcase{position:relative;border-radius:16px;overflow:hidden;
+      background:linear-gradient(#4a3423,#2f2013);box-shadow:0 8px 24px rgba(20,40,70,.13);}
+    .dg-bc-head{position:absolute;top:0;left:0;right:0;padding:11px 14px 8px;text-align:center;z-index:2;}
+    .dg-bc-head a{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:1.4rem;
+      color:#F3E6C4;text-decoration:none;text-shadow:0 2px 10px rgba(0,0,0,.6);}
+    .dg-bc-head p{font-family:'DM Sans',Arial,sans-serif;font-size:10.5px;color:#d8c69a;margin:2px 0 0;
+      letter-spacing:.05em;text-transform:uppercase;}
+    .dg-shelf{position:absolute;left:12px;right:12px;bottom:16px;height:150px;display:flex;gap:5px;
+      align-items:flex-end;justify-content:center;}
+    .dg-shelf::after{content:'';position:absolute;left:-6px;right:-6px;bottom:-11px;height:9px;
+      background:linear-gradient(#8a6535,#5d431f);border-radius:3px;box-shadow:0 5px 12px rgba(0,0,0,.55);}
+    .dg-spine{flex:1 1 auto;max-width:34px;height:100%;background:var(--sp);border-radius:3px 3px 1px 1px;
+      position:relative;display:flex;align-items:center;justify-content:center;text-decoration:none;
+      box-shadow:inset -3px 0 6px rgba(0,0,0,.34),inset 2px 0 3px rgba(255,255,255,.14);
+      border-top:3px solid rgba(201,168,76,.85);transition:transform .16s ease;}
+    .dg-spine:hover{transform:translateY(-9px);}
+    .dg-spine span{writing-mode:vertical-rl;transform:rotate(180deg);color:#F5EAD0;
+      font:600 10.5px/1 'DM Sans',Arial,sans-serif;letter-spacing:.06em;white-space:nowrap;}
+
+    @media(max-width:820px){
+      .dg-door.hero{height:300px;}
+      .dg-doorrow{grid-template-columns:1fr;}
+      .dg-doorrow .dg-door{height:190px;}
+      .dg-bookcase{height:250px;}
+    }
+  </style>
+
+  <div class="dg-doors">
+    <p class="dg-doors-lede">What kind of journey are you planning?</p>
+
+    <a class="dg-door hero" href="cruises.html">
+      <img referrerpolicy="no-referrer" loading="eager"
+           src="https://commons.wikimedia.org/wiki/Special:FilePath/RCI%20Sovereign%20of%20the%20Seas.jpg?width=1600"
+           alt="A cruise ship at sea" onerror="this.style.display='none'">
+      <span class="dg-door-veil"></span>
+      <span class="dg-door-txt">
+        <span class="dg-door-rule"></span>
+        <h3 class="dg-door-name">Cruises</h3>
+        <p class="dg-door-sub">Caribbean, Alaska, the Mediterranean and the Mexican Riviera &mdash;
+          with honest Guild port guides for the days you step ashore.</p>
+        <span class="dg-cta">Explore cruises &rarr;</span>
+      </span>
+    </a>
+
+    <div class="dg-doorrow">
+
+      <a class="dg-door" href="https://us.trip.com/hotels/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=home&amp;trip_sub3=door-hotels"
+         target="_blank" rel="sponsored nofollow noopener">
+        <img referrerpolicy="no-referrer" loading="lazy"
+             src="https://commons.wikimedia.org/wiki/Special:FilePath/Marina%20Bay%20Sands%20in%20the%20evening%20-%2020101120.jpg?width=900"
+             alt="Hotels" onerror="this.style.display='none'">
+        <span class="dg-door-veil"></span>
+        <span class="dg-door-txt">
+          <span class="dg-door-rule"></span>
+          <h3 class="dg-door-name">Hotels</h3>
+          <p class="dg-door-sub">Every city, every budget.</p>
+        </span>
+      </a>
+
+      <a class="dg-door" href="vacation-homes.html">
+        <span style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;
+                     background:linear-gradient(150deg,#1f4d6b,#0d2547 70%);">
+          <svg viewBox="0 0 24 24" style="width:76px;height:76px;stroke:rgba(255,255,255,.6);fill:none;
+               stroke-width:1.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.2V20h13v-9.8"/><path d="M9.6 20v-5.4h4.8V20"/>
+          </svg>
+        </span>
+        <span style="position:absolute;top:10px;right:10px;background:rgba(201,168,76,.95);color:#22303f;
+              font:600 10px/1 'DM Sans',Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;
+              padding:5px 8px;border-radius:20px;">photo to choose</span>
+        <span class="dg-door-veil"></span>
+        <span class="dg-door-txt">
+          <span class="dg-door-rule"></span>
+          <h3 class="dg-door-name">Vacation Homes</h3>
+          <p class="dg-door-sub">Whole houses, room to spread out.</p>
+        </span>
+      </a>
+
+      <div class="dg-bookcase">
+        <div class="dg-bc-head">
+          <a href="library.html">The Travel Library</a>
+          <p>175 books &middot; pull a shelf</p>
+        </div>
+        <div class="dg-shelf">
+        <a class="dg-spine" href="library.html#cont-africa" style="--sp:#7B2D26" title="Africa books"><span>Africa</span></a>
+        <a class="dg-spine" href="library.html#cont-asia" style="--sp:#1F6F6B" title="Asia books"><span>Asia</span></a>
+        <a class="dg-spine" href="library.html#cont-europe" style="--sp:#1B3A6B" title="Europe books"><span>Europe</span></a>
+        <a class="dg-spine" href="library.html#cont-north-america" style="--sp:#A9762F" title="N. America books"><span>N. America</span></a>
+        <a class="dg-spine" href="library.html#cont-south-america" style="--sp:#2F5D50" title="S. America books"><span>S. America</span></a>
+        <a class="dg-spine" href="library.html#cont-oceania" style="--sp:#5B3A64" title="Oceania books"><span>Oceania</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- 05 CRUISES -->
   <div class="sec-hdr" id="cruises" style="scroll-margin-top:14px;">
     <div><h2 class="slbl" style="margin-bottom:0;">Featured Cruises</h2><p style="font-size:12px;color:var(--txt2);margin-top:3px;">Sail with the world&rsquo;s favorite cruise lines &mdash; Caribbean, Bahamas &amp; the Gulf of Mexico</p></div>
@@ -750,21 +888,6 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     <div class="ci-ico"><i class="ti ti-anchor"></i></div>
     <div class="ci-txt"><h4>One Voyage, Many Worlds</h4><p>From the Mediterranean's ancient ports to the Caribbean's beaches and the Baltic's capitals &mdash; many itineraries weave several countries into a single sailing.</p></div>
     <button class="ci-btn" onclick="window.open('https://us.trip.com/cruises/?Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=all-sailings','_blank')">View all sailings &rarr;</button>
-  </div>
-
-  <!-- 06b WHERE TO STAY — PORT HOTELS MAP -->
-  <div style="margin-top:1.6rem;">
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:.35rem;">
-      <h2 class="slbl" style="margin-bottom:0;">Where to Stay the Night Before You Sail</h2>
-      <span style="font-size:22px;">&#127976;</span>
-    </div>
-    <p style="font-size:12px;color:var(--txt2);margin:0 0 .8rem;">Hand-picked hotels near each cruise port &mdash; tap a pin to see details and book.</p>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:.7rem;">
-      <button class="port-tab active" data-port="barcelona">&#9875; Barcelona</button>
-      <button class="port-tab" data-port="miami">&#9875; Miami</button>
-      <button class="port-tab" data-port="copenhagen">&#9875; Copenhagen</button>
-    </div>
-    <div id="portMap" style="height:380px;border-radius:14px;border:.5px solid var(--border);overflow:hidden;z-index:0;"></div>
   </div>
 
   <!-- 01 HERO -->
@@ -907,26 +1030,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     <div class="gtl-board"></div>
     <p class="gtl-note">Eight books are open on the shelf today &mdash; the United States, Mexico, Thailand, Italy, France, the United Kingdom, Germany and Australia. More are being written every week.</p>
     <div class="gtl-cta" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;"><a href="us-states-library.html" style="background:#C9A84C;color:#1B3A6B;">Open the America Bookcase &mdash; all 50 States &rsaquo;</a><a href="library.html">Step inside the full Library &rsaquo;</a></div>
-  </section><!-- 03b DESTINATIONS (Trip.com Library) -->
-  <div class="sec-hdr" id="library"><div><h2 class="slbl" style="margin-bottom:0;">Popular Destinations &mdash; Plan Your Next Journey</h2>
-  <p style="font-size:12px;color:var(--txt2);margin-top:3px;">Each city links to hotels, flights &amp; things to do on Trip.com</p></div>
-  <a href="library.html" style="background:#4f8bd0;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:9px 18px;border-radius:10px;white-space:nowrap;box-shadow:0 2px 6px rgba(12,36,68,.2);">Browse all in the Library &rsaquo;</a></div>
-  <div class="dest-grid">
-      <article class="dcity" style="--g1:#c9772e;--g2:#5b1f12"><img referrerpolicy="no-referrer" class="dcity-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Wat%20Arun%20from%20Chao%20Phraya%20River%20at%20sunset.jpg?width=680" alt="Bangkok" loading="lazy" onerror="this.style.display='none'"><div class="dcity-veil"></div><div class="dcity-body"><h4 class="dcity-name">Bangkok</h4><div class="dcity-lnks"><a class="dcity-lnk hotels" href="https://us.trip.com/hotels/list?searchWord=Bangkok&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=hotels&amp;trip_sub3=pop-bangkok" target="_blank" rel="sponsored nofollow noopener">Hotels</a><a class="dcity-lnk flights" href="https://us.trip.com/flights/to-bangkok/airfares-BKK/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=flights&amp;trip_sub3=pop-bangkok" target="_blank" rel="sponsored nofollow noopener">Flights</a><a class="dcity-lnk things" href="https://us.trip.com/things-to-do/?keyword=Bangkok&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=things&amp;trip_sub3=pop-bangkok" target="_blank" rel="sponsored nofollow noopener">Things to do</a></div></div></article>
-      <article class="dcity" style="--g1:#caa04a;--g2:#3b2a13"><img referrerpolicy="no-referrer" class="dcity-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Burj%20Khalifa.jpg?width=680" alt="Dubai" loading="lazy" onerror="this.style.display='none'"><div class="dcity-veil"></div><div class="dcity-body"><h4 class="dcity-name">Dubai</h4><div class="dcity-lnks"><a class="dcity-lnk hotels" href="https://us.trip.com/hotels/list?searchWord=Dubai&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=hotels&amp;trip_sub3=pop-dubai" target="_blank" rel="sponsored nofollow noopener">Hotels</a><a class="dcity-lnk flights" href="https://us.trip.com/flights/to-dubai/airfares-DXB/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=flights&amp;trip_sub3=pop-dubai" target="_blank" rel="sponsored nofollow noopener">Flights</a><a class="dcity-lnk things" href="https://us.trip.com/things-to-do/?keyword=Dubai&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=things&amp;trip_sub3=pop-dubai" target="_blank" rel="sponsored nofollow noopener">Things to do</a></div></div></article>
-      <article class="dcity" style="--g1:#0f4c5c;--g2:#5f9ea0"><img referrerpolicy="no-referrer" class="dcity-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Tour%20Eiffel%20Wikimedia%20Commons.jpg?width=680" alt="Paris" loading="lazy" onerror="this.style.display='none'"><div class="dcity-veil"></div><div class="dcity-body"><h4 class="dcity-name">Paris</h4><div class="dcity-lnks"><a class="dcity-lnk hotels" href="https://us.trip.com/hotels/list?searchWord=Paris&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=hotels&amp;trip_sub3=pop-paris" target="_blank" rel="sponsored nofollow noopener">Hotels</a><a class="dcity-lnk flights" href="https://us.trip.com/flights/to-paris/airfares-PAR/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=flights&amp;trip_sub3=pop-paris" target="_blank" rel="sponsored nofollow noopener">Flights</a><a class="dcity-lnk things" href="https://us.trip.com/things-to-do/?keyword=Paris&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=things&amp;trip_sub3=pop-paris" target="_blank" rel="sponsored nofollow noopener">Things to do</a></div></div></article>
-      <article class="dcity" style="--g1:#2b8a7a;--g2:#123a3f"><img referrerpolicy="no-referrer" class="dcity-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Marina%20Bay%20Sands%20in%20the%20evening%20-%2020101120.jpg?width=680" alt="Singapore" loading="lazy" onerror="this.style.display='none'"><div class="dcity-veil"></div><div class="dcity-body"><h4 class="dcity-name">Singapore</h4><div class="dcity-lnks"><a class="dcity-lnk hotels" href="https://us.trip.com/hotels/list?searchWord=Singapore&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=hotels&amp;trip_sub3=pop-singapore" target="_blank" rel="sponsored nofollow noopener">Hotels</a><a class="dcity-lnk flights" href="https://us.trip.com/flights/to-singapore/airfares-SIN/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=flights&amp;trip_sub3=pop-singapore" target="_blank" rel="sponsored nofollow noopener">Flights</a><a class="dcity-lnk things" href="https://us.trip.com/things-to-do/?keyword=Singapore&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=things&amp;trip_sub3=pop-singapore" target="_blank" rel="sponsored nofollow noopener">Things to do</a></div></div></article>
-      <article class="dcity" style="--g1:#8a2846;--g2:#1b1f3a"><img referrerpolicy="no-referrer" class="dcity-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Skyscrapers%20of%20Shinjuku%202009%20January.jpg?width=680" alt="Tokyo" loading="lazy" onerror="this.style.display='none'"><div class="dcity-veil"></div><div class="dcity-body"><h4 class="dcity-name">Tokyo</h4><div class="dcity-lnks"><a class="dcity-lnk hotels" href="https://us.trip.com/hotels/list?searchWord=Tokyo&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=hotels&amp;trip_sub3=pop-tokyo" target="_blank" rel="sponsored nofollow noopener">Hotels</a><a class="dcity-lnk flights" href="https://us.trip.com/flights/to-tokyo/airfares-HND/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=flights&amp;trip_sub3=pop-tokyo" target="_blank" rel="sponsored nofollow noopener">Flights</a><a class="dcity-lnk things" href="https://us.trip.com/things-to-do/?keyword=Tokyo&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=things&amp;trip_sub3=pop-tokyo" target="_blank" rel="sponsored nofollow noopener">Things to do</a></div></div></article>
-      <article class="dcity" style="--g1:#1f4037;--g2:#99a8a5"><img referrerpolicy="no-referrer" class="dcity-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/New%20york%20times%20square-terabass.jpg?width=680" alt="New York" loading="lazy" onerror="this.style.display='none'"><div class="dcity-veil"></div><div class="dcity-body"><h4 class="dcity-name">New York</h4><div class="dcity-lnks"><a class="dcity-lnk hotels" href="https://us.trip.com/hotels/new-york-hotels-list-633/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=hotels&amp;trip_sub3=pop-new-york" target="_blank" rel="sponsored nofollow noopener">Hotels</a><a class="dcity-lnk flights" href="https://us.trip.com/flights/to-new-york/airfares-NYC/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=flights&amp;trip_sub3=pop-new-york" target="_blank" rel="sponsored nofollow noopener">Flights</a><a class="dcity-lnk things" href="https://us.trip.com/travel-guide/destination/new-york-248/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=things&amp;trip_sub3=pop-new-york" target="_blank" rel="sponsored nofollow noopener">Things to do</a></div></div></article>
-      <article class="dcity" style="--g1:#42275a;--g2:#734b6d"><img referrerpolicy="no-referrer" class="dcity-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Palace%20of%20Westminster%2C%20London%20-%20Feb%202007.jpg?width=680" alt="London" loading="lazy" onerror="this.style.display='none'"><div class="dcity-veil"></div><div class="dcity-body"><h4 class="dcity-name">London</h4><div class="dcity-lnks"><a class="dcity-lnk hotels" href="https://us.trip.com/hotels/list?searchWord=London&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=hotels&amp;trip_sub3=pop-london" target="_blank" rel="sponsored nofollow noopener">Hotels</a><a class="dcity-lnk flights" href="https://us.trip.com/flights/to-london/airfares-LON/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=flights&amp;trip_sub3=pop-london" target="_blank" rel="sponsored nofollow noopener">Flights</a><a class="dcity-lnk things" href="https://us.trip.com/things-to-do/?keyword=London&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=things&amp;trip_sub3=pop-london" target="_blank" rel="sponsored nofollow noopener">Things to do</a></div></div></article>
-      <article class="dcity" style="--g1:#1f6f8b;--g2:#0a2233"><img referrerpolicy="no-referrer" class="dcity-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Hong%20Kong%20Skyline%20Restitch%20-%20Dec%202007.jpg?width=680" alt="Hong Kong" loading="lazy" onerror="this.style.display='none'"><div class="dcity-veil"></div><div class="dcity-body"><h4 class="dcity-name">Hong Kong</h4><div class="dcity-lnks"><a class="dcity-lnk hotels" href="https://us.trip.com/hotels/list?searchWord=Hong%20Kong&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=hotels&amp;trip_sub3=pop-hong-kong" target="_blank" rel="sponsored nofollow noopener">Hotels</a><a class="dcity-lnk flights" href="https://us.trip.com/flights/to-hong-kong/airfares-HKG/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=flights&amp;trip_sub3=pop-hong-kong" target="_blank" rel="sponsored nofollow noopener">Flights</a><a class="dcity-lnk things" href="https://us.trip.com/things-to-do/?keyword=Hong%20Kong&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=things&amp;trip_sub3=pop-hong-kong" target="_blank" rel="sponsored nofollow noopener">Things to do</a></div></div></article>
-  </div>
-  <h2 class="slbl" style="margin-top:1.4rem;">Travel Essentials &mdash; Good Anywhere</h2>
-  <div class="dsvc-grid"><a class="dsvc" href="https://us.trip.com/trains/?Allianceid=8217189&SID=317113714&trip_sub1=trains&trip_sub3=trains-global" target="_blank" rel="sponsored nofollow noopener"><i class="ti ti-train"></i><span class="dsvc-t">Train tickets</span><span class="dsvc-s">Rail across Europe &amp; Asia</span></a><a class="dsvc" href="https://us.trip.com/sale/w/10229/esim.html?Allianceid=8217189&SID=317113714&trip_sub1=esim&trip_sub3=esim-global" target="_blank" rel="sponsored nofollow noopener"><i class="ti ti-device-mobile"></i><span class="dsvc-t">eSIM data</span><span class="dsvc-s">Land already connected</span></a><a class="dsvc" href="https://us.trip.com/airport-transfers/?Allianceid=8217189&SID=317113714&trip_sub1=transfers&trip_sub3=transfers-global" target="_blank" rel="sponsored nofollow noopener"><i class="ti ti-car"></i><span class="dsvc-t">Airport transfers</span><span class="dsvc-s">A driver at arrivals</span></a></div>
-
-  
-
-  <div class="boundless">
+  </section>  <div class="boundless">
     <h2 class="bd-title">Boundless Global Expeditions</h2>
     <p class="bd-tag">Your journey starts here &mdash; adventure awaits everywhere</p>
   </div>
@@ -1087,6 +1191,48 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   </div>
   </div>
   <!-- /logbook -->
+
+
+  <!-- BOTTOM SEARCH (preview) -->
+  <style id="dg-btm-css">
+    .dg-btm{max-width:800px;margin:2.2rem auto 1.4rem;padding:20px 22px 22px;border-radius:16px;
+      border:1px solid #c7a86a;background:linear-gradient(rgba(245,236,214,.95),rgba(238,228,203,.97));
+      box-shadow:0 10px 30px rgba(20,40,70,.14);text-align:center;}
+    .dg-btm h3{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:700;
+      font-size:clamp(1.5rem,3vw,2.1rem);color:#1B3A6B;margin:0 0 4px;}
+    .dg-btm p.dg-btm-sub{font-family:'DM Sans',Arial,sans-serif;font-size:13px;color:#5a5140;margin:0 0 14px;}
+    .dg-btm-row{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;}
+    .dg-btm-row input{flex:1 1 320px;max-width:420px;height:46px;border:1px solid #c7a86a;border-radius:9px;
+      padding:0 14px;font-family:'DM Sans',Arial,sans-serif;font-size:15px;background:#fff;color:#22303f;}
+    .dg-btm-row button{height:46px;padding:0 26px;border:0;border-radius:9px;background:#2F76D8;color:#fff;
+      font-family:'DM Sans',Arial,sans-serif;font-size:15px;font-weight:600;cursor:pointer;}
+    .dg-btm-row button:hover{background:#1B5FC0;}
+    .dg-btm-note{font-family:'DM Sans',Arial,sans-serif;font-size:11px;color:#6b5d38;margin:11px 0 0;}
+  </style>
+  <div class="dg-btm">
+    <h3>Still deciding?</h3>
+    <p class="dg-btm-sub">Tell us the city and we&rsquo;ll show you what&rsquo;s available.</p>
+    <div class="dg-btm-row">
+      <input id="dgBtmDest" type="text" placeholder="City or region — Rome, Sydney, Cozumel…" aria-label="Destination">
+      <button id="dgBtmGo" type="button">Find your stay</button>
+    </div>
+    <p class="dg-btm-note">Availability powered by Trip.com &mdash; you&rsquo;ll be taken directly to live results.</p>
+  </div>
+  <script id="dg-btm-js">
+  (function(){
+    var i=document.getElementById('dgBtmDest'), b=document.getElementById('dgBtmGo');
+    if(!i||!b) return;
+    function go(){
+      var q=(i.value||'').trim();
+      var u = q ? 'https://us.trip.com/hotels/list?searchWord='+encodeURIComponent(q)+
+                  '&Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=bottom-search'
+                : 'https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=bottom-search';
+      window.open(u,'_blank','noopener');
+    }
+    b.addEventListener('click',go);
+    i.addEventListener('keydown',function(e){ if(e.key==='Enter') go(); });
+  })();
+  </script>
 
   <!-- 08 NEWSLETTER -->
   <div class="nl-wrap">
@@ -1498,58 +1644,7 @@ document.querySelectorAll('.ccard').forEach(card => {
 })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-(function(){
-  if(typeof L==='undefined'){ return; }
-  var AFF='Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=portmap';
-  var PORTS={
-    barcelona:{ center:[41.3755,2.1775], zoom:14, hotels:[
-      {name:'Eurostars Grand Marina', lat:41.3717713, lng:2.1808974, rating:4.2, note:'Right on the port pier at the World Trade Center \u2014 the closest you can sleep to the ship.', kw:'Eurostars Grand Marina Barcelona'},
-      {name:'Hotel Duquesa de Cardona', lat:41.3798075, lng:2.1804625, rating:4.5, note:'Top-rated of the three. Waterfront on Passeig de Colom, steps from Port Vell and the Gothic Quarter.', kw:'Hotel Duquesa de Cardona Barcelona'},
-      {name:'Hotel Arc La Rambla', lat:41.3782064, lng:2.1755469, rating:4.4, note:'Cruiser favorite right on La Rambla \u2014 luggage lockers for early arrivals, easy walk to the harbor.', kw:'Hotel Arc La Rambla Barcelona'}
-    ]},
-    miami:{ center:[25.7815,-80.1895], zoom:14, hotels:[
-      {name:'citizenM Miami World Center', lat:25.7812906, lng:-80.1907111, rating:4.4, note:'Modern and walkable to PortMiami. Compact rooms, great price \u2014 about as close as you can stay.', kw:'citizenM Miami World Center'},
-      {name:'Hilton Miami Downtown', lat:25.7910542, lng:-80.1883699, rating:4.2, note:'Big and reliable with Biscayne Bay views; known to run a shuttle to the cruise port.', kw:'Hilton Miami Downtown'},
-      {name:'Courtyard by Marriott Downtown/Brickell', lat:25.7722558, lng:-80.1905867, rating:4.2, note:'Runs a $10/person shuttle straight to the port on cruise morning. Solid Marriott comfort.', kw:'Courtyard Miami Downtown Brickell'}
-    ]},
-    copenhagen:{ center:[55.7095,12.597], zoom:14, hotels:[
-      {name:'Comwell Copenhagen Portside', lat:55.7127269, lng:12.5933459, rating:4.3, note:'In Nordhavn, minutes from the Oceankaj cruise terminal. Metro + harbor ferry at the door.', kw:'Comwell Copenhagen Portside'},
-      {name:'Residence Inn Copenhagen Nordhavn', lat:55.7073893, lng:12.6007092, rating:4.7, note:'Highest-rated of all nine. Roomy suites with kitchenettes, waterbus + metro nearby.', kw:'Residence Inn Copenhagen Nordhavn'},
-      {name:'Fairfield by Marriott Copenhagen Nordhavn', lat:55.7071891, lng:12.6005838, rating:4.3, note:'Newer, on the Nordhavn waterfront with a strong breakfast. Quick hop to Oceankaj.', kw:'Fairfield Copenhagen Nordhavn'}
-    ]}
-  };
-  var pin=L.icon({
-    iconUrl:'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon.png',
-    iconRetinaUrl:'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-    shadowUrl:'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-shadow.png',
-    iconSize:[25,41], iconAnchor:[12,41], popupAnchor:[1,-34], shadowSize:[41,41]
-  });
-  var map=L.map('portMap',{scrollWheelZoom:false}).setView(PORTS.barcelona.center, PORTS.barcelona.zoom);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19, attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
-  var markers=[];
-  function show(key){
-    markers.forEach(function(m){ map.removeLayer(m); }); markers=[];
-    var p=PORTS[key]; if(!p) return;
-    map.setView(p.center, p.zoom);
-    p.hotels.forEach(function(h){
-      var url='https://us.trip.com/hotels/list?searchWord='+encodeURIComponent(h.kw)+'&'+AFF;
-      var html='<div class="map-pop"><strong>'+h.name+'</strong><br><span class="map-rate">&#9733; '+h.rating+'</span>'+
-               '<p>'+h.note+'</p><a class="map-book-btn" href="'+url+'" target="_blank" rel="sponsored nofollow noopener">Book on Trip.com &rarr;</a></div>';
-      markers.push(L.marker([h.lat,h.lng],{icon:pin}).addTo(map).bindPopup(html));
-    });
-  }
-  show('barcelona');
-  setTimeout(function(){ map.invalidateSize(); }, 250);
-  document.querySelectorAll('.port-tab').forEach(function(b){
-    b.addEventListener('click', function(){
-      document.querySelectorAll('.port-tab').forEach(function(x){ x.classList.remove('active'); });
-      b.classList.add('active');
-      show(b.getAttribute('data-port'));
-    });
-  });
-})();
-</script>
+
 
 <script>
 /* ===== City dropdown ===== */
@@ -1944,7 +2039,7 @@ document.querySelectorAll('.ccard').forEach(card => {
   if(window.__dgBar) return; window.__dgBar=1;
   function run(){
     try{
-      if(!window.matchMedia || !window.matchMedia('(max-width:820px)').matches) return;
+      if(!window.matchMedia || !window.matchMedia('(max-width:4000px)').matches) return;
       if(document.querySelector('.dg-sticky-cta')) return;
       var href='', label='';
       if(document.querySelector('.searchrow')){            // homepage
