@@ -2422,5 +2422,31 @@ document.querySelectorAll('.ccard').forEach(card => {
   .searchrow .search-wrap{ max-width:760px; }
 }
 </style>
+
+<style id="dg-readability-fix">
+/* 1. Three headings sat directly on the old-map background — dark navy over
+      compass roses and coastlines. Unreadable. Give them the same parchment
+      plate the hero heading already uses. */
+  .dg-doors-lede{display:block;width:max-content;max-width:92%;
+    margin-left:auto;margin-right:auto;
+    background:linear-gradient(rgba(245,236,214,.97),rgba(238,228,203,.98));
+    border:1px solid #c7a86a;border-radius:14px;padding:9px 30px 11px;
+    box-shadow:0 6px 18px rgba(20,40,70,.18);}
+  .page > .sec-hdr{background:linear-gradient(rgba(245,236,214,.97),rgba(238,228,203,.98));
+    border:1px solid #c7a86a;border-radius:14px;padding:12px 20px;
+    box-shadow:0 6px 18px rgba(20,40,70,.18);}
+  .page > .sec-hdr .slbl{color:#1B3A6B !important;}
+  .page > .sec-hdr p{color:#5a5140 !important;}
+  @media(max-width:560px){ .dg-doors-lede{padding:8px 16px 10px;} }
+
+/* 2. The Featured Cruises cards are LIGHT, but they inherited the night-sky
+      theme's near-white text (--txt:#e9eefc). The sailing names were white on
+      white — measured 1.16:1, effectively invisible. */
+  .cruise-grid .ccard, .cruise-grid .ccard-body{color:#22303f;}
+  .cruise-grid .cname{color:#1B3A6B !important;font-weight:700;}
+  .cruise-grid .croute{color:#4a5568 !important;}
+  .cruise-grid .csub{color:#4a5568 !important;}
+  .cruise-grid .cport{color:#12467f !important;}
+</style>
 </body>
 </html>
