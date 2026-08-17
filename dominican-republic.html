@@ -189,6 +189,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 }
 </style>
 <link rel="stylesheet" href="dg-site.css">
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 
@@ -232,7 +240,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   <img class="hero-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Punta%20Cana%20%28Dominican%20Republic%29%20banner%20Beach.jpg?width=1600" alt="The turquoise shallows and palm-lined white sand of a Dominican Republic beach" referrerpolicy="no-referrer" onerror="this.style.display='none'">
   <p class="hero-cap noi18n">The Dominican Republic&rsquo;s Caribbean shore. Photo: Wikimedia Commons.</p>
 
-  <h2>Where to stay &amp; when to go</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#where-to-stay-when-to-go">Where to stay</a><a href="#why-visit-the-dominican-republic">Why go</a><a href="#the-regions-of-the-dominican-republic">Regions</a><a href="#top-things-to-do-in-the-dominican-republ">Things to do</a><a href="#best-time-to-visit-getting-there">When to go</a><a href="#dominican-republic-travel-faq">FAQ</a></nav>
+<h2 id="where-to-stay-when-to-go">Where to stay &amp; when to go</h2>
   <p class="lede">Five Guild guides to the places our readers actually book, plus the month-by-month calendar &mdash; which, on this island, is different on every coast.</p>
   <div class="why">
     <a class="wcard" href="punta-cana-hotels.html" style="text-decoration:none;"><h3>Where to Stay in Punta Cana &rsaquo;</h3><p>Bávaro, Cap Cana and Uvero Alto — honest all-inclusive picks, what the wristband really covers, and the one walkable corner.</p></a>
@@ -243,7 +252,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <a class="wcard" href="best-time-to-visit-dominican-republic.html" style="text-decoration:none;"><h3>Best Time to Visit &rsaquo;</h3><p>Month by month, coast by coast &mdash; the dry seasons, the hurricane odds, the seaweed and the whales.</p></a>
   </div>
 
-  <h2>Why visit the Dominican Republic</h2>
+  <h2 id="why-visit-the-dominican-republic">Why visit the Dominican Republic</h2>
   <p class="lede">Few Caribbean countries offer so many different holidays inside one short flight.</p>
   <div class="why">
     <div class="wcard"><h3>The beaches</h3><p>Thirty-odd miles of continuous white sand at Punta Cana and B&aacute;varo, the reef-sheltered calm of Playa Dominicus, and the empty Atlantic sweeps of Playa Cos&oacute;n and Playa Rinc&oacute;n on the Saman&aacute; peninsula.</p></div>
@@ -281,7 +290,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins. US dollars are widely accepted at resorts and tour desks, but at a rate of the hotel&rsquo;s choosing &mdash; pay in <strong>Dominican pesos</strong> wherever a peso price is displayed, and always decline a terminal&rsquo;s offer to charge you in your home currency. Restaurant bills add 18% tax plus a 10% service charge on top of the menu price.</div>
   </div>
 
-  <h2>The regions of the Dominican Republic</h2>
+  <h2 id="the-regions-of-the-dominican-republic">The regions of the Dominican Republic</h2>
   <p class="lede">Four coasts and a capital, each a different holiday. Every Guild city guide below is written and live.</p>
   <div class="chapters">
 
@@ -348,7 +357,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>Top things to do in the Dominican Republic</h2>
+  <h2 id="top-things-to-do-in-the-dominican-republ">Top things to do in the Dominican Republic</h2>
   <p class="lede">The experiences worth building a trip around.</p>
   <div class="things">
     <div class="tcard"><h3>Walk the Zona Colonial</h3><p>Santo Domingo&rsquo;s UNESCO old town: the Catedral Primada, the Alc&aacute;zar de Col&oacute;n, Calle Las Damas and the Fortaleza Ozama, all within a flat square kilometre.</p></div>
@@ -361,7 +370,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="tcard"><h3>The 27 Waterfalls of Damajagua</h3><p>Canyon pools you slide and jump back down, near Puerto Plata. Wonderful, and genuinely strenuous &mdash; the seven-fall option is the realistic one for most visitors.</p></div>
   </div>
 
-  <h2>Best time to visit &amp; getting there</h2>
+  <h2 id="best-time-to-visit-getting-there">Best time to visit &amp; getting there</h2>
   <div class="split">
     <div class="box">
       <h3>When to go</h3>
@@ -377,7 +386,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>Dominican Republic travel FAQ</h2>
+  <h2 id="dominican-republic-travel-faq">Dominican Republic travel FAQ</h2>
   <div class="faq">
     <details open>
       <summary>When is the best time to visit the Dominican Republic?</summary>

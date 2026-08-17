@@ -200,6 +200,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 }
 </style>
 <link rel="stylesheet" href="dg-site.css">
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -254,7 +262,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="ft"><b>Entry</b><span>Egypt: visa on arrival or e-visa. Morocco and South Africa: no visa under 90 days</span></div>
   </div>
 
-  <h2>The countries on the shelf</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#the-countries-on-the-shelf">Countries</a><a href="#elsewhere-in-africa">Elsewhere</a><a href="#when-to-go">When to go</a><a href="#questions-readers-ask-about-africa">FAQ</a></nav>
+<h2 id="the-countries-on-the-shelf">The countries on the shelf</h2>
   <p class="lede">Three country books today &mdash; Egypt, Morocco and South Africa &mdash; each with its own city guides and a best-time-to-go page.</p>
   <div class="chapters">
     <div class="chapter">
@@ -298,7 +307,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>Elsewhere in Africa</h2>
+  <h2 id="elsewhere-in-africa">Elsewhere in Africa</h2>
   <p class="lede">The Guild has not written books for the rest of the continent, and we will not imply otherwise. If you are looking further afield in the meantime, these are the hotel searches readers ask for most.</p>
   <div class="chapters">
     <div class="chapter">
@@ -313,7 +322,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>When to go</h2>
+  <h2 id="when-to-go">When to go</h2>
   <p class="lede">The three countries on this shelf sit in three different climates, so there is no single answer &mdash; but there is a rule of thumb: go to North Africa in the cool half of the year, and to South Africa when you have decided between safari and the Cape.</p>
   <div class="split">
     <div class="box"><h3>Egypt &mdash; October to April</h3><p>The cool season is the season. Cairo and Luxor are pleasant, the Nile cruises run at full strength and the desert nights are cold enough for a jacket. From June to September Upper Egypt is brutally hot &mdash; regularly well above 100&deg;F at Luxor and Aswan &mdash; and sightseeing has to be done at dawn. The Red Sea resorts, by contrast, work year-round.</p></div>
@@ -322,7 +331,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="box"><h3>South Africa for the Cape &mdash; November to March</h3><p>The southern summer is when Cape Town is at its best: long dry days, the winelands in full leaf, and the beaches usable if you can bear cold Atlantic water. It is also the busiest and priciest stretch, particularly over Christmas and New Year. The famous southeasterly wind blows hardest in December and January.</p></div>
   </div>
 
-  <h2>Questions readers ask about Africa</h2>
+  <h2 id="questions-readers-ask-about-africa">Questions readers ask about Africa</h2>
   <div class="faq">
     <details>
       <summary>How many African countries does the Guild cover?</summary>

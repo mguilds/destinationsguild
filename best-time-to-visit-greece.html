@@ -138,6 +138,14 @@
   .plain{font-size:16px;color:#3a4756;max-width:840px;}
   .plain strong{color:var(--navy);}
 </style>
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -164,7 +172,8 @@
   </div>
 
   <section id="short">
-    <h2>The short answer</h2>
+    <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#the-short-answer">Short answer</a><a href="#season-by-season">By season</a><a href="#month-by-month">By month</a><a href="#what-is-open-when">What is open</a><a href="#heat-wind-and-crowds-plainly">Heat &amp; wind</a><a href="#common-questions-about-timing-a-greek-tr">FAQ</a></nav>
+<h2 id="the-short-answer">The short answer</h2>
     <p class="plain">For most travellers, the answer is <strong>late April to mid-June</strong> or <strong>mid-September to late October</strong>. Both give you warm, bright days, a sea that is swimmable, everything open, and crowds and prices well below the peak. <strong>July and August</strong> are hot, expensive and very busy, and the <em>meltemi</em> wind disrupts ferries. <strong>November to March</strong> is quiet, cheap and often lovely on the mainland &mdash; Athens, Delphi, Meteora and Thessaloniki are all rewarding in winter &mdash; but most island hotels and restaurants are shut. If you are travelling at an unhurried pace and dislike heat and crowds, aim squarely at the second half of September.</p>
     <div class="facts">
     <div class="ft"><b>Best overall</b><span>Late Sept &ndash; mid Oct</span></div>
@@ -195,7 +204,7 @@
   </div>
 
   <section id="seasons">
-    <h2>Season by season</h2>
+    <h2 id="season-by-season">Season by season</h2>
     <div class="why">
     <div class="wcard"><h3>Spring &mdash; April to early June</h3><p>The best light of the year and hillsides full of wild flowers. April is variable and can bring rain, with sea temperatures still bracing; by mid-May the days are reliably warm and most island hotels have opened. Early June is close to perfect: hot enough to swim, cool enough to walk around a ruin at noon, and the crowds have not arrived. Greek Orthodox Easter, which usually falls later than the Western date, is the loveliest week to be here and also the busiest for domestic travel &mdash; book early if it falls inside your dates.</p></div>
     <div class="wcard"><h3>High summer &mdash; mid-June to August</h3><p>Hot, bright, expensive and crowded. Athens regularly passes 95&deg;F and during heatwaves the Acropolis closes in the middle of the day for safety. The sea is at its warmest and every hotel, restaurant and beach club is open, but the islands are at capacity, the ferries are full and the <em>meltemi</em> wind blows hard for days at a time, cancelling high-speed boats. Mid-August is peak of the peak: the 15 August feast of the Assumption is a national holiday and Greeks travel en masse.</p></div>
@@ -205,7 +214,7 @@
   </section>
 
   <section id="months">
-    <h2>Month by month</h2>
+    <h2 id="month-by-month">Month by month</h2>
     <p class="lede">Temperatures are rough daytime highs for Athens and the southern islands; the north and the mountains run several degrees cooler.</p>
     <div class="why">
     <div class="wcard"><h3>January &mdash; about 55&deg;F</h3><p>The quietest month. Athens is cool and often bright, with occasional rain and the sites almost empty; museums keep shorter winter hours. Crete is the mildest place in the country. Most Cycladic islands are closed for the season. Excellent value, and a fine time for a city-and-antiquities trip if you do not need a beach.</p></div>
@@ -224,7 +233,7 @@
   </section>
 
   <section id="closed">
-    <h2>What is open when</h2>
+    <h2 id="what-is-open-when">What is open when</h2>
     <p class="lede">The single most useful thing to understand about timing a Greek holiday.</p>
     <div class="why">
     <div class="wcard"><h3>The islands run a season, not a year</h3><p>Most hotels, restaurants and beach clubs on Santorini, Mykonos and the smaller Cyclades open around Easter or the start of May and close in late October or early November. Between November and March many islands have only a handful of places open, ferry schedules are thin and the weather can strand you. This is the single most important thing to understand when planning a Greek trip outside summer.</p></div>
@@ -235,7 +244,7 @@
   </section>
 
   <section id="heat">
-    <h2>Heat, wind and crowds &mdash; plainly</h2>
+    <h2 id="heat-wind-and-crowds-plainly">Heat, wind and crowds &mdash; plainly</h2>
     <div class="why">
     <div class="wcard"><h3>Summer heat is a health question, not a comfort one</h3><p>Athens regularly passes 95&deg;F in July and August, and in a heatwave the Acropolis closes during the middle of the day for safety. For anyone with a heart or breathing condition, that is worth planning around rather than enduring. If you travel in high summer, sightsee before ten in the morning and after five in the afternoon, keep the middle of the day for a shaded lunch or a pool, and drink far more water than feels necessary.</p></div>
     <div class="wcard"><h3>The meltemi &mdash; a wind with consequences</h3><p>From roughly July to early September a strong northerly wind blows down the Aegean. It makes the Cyclades pleasantly cool, which is why the islands are bearable in August at all &mdash; but it whips up the sea, and high-speed catamarans are cancelled regularly when it blows. Large conventional ferries usually sail regardless and are far steadier. Never plan a same-day ferry connection to a flight in July or August; leave a night&rsquo;s margin.</p></div>
@@ -255,7 +264,7 @@
   </section>
 
   <section id="faq">
-    <h2>Common questions about timing a Greek trip</h2>
+    <h2 id="common-questions-about-timing-a-greek-tr">Common questions about timing a Greek trip</h2>
 <div class="faq">
     <details open>
       <summary>What is the overall best time to visit Greece?</summary>

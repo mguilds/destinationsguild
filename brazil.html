@@ -184,6 +184,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 .foot a{color:var(--blue-btn);text-decoration:none;}
 </style>
 <link rel="stylesheet" href="dg-site.css">
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 
@@ -233,7 +241,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   <p class="hero-cap noi18n">Christ the Redeemer on Corcovado, high above Rio de Janeiro. Photo: Wikimedia Commons.</p>
 
   <!-- PLAN / WHERE TO STAY CLUSTER -->
-  <h2>Where to stay &amp; when to go</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#where-to-stay-when-to-go">Where to stay</a><a href="#why-visit-brazil">Why go</a><a href="#the-regions-of-brazil">Regions</a><a href="#top-things-to-do-in-brazil">Things to do</a><a href="#best-time-to-visit-getting-there">When to go</a><a href="#brazil-travel-faq">FAQ</a></nav>
+<h2 id="where-to-stay-when-to-go">Where to stay &amp; when to go</h2>
   <p class="lede">Guild guides to the best places to stay in Brazil's headline cities &mdash; and the best time to plan your trip.</p>
   <div class="why">
     <a class="wcard" href="rio-de-janeiro-hotels.html" style="text-decoration:none;"><h3>Where to Stay in Rio de Janeiro &rsaquo;</h3><p>Best areas and hotels &mdash; Copacabana and Ipanema, Leblon, Botafogo and historic Centro.</p></a>
@@ -242,7 +251,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- WHY -->
-  <h2>Why visit Brazil</h2>
+  <h2 id="why-visit-brazil">Why visit Brazil</h2>
   <p class="lede">Few countries offer this much at once — beaches and rainforest, world cities and wild wetlands, and a culture that runs on music.</p>
   <div class="why">
     <div class="wcard"><h3>Beaches without end</h3><p>Copacabana and Ipanema in Rio, the dunes of the Northeast, the surf coves of Santa Catarina — thousands of miles of Atlantic sand to choose from.</p></div>
@@ -280,7 +289,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- REGIONS -->
-  <h2>The regions of Brazil</h2>
+  <h2 id="the-regions-of-brazil">The regions of Brazil</h2>
   <p class="lede">Each region is its own trip. City guides are on the way — every stop below is bookable now through our partner.</p>
   <div class="chapters">
 
@@ -344,7 +353,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- THINGS TO DO -->
-  <h2>Top things to do in Brazil</h2>
+  <h2 id="top-things-to-do-in-brazil">Top things to do in Brazil</h2>
   <p class="lede">The experiences worth building a trip around.</p>
   <div class="things">
     <div class="tcard"><h3>Christ the Redeemer &amp; Sugarloaf</h3><p>Ride the cog train up Corcovado to the outstretched arms of Christ, then the cable car up Sugarloaf for Rio's bay at golden hour.</p></div>
@@ -356,7 +365,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- WHEN / GETTING THERE -->
-  <h2>Best time to visit &amp; getting there</h2>
+  <h2 id="best-time-to-visit-getting-there">Best time to visit &amp; getting there</h2>
   <div class="split">
     <div class="box">
       <h3>When to go</h3>
@@ -374,7 +383,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- FAQ -->
-  <h2>Brazil travel FAQ</h2>
+  <h2 id="brazil-travel-faq">Brazil travel FAQ</h2>
   <div class="faq">
     <details open>
       <summary>When is the best time to visit Brazil?</summary>

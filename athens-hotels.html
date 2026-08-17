@@ -138,6 +138,14 @@
   .plain{font-size:16px;color:#3a4756;max-width:840px;}
   .plain strong{color:var(--navy);}
 </style>
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -183,7 +191,8 @@
   </div>
 
   <section id="good-to-know">
-    <h2>Good to know before you book</h2>
+    <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#good-to-know-before-you-book">Good to know</a><a href="#luxury">Luxury</a><a href="#boutique">Boutique</a><a href="#budget-value">Budget</a><a href="#family-friendly">Family</a><a href="#adults-only">Adults-only</a><a href="#pet-friendly">Pet-friendly</a></nav>
+<h2 id="good-to-know-before-you-book">Good to know before you book</h2>
     <p class="catnote">A few plain facts that decide where an older traveller should sleep in Athens.</p>
     <div class="facts">
     <div class="ft"><b>Currency</b><span>Euro (EUR, &euro;)</span></div>
@@ -201,7 +210,7 @@
   </section>
 
   <section id="luxury">
-    <h2>Luxury</h2>
+    <h2 id="luxury">Luxury</h2>
     <p class="catnote">Athens&rsquo; grand hotels sit on Syntagma Square, a level walk from Plaka and directly above the metro.</p>
     <div class="hotel"><h3>Hotel Grande Bretagne, a Luxury Collection Hotel</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Syntagma</span><span class="tag">1874 landmark</span><span class="tag">Rooftop Parthenon view</span><span class="tag">Pets welcome</span></div>
@@ -214,7 +223,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Athens&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=athens-hotels&amp;trip_sub3=browse-luxury" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all luxury hotels in Athens &rsaquo;</a>
   </section>
   <section id="boutique">
-    <h2>Boutique</h2>
+    <h2 id="boutique">Boutique</h2>
     <p class="catnote">Small, design-minded hotels &mdash; one on the pedestrian promenade below the Acropolis, one in a 1930s building downtown.</p>
     <div class="hotel"><h3>AthensWas Design Hotel</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Makriyianni</span><span class="tag">21 rooms</span><span class="tag">Pedestrian street</span><span class="tag">Rooftop restaurant</span></div>
@@ -227,7 +236,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Athens&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=athens-hotels&amp;trip_sub3=browse-boutique" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all boutique hotels in Athens &rsaquo;</a>
   </section>
   <section id="budget">
-    <h2>Budget &amp; Value</h2>
+    <h2 id="budget-value">Budget &amp; Value</h2>
     <p class="catnote">Central, sensible and well kept &mdash; both of these put the Acropolis within an easy walk.</p>
     <div class="hotel"><h3>Athens Center Square Hotel</h3>
       <div class="tags"><span class="tag price">$ Budget</span><span class="tag">Monastiraki</span><span class="tag">54 rooms</span><span class="tag">Garden terrace</span><span class="tag">Beside the market</span></div>
@@ -240,7 +249,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Athens&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=athens-hotels&amp;trip_sub3=browse-budget" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all value hotels in Athens &rsaquo;</a>
   </section>
   <section id="family">
-    <h2>Family-friendly</h2>
+    <h2 id="family-friendly">Family-friendly</h2>
     <p class="catnote">Central Athens has very few hotels with a pool. These two have one &mdash; which changes a July afternoon entirely.</p>
     <div class="hotel"><h3>Electra Palace Athens</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Plaka</span><span class="tag">Indoor and rooftop pools</span><span class="tag">Roof-garden dining</span><span class="tag">Neoclassical</span></div>
@@ -253,7 +262,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Athens&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=athens-hotels&amp;trip_sub3=browse-family" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all family hotels in Athens &rsaquo;</a>
   </section>
   <section id="adults">
-    <h2>Adults-only</h2>
+    <h2 id="adults-only">Adults-only</h2>
     <p class="catnote">We will say this plainly: Athens has very few genuine adults-only hotels, and only one we would recommend without hesitation. Rather than pad the list, here is that one, and a link to browse the rest for yourself.</p>
     <div class="hotel"><h3>Not Hotel &mdash; Adults Only</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Kerameikos</span><span class="tag">Strictly 18+</span><span class="tag">Outdoor pool</span><span class="tag">Garden and library</span></div>
@@ -262,7 +271,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Athens&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=athens-hotels&amp;trip_sub3=browse-adults" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all adults-only stays in Athens &rsaquo;</a>
   </section>
   <section id="pet">
-    <h2>Pet-friendly</h2>
+    <h2 id="pet-friendly">Pet-friendly</h2>
     <p class="catnote">Two hotels with pet arrangements written down rather than merely tolerated. Confirm the current weight limit and fee with the hotel before you book.</p>
     <div class="hotel"><h3>COCO-MAT Athens BC</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Koukaki</span><span class="tag">Certified pet stay</span><span class="tag">Dog beds and bowls</span><span class="tag">Natural materials</span></div>
@@ -275,7 +284,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Athens&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=athens-hotels&amp;trip_sub3=browse-pet" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all pet-friendly hotels in Athens &rsaquo;</a>
   </section>
   <section id="spa">
-    <h2>Spa &amp; Pool</h2>
+    <h2 id="spa-pool">Spa &amp; Pool</h2>
     <p class="catnote">For when the point of the afternoon is a swim and a treatment rather than another museum.</p>
     <div class="hotel"><h3>Divani Caravel</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Ilisia</span><span class="tag">Rooftop pool</span><span class="tag">Full health club</span><span class="tag">Panoramic views</span></div>
@@ -289,7 +298,7 @@
   </section>
 
   <section id="faq">
-    <h2>Athens Hotels &mdash; common questions</h2>
+    <h2 id="athens-hotels-common-questions">Athens Hotels &mdash; common questions</h2>
 <div class="faq">
     <details open>
       <summary>Which neighbourhood should I stay in in Athens?</summary>
@@ -319,7 +328,7 @@
   </section>
 
   <section class="band">
-    <h2>Don&rsquo;t see your perfect fit?</h2>
+    <h2 id="dont-see-your-perfect-fit">Don&rsquo;t see your perfect fit?</h2>
     <p>Browse every hotel with live prices and availability on Trip.com. Booking through our links supports Destinations Guild at no extra cost to you.</p>
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Athens&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=athens-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse all Athens hotels</a>

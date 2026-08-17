@@ -200,6 +200,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 }
 </style>
 <link rel="stylesheet" href="dg-site.css">
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -254,7 +262,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="ft"><b>Entry</b><span>Schengen allows 90 days in any 180; the UK is separate and needs an ETA</span></div>
   </div>
 
-  <h2>The countries on the shelf</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#the-countries-on-the-shelf">Countries</a><a href="#elsewhere-in-europe">Elsewhere</a><a href="#when-to-go">When to go</a><a href="#questions-readers-ask-about-europe">FAQ</a></nav>
+<h2 id="the-countries-on-the-shelf">The countries on the shelf</h2>
   <p class="lede">Five country books today, each with its own city hotel guides and a best-time-to-go page.</p>
   <div class="chapters">
     <div class="chapter">
@@ -315,7 +324,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>Elsewhere in Europe</h2>
+  <h2 id="elsewhere-in-europe">Elsewhere in Europe</h2>
   <p class="lede">These countries do not have a Guild book yet, and we would rather tell you that than hand you a thin one. Until the books are written, here are hotel searches for the cities readers ask about most.</p>
   <div class="chapters">
     <div class="chapter">
@@ -332,7 +341,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>When to go</h2>
+  <h2 id="when-to-go">When to go</h2>
   <p class="lede">Europe's high season is short, loud and expensive, and it sits squarely in July and August. Almost everything the Guild recommends comes down to travelling on either side of it.</p>
   <div class="split">
     <div class="box"><h3>Spring &mdash; April to June</h3><p>The best all-round window on the continent. Gardens and countryside are at their peak, the days are long by June, and the queues at the headline sights are still manageable. Northern Europe warms later than the Mediterranean, so save Scotland and Germany for late May onward and take Spain, Italy or southern France in April.</p></div>
@@ -341,7 +350,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="box"><h3>Winter &mdash; November to March</h3><p>The cheapest and quietest time to see the great museums and cathedrals, and the only time you will have the Louvre or the Uffizi to yourself. Expect short grey days and some seasonal closures on the coast and in the hill towns. The exceptions are the German and Austrian Christmas markets from late November, and the Alps, which come into their own from January.</p></div>
   </div>
 
-  <h2>Questions readers ask about Europe</h2>
+  <h2 id="questions-readers-ask-about-europe">Questions readers ask about Europe</h2>
   <div class="faq">
     <details>
       <summary>When is the best time to visit Europe?</summary>
