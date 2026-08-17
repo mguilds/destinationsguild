@@ -623,6 +623,18 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   .chart-chest .cr-foot a:hover{color:#1B3A6B;text-decoration:underline;}
 </style>
 <style>#site-index{margin-left:auto !important;margin-right:auto !important;float:none !important;}</style>
+<style id="dg-placard-css">
+.dg-placard{background:var(--card,#fff);border:1px solid var(--line,#e3e7ee);border-top:3px solid var(--gold,#C9A84C);border-radius:10px;padding:18px 20px 20px;box-shadow:0 1px 3px rgba(28,39,51,.06)}
+.dg-plac-head h3{margin:0 0 4px;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--ink,#1c2733)}
+.dg-plac-head p{margin:0 0 14px;font-size:15px;line-height:1.5;color:var(--txt2,#6B6A66)}
+.dg-plac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.dg-plac-tile{display:flex;flex-direction:column;gap:3px;padding:14px;border:1px solid var(--line,#e3e7ee);border-radius:8px;background:var(--bg,#FAF9F6);text-decoration:none;transition:border-color .15s,transform .15s}
+.dg-plac-tile:hover{border-color:var(--gold,#C9A84C);transform:translateY(-1px)}
+.dg-placard .pt-k{font-weight:700;font-size:15px;color:var(--ink,#1c2733)}
+.dg-placard .pt-s{font-size:13px;line-height:1.4;color:var(--txt2,#6B6A66)}
+@media(max-width:760px){.dg-plac-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.dg-plac-grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <div class="lang-float noi18n"><a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Cambiar a Español"><svg class="mxflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#ffffff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg>ES</a><a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="Switch to English"><svg class="usflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="24" height="1.85" fill="#B22234"/><rect width="24" height="1.85" y="3.7" fill="#B22234"/><rect width="24" height="1.85" y="7.4" fill="#B22234"/><rect width="24" height="1.85" y="11.1" fill="#B22234"/><rect width="24" height="1.85" y="14.15" fill="#B22234"/><rect width="11" height="8.6" fill="#3C3B6E"/></svg>EN</a><a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Passer au français (Canada)"><svg class="caflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#ffffff"/><rect width="6" height="16" fill="#D52B1E"/><rect x="18" width="6" height="16" fill="#D52B1E"/><path d="M12 3.2l.7 1.7 1.8-.4-.8 1.5 1.3.7-1.6.5.3 1.8-1.5-1-1.5 1 .3-1.8-1.6-.5 1.3-.7-.8-1.5 1.8.4z" fill="#D52B1E"/></svg>FR</a></div>
@@ -987,53 +999,21 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     </div>
   </div>
 
-<div class="dg-doorrow">
+<div class="dg-placard">
 
-      <a class="dg-door" href="https://us.trip.com/hotels/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=home&amp;trip_sub3=door-hotels"
-         target="_blank" rel="sponsored nofollow noopener">
-        <img referrerpolicy="no-referrer" loading="lazy"
-             src="https://commons.wikimedia.org/wiki/Special:FilePath/Marina%20Bay%20Sands%20in%20the%20evening%20-%2020101120.jpg?width=900"
-             alt="Hotels" onerror="this.style.display='none'">
-        <span class="dg-door-veil"></span>
-        <span class="dg-door-txt">
-          <span class="dg-door-rule"></span>
-          <h3 class="dg-door-name">Hotels</h3>
-          <p class="dg-door-sub">Every city, every budget.</p>
-        </span>
-      </a>
-
-      <a class="dg-door" href="vacation-homes.html">
-        <span style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;
-                     background:linear-gradient(150deg,#1f4d6b,#0d2547 70%);">
-          <svg viewBox="0 0 24 24" style="width:76px;height:76px;stroke:rgba(255,255,255,.6);fill:none;
-               stroke-width:1.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.2V20h13v-9.8"/><path d="M9.6 20v-5.4h4.8V20"/>
-          </svg>
-        </span>
-        <span class="dg-door-veil"></span>
-        <span class="dg-door-txt">
-          <span class="dg-door-rule"></span>
-          <h3 class="dg-door-name">Vacation Homes</h3>
-          <p class="dg-door-sub">Whole houses, room to spread out.</p>
-        </span>
-      </a>
-
-      <div class="dg-bookcase">
-        <div class="dg-bc-head">
-          <a href="library.html">The Travel Library</a>
-          <p>174 books &middot; pull a shelf</p>
+        <div class="dg-plac-head">
+          <h3>Vacation Homes</h3>
+          <p>Whole houses with room to spread out &mdash; four ways to look.</p>
         </div>
-        <div class="dg-shelf">
-        <a class="dg-spine" href="library.html#cont-africa" style="--sp:#7B2D26" title="Africa books"><span>Africa</span></a>
-        <a class="dg-spine" href="library.html#cont-asia" style="--sp:#1F6F6B" title="Asia books"><span>Asia</span></a>
-        <a class="dg-spine" href="library.html#cont-europe" style="--sp:#1B3A6B" title="Europe books"><span>Europe</span></a>
-        <a class="dg-spine" href="library.html#cont-north-america" style="--sp:#A9762F" title="N. America books"><span>N. America</span></a>
-        <a class="dg-spine" href="library.html#cont-south-america" style="--sp:#2F5D50" title="S. America books"><span>S. America</span></a>
-        <a class="dg-spine" href="library.html#cont-oceania" style="--sp:#5B3A64" title="Oceania books"><span>Oceania</span></a>
+
+        <div class="dg-plac-grid">
+        <a class="dg-plac-tile" href="vacation-homes.html#beach"><span class="pt-k">Beach Houses</span><span class="pt-s">Sand at the door</span></a>
+        <a class="dg-plac-tile" href="vacation-homes.html#cabins"><span class="pt-k">Cabins &amp; Lodges</span><span class="pt-s">Woods, lakes and quiet</span></a>
+        <a class="dg-plac-tile" href="vacation-homes.html#condos"><span class="pt-k">Condos &amp; Apartments</span><span class="pt-s">In the middle of town</span></a>
+        <a class="dg-plac-tile" href="vacation-homes.html#villas"><span class="pt-k">Villas &amp; Large Homes</span><span class="pt-s">Room for everyone</span></a>
         </div>
+
       </div>
-
-    </div>
   </div>
 
   <!-- 05 CRUISES -->
