@@ -184,6 +184,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 .foot a{color:var(--blue-btn);text-decoration:none;}
 </style>
 <link rel="stylesheet" href="dg-site.css">
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 
@@ -247,7 +255,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   <p class="hero-cap noi18n">Gyeongbokgung, the grand royal palace of the Joseon dynasty, in the heart of Seoul. Photo: Wikimedia Commons.</p>
 
   <!-- PLAN / WHERE TO STAY CLUSTER -->
-  <h2>Where to stay &amp; when to go</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#where-to-stay-when-to-go">Where to stay</a><a href="#why-visit-south-korea">Why go</a><a href="#the-regions-of-south-korea">Regions</a><a href="#top-things-to-do-in-south-korea">Things to do</a><a href="#best-time-to-visit-getting-there">When to go</a><a href="#south-korea-travel-faq">FAQ</a></nav>
+<h2 id="where-to-stay-when-to-go">Where to stay &amp; when to go</h2>
   <p class="lede">Guild guides to the best places to stay in South Korea's headline destinations &mdash; and the best time to plan your trip.</p>
   <div class="why">
     <a class="wcard" href="seoul-hotels.html" style="text-decoration:none;"><h3>Where to Stay in Seoul &rsaquo;</h3><p>Best areas and hotels &mdash; palace-side Jongno, buzzy Myeongdong, glossy Gangnam and the nightlife of Hongdae and Itaewon.</p></a>
@@ -257,7 +266,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- WHY -->
-  <h2>Why visit South Korea</h2>
+  <h2 id="why-visit-south-korea">Why visit South Korea</h2>
   <p class="lede">Few countries pack so much variety into so small and well-connected a space &mdash; palaces and pop culture, mountains and islands, all a short train ride apart.</p>
   <div class="why">
     <div class="wcard"><h3>Palaces &amp; history</h3><p>The grand Joseon palaces of Seoul, the royal tombs and stone Buddhas of Gyeongju, and hanok villages of tiled wooden houses that have stood for centuries.</p></div>
@@ -295,7 +304,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- REGIONS -->
-  <h2>The regions of South Korea</h2>
+  <h2 id="the-regions-of-south-korea">The regions of South Korea</h2>
   <p class="lede">Each region is its own trip, and the fast KTX train links most of them in a few hours. Full Guild city guides are live for the headline destinations; every city links straight to hotels through our Trip.com partner.</p>
   <div class="chapters">
 
@@ -355,7 +364,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- THINGS TO DO -->
-  <h2>Top things to do in South Korea</h2>
+  <h2 id="top-things-to-do-in-south-korea">Top things to do in South Korea</h2>
   <p class="lede">The experiences worth building a trip around.</p>
   <div class="things">
     <div class="tcard"><h3>Seoul's grand palaces</h3><p>Gyeongbokgung and Changdeokgung with its Secret Garden, the changing of the guard, and the hanok lanes of Bukchon between them &mdash; best in a rented hanbok.</p></div>
@@ -367,7 +376,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- WHEN / GETTING THERE -->
-  <h2>Best time to visit &amp; getting there</h2>
+  <h2 id="best-time-to-visit-getting-there">Best time to visit &amp; getting there</h2>
   <div class="split">
     <div class="box">
       <h3>When to go</h3>
@@ -384,7 +393,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- FAQ -->
-  <h2>South Korea travel FAQ</h2>
+  <h2 id="south-korea-travel-faq">South Korea travel FAQ</h2>
   <div class="faq">
     <details open>
       <summary>When is the best time to visit South Korea?</summary>

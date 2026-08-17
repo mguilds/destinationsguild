@@ -200,6 +200,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 }
 </style>
 <link rel="stylesheet" href="dg-site.css">
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -254,7 +262,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="ft"><b>Entry</b><span>US citizens need a visa for Brazil, approved before you travel</span></div>
   </div>
 
-  <h2>The countries on the shelf</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#the-countries-on-the-shelf">Countries</a><a href="#elsewhere-in-south-america">Elsewhere</a><a href="#when-to-go">When to go</a><a href="#questions-readers-ask-about-south-americ">FAQ</a></nav>
+<h2 id="the-countries-on-the-shelf">The countries on the shelf</h2>
   <p class="lede">One country book so far. It is a good one, and it is the only one we can honestly point you to today.</p>
   <div class="chapters">
     <div class="chapter">
@@ -270,7 +279,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>Elsewhere in South America</h2>
+  <h2 id="elsewhere-in-south-america">Elsewhere in South America</h2>
   <p class="lede">There is no Guild book for these countries yet &mdash; only the honest note that they are coming. In the meantime, here are hotel searches for the cities readers write to us about.</p>
   <div class="chapters">
     <div class="chapter">
@@ -286,7 +295,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>When to go</h2>
+  <h2 id="when-to-go">When to go</h2>
   <p class="lede">Most of South America lies south of the equator, so the calendar turns over: December to March is high summer, June to August is winter. The one exception to keep in mind is the tropical north, where the year divides into wet and dry rather than hot and cold.</p>
   <div class="split">
     <div class="box"><h3>December to March &mdash; the southern summer</h3><p>Hot, humid and festive along the Brazilian coast, with afternoon thunderstorms and the highest prices of the year. Carnival falls in February or early March &mdash; in 2027 it begins on Friday 5 February &mdash; and Rio hotel rates roughly double around it, so book far ahead or plan deliberately around it. This is also the only sensible window for Patagonia at the far south of the continent.</p></div>
@@ -295,7 +304,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="box"><h3>October and November &mdash; the quiet stretch</h3><p>The cheapest time to fly to Brazil and one of the pleasantest to travel. Spring warmth is returning, the summer crowds have not yet arrived and hotels are open to negotiation. Rain is picking up in the southeast by late November, but rarely for a whole day at a time.</p></div>
   </div>
 
-  <h2>Questions readers ask about South America</h2>
+  <h2 id="questions-readers-ask-about-south-americ">Questions readers ask about South America</h2>
   <div class="faq">
     <details>
       <summary>How many South American countries does the Guild cover?</summary>
