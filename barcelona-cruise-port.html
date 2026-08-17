@@ -150,8 +150,8 @@ footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:24px 20px;
   var map=L.map(el,{scrollWheelZoom:false});
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
   var pts=[
-[41.3565,2.1710,"&#9875; <b>Cruise terminals &mdash; Moll Adossat</b><br>Terminals A&ndash;E and the MSC terminal. Most ships dock here. Shuttle or taxi into town","pier"],
-[41.37158,2.18126,"&#9875; <b>World Trade Center berths</b><br>Small ships only &mdash; and the one berth you can walk from","pier"],
+[41.3585,2.1787,"&#9875; <b>Cruise terminals &mdash; Moll Adossat</b><br>Terminals A&ndash;E and the MSC terminal. Most ships dock here. Shuttle or taxi into town","pier"],
+[41.3719,2.1800,"&#9875; <b>World Trade Center berths</b><br>Small ships only &mdash; and the one berth you can walk from","pier2"],
 [41.3758,2.17776,"<b>Columbus monument</b><br>Where the port shuttle drops you, at the foot of La Rambla"],
 [41.38262,2.17176,"<b>La Rambla &amp; La Boqueria market</b><br>The famous walk &mdash; and the city’s worst pickpocket ground"],
 [41.40369,2.17433,"<b>Sagrada Fam&iacute;lia</b><br>Book online weeks ahead &mdash; there is no ticket window"],
@@ -161,15 +161,16 @@ footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:24px 20px;
   ];
   var g=[],pier=[],firstPier=null;
   pts.forEach(function(p){
+    var isShip=(p[3]==='pier'||p[3]==='pier2');
     var isPier=(p[3]==='pier');
-    var opt=isPier?{icon:L.divIcon({className:'hm-ship',html:'<span>&#128674;</span>',iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]}),zIndexOffset:1000}:{};
+    var opt=isShip?{icon:L.divIcon({className:'hm-ship',html:'<span>&#128674;</span>',iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]}),zIndexOffset:1000}:{};
     var m=L.marker([p[0],p[1]],opt).addTo(map).bindPopup(p[2]);
     g.push(m.getLatLng());
     if(isPier){ pier.push(m.getLatLng()); if(!firstPier) firstPier=m; }
   });
   var allB=L.latLngBounds(g).pad(0.18), closeB=L.latLngBounds(pier.length?pier:g).pad(0.9);
   function show(which){
-    try{ map.fitBounds(which==='all'?allB:closeB,{maxZoom:which==='all'?18:14}); }catch(e){}
+    try{ map.fitBounds(which==='all'?allB:closeB,{maxZoom:which==='all'?18:15}); }catch(e){}
     var bs=document.querySelectorAll('.hm-b');
     for(var i=0;i<bs.length;i++){ bs[i].classList.toggle('is-on', bs[i].getAttribute('data-hm')===which); }
   }
