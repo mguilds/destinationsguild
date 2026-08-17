@@ -154,7 +154,7 @@ footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:24px 20px;
 [36.4205,25.4304,"<b>Cable car top station, Fira</b><br>Three minutes up &mdash; and the queue that decides your day"],
 [36.4149,25.4325,"<b>Fira</b><br>The main town: caldera walk, shops, buses, ATMs"],
 [36.4622,25.3757,"<b>Oia</b><br>The blue domes. 25&ndash;45 minutes by bus from Fira"],
-[36.3866,25.4293,"&#9875; <b>Athinios ferry port</b><br>Road-accessible &mdash; ship excursions often tender here","pier"],
+[36.3866,25.4293,"&#9875; <b>Athinios ferry port</b><br>Road-accessible &mdash; ship excursions often tender here","pier2"],
 [36.3518,25.4034,"<b>Ancient Akrotiri</b><br>A Bronze Age town under a modern roof &mdash; the best hot-day option"],
 [36.3569,25.4739,"<b>Perissa beach</b><br>Black volcanic sand, sunbeds and tavernas"],
 [36.3762,25.4806,"<b>Kamari beach</b><br>The other black-sand beach, flat and easy"],
@@ -162,8 +162,9 @@ footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:24px 20px;
   ];
   var g=[],pier=[],firstPier=null;
   pts.forEach(function(p){
+    var isShip=(p[3]==='pier'||p[3]==='pier2');
     var isPier=(p[3]==='pier');
-    var opt=isPier?{icon:L.divIcon({className:'hm-ship',html:'<span>&#128674;</span>',iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]}),zIndexOffset:1000}:{};
+    var opt=isShip?{icon:L.divIcon({className:'hm-ship',html:'<span>&#128674;</span>',iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]}),zIndexOffset:1000}:{};
     var m=L.marker([p[0],p[1]],opt).addTo(map).bindPopup(p[2]);
     g.push(m.getLatLng());
     if(isPier){ pier.push(m.getLatLng()); if(!firstPier) firstPier=m; }

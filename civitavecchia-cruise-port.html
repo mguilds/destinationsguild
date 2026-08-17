@@ -151,7 +151,7 @@ footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:24px 20px;
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
   var pts=[
 [42.0959,11.7887,"&#9875; <b>Cruise berths &mdash; Roma Cruise Terminal</b><br>Your ship docks here. Take the free shuttle to the gate","pier"],
-[42.1040,11.7749,"&#9875; <b>Pier 25 &mdash; the outer breakwater</b><br>Some big ships berth here. Shuttle only, no walking","pier"],
+[42.1050,11.7792,"&#9875; <b>Molo 24/25 &mdash; the far berths</b><br>Some big ships tie up here. Shuttle only, no walking","pier2"],
 [42.0972,11.7872,"<b>Largo della Pace</b><br>Where the free shuttle drops you: taxis, bars, information"],
 [42.0903,11.7908,"<b>Forte Michelangelo</b><br>The 16th-century fortress right at the pedestrian gate"],
 [42.0880,11.7984,"<b>Civitavecchia station</b><br>Trains to Rome, 2&ndash;3 an hour. About 15 minutes’ walk from the gate"],
@@ -161,8 +161,9 @@ footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:24px 20px;
   ];
   var g=[],pier=[],firstPier=null;
   pts.forEach(function(p){
+    var isShip=(p[3]==='pier'||p[3]==='pier2');
     var isPier=(p[3]==='pier');
-    var opt=isPier?{icon:L.divIcon({className:'hm-ship',html:'<span>&#128674;</span>',iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]}),zIndexOffset:1000}:{};
+    var opt=isShip?{icon:L.divIcon({className:'hm-ship',html:'<span>&#128674;</span>',iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]}),zIndexOffset:1000}:{};
     var m=L.marker([p[0],p[1]],opt).addTo(map).bindPopup(p[2]);
     g.push(m.getLatLng());
     if(isPier){ pier.push(m.getLatLng()); if(!firstPier) firstPier=m; }
