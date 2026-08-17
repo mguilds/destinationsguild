@@ -138,6 +138,14 @@
   .plain{font-size:16px;color:#3a4756;max-width:840px;}
   .plain strong{color:var(--navy);}
 </style>
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -184,7 +192,8 @@
   </div>
 
   <section id="good-to-know">
-    <h2>Good to know before you book</h2>
+    <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#good-to-know-before-you-book">Good to know</a><a href="#luxury">Luxury</a><a href="#boutique">Boutique</a><a href="#budget-value">Budget</a><a href="#family-friendly">Family</a><a href="#adults-only">Adults-only</a><a href="#pet-friendly">Pet-friendly</a></nav>
+<h2 id="good-to-know-before-you-book">Good to know before you book</h2>
     <p class="catnote">Four practical things that decide where an older traveller should sleep on Rhodes.</p>
     <div class="facts">
     <div class="ft"><b>Currency</b><span>Euro (EUR, &euro;)</span></div>
@@ -202,7 +211,7 @@
   </section>
 
   <section id="luxury">
-    <h2>Luxury</h2>
+    <h2 id="luxury">Luxury</h2>
     <p class="catnote">One in town with lifts and level ground, one hand-built above the sea at Lindos.</p>
     <div class="hotel"><h3>Rodos Park Suites &amp; Spa</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Rhodes New Town</span><span class="tag">75 rooms</span><span class="tag">Heated pool</span><span class="tag">Level ground</span><span class="tag">Lifts throughout</span></div>
@@ -215,7 +224,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Rhodes&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rhodes-hotels&amp;trip_sub3=browse-luxury" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all luxury hotels in Rhodes &rsaquo;</a>
   </section>
   <section id="boutique">
-    <h2>Boutique</h2>
+    <h2 id="boutique">Boutique</h2>
     <p class="catnote">Inside the walls, in buildings six and seven hundred years old. Both are reached across cobbles.</p>
     <div class="hotel"><h3>S. Nikolis Historic Boutique Hotel</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Rhodes Old Town</span><span class="tag">14th-century house</span><span class="tag">Roof garden</span><span class="tag">Family-run since 1980</span></div>
@@ -228,7 +237,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Rhodes&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rhodes-hotels&amp;trip_sub3=browse-boutique" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all boutique hotels in Rhodes &rsaquo;</a>
   </section>
   <section id="budget">
-    <h2>Budget &amp; Value</h2>
+    <h2 id="budget-value">Budget &amp; Value</h2>
     <p class="catnote">Both are genuinely inexpensive and genuinely well liked. The first is flat; the second is inside the walls.</p>
     <div class="hotel"><h3>Hotel Anastasia</h3>
       <div class="tags"><span class="tag price">$ Budget</span><span class="tag">Rhodes New Town</span><span class="tag">1930s mansion</span><span class="tag">Garden breakfast</span><span class="tag">Level walking</span></div>
@@ -241,7 +250,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Rhodes&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rhodes-hotels&amp;trip_sub3=browse-budget" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all value hotels in Rhodes &rsaquo;</a>
   </section>
   <section id="family">
-    <h2>Family-friendly</h2>
+    <h2 id="family-friendly">Family-friendly</h2>
     <p class="catnote">Rhodes does the big all-inclusive family resort very well, and Faliraki is where most of them are.</p>
     <div class="hotel"><h3>Amada Colossos Resort</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Faliraki</span><span class="tag">Waterpark</span><span class="tag">Blue Flag beach</span><span class="tag">Ultra all-inclusive</span><span class="tag">Flat grounds</span></div>
@@ -254,7 +263,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Rhodes&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rhodes-hotels&amp;trip_sub3=browse-family" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all family hotels in Rhodes &rsaquo;</a>
   </section>
   <section id="adults">
-    <h2>Adults-only</h2>
+    <h2 id="adults-only">Adults-only</h2>
     <p class="catnote">Both sit just outside Lindos, on the calm east coast. Both are terraced down a slope &mdash; ask for a lift-served level when you book.</p>
     <div class="hotel"><h3>Lindos Blu Luxury Hotel &amp; Suites &mdash; Adults Only</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Vlicha Bay, Lindos</span><span class="tag">Adults-only</span><span class="tag">Three pools</span><span class="tag">Private beach</span><span class="tag">Beach buggy</span></div>
@@ -267,7 +276,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Rhodes&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rhodes-hotels&amp;trip_sub3=browse-adults" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all adults-only stays in Rhodes &rsaquo;</a>
   </section>
   <section id="pet">
-    <h2>Pet-friendly</h2>
+    <h2 id="pet-friendly">Pet-friendly</h2>
     <p class="catnote">Two hotels that genuinely welcome small dogs. Both have weight limits, so confirm yours with the hotel before you travel.</p>
     <div class="hotel"><h3>In Camera Art Boutique Hotel</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Rhodes Old Town</span><span class="tag">Small dogs welcome</span><span class="tag">Outdoor hot tub</span><span class="tag">Medieval stone house</span></div>
@@ -280,7 +289,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Rhodes&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rhodes-hotels&amp;trip_sub3=browse-pet" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all pet-friendly hotels in Rhodes &rsaquo;</a>
   </section>
   <section id="beachfront">
-    <h2>Beachfront</h2>
+    <h2 id="beachfront">Beachfront</h2>
     <p class="catnote">One on the breezy west coast, one on the sheltered east &mdash; the difference in the swimming is considerable.</p>
     <div class="hotel"><h3>Sheraton Rhodes Resort</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Ixia</span><span class="tag">Private beach</span><span class="tag">Four pools</span><span class="tag">Familiar comforts</span><span class="tag">Level paths</span></div>
@@ -293,7 +302,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Rhodes&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rhodes-hotels&amp;trip_sub3=browse-beachfront" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all beachfront hotels in Rhodes &rsaquo;</a>
   </section>
   <section id="spa">
-    <h2>Spa &amp; Pool</h2>
+    <h2 id="spa-pool">Spa &amp; Pool</h2>
     <p class="catnote">Two large, flat, lift-served resorts where the pools and the treatment rooms are the main event.</p>
     <div class="hotel"><h3>Atrium Platinum Luxury Resort Hotel &amp; Spa</h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Ixia</span><span class="tag">Full spa and steam room</span><span class="tag">Several large pools</span><span class="tag">All-inclusive option</span><span class="tag">Flat grounds</span></div>
@@ -307,7 +316,7 @@
   </section>
 
   <section id="faq">
-    <h2>Rhodes Hotels &mdash; common questions</h2>
+    <h2 id="rhodes-hotels-common-questions">Rhodes Hotels &mdash; common questions</h2>
 <div class="faq">
     <details open>
       <summary>Should I stay in Rhodes Old Town or the New Town?</summary>
@@ -337,7 +346,7 @@
   </section>
 
   <section class="band">
-    <h2>Don&rsquo;t see your perfect fit?</h2>
+    <h2 id="dont-see-your-perfect-fit">Don&rsquo;t see your perfect fit?</h2>
     <p>Browse every hotel with live prices and availability on Trip.com. Booking through our links supports Destinations Guild at no extra cost to you.</p>
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Rhodes&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rhodes-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse all Rhodes hotels</a>

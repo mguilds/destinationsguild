@@ -200,6 +200,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 }
 </style>
 <link rel="stylesheet" href="dg-site.css">
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -254,7 +262,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="ft"><b>Entry</b><span>Every visitor needs a visa or Electronic Travel Authority approved before boarding</span></div>
   </div>
 
-  <h2>The countries on the shelf</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#the-countries-on-the-shelf">Countries</a><a href="#elsewhere-in-oceania">Elsewhere</a><a href="#when-to-go">When to go</a><a href="#questions-readers-ask-about-oceania">FAQ</a></nav>
+<h2 id="the-countries-on-the-shelf">The countries on the shelf</h2>
   <p class="lede">One country book so far &mdash; Australia &mdash; with its city guides and a best-time-to-go page.</p>
   <div class="chapters">
     <div class="chapter">
@@ -270,7 +279,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>Elsewhere in Oceania</h2>
+  <h2 id="elsewhere-in-oceania">Elsewhere in Oceania</h2>
   <p class="lede">New Zealand and the Pacific islands do not have Guild books yet, and we would rather say so than write around it. If you are adding them to an Australian trip in the meantime, here are the hotel searches readers ask for.</p>
   <div class="chapters">
     <div class="chapter">
@@ -285,7 +294,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     </div>
   </div>
 
-  <h2>When to go</h2>
+  <h2 id="when-to-go">When to go</h2>
   <p class="lede">Australia is wide enough to hold several climates at once, so the honest answer to &lsquo;when should I go&rsquo; depends on whether you are heading for the southern cities or the tropical north. Spring and autumn suit almost everybody.</p>
   <div class="split">
     <div class="box"><h3>September to November &mdash; spring</h3><p>The Guild's first choice for a general trip. Sydney and Melbourne are warm without being hot, the jacarandas are out in Sydney in November, the Red Centre is comfortable for walking at Uluru, and the tropical north is drying out after the wet. Airfares from the United States sit below the December peak.</p></div>
@@ -294,7 +303,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <div class="box"><h3>June to August &mdash; the dry winter</h3><p>Cool and often grey in Sydney and Melbourne, and genuinely cold in Tasmania and the alpine country, where the ski fields open. This is, however, the ideal season for everything north of the tropic: the Great Barrier Reef, Kakadu, Darwin and the Kimberley are dry, clear and comfortable, and it is the best window for the Red Centre too.</p></div>
   </div>
 
-  <h2>Questions readers ask about Oceania</h2>
+  <h2 id="questions-readers-ask-about-oceania">Questions readers ask about Oceania</h2>
   <div class="faq">
     <details>
       <summary>How many Oceania countries does the Guild cover?</summary>

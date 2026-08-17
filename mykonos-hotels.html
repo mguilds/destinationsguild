@@ -138,6 +138,14 @@
   .plain{font-size:16px;color:#3a4756;max-width:840px;}
   .plain strong{color:var(--navy);}
 </style>
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -184,7 +192,8 @@
   </div>
 
   <section id="good-to-know">
-    <h2>Good to know before you book</h2>
+    <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#good-to-know-before-you-book">Good to know</a><a href="#luxury">Luxury</a><a href="#boutique">Boutique</a><a href="#budget-value">Budget</a><a href="#family-friendly">Family</a><a href="#adults-only">Adults-only</a><a href="#pet-friendly">Pet-friendly</a></nav>
+<h2 id="good-to-know-before-you-book">Good to know before you book</h2>
     <p class="catnote">Four things worth knowing before you choose a corner of the island.</p>
     <div class="facts">
     <div class="ft"><b>Currency</b><span>Euro (EUR, &euro;)</span></div>
@@ -202,7 +211,7 @@
   </section>
 
   <section id="luxury">
-    <h2>Luxury</h2>
+    <h2 id="luxury">Luxury</h2>
     <p class="catnote">Two full-service resorts on very different beaches &mdash; one calm, one glamorous.</p>
     <div class="hotel"><h3>Santa Marina, a Luxury Collection Resort</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Ornos</span><span class="tag">Private beach</span><span class="tag">Calm bay</span><span class="tag">Buggy transfers</span></div>
@@ -215,7 +224,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Mykonos&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=mykonos-hotels&amp;trip_sub3=browse-luxury" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all luxury hotels in Mykonos &rsaquo;</a>
   </section>
   <section id="boutique">
-    <h2>Boutique</h2>
+    <h2 id="boutique">Boutique</h2>
     <p class="catnote">Small enough that the staff learn your name by the second day.</p>
     <div class="hotel"><h3>Kove Hotel &amp; Spa Mykonos &mdash; MGallery Collection</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Ornos</span><span class="tag">35 rooms</span><span class="tag">Cave spa</span><span class="tag">Quiet cove</span></div>
@@ -228,7 +237,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Mykonos&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=mykonos-hotels&amp;trip_sub3=browse-boutique" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all boutique hotels in Mykonos &rsaquo;</a>
   </section>
   <section id="budget">
-    <h2>Budget &amp; Value</h2>
+    <h2 id="budget-value">Budget &amp; Value</h2>
     <p class="catnote">We will be honest: Mykonos has no true budget tier in July and August. These are the island&rsquo;s genuine value stalwarts, and both are dramatically cheaper in May, early June and late September.</p>
     <div class="hotel"><h3>Hotel Matina</h3>
       <div class="tags"><span class="tag price">$ Budget</span><span class="tag">Mykonos Town</span><span class="tag">Walled garden</span><span class="tag">Family-run</span><span class="tag">Small pool</span></div>
@@ -241,7 +250,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Mykonos&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=mykonos-hotels&amp;trip_sub3=browse-budget" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all value hotels in Mykonos &rsaquo;</a>
   </section>
   <section id="family">
-    <h2>Family-friendly</h2>
+    <h2 id="family-friendly">Family-friendly</h2>
     <p class="catnote">Space to spread out, and beaches where the water shelves gently rather than dropping away.</p>
     <div class="hotel"><h3>Saint John Hotel Villas &amp; Spa</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Agios Ioannis</span><span class="tag">Private beach</span><span class="tag">Large grounds</span><span class="tag">Sunset over Delos</span></div>
@@ -254,7 +263,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Mykonos&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=mykonos-hotels&amp;trip_sub3=browse-family" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all family hotels in Mykonos &rsaquo;</a>
   </section>
   <section id="adults">
-    <h2>Adults-only</h2>
+    <h2 id="adults-only">Adults-only</h2>
     <p class="catnote">Both of these are grown-up and quiet rather than party addresses, which on this island is worth saying out loud.</p>
     <div class="hotel"><h3>Boheme Mykonos &mdash; Adults Only</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Mykonos Town</span><span class="tag">Adults-only</span><span class="tag">Garden courtyard</span><span class="tag">Walk into town</span></div>
@@ -267,7 +276,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Mykonos&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=mykonos-hotels&amp;trip_sub3=browse-adults" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all adults-only stays in Mykonos &rsaquo;</a>
   </section>
   <section id="pet">
-    <h2>Pet-friendly</h2>
+    <h2 id="pet-friendly">Pet-friendly</h2>
     <p class="catnote">Two five-star hotels that accept pets at no extra charge. Acceptance at the first is on request, so telephone ahead.</p>
     <div class="hotel"><h3>Semeli Hotel</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Mykonos Town</span><span class="tag">Pets on request</span><span class="tag">Large pool terrace</span><span class="tag">Central</span></div>
@@ -280,7 +289,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Mykonos&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=mykonos-hotels&amp;trip_sub3=browse-pet" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all pet-friendly hotels in Mykonos &rsaquo;</a>
   </section>
   <section id="beachfront">
-    <h2>Beachfront</h2>
+    <h2 id="beachfront">Beachfront</h2>
     <p class="catnote">Two beaches at opposite ends of the island, both a long way from the noise.</p>
     <div class="hotel"><h3>Myconian Utopia Resort</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Elia</span><span class="tag">Elia beach</span><span class="tag">Relais &amp; Ch&acirc;teaux</span><span class="tag">Full spa</span><span class="tag">Secluded</span></div>
@@ -293,7 +302,7 @@
     <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Mykonos&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=mykonos-hotels&amp;trip_sub3=browse-beachfront" target="_blank" rel="sponsored nofollow noopener" style="background:#eaf2fb;color:#1a5aa8;box-shadow:none;">Browse all beachfront hotels in Mykonos &rsaquo;</a>
   </section>
   <section id="spa">
-    <h2>Spa &amp; Pool</h2>
+    <h2 id="spa-pool">Spa &amp; Pool</h2>
     <p class="catnote">Somewhere to be on a windy day, which on Mykonos is not a rare event.</p>
     <div class="hotel"><h3>Myconian Ambassador Relais &amp; Ch&acirc;teaux Hotel</h3>
       <div class="tags"><span class="tag price">$$$$ Luxury</span><span class="tag">Platis Gialos</span><span class="tag">Thalasso spa</span><span class="tag">Heated seawater</span><span class="tag">Cascading pools</span></div>
@@ -307,7 +316,7 @@
   </section>
 
   <section id="faq">
-    <h2>Mykonos Hotels &mdash; common questions</h2>
+    <h2 id="mykonos-hotels-common-questions">Mykonos Hotels &mdash; common questions</h2>
 <div class="faq">
     <details open>
       <summary>Which part of Mykonos is quiet, and which is loud?</summary>
@@ -337,7 +346,7 @@
   </section>
 
   <section class="band">
-    <h2>Don&rsquo;t see your perfect fit?</h2>
+    <h2 id="dont-see-your-perfect-fit">Don&rsquo;t see your perfect fit?</h2>
     <p>Browse every hotel with live prices and availability on Trip.com. Booking through our links supports Destinations Guild at no extra cost to you.</p>
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?searchWord=Mykonos&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=mykonos-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse all Mykonos hotels</a>
