@@ -213,6 +213,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   body.dg-has-bar{ padding-bottom:68px !important; }
 }
 </style>
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 
@@ -268,7 +276,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   <p class="hero-cap noi18n">The Hong Kong Island skyline above Victoria Harbour, seen from Kowloon. Photo: Wikimedia Commons.</p>
 
   <!-- PLAN / WHERE TO STAY CLUSTER -->
-  <h2>Where to stay &amp; when to go</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#where-to-stay-when-to-go">Where to stay</a><a href="#why-visit-hong-kong">Why go</a><a href="#the-districts-of-hong-kong">Districts of Hong</a><a href="#how-the-territory-divides-up">How the territory</a><a href="#top-things-to-do-in-hong-kong">Things to do</a><a href="#best-time-to-visit-getting-there">When to go</a><a href="#hong-kong-travel-faq">FAQ</a></nav>
+<h2 id="where-to-stay-when-to-go">Where to stay &amp; when to go</h2>
   <p class="lede">Guild guides to the best areas to stay on both sides of Victoria Harbour &mdash; and the best time to plan your trip.</p>
   <div class="why">
     <a class="wcard" href="hong-kong-hotels.html" style="text-decoration:none;"><h3>Where to Stay on Hong Kong Island &rsaquo;</h3><p>Best areas and hotels &mdash; Central, Admiralty, Wan Chai, Causeway Bay and the Peak.</p></a>
@@ -277,7 +286,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- WHY -->
-  <h2>Why visit Hong Kong</h2>
+  <h2 id="why-visit-hong-kong">Why visit Hong Kong</h2>
   <p class="lede">Few cities pack this much energy, food, scenery and sheer spectacle into so small a space — or make it feel this effortless to get around.</p>
   <div class="why">
     <div class="wcard"><h3>The greatest skyline</h3><p>A wall of skyscrapers rising straight from the water, the neon-lit Symphony of Lights, and the sweeping view from Victoria Peak — one of the world's unforgettable cityscapes.</p></div>
@@ -315,7 +324,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- REGIONS -->
-  <h2>The districts of Hong Kong</h2>
+  <h2 id="the-districts-of-hong-kong">The districts of Hong Kong</h2>
   <p class="lede">The whole territory is compact and superbly connected by MTR, tram and ferry. Full Guild area guides are on the way; for now, every district links straight to hotels through our Trip.com partner.</p>
   <div class="chapters">
 
@@ -366,7 +375,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- REGIONS PROSE -->
-  <h2>How the territory divides up</h2>
+  <h2 id="how-the-territory-divides-up">How the territory divides up</h2>
   <div class="split">
     <div class="box">
       <h3>Hong Kong Island</h3>
@@ -383,7 +392,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- THINGS TO DO -->
-  <h2>Top things to do in Hong Kong</h2>
+  <h2 id="top-things-to-do-in-hong-kong">Top things to do in Hong Kong</h2>
   <p class="lede">The experiences worth building a trip around.</p>
   <div class="things">
     <div class="tcard"><h3>The Peak at dusk</h3><p>Ride the historic Peak Tram up Victoria Peak and time it for sunset, when the skyline lights up and the whole harbour glitters below. Book tram tickets ahead in high season.</p></div>
@@ -395,7 +404,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- WHEN / GETTING THERE -->
-  <h2>Best time to visit &amp; getting there</h2>
+  <h2 id="best-time-to-visit-getting-there">Best time to visit &amp; getting there</h2>
   <div class="split">
     <div class="box">
       <h3>When to go</h3>
@@ -412,7 +421,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- FAQ -->
-  <h2>Hong Kong travel FAQ</h2>
+  <h2 id="hong-kong-travel-faq">Hong Kong travel FAQ</h2>
   <div class="faq">
     <details open>
       <summary>When is the best time to visit Hong Kong?</summary>

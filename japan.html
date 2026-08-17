@@ -213,6 +213,14 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   body.dg-has-bar{ padding-bottom:68px !important; }
 }
 </style>
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 
@@ -261,7 +269,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   <p class="hero-cap noi18n">Mount Fuji mirrored in Lake Kawaguchi, one of the Fuji Five Lakes. Photo: Wikimedia Commons.</p>
 
   <!-- PLAN / WHERE TO STAY CLUSTER -->
-  <h2>Where to stay &amp; when to go</h2>
+  <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#where-to-stay-when-to-go">Where to stay</a><a href="#why-visit-japan">Why go</a><a href="#the-regions-of-japan">Regions</a><a href="#top-things-to-do-in-japan">Things to do</a><a href="#best-time-to-visit-getting-there">When to go</a><a href="#japan-travel-faq">FAQ</a></nav>
+<h2 id="where-to-stay-when-to-go">Where to stay &amp; when to go</h2>
   <p class="lede">Guild guides to the best places to stay in Japan's headline destinations &mdash; and the best time to plan your trip.</p>
   <div class="why">
     <a class="wcard" href="tokyo-hotels.html" style="text-decoration:none;"><h3>Where to Stay in Tokyo &rsaquo;</h3><p>Best areas and hotels &mdash; Shinjuku, Shibuya, Ginza, Asakusa and beyond, by budget and style.</p></a>
@@ -273,7 +282,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- WHY -->
-  <h2>Why visit Japan</h2>
+  <h2 id="why-visit-japan">Why visit Japan</h2>
   <p class="lede">Few countries fold this much tradition, technology, nature and sheer culinary joy into a single trip — or run it all so smoothly.</p>
   <div class="why">
     <div class="wcard"><h3>Old meets new</h3><p>Ancient shrines and Zen gardens sit a subway stop from robot cafes and skyscrapers. Kyoto's thousand temples, Tokyo's neon canyons — centuries apart, minutes away.</p></div>
@@ -311,7 +320,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- REGIONS -->
-  <h2>The regions of Japan</h2>
+  <h2 id="the-regions-of-japan">The regions of Japan</h2>
   <p class="lede">Each region is its own trip. Full Guild city guides are on the way; for now, every city links straight to hotels through our Trip.com partner.</p>
   <div class="chapters">
 
@@ -379,7 +388,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- THINGS TO DO -->
-  <h2>Top things to do in Japan</h2>
+  <h2 id="top-things-to-do-in-japan">Top things to do in Japan</h2>
   <p class="lede">The experiences worth building a trip around.</p>
   <div class="things">
     <div class="tcard"><h3>Temples of Kyoto</h3><p>Golden Kinkaku-ji, the vermilion torii tunnels of Fushimi Inari, and the hillside stage of Kiyomizu-dera. Go at opening to beat the crowds.</p></div>
@@ -391,7 +400,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- WHEN / GETTING THERE -->
-  <h2>Best time to visit &amp; getting there</h2>
+  <h2 id="best-time-to-visit-getting-there">Best time to visit &amp; getting there</h2>
   <div class="split">
     <div class="box">
       <h3>When to go</h3>
@@ -408,7 +417,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   </div>
 
   <!-- FAQ -->
-  <h2>Japan travel FAQ</h2>
+  <h2 id="japan-travel-faq">Japan travel FAQ</h2>
   <div class="faq">
     <details open>
       <summary>When is the best time to visit Japan?</summary>

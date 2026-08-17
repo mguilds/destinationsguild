@@ -141,6 +141,14 @@
   .plain{font-size:16px;color:#3a4756;max-width:840px;}
   .plain strong{color:var(--navy);}
 </style>
+<style id="dg-jumpbar">
+.jumpbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:20px 0 4px}
+.jumpbar .jb-l{font:700 11px/1 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.7px;text-transform:uppercase;color:#8a7f68;margin-right:2px}
+.jumpbar a{font:600 13px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#2b3a4a;background:#fffdf6;border:1px solid #e0d3ad;border-radius:20px;padding:8px 13px;text-decoration:none;transition:background .12s,color .12s,border-color .12s}
+.jumpbar a:hover,.jumpbar a:focus{background:#8a6a1f;color:#fff;border-color:#8a6a1f}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -173,7 +181,8 @@
   </div>
 
   <section id="stay">
-    <h2>Where to stay &mdash; the Guild&rsquo;s Greece guides</h2>
+    <nav class="jumpbar" aria-label="On this page"><span class="jb-l">On this page</span><a href="#where-to-stay-the-guilds-greece-guides">Where to stay</a><a href="#why-visit-greece">Why go</a><a href="#greece-at-a-glance">At a glance</a><a href="#the-regions-of-greece">Regions</a><a href="#top-things-to-do-in-greece">Things to do</a><a href="#best-time-to-visit-getting-there">When to go</a><a href="#greece-in-your-later-years-what-we-would">Later years</a></nav>
+<h2 id="where-to-stay-the-guilds-greece-guides">Where to stay &mdash; the Guild&rsquo;s Greece guides</h2>
     <p class="lede">Five full &ldquo;where to stay&rdquo; guides, each with honest hotel picks by style and a plain word about steps, cobbles and crowds &mdash; plus our month-by-month guide to timing the trip.</p>
     <div class="why">
     <a class="wcard" href="athens-hotels.html" style="text-decoration:none;"><h3>Where to Stay in Athens &rsaquo;</h3><p>Syntagma, Plaka, Makriyianni and Koukaki &mdash; which neighbourhood suits which traveller, and where the level ground is.</p></a>
@@ -204,7 +213,7 @@
   </div>
 
   <section id="why">
-    <h2>Why visit Greece</h2>
+    <h2 id="why-visit-greece">Why visit Greece</h2>
     <p class="lede">Three thousand years of history, six thousand islands, and a way of eating dinner that makes everywhere else seem hurried.</p>
     <div class="why">
     <div class="wcard"><h3>The oldest stories, still standing</h3><p>The Parthenon on its rock, the oracle at Delphi, the theatre at Epidaurus where a whisper carries to the back row, the Minoan palace at Knossos and the lion gate at Mycenae. Almost nowhere else can you stand inside so much of what you were taught in school.</p></div>
@@ -215,7 +224,7 @@
   </section>
 
   <section id="facts">
-    <h2>Greece at a glance</h2>
+    <h2 id="greece-at-a-glance">Greece at a glance</h2>
     <div class="facts">
     <div class="ft"><b>Capital</b><span>Athens</span></div>
     <div class="ft"><b>Currency</b><span>Euro (EUR, &euro;)</span></div>
@@ -227,7 +236,7 @@
   </section>
 
   <section id="regions">
-    <h2>The regions of Greece</h2>
+    <h2 id="the-regions-of-greece">The regions of Greece</h2>
     <p class="lede">Where the Guild has written a full guide, the link goes to it. Everywhere else, the link goes straight to hotels through our Trip.com partner.</p>
     <div class="why">
     <div class="wcard" style="padding:20px 22px;">
@@ -307,7 +316,7 @@
   </section>
 
   <section id="things">
-    <h2>Top things to do in Greece</h2>
+    <h2 id="top-things-to-do-in-greece">Top things to do in Greece</h2>
     <p class="lede">The experiences worth building a trip around.</p>
     <div class="why">
     <div class="wcard"><h3>The Acropolis, early</h3><p>Go at opening time or in the last two hours of the day. The climb is steep and uneven; there is a lift on the north side for visitors with limited mobility, and it is worth arranging in advance. Pair it with the Acropolis Museum below.</p></div>
@@ -320,7 +329,7 @@
   </section>
 
   <section id="when">
-    <h2>Best time to visit &amp; getting there</h2>
+    <h2 id="best-time-to-visit-getting-there">Best time to visit &amp; getting there</h2>
     <div class="why">
       <div class="wcard"><h3>When to go</h3><p><strong>Late April to mid-June</strong> and <strong>mid-September to late October</strong> are the sweet spots: warm, bright, everything open and the crowds well below peak. <strong>July and August</strong> are hot and very busy, with island ferries full and prices at their highest. <strong>November to March</strong> is quiet and inexpensive on the mainland &mdash; Athens, Delphi, Meteora and Thessaloniki are all lovely in winter &mdash; but most island hotels close. Our <a href="best-time-to-visit-greece.html">month-by-month guide</a> goes through it properly.</p></div>
       <div class="wcard"><h3>Getting there</h3><p><strong>Athens (ATH)</strong> is the main long-haul gateway, with direct flights from several North American cities in season and connections year-round. <strong>Thessaloniki (SKG)</strong>, <strong>Heraklion (HER)</strong>, <strong>Chania (CHQ)</strong>, <strong>Rhodes (RHO)</strong>, <strong>Corfu (CFU)</strong>, <strong>Mykonos (JMK)</strong> and <strong>Santorini (JTR)</strong> take seasonal international and frequent domestic flights.</p></div>
@@ -330,7 +339,7 @@
   </section>
 
   <section id="older">
-    <h2>Greece in your later years &mdash; what we would tell our own parents</h2>
+    <h2 id="greece-in-your-later-years-what-we-would">Greece in your later years &mdash; what we would tell our own parents</h2>
     <p class="lede">Greece is one of the most rewarding countries in Europe for unhurried travel. A few honest notes make it a great deal easier.</p>
     <div class="why">
       <div class="wcard"><h3>Which cities are genuinely walkable</h3><p>Athens&rsquo; historic core, Chania&rsquo;s harbour front, Rethymno and the New Town of Rhodes are all flat and easy. The Rhodes Old Town, Mykonos Chora and every caldera village on Santorini are cobbled, stepped or both. Marble paving in Plaka and whitewashed grout in the Cyclades both become slippery when wet &mdash; closed shoes with real grip matter more here than a guidebook will usually tell you.</p></div>
@@ -341,7 +350,7 @@
   </section>
 
   <section id="faq">
-    <h2>Greece travel FAQ</h2>
+    <h2 id="greece-travel-faq">Greece travel FAQ</h2>
 <div class="faq">
     <details open>
       <summary>When is the best time to visit Greece?</summary>
