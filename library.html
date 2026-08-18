@@ -1181,10 +1181,16 @@
   }
   function findTargets(sl){
     if(!sl || !/^[a-z0-9\-]+$/.test(sl)) return [];
-    var want = sl + '.html';
+    /* Netlify's Pretty URLs rewrites href="jamaica.html" to href="/jamaica" in the
+       served page, so normalise both shapes before comparing. */
+    function norm(h){
+      h = (h || '').split('#')[0].split('?')[0];
+      h = h.replace(/^\.?\//, '');
+      return h.replace(/\.html$/, '').toLowerCase();
+    }
     return [].slice.call(document.querySelectorAll('a[href]')).filter(function(a){
-      var h = a.getAttribute('href') || '';
-      return (h === want || h === '/' + want) && (a.classList.contains('spine') || a.classList.contains('catf'));
+      return norm(a.getAttribute('href')) === sl &&
+             (a.classList.contains('spine') || a.classList.contains('catf'));
     });
   }
   function open(){
