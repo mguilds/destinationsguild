@@ -125,6 +125,33 @@
   .pp-menu a{ display:flex; align-items:center; gap:8px; text-decoration:none; color:#1c2733; font-family:'EB Garamond',Georgia,serif; font-size:15px; padding:9px 10px; border-radius:8px; }
   .pp-menu a:hover{ background:#f0e9d6; } .pp-menu .who{ font-size:11px; color:#8a7c52; padding:6px 10px 2px; }
 
+
+  /* ===== DG deep-link: open the Library straight to one book (added 2026-08-18) ===== */
+  @keyframes dgPullOut{
+    0%   { transform: translateY(0) rotate(0deg) scale(1); }
+    35%  { transform: translateY(-16px) rotate(-7deg) scale(1.05); }
+    60%  { transform: translateY(-22px) rotate(-9deg) scale(1.07); }
+    100% { transform: translateY(-10px) rotate(-4deg) scale(1.04); }
+  }
+  @keyframes dgGlow{
+    0%   { box-shadow:0 0 0 0 rgba(212,160,23,0); }
+    40%  { box-shadow:0 10px 26px 4px rgba(212,160,23,.65); }
+    100% { box-shadow:0 6px 18px 2px rgba(212,160,23,.30); }
+  }
+  .spine.dg-pulled{
+    transform-origin:bottom center;
+    animation:dgPullOut 1100ms cubic-bezier(.22,.9,.3,1) forwards, dgGlow 1400ms ease-out forwards;
+    position:relative; z-index:5;
+  }
+  .catf.dg-pulled{
+    animation:dgGlow 1600ms ease-out forwards;
+    outline:2px solid rgba(212,160,23,.85); outline-offset:2px;
+  }
+  .dg-shelf-spot{ animation:dgGlow 1800ms ease-out forwards; border-radius:10px; }
+  @media (prefers-reduced-motion: reduce){
+    .spine.dg-pulled{ animation:dgGlow 800ms ease-out forwards; transform:none; }
+  }
+
   /* ===== Consolidated Library: locator, bookcase, card catalog ===== */
   .lib-locator{ margin:18px 0 6px; }
   .loc-card{ background:linear-gradient(#fbf7ee,#f3ead3); border:1px solid rgba(120,90,40,.35); border-radius:16px; box-shadow:0 5px 16px rgba(60,45,15,.14); padding:18px 20px 20px; max-width:760px; margin:0 auto; }
@@ -1141,5 +1168,47 @@
 </script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 <script>/* DG affiliate-click tracking -> GA4 */(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();</script>
+
+<script>
+/* ===== DG deep-link (added 2026-08-18) =====
+   library.html#jamaica  ->  scrolls to that book on the shelf and pulls it out.
+   Works for any page slug: #portugal, #egypt, #miami-cruise-port, #negril-hotels ...
+   Purely additive: if the hash matches nothing, the page behaves exactly as before. */
+(function(){
+  function slug(){
+    try { return decodeURIComponent((location.hash||'').replace(/^#/,'')).trim().toLowerCase(); }
+    catch(e){ return ''; }
+  }
+  function findTargets(sl){
+    if(!sl || !/^[a-z0-9\-]+$/.test(sl)) return [];
+    var want = sl + '.html';
+    return [].slice.call(document.querySelectorAll('a[href]')).filter(function(a){
+      var h = a.getAttribute('href') || '';
+      return (h === want || h === '/' + want) && (a.classList.contains('spine') || a.classList.contains('catf'));
+    });
+  }
+  function open(){
+    var sl = slug();
+    var hits = findTargets(sl);
+    if(!hits.length) return;
+    [].slice.call(document.querySelectorAll('.dg-pulled,.dg-shelf-spot')).forEach(function(el){
+      el.classList.remove('dg-pulled'); el.classList.remove('dg-shelf-spot');
+    });
+    var spine = hits.filter(function(a){ return a.classList.contains('spine'); })[0] || hits[0];
+    var unit  = spine.closest ? spine.closest('.shelf-unit') : null;
+    var scrollTo = unit || spine;
+    try { scrollTo.scrollIntoView({behavior:'smooth', block:'center'}); }
+    catch(e){ scrollTo.scrollIntoView(); }
+    if(unit) unit.classList.add('dg-shelf-spot');
+    setTimeout(function(){ spine.classList.add('dg-pulled'); }, 420);
+    hits.forEach(function(a){ if(a.classList.contains('catf')) a.classList.add('dg-pulled'); });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', function(){ setTimeout(open, 260); });
+  } else { setTimeout(open, 260); }
+  window.addEventListener('hashchange', open);
+})();
+</script>
+
 </body>
 </html>
