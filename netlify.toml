@@ -30,3 +30,15 @@
   to = "/404.html"
   status = 404
   force = true
+
+# Friends page renamed 2026-08-18 — always "Guild Hospitality", never "Guild" alone
+[[redirects]]
+  from = "/friends-of-the-guild.html"
+  to = "/friends-of-guild-hospitality.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/friends-of-the-guild"
+  to = "/friends-of-guild-hospitality.html"
+  status = 301
+  force = true
