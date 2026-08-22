@@ -281,10 +281,8 @@
         href='https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=stickybar';
         label='Find your stay';
       } else {
-        var band=document.querySelector('a[href*="us.trip.com/hotels/list"]')
+        var band=document.querySelector('.band a.btn[href*="trip.com"]')
               || document.querySelector('a.btn[href*="us.trip.com/hotels"]')
-              || document.querySelector('a[href*="us.trip.com/hotels"]')
-              || document.querySelector('.band a.btn[href*="trip.com"]')
               || document.querySelector('a.hbtn[href*="trip.com"]')
               || document.querySelector('a[href*="us.trip.com"]');
         if(band){ href=band.href; label='Book on Trip.com'; }
