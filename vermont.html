@@ -363,11 +363,11 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script><script>(function(){if(typeof L==='undefined'){return;}var map=L.map('stateMap',{scrollWheelZoom:false}).setView([44.186,-72.778],6);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);var places=[
-    {n:'Montpelier', d:'State capital', lat:44.26, lng:-72.58, cap:true, url:'https://us.trip.com/hotels/list?searchWord=Capitol%20Plaza%20Hotel%20Montpelier&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=montpelier-map'},
-    {n:'Stowe', d:'Ski village', lat:44.47, lng:-72.68, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Topnotch%20Resort%20Stowe&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=stowe-map'},
-    {n:'Burlington', d:'Lakefront city', lat:44.48, lng:-73.21, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Hotel%20Vermont%20Burlington&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=burlington-map'},
-    {n:'Green Mountains', d:'Scenic byway', lat:44.1, lng:-72.9, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Trapp%20Family%20Lodge%20Stowe%20Vermont&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=green-mountains-map'},
-    {n:'Woodstock', d:'Historic village', lat:43.62, lng:-72.52, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Woodstock%20Inn%20and%20Resort%20Vermont&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=woodstock-map'}
+    {n:'Montpelier', d:'State capital', lat:44.26, lng:-72.58, cap:true, url:'https://us.trip.com/hotels/detail/?hotelId=4373494&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=montpelier-map'},
+    {n:'Stowe', d:'Ski village', lat:44.47, lng:-72.68, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2883742&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=stowe-map'},
+    {n:'Burlington', d:'Lakefront city', lat:44.48, lng:-73.21, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=3121988&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=burlington-map'},
+    {n:'Green Mountains', d:'Scenic byway', lat:44.1, lng:-72.9, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2883760&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=green-mountains-map'},
+    {n:'Woodstock', d:'Historic village', lat:43.62, lng:-72.52, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2560245&Allianceid=8217189&SID=317113714&trip_sub1=vermont&trip_sub3=woodstock-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>
