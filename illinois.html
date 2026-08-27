@@ -359,10 +359,10 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script><script>(function(){if(typeof L==='undefined'){return;}var map=L.map('stateMap',{scrollWheelZoom:false}).setView([41.3488,-89.1755],6);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);var places=[
-    {n:'Springfield', d:'State capital', lat:39.7817, lng:-89.6501, cap:true, url:'https://us.trip.com/hotels/list?searchWord=President%20Abraham%20Lincoln%20Springfield%20a%20DoubleTree%20by%20Hilton&Allianceid=8217189&SID=317113714&trip_sub1=illinois&trip_sub3=springfield-map'},
-    {n:'Chicago', d:'Global city', lat:41.8781, lng:-87.6298, cap:false, url:'https://us.trip.com/hotels/list?searchWord=The%20Peninsula%20Chicago&Allianceid=8217189&SID=317113714&trip_sub1=illinois&trip_sub3=chicago-map'},
-    {n:'Starved Rock', d:'State park canyons', lat:41.3186, lng:-88.9926, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Starved%20Rock%20Lodge%20Oglesby%20Illinois&Allianceid=8217189&SID=317113714&trip_sub1=illinois&trip_sub3=starved-rock-map'},
-    {n:'Galena', d:'Historic river town', lat:42.4166, lng:-90.4296, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Eagle%20Ridge%20Resort%20and%20Spa%20Galena%20Illinois&Allianceid=8217189&SID=317113714&trip_sub1=illinois&trip_sub3=galena-map'}
+    {n:'Springfield', d:'State capital', lat:39.7817, lng:-89.6501, cap:true, url:'https://us.trip.com/hotels/detail/?hotelId=2110791&Allianceid=8217189&SID=317113714&trip_sub1=illinois&trip_sub3=springfield-map'},
+    {n:'Chicago', d:'Global city', lat:41.8781, lng:-87.6298, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=986949&Allianceid=8217189&SID=317113714&trip_sub1=illinois&trip_sub3=chicago-map'},
+    {n:'Starved Rock', d:'State park canyons', lat:41.3186, lng:-88.9926, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2893505&Allianceid=8217189&SID=317113714&trip_sub1=illinois&trip_sub3=starved-rock-map'},
+    {n:'Galena', d:'Historic river town', lat:42.4166, lng:-90.4296, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2879640&Allianceid=8217189&SID=317113714&trip_sub1=illinois&trip_sub3=galena-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>
