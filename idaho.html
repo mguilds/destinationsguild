@@ -359,10 +359,10 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script><script>(function(){if(typeof L==='undefined'){return;}var map=L.map('stateMap',{scrollWheelZoom:false}).setView([43.5076,-114.9565],6);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);var places=[
-    {n:'Boise', d:'State capital', lat:43.615, lng:-116.2023, cap:true, url:'https://us.trip.com/hotels/list?searchWord=The%20Grove%20Hotel%20Boise&Allianceid=8217189&SID=317113714&trip_sub1=idaho&trip_sub3=boise-map'},
+    {n:'Boise', d:'State capital', lat:43.615, lng:-116.2023, cap:true, url:'https://us.trip.com/hotels/detail/?hotelId=3728544&Allianceid=8217189&SID=317113714&trip_sub1=idaho&trip_sub3=boise-map'},
     {n:'Sawtooth Mountains', d:'Alpine wilderness', lat:44.1244, lng:-114.8719, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Redfish%20Lake%20Lodge%20Stanley%20Idaho&Allianceid=8217189&SID=317113714&trip_sub1=idaho&trip_sub3=sawtooth-mountains-map'},
-    {n:'Sun Valley', d:'Historic ski resort', lat:43.6971, lng:-114.3517, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Sun%20Valley%20Lodge%20Idaho&Allianceid=8217189&SID=317113714&trip_sub1=idaho&trip_sub3=sun-valley-map'},
-    {n:'Shoshone Falls', d:'Waterfall on the Snake River', lat:42.5938, lng:-114.4, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Hilton%20Garden%20Inn%20Twin%20Falls%20Idaho&Allianceid=8217189&SID=317113714&trip_sub1=idaho&trip_sub3=shoshone-falls-map'}
+    {n:'Sun Valley', d:'Historic ski resort', lat:43.6971, lng:-114.3517, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=126880755&Allianceid=8217189&SID=317113714&trip_sub1=idaho&trip_sub3=sun-valley-map'},
+    {n:'Shoshone Falls', d:'Waterfall on the Snake River', lat:42.5938, lng:-114.4, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2224862&Allianceid=8217189&SID=317113714&trip_sub1=idaho&trip_sub3=shoshone-falls-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>
