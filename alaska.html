@@ -359,10 +359,10 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script><script>(function(){if(typeof L==='undefined'){return;}var map=L.map('stateMap',{scrollWheelZoom:false}).setView([60.6848,-146.2388],6);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);var places=[
-    {n:'Juneau', d:'State capital', lat:58.3019, lng:-134.4197, cap:true, url:'https://us.trip.com/hotels/list?searchWord=Four%20Points%20by%20Sheraton%20Juneau&Allianceid=8217189&SID=317113714&trip_sub1=alaska&trip_sub3=juneau-map'},
-    {n:'Denali National Park', d:'National park', lat:63.1148, lng:-151.1926, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Grande%20Denali%20Lodge%20Denali&Allianceid=8217189&SID=317113714&trip_sub1=alaska&trip_sub3=denali-national-park-map'},
-    {n:'Anchorage', d:'Gateway city', lat:61.2181, lng:-149.9003, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Hotel%20Captain%20Cook%20Anchorage&Allianceid=8217189&SID=317113714&trip_sub1=alaska&trip_sub3=anchorage-map'},
-    {n:'Seward & Kenai Fjords', d:'Cruise port', lat:60.1042, lng:-149.4425, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Seward%20Windsong%20Lodge&Allianceid=8217189&SID=317113714&trip_sub1=alaska&trip_sub3=seward-kenai-fjords-map'}
+    {n:'Juneau', d:'State capital', lat:58.3019, lng:-134.4197, cap:true, url:'https://us.trip.com/hotels/detail/?hotelId=3688712&Allianceid=8217189&SID=317113714&trip_sub1=alaska&trip_sub3=juneau-map'},
+    {n:'Denali National Park', d:'National park', lat:63.1148, lng:-151.1926, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2544947&Allianceid=8217189&SID=317113714&trip_sub1=alaska&trip_sub3=denali-national-park-map'},
+    {n:'Anchorage', d:'Gateway city', lat:61.2181, lng:-149.9003, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2542506&Allianceid=8217189&SID=317113714&trip_sub1=alaska&trip_sub3=anchorage-map'},
+    {n:'Seward & Kenai Fjords', d:'Cruise port', lat:60.1042, lng:-149.4425, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=9032132&Allianceid=8217189&SID=317113714&trip_sub1=alaska&trip_sub3=seward-kenai-fjords-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>

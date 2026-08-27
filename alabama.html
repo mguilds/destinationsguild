@@ -359,10 +359,10 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script><script>(function(){if(typeof L==='undefined'){return;}var map=L.map('stateMap',{scrollWheelZoom:false}).setView([32.7186,-86.8512],6);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);var places=[
-    {n:'Montgomery', d:'State capital', lat:32.3792, lng:-86.3077, cap:true, url:'https://us.trip.com/hotels/list?searchWord=Renaissance%20Montgomery%20Hotel%20%26%20Spa&Allianceid=8217189&SID=317113714&trip_sub1=alabama&trip_sub3=montgomery-map'},
-    {n:'Gulf Shores', d:'Beach town', lat:30.246, lng:-87.7008, cap:false, url:'https://us.trip.com/hotels/list?searchWord=The%20Beach%20Club%20Resort%20Gulf%20Shores&Allianceid=8217189&SID=317113714&trip_sub1=alabama&trip_sub3=gulf-shores-map'},
-    {n:'Birmingham', d:'Historic city', lat:33.5186, lng:-86.8104, cap:false, url:'https://us.trip.com/hotels/list?searchWord=The%20Redmont%20Hotel%20Birmingham&Allianceid=8217189&SID=317113714&trip_sub1=alabama&trip_sub3=birmingham-map'},
-    {n:'Huntsville', d:'Space &amp; science hub', lat:34.7304, lng:-86.5861, cap:false, url:'https://us.trip.com/hotels/list?searchWord=The%20Westin%20Huntsville&Allianceid=8217189&SID=317113714&trip_sub1=alabama&trip_sub3=huntsville-map'}
+    {n:'Montgomery', d:'State capital', lat:32.3792, lng:-86.3077, cap:true, url:'https://us.trip.com/hotels/detail/?hotelId=2254266&Allianceid=8217189&SID=317113714&trip_sub1=alabama&trip_sub3=montgomery-map'},
+    {n:'Gulf Shores', d:'Beach town', lat:30.246, lng:-87.7008, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=9128137&Allianceid=8217189&SID=317113714&trip_sub1=alabama&trip_sub3=gulf-shores-map'},
+    {n:'Birmingham', d:'Historic city', lat:33.5186, lng:-86.8104, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2694938&Allianceid=8217189&SID=317113714&trip_sub1=alabama&trip_sub3=birmingham-map'},
+    {n:'Huntsville', d:'Space &amp; science hub', lat:34.7304, lng:-86.5861, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=3442144&Allianceid=8217189&SID=317113714&trip_sub1=alabama&trip_sub3=huntsville-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>
