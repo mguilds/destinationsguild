@@ -359,10 +359,10 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script><script>(function(){if(typeof L==='undefined'){return;}var map=L.map('stateMap',{scrollWheelZoom:false}).setView([39.126,-106.4883],6);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);var places=[
-    {n:'Denver', d:'State capital', lat:39.7392, lng:-104.9903, cap:true, url:'https://us.trip.com/hotels/list?searchWord=The%20Brown%20Palace%20Hotel%20Denver&Allianceid=8217189&SID=317113714&trip_sub1=colorado&trip_sub3=denver-map'},
-    {n:'Rocky Mountain National Park', d:'National park', lat:40.3428, lng:-105.6836, cap:false, url:'https://us.trip.com/hotels/list?searchWord=The%20Stanley%20Hotel%20Estes%20Park&Allianceid=8217189&SID=317113714&trip_sub1=colorado&trip_sub3=rocky-mountain-national-park-map'},
-    {n:'Aspen / Vail', d:'Ski resorts', lat:39.1911, lng:-106.8175, cap:false, url:'https://us.trip.com/hotels/list?searchWord=The%20Little%20Nell%20Aspen&Allianceid=8217189&SID=317113714&trip_sub1=colorado&trip_sub3=aspen-vail-map'},
-    {n:'Mesa Verde', d:'Ancient cliff dwellings', lat:37.2309, lng:-108.4618, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Far%20View%20Lodge%20Mesa%20Verde%20National%20Park&Allianceid=8217189&SID=317113714&trip_sub1=colorado&trip_sub3=mesa-verde-map'}
+    {n:'Denver', d:'State capital', lat:39.7392, lng:-104.9903, cap:true, url:'https://us.trip.com/hotels/detail/?hotelId=2117353&Allianceid=8217189&SID=317113714&trip_sub1=colorado&trip_sub3=denver-map'},
+    {n:'Rocky Mountain National Park', d:'National park', lat:40.3428, lng:-105.6836, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=3061035&Allianceid=8217189&SID=317113714&trip_sub1=colorado&trip_sub3=rocky-mountain-national-park-map'},
+    {n:'Aspen / Vail', d:'Ski resorts', lat:39.1911, lng:-106.8175, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=3119463&Allianceid=8217189&SID=317113714&trip_sub1=colorado&trip_sub3=aspen-vail-map'},
+    {n:'Mesa Verde', d:'Ancient cliff dwellings', lat:37.2309, lng:-108.4618, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=3121350&Allianceid=8217189&SID=317113714&trip_sub1=colorado&trip_sub3=mesa-verde-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>
