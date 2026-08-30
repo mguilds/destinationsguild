@@ -90,8 +90,6 @@ section.blk{padding:44px 0 8px}
 .disc{text-align:center;color:#8a8375;font-size:12px;max-width:720px;margin:26px auto 0;padding:0 20px}
 footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:26px 20px;margin-top:40px;font-size:14px}
 footer a{color:var(--gold);text-decoration:none}
-.dcard.soon,.chip.soon{cursor:default;opacity:.82}
-.chip.soon .ar{display:none}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -164,7 +162,7 @@ footer a{color:var(--gold);text-decoration:none}
   <!-- DESTINATIONS -->
   <section class="blk">
     <h2>Where do you want to sail?</h2>
-    <p class="lead">The world's most‑loved cruise regions. Tap one to read the Guild's guide to it &mdash; where the ships call, when to sail, and what a day ashore is really like.</p>
+    <p class="lead">The world's most‑loved cruise regions. Tap one to see live sailings on Trip.com.</p>
     <div class="grid" id="destGrid"></div>
   </section>
 
@@ -185,14 +183,14 @@ footer a{color:var(--gold);text-decoration:none}
   <!-- LINES -->
   <section class="blk">
     <h2>Cruise lines</h2>
-    <p class="lead">The lines that sail these waters, and who each one suits. We don't sell sailings &mdash; book those with the line or your travel agent.</p>
+    <p class="lead">Have a favorite? Jump straight to their ships and itineraries.</p>
     <div class="chips" id="lineGrid"></div>
   </section>
 
   <!-- PORTS -->
   <section class="blk">
     <h2>Sail from a port near you</h2>
-    <p class="lead">Popular U.S. departure ports — drive to the dock and go. Tap one for our port guide, or for somewhere to stay the night before you sail.</p>
+    <p class="lead">Popular U.S. departure ports — drive to the dock and go.</p>
     <div class="chips" id="portGrid"></div>
   </section>
 
@@ -329,19 +327,9 @@ footer a{color:var(--gold);text-decoration:none}
           <span class="pc-cta">Open the port guide &rarr;</span>
         </span>
       </a>
-      <a class="pc-card" href="fort-lauderdale-cruise-port.html" style="background:linear-gradient(140deg,#12557e,#3fa9a0)">
-        <span class="pc-veil"></span>
-        <span class="pc-txt">
-          <span class="pc-rule"></span>
-          <h3 class="pc-name">Fort Lauderdale</h3>
-          <p class="pc-sub">Port Everglades</p>
-          <p class="pc-blurb">Eight terminals, an airport two miles away, and the honest arithmetic on whether that hotel shuttle really saves you money.</p>
-          <span class="pc-cta">Open the port guide &rarr;</span>
-        </span>
-      </a>
     </div>
-    <p class="pc-soon">More ports are written every day &mdash; Port Canaveral, Galveston, Nassau, Grand Cayman,
-      Juneau and Athens are in the queue.</p>
+    <p class="pc-soon">More ports are written every day &mdash; Nassau, Grand Cayman, St Thomas, Juneau,
+      Athens and Dubrovnik are in the queue.</p>
   </div>
 
 <footer>
@@ -351,10 +339,7 @@ footer a{color:var(--gold);text-decoration:none}
 <script>
 // ---- Trip.com affiliate (NEVER change) ----
 var AFF="Allianceid=8217189&SID=317113714&trip_sub1=cruises";
-// Trip.com sells hotels through our links, but NOT cruise sailings and NOT shore tours.
-// The two old name-based shapes landed readers on a blank or worldwide page,
-// so they are gone. Only the proven hotels/list?city= shape is used here.
-function tripHotels(cityId,tag){ return "https://us.trip.com/hotels/list?city="+cityId+"&"+AFF+"&trip_sub3="+encodeURIComponent(tag); }
+function tripCruise(term,tag){ var u="https://us.trip.com/cruises/list?"; if(term){u+="kwd="+encodeURIComponent(term)+"&";} u+=AFF+"&trip_sub3="+encodeURIComponent(tag); return u; }
 
 // ---- QUIZ ----
 var QS=[
@@ -405,9 +390,9 @@ function showResult(){
   var sum='A '+LABEL[ans.style]+' '+(ans.where==='anywhere'?'getaway':LABEL[ans.where]+' cruise')+' '+LABEL[ans.who]+', '+LABEL[ans.when]+'.';
   document.getElementById('rsum').textContent='Here’s your cruise 🧭';
   document.getElementById('rsub').textContent=sum;
-  var WPAGE={caribbean:'caribbean-cruises.html',bahamas:'bahamas-cruises.html',alaska:'alaska-cruises.html',mediterranean:'mediterranean-cruises.html',mexico:'mexican-riviera-cruises.html',anywhere:'library.html'};
-  var c=document.getElementById('cta');c.href=WPAGE[ans.where]||'library.html';
-  c.removeAttribute('target');c.removeAttribute('rel');c.textContent='Read our '+(LABEL[ans.where]||'cruise')+' guide →';
+  var WKW={caribbean:'Caribbean',bahamas:'Bahamas',alaska:'Alaska',mediterranean:'Mediterranean',mexico:'Mexican Riviera',anywhere:''};
+  var tag='quiz-'+ans.where+'-'+ans.who+'-'+ans.style+'-'+ans.when;
+  document.getElementById('cta').href=tripCruise(WKW[ans.where]||'',tag);
   document.getElementById('result').classList.add('show');
 }
 function restart(){ans={};step=0;document.getElementById('result').classList.remove('show');document.getElementById('qwrap').style.display='';document.getElementById('dots').style.display='';renderStep();}
@@ -415,11 +400,11 @@ renderStep();
 
 // ---- DESTINATIONS ----
 var DEST=[
- {n:'Caribbean',p:'caribbean-cruises.html',kw:'Caribbean',g:'linear-gradient(135deg,#0fb5b0,#0a6e8a)',t:'dest-caribbean'},
- {n:'Bahamas',p:'bahamas-cruises.html',kw:'Bahamas',g:'linear-gradient(135deg,#37c0d6,#e6c98a)',t:'dest-bahamas'},
- {n:'Alaska',p:'alaska-cruises.html',kw:'Alaska',g:'linear-gradient(135deg,#6b8ca6,#dfe9f0)',t:'dest-alaska'},
- {n:'Mediterranean',p:'mediterranean-cruises.html',kw:'Mediterranean',g:'linear-gradient(135deg,#2b6cb0,#d98b5f)',t:'dest-mediterranean'},
- {n:'Mexican Riviera',p:'mexican-riviera-cruises.html',kw:'Mexican Riviera',g:'linear-gradient(135deg,#f0873f,#c9432b)',t:'dest-mexico'},
+ {n:'Caribbean',kw:'Caribbean',g:'linear-gradient(135deg,#0fb5b0,#0a6e8a)',t:'dest-caribbean'},
+ {n:'Bahamas',kw:'Bahamas',g:'linear-gradient(135deg,#37c0d6,#e6c98a)',t:'dest-bahamas'},
+ {n:'Alaska',kw:'Alaska',g:'linear-gradient(135deg,#6b8ca6,#dfe9f0)',t:'dest-alaska'},
+ {n:'Mediterranean',kw:'Mediterranean',g:'linear-gradient(135deg,#2b6cb0,#d98b5f)',t:'dest-mediterranean'},
+ {n:'Mexican Riviera',kw:'Mexican Riviera',g:'linear-gradient(135deg,#f0873f,#c9432b)',t:'dest-mexico'},
  {n:'Greek Isles',kw:'Greek Isles',g:'linear-gradient(135deg,#1f8fd0,#eef3f7)',t:'dest-greek-isles'},
  {n:'Northern Europe',kw:'Northern Europe',g:'linear-gradient(135deg,#274b73,#5d7fa6)',t:'dest-europe'},
  {n:'Norwegian Fjords',kw:'Norwegian Fjords',g:'linear-gradient(135deg,#3a5f7d,#a9c7d6)',t:'dest-fjords'},
@@ -437,9 +422,8 @@ var DEST=[
  {n:'Transatlantic',kw:'Transatlantic',g:'linear-gradient(135deg,#274b73,#0f6e56)',t:'dest-transatlantic'}
 ];
 (function(){var g=document.getElementById('destGrid');DEST.forEach(function(d){
- var a=document.createElement('a');a.className='dcard';
- if(d.p){a.href=d.p;}else{a.className='dcard soon';}
- a.style.background=d.g;a.innerHTML='<span class="veil"></span><span class="nm">'+d.n+'</span><span class="go">'+(d.p?'Read the guide ›':'Guide coming soon')+'</span>';g.appendChild(a);});})();
+ var a=document.createElement('a');a.className='dcard';a.href=tripCruise(d.kw,d.t);a.target='_blank';a.rel='sponsored nofollow noopener';
+ a.style.background=d.g;a.innerHTML='<span class="veil"></span><span class="nm">'+d.n+'</span><span class="go">Cruises ›</span>';g.appendChild(a);});})();
 
 // ---- LINES ----
 var LINES=[
@@ -454,30 +438,27 @@ var LINES=[
  {n:'Virgin Voyages',kw:'Virgin Voyages',s:'Adults‑only, stylish',t:'line-virgin'}
 ];
 (function(){var g=document.getElementById('lineGrid');LINES.forEach(function(l){
- var a=document.createElement('span');a.className='chip soon';
- a.innerHTML='<span>'+l.n+'<small>'+l.s+'</small></span>';g.appendChild(a);});})();
+ var a=document.createElement('a');a.className='chip';a.href=tripCruise(l.kw,l.t);a.target='_blank';a.rel='sponsored nofollow noopener';
+ a.innerHTML='<span>'+l.n+'<small>'+l.s+'</small></span><span class="ar">›</span>';g.appendChild(a);});})();
 
 // ---- PORTS ----
 var PORTS=[
- {n:'Miami, FL',p:'miami-cruise-port.html',c:25773,s:'Cruise Capital of the World',t:'port-miami'},
- {n:'Fort Lauderdale, FL',p:'fort-lauderdale-cruise-port.html',c:3781,s:'Port Everglades',t:'port-fort-lauderdale'},
- {n:'Port Canaveral, FL',c:26090,s:'Near Orlando',t:'port-canaveral'},
- {n:'Galveston, TX',c:20228,s:'Gulf departures',t:'port-galveston'},
- {n:'New York, NY',c:633,s:'Bermuda & Canada',t:'port-new-york'},
- {n:'Los Angeles, CA',c:347,s:'Mexico & Pacific',t:'port-los-angeles'},
- {n:'Seattle, WA',c:511,s:'Gateway to Alaska',t:'port-seattle'},
- {n:'New Orleans, LA',c:1186,s:'Caribbean & Mexico',t:'port-new-orleans'},
- {n:'Long Beach, CA',c:25916,s:'Baja & Catalina',t:'port-long-beach'},
- {n:'Tampa, FL',c:1399,s:'Western Caribbean',t:'port-tampa'},
- {n:'Boston, MA',c:26848,s:'Canada & New England',t:'port-boston'},
- {n:'San Juan, PR',c:4090,s:'Deep Caribbean',t:'port-san-juan'}
+ {n:'Miami, FL',kw:'Miami',s:'Cruise Capital of the World',t:'port-miami'},
+ {n:'Fort Lauderdale, FL',kw:'Fort Lauderdale',s:'Port Everglades',t:'port-fort-lauderdale'},
+ {n:'Port Canaveral, FL',kw:'Port Canaveral',s:'Near Orlando',t:'port-canaveral'},
+ {n:'Galveston, TX',kw:'Galveston',s:'Gulf departures',t:'port-galveston'},
+ {n:'New York, NY',kw:'New York',s:'Bermuda & Canada',t:'port-new-york'},
+ {n:'Los Angeles, CA',kw:'Los Angeles',s:'Mexico & Pacific',t:'port-los-angeles'},
+ {n:'Seattle, WA',kw:'Seattle',s:'Gateway to Alaska',t:'port-seattle'},
+ {n:'New Orleans, LA',kw:'New Orleans',s:'Caribbean & Mexico',t:'port-new-orleans'},
+ {n:'Long Beach, CA',kw:'Long Beach',s:'Baja & Catalina',t:'port-long-beach'},
+ {n:'Tampa, FL',kw:'Tampa',s:'Western Caribbean',t:'port-tampa'},
+ {n:'Boston, MA',kw:'Boston',s:'Canada & New England',t:'port-boston'},
+ {n:'San Juan, PR',kw:'San Juan',s:'Deep Caribbean',t:'port-san-juan'}
 ];
 (function(){var g=document.getElementById('portGrid');PORTS.forEach(function(p){
- var a=document.createElement('a');a.className='chip';
- if(p.p){a.href=p.p;a.innerHTML='<span>'+p.n+'<small>'+p.s+'</small></span><span class="ar">›</span>';}
- else{a.href=tripHotels(p.c,p.t);a.target='_blank';a.rel='sponsored nofollow noopener';
-  a.innerHTML='<span>'+p.n+'<small>'+p.s+' · where to stay</small></span><span class="ar">›</span>';}
- g.appendChild(a);});})();
+ var a=document.createElement('a');a.className='chip';a.href=tripCruise(p.kw,p.t);a.target='_blank';a.rel='sponsored nofollow noopener';
+ a.innerHTML='<span>'+p.n+'<small>'+p.s+'</small></span><span class="ar">›</span>';g.appendChild(a);});})();
 
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>

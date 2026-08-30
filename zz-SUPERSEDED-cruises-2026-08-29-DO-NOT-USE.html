@@ -164,7 +164,7 @@ footer a{color:var(--gold);text-decoration:none}
   <!-- DESTINATIONS -->
   <section class="blk">
     <h2>Where do you want to sail?</h2>
-    <p class="lead">The world's most‑loved cruise regions. Tap one to read the Guild's guide to it &mdash; where the ships call, when to sail, and what a day ashore is really like.</p>
+    <p class="lead">The world's most‑loved cruise regions. Tap one to read the Guild's guide to it — where the ships call, when to sail, and what a day ashore is really like.</p>
     <div class="grid" id="destGrid"></div>
   </section>
 
@@ -185,7 +185,7 @@ footer a{color:var(--gold);text-decoration:none}
   <!-- LINES -->
   <section class="blk">
     <h2>Cruise lines</h2>
-    <p class="lead">The lines that sail these waters, and who each one suits. We don't sell sailings &mdash; book those with the line or your travel agent.</p>
+    <p class="lead">The lines that sail these waters, and who each one suits. We don't sell sailings — book those with the line or your travel agent.</p>
     <div class="chips" id="lineGrid"></div>
   </section>
 
@@ -329,19 +329,9 @@ footer a{color:var(--gold);text-decoration:none}
           <span class="pc-cta">Open the port guide &rarr;</span>
         </span>
       </a>
-      <a class="pc-card" href="fort-lauderdale-cruise-port.html" style="background:linear-gradient(140deg,#12557e,#3fa9a0)">
-        <span class="pc-veil"></span>
-        <span class="pc-txt">
-          <span class="pc-rule"></span>
-          <h3 class="pc-name">Fort Lauderdale</h3>
-          <p class="pc-sub">Port Everglades</p>
-          <p class="pc-blurb">Eight terminals, an airport two miles away, and the honest arithmetic on whether that hotel shuttle really saves you money.</p>
-          <span class="pc-cta">Open the port guide &rarr;</span>
-        </span>
-      </a>
     </div>
-    <p class="pc-soon">More ports are written every day &mdash; Port Canaveral, Galveston, Nassau, Grand Cayman,
-      Juneau and Athens are in the queue.</p>
+    <p class="pc-soon">More ports are written every day &mdash; Nassau, Grand Cayman, St Thomas, Juneau,
+      Athens and Dubrovnik are in the queue.</p>
   </div>
 
 <footer>
@@ -406,6 +396,7 @@ function showResult(){
   document.getElementById('rsum').textContent='Here’s your cruise 🧭';
   document.getElementById('rsub').textContent=sum;
   var WPAGE={caribbean:'caribbean-cruises.html',bahamas:'bahamas-cruises.html',alaska:'alaska-cruises.html',mediterranean:'mediterranean-cruises.html',mexico:'mexican-riviera-cruises.html',anywhere:'library.html'};
+  var tag='quiz-'+ans.where+'-'+ans.who+'-'+ans.style+'-'+ans.when;
   var c=document.getElementById('cta');c.href=WPAGE[ans.where]||'library.html';
   c.removeAttribute('target');c.removeAttribute('rel');c.textContent='Read our '+(LABEL[ans.where]||'cruise')+' guide →';
   document.getElementById('result').classList.add('show');
@@ -460,7 +451,7 @@ var LINES=[
 // ---- PORTS ----
 var PORTS=[
  {n:'Miami, FL',p:'miami-cruise-port.html',c:25773,s:'Cruise Capital of the World',t:'port-miami'},
- {n:'Fort Lauderdale, FL',p:'fort-lauderdale-cruise-port.html',c:3781,s:'Port Everglades',t:'port-fort-lauderdale'},
+ {n:'Fort Lauderdale, FL',c:3781,s:'Port Everglades',t:'port-fort-lauderdale'},
  {n:'Port Canaveral, FL',c:26090,s:'Near Orlando',t:'port-canaveral'},
  {n:'Galveston, TX',c:20228,s:'Gulf departures',t:'port-galveston'},
  {n:'New York, NY',c:633,s:'Bermuda & Canada',t:'port-new-york'},
