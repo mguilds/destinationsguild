@@ -1,0 +1,21 @@
+GUILD LINK LEDGER — count for 2026-08-31 (7 AM run)
+
+Line to add to the COUNTS array:
+
+  { date:"2026-08-31", real:177, realPages:80, total:329, totalPages:90, pages:347 }
+
+NOT PUBLISHED. This run could not open the ledger page
+(https://claude.ai/code/artifact/62d77d89-929b-46e7-8f7a-f603e8834fed),
+so nothing was changed. The numbers above are saved here so the next run
+can add them.
+
+Counted from a fresh clone of github.com/mguilds/destinationsguild
+(root *.html only), looking for searchWord= , keyword= , kwd=
+
+  real        177  (live pages only)
+  realPages    80
+  total       329  (including zz-SUPERSEDED drafts)
+  totalPages   90
+  pages       347
+
+No sudden jump: 177 matches the last recorded figure for 31 August.
