@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="en"><head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XY1WMZLK0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3XY1WMZLK0');
+</script>
+<link rel="manifest" href="/manifest.json">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>San Diego Cruise Port Guide &mdash; Piers, Parking, Park-and-Cruise &amp; Hotels | Destinations Guild</title>
+<meta name="description" content="Sailing from San Diego? The port runs no parking at all, the Gaslamp walk is not ten minutes, and with two of you a taxi beats the shuttle. Real park-and-cruise prices, verified hotels and a harbor map. A Cruise Companion departure-port guide.">
+<link rel="canonical" href="https://destinationsguild.com/san-diego-cruise-port.html">
+<meta name="keywords" content="San Diego cruise port, San Diego cruise terminal, B Street Pier, Broadway Pier San Diego, San Diego cruise parking, park and cruise San Diego, hotels near San Diego cruise port, San Diego airport to cruise terminal, embarkation day San Diego, Mexican Riviera cruises from San Diego">
+<meta property="og:type" content="article">
+<meta property="og:title" content="San Diego &mdash; Your Cruise Port Guide | Destinations Guild">
+<meta property="og:description" content="Two piers a block apart, no port-run parking, and an airport ten minutes away. Park-and-cruise prices, verified hotels and the walk times nobody else measured.">
+<meta property="og:url" content="https://destinationsguild.com/san-diego-cruise-port.html">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://destinationsguild.com/"}, {"@type": "ListItem", "position": 2, "name": "Cruises", "item": "https://destinationsguild.com/cruises.html"}, {"@type": "ListItem", "position": 3, "name": "San Diego Cruise Port", "item": "https://destinationsguild.com/san-diego-cruise-port.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I walk into town from the ship?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and it is flat. The USS Midway is five to seven minutes, Seaport Village about fifteen, Santa Fe Depot about ten. The Gaslamp Quarter is twenty to twenty-five minutes, not the ten often quoted."}}, {"@type": "Question", "name": "Do any hotels offer a free shuttle to the ship?", "acceptedAnswer": {"@type": "Answer", "text": "Almost none downtown. The waterfront hotels are close enough to the pier that a shuttle has no market, and the Wyndham San Diego Bayside states plainly that it runs none. The shuttles that do exist belong to the park-and-cruise hotels and the parking operators."}}, {"@type": "Question", "name": "Where do I park for a cruise in San Diego, and what does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "The Port of San Diego operates no parking at all and you may not park on the pier. Private lots run from about $15 a day at Ace Parking on West Broadway to about $30 a day beside the pier. A park-and-cruise hotel package from about $129 usually beats paying by the day on a week-long cruise."}}, {"@type": "Question", "name": "How far is San Diego airport from the cruise terminal?", "acceptedAnswer": {"@type": "Answer", "text": "About 2.4 miles, roughly ten minutes by car. Taxi fares run $15 to $25 and rideshare $12 to $20."}}, {"@type": "Question", "name": "Do I need a passport to cruise from San Diego?", "acceptedAnswer": {"@type": "Answer", "text": "For sailings to Mexico, yes, and most ships from San Diego are bound for Mexico."}}, {"@type": "Question", "name": "When should I arrive at the San Diego cruise terminal?", "acceptedAnswer": {"@type": "Answer", "text": "At the boarding time your cruise line assigned you, and not before ten in the morning. There is nowhere to wait if you come early."}}]}</script>
+<style>
+:root{--navy:#1B3A6B;--gold:#C9A84C;--teal:#0F6E56;--ink:#1c2b3f;--paper:#F5F1E8;--card:#fff;--line:#e3ddce;--sea:#12557e}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;line-height:1.65}
+.nav{background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;gap:22px;padding:13px 20px;font-weight:600;font-size:15px;flex-wrap:wrap}
+.nav .brand{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;font-style:italic;margin-right:8px}
+.nav a{color:#fff;text-decoration:none;opacity:.92}.nav a:hover{opacity:1;color:var(--gold)}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.gbanner{height:clamp(170px,28vh,280px);background:linear-gradient(135deg,#14b3c4,#e2b96a);position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+.gbanner::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:56px;background:linear-gradient(rgba(245,241,232,0),#F5F1E8)}
+.gbanner .in{position:relative;z-index:2;padding:0 20px}
+.gbanner .kick{font-family:'Dancing Script',cursive;font-size:1.5rem;margin:0;opacity:.95}
+.gbanner h1{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:700;font-size:clamp(2rem,4.6vw,3rem);margin:2px 0 0;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0 8px}
+@media(max-width:640px){.facts{grid-template-columns:repeat(2,1fr)}}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center}
+.fact .l{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:#8a8375;font-weight:700}
+.fact .v{font-size:14px;font-weight:600;color:var(--navy);margin-top:3px}
+a.fact{display:flex;flex-direction:column;justify-content:flex-start;text-decoration:none;color:inherit;cursor:pointer;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+a.fact:hover,a.fact:focus{border-color:var(--navy);box-shadow:0 6px 16px rgba(20,40,80,.13);transform:translateY(-2px)}
+a.fact:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+.fact .go{display:block;margin-top:auto;padding-top:6px;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#a89f8c}
+a.fact:hover .go,a.fact:focus .go{color:var(--navy)}
+h2[id]{scroll-margin-top:14px}
+html{scroll-behavior:smooth}
+h2{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--navy);font-size:1.7rem;margin:34px 0 8px}
+h2 .em{font-style:normal;margin-right:8px}
+p.body{margin:0 0 12px}
+.callout{background:#fff6e6;border:1px solid #e7cf95;border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px;margin:14px 0}
+.callout b{color:#8a6a1f}
+ul.tick{list-style:none;padding:0;margin:8px 0}
+ul.tick li{padding:6px 0 6px 26px;position:relative}
+ul.tick li::before{content:'⚓';position:absolute;left:0;color:var(--sea)}
+.book{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:16px 0 4px}
+.book a{display:inline-block;background:var(--gold);color:#2a2000;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:11px;font-size:15px}
+.book a.alt{background:#fff;color:var(--navy);border:1.5px solid var(--sea)}
+.book a:hover{transform:translateY(-2px)}
+.libnote{max-width:760px;margin:34px auto 0;background:#efe7d5;border:1px solid var(--line);border-radius:14px;padding:16px 20px;text-align:center}
+.libnote a{color:var(--navy);font-weight:700}
+.disc{text-align:center;color:#8a8375;font-size:12px;max-width:720px;margin:20px auto 0}
+footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:24px 20px;margin-top:34px;font-size:14px}footer a{color:var(--gold);text-decoration:none}
+.printbtn{background:#fff;border:1.5px solid var(--sea);color:var(--navy);font-weight:700;padding:9px 18px;border-radius:10px;cursor:pointer;font-size:14px;font-family:inherit}.printbtn:hover{background:#eef4f8}
+@media print{.nav,footer,.book,.libnote,.disc,.printbtn{display:none!important}body{background:#fff;color:#000}.gbanner{height:auto!important;background:#fff!important;color:#000;display:block;text-align:left;padding:0 0 6px;filter:none;border-bottom:2px solid #000}.gbanner::after{display:none}.gbanner .kick{color:#444}.gbanner h1{color:#000;text-shadow:none;font-size:22pt;margin:0}.wrap{max-width:100%;padding:0}h2{color:#000;page-break-after:avoid}.fact,.port{border:1px solid #999!important}a{color:#000;text-decoration:none}}
+</style>
+<style id="dg-mobile-inline">
+/* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
+@media (max-width: 820px){
+  .dg-nav-links a, .tb-links a, .tb-nav a, .pagenav a, .crumb a, .foot a, .tb-affil,
+  .lang-tgl, .hbtn, .btn, .srch-btn, .map-book-btn, .book-btn, .cview-btn, .ci-btn,
+  .jump a, .chip, .dcity-lnk, .a250-btn, .cattab {
+    min-height:44px !important; display:inline-flex !important; align-items:center !important;
+    justify-content:center !important; padding-top:10px !important; padding-bottom:10px !important;
+  }
+  .cities li{ padding:9px 0 !important; min-height:44px !important; }
+  .cities a{ display:inline-flex !important; align-items:center !important; min-height:44px !important; }
+  .faq summary{ padding:15px 2px !important; min-height:44px !important; }
+  .inp, .sel, input, select, textarea{ min-height:48px !important; font-size:16px !important; }
+  .dg-nav-links{ gap:6px 10px !important; }
+  .tb-links{ gap:4px 8px !important; }
+  .tb-nav{ gap:6px 14px !important; }
+  /* legible captions (>=14px floor) */
+  .hero-cap, .fx-note, .catnote, .powered, .aff-note, .shelf-note, .ch-note, .foot, .gtl-note, .disc, .hcard-brand, .cport, .lauthor, .ldate{ font-size:14px !important; line-height:1.5 !important; }
+  .lede, .box p, .wcard p, .tcard p{ font-size:15.5px !important; }
+  /* modest contrast lift on light-background captions */
+  .hero-cap{ color:#6b5d38 !important; }
+  /* clear focus for keyboard / switch-device users */
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible{
+    outline:3px solid #2F76D8 !important; outline-offset:2px !important;
+  }
+  /* leave room for the sticky action bar */
+  body.dg-has-bar{ padding-bottom:68px !important; }
+}
+</style>
+<style id="dg-harbor-map">
+#harborMap{height:400px;border-radius:14px;border:1px solid rgba(27,58,107,.18);box-shadow:0 6px 22px rgba(27,58,107,.10);margin:6px 0 10px}
+.hm-legend{font:500 13.5px/1.5 -apple-system,'Segoe UI',Roboto,sans-serif;color:#4a5568;margin:0 0 18px}
+.hm-legend b{color:#1B3A6B}
+@media(max-width:820px){#harborMap{height:320px}}
+.hm-btns{display:flex;gap:8px;margin:0 0 8px;flex-wrap:wrap}
+.hm-b{font:700 12.5px/1 -apple-system,'Segoe UI',Roboto,sans-serif;color:#1B3A6B;background:#fff;border:1px solid rgba(27,58,107,.25);border-radius:20px;padding:8px 13px;cursor:pointer}
+.hm-b:hover{border-color:#1B3A6B}
+.hm-b.is-on{background:#1B3A6B;color:#fff;border-color:#1B3A6B}
+.hm-ship{background:none;border:0}
+.hm-ship span{display:block;width:34px;height:34px;line-height:32px;text-align:center;font-size:17px;background:#1B3A6B;color:#fff;border:2px solid #fff;border-radius:50%;box-shadow:0 3px 8px rgba(0,0,0,.3)}
+.stayrow{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:14px 0 6px}
+.staycard{border:1px solid rgba(27,58,107,.16);border-radius:14px;padding:14px 16px;background:#fff}
+.staycard h3{margin:0 0 4px;font:700 16.5px/1.3 'Cormorant Garamond',Georgia,serif;color:#1B3A6B}
+.staycard p{margin:0 0 10px;font:400 14px/1.55 -apple-system,'Segoe UI',Roboto,sans-serif;color:#4a5568}
+.staycard a{font-weight:700;color:#0F6E56;text-decoration:none}
+</style>
+<style id="dg-port-polly">
+  .gbanner{position:relative;overflow:visible;}
+  .dg-port-polly{position:absolute;top:6px;right:22px;width:86px;height:112px;z-index:6;
+    pointer-events:none;animation:dgPollyDrift 3.8s ease-in-out infinite;
+    filter:drop-shadow(0 6px 10px rgba(0,0,0,.32));}
+  .dg-port-polly svg{width:100%;height:100%;display:block;}
+  @keyframes dgPollyDrift{
+    0%,100%{transform:translateY(0) rotate(-3deg);}
+    50%{transform:translateY(-9px) rotate(3deg);}
+  }
+  @media(max-width:820px){.dg-port-polly{width:62px;height:81px;right:10px;top:4px;}}
+  @media(prefers-reduced-motion:reduce){.dg-port-polly{animation:none;}}
+</style>
+</head><body>
+<div class="nav"><span class="brand">🌍 Destinations Guild</span><a href="index.html">Home</a><a href="cruises.html">Cruises</a><a href="caribbean-cruises.html">Caribbean</a><a href="library.html">Library</a></div>
+<div class="gbanner">
+<div class="dg-port-polly" role="img" aria-label="Polly the Guild parrot"><svg viewBox="0 0 50 86" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Polly the parrot"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.6;0 0" keyTimes="0;0.5;1" dur="1.6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="rotate" values="-6 28 44;6 28 44;-6 28 44" keyTimes="0;0.5;1" dur="1.9s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/><path d="M26 43 Q31 58 37 74 Q35 58 29 45 Z" fill="#2D6BC4"/><path d="M28 44 Q38 62 47 78 Q41 60 31 46 Z" fill="#1E54A8"/><path d="M24 43 Q28 55 33 67 Q31 55 27 45 Z" fill="#3F7FD6"/><path d="M26 43 Q33 60 44 81 Q39 60 30 45 Z" fill="#128241"/></g><path d="M27 41 Q31 42 33 46 Q29 48 26 45 Z" fill="#F2B600"/><ellipse cx="25" cy="33" rx="9.5" ry="14" fill="#29B34E"/><g><animateTransform attributeName="transform" type="rotate" values="0 28 24;-24 28 24;0 28 24;-24 28 24;0 28 24;0 28 24" keyTimes="0;0.07;0.15;0.22;0.3;1" dur="2.9s" repeatCount="indefinite"/><path d="M27 22 C33 25 34 38 30 47 C28 41 26 30 27 22 Z" fill="#2D6BC4"/><path d="M28 29 C31 31 31 37 30 42 C28 38 28 33 28 29 Z" fill="#F2B600"/></g><circle cx="23" cy="15" r="11.5" fill="#29B34E"/><path d="M30 6 C33 3 36 5 34 8 C32 7 30 8 30 9 Z" fill="#29B34E"/><ellipse cx="18" cy="16" rx="6.8" ry="7.8" fill="#ffffff"/><ellipse cx="17" cy="14" rx="2.4" ry="2.4" fill="#1a1a1a"><animate attributeName="ry" values="2.4;2.4;0.3;2.4" keyTimes="0;0.82;0.9;1" dur="3.2s" repeatCount="indefinite"/></ellipse><circle cx="17.9" cy="13.1" r="0.8" fill="#ffffff"/><path d="M15 10 C8 10 5 17 9 21 C11 23 14 22 14 19 C13 16 14 12 15 10 Z" fill="#2b2b2b"/><path d="M9 20 C10 23 14 23 14 20 C12 21 10 21 9 20 Z" fill="#8a8a8a"/></g></svg></div>
+
+<div class="in"><p class="kick">A Cruise Companion departure&#8209;port guide</p><h1>San Diego &mdash; Sailing from California&rsquo;s Easiest Port</h1><p class="dg-byline" style="display:inline-block;margin:10px auto 0;background:rgba(20,32,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated September 2026</p></div></div>
+<div class="wrap">
+
+<div class="facts">
+  <a class="fact" href="#harbor-map"><div class="l">Two piers</div><div class="v">B Street and Broadway, a block apart</div><span class="go">Harbor map &#8595;</span></a>
+  <a class="fact" href="#stepping-off"><div class="l">Walk into town?</div><div class="v">Yes &mdash; and it is flat</div><span class="go">Stepping off &#8595;</span></a>
+  <a class="fact" href="#money"><div class="l">Parking</div><div class="v">$15&ndash;$30 a day &middot; none run by the port</div><span class="go">Money &amp; parking &#8595;</span></a>
+  <a class="fact" href="#what-to-do"><div class="l">The airport</div><div class="v">2.4 miles &mdash; ten minutes</div><span class="go">What to do &#8595;</span></a>
+</div>
+
+<p><b>San Diego is the gentlest departure port in America, and the reason is geography. The airport sits two and a half miles from the berth. The ship ties up at the foot of downtown. You can walk off the gangway and be at the USS Midway in seven minutes on flat pavement. For a reader who has fought the traffic out to Port Canaveral or crossed Los Angeles to reach a pier, this port is a holiday before the holiday starts.</b></p>
+
+<p>There are two catches, and we would rather you heard them from us. The Port of San Diego owns no parking at all &mdash; not one space &mdash; so every lot you will see advertised is a private operator with its own rate and its own shuttle policy. And the famous ten&#8209;minute walk to the Gaslamp Quarter is not ten minutes. We measured it. Both are dealt with below.</p>
+
+<h2 id="harbor-map"><span>&#128506;&#65039;</span>Harbor map &mdash; where everything is</h2>
+<p class="hm-legend">San Diego works along one street. North Harbor Drive runs the length of the waterfront, and almost everything a cruise passenger needs sits on it: the two piers, the Midway, the Maritime Museum, Seaport Village and, at the north end, the airport. Open the close view to see where your ship ties up; the wider view puts the airport and the Gaslamp in the same picture.</p>
+<div class="hm-btns"><button class="hm-b is-on" data-hm="close">Where the ship ties up</button><button class="hm-b" data-hm="all">Wider view</button></div>
+<div id="harborMap" style="height:420px;border-radius:14px;overflow:hidden;margin:12px 0 6px"></div>
+<p class="disc">Coordinates on this map were each checked against an independent gazetteer before publication. Where two sources disagreed we say so rather than draw a pin we cannot stand behind.</p>
+
+<h2 id="stay"><span>&#127976;</span>Stay the night before you sail</h2>
+<p>This is the section that matters most at San Diego, because the port is so central that where you sleep genuinely decides how your morning goes. All three below are within a short ride of the pier, and two are close enough to walk with a case.</p>
+
+<div class="stayrow">
+  <div class="staycard">
+    <h3>Closest to the berth</h3>
+    <p><b>Wyndham San Diego Bayside</b> sits directly across North Harbor Drive from the B Street Pier. Its own front desk describes the terminal as &ldquo;a short walk across the street,&rdquo; which is the plain truth &mdash; and the reason it runs no shuttle. It also sells the most generous park&#8209;and&#8209;cruise package in the city, covered in the table below.</p>
+    <p><a href="https://us.trip.com/hotels/detail/?cityId=698&amp;hotelId=2199436&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=san-diego-cruise-port&amp;trip_sub3=stay-bayside" target="_blank" rel="sponsored nofollow noopener">Book Me &mdash; Wyndham San Diego Bayside &rarr;</a></p>
+  </div>
+  <div class="staycard">
+    <h3>On the water, in the thick of it</h3>
+    <p><b>Manchester Grand Hyatt San Diego</b> is the tall pair of towers over Seaport Village, about three quarters of a mile south of the pier. Fair warning, and we would rather give it than not: the hotel is working through a staged renovation into 2026 &mdash; rooftop pool, restaurants, meeting rooms and rooms in phases. Ask what is closed when you book.</p>
+    <p><a href="https://us.trip.com/hotels/detail/?cityId=698&amp;hotelId=2193637&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=san-diego-cruise-port&amp;trip_sub3=stay-hyatt" target="_blank" rel="sponsored nofollow noopener">Book Me &mdash; Manchester Grand Hyatt &rarr;</a></p>
+  </div>
+  <div class="staycard">
+    <h3>Quieter, and kinder on the wallet</h3>
+    <p><b>Best Western Plus Bayside Inn</b> on West Ash Street is about half a mile back from the water, which buys you a considerably lower rate and a quieter night. It is an easy flat walk down Ash to the Embarcadero in the morning, or a minimum&#8209;fare ride.</p>
+    <p><a href="https://us.trip.com/hotels/detail/?cityId=698&amp;hotelId=2193640&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=san-diego-cruise-port&amp;trip_sub3=stay-bayside-inn" target="_blank" rel="sponsored nofollow noopener">Book Me &mdash; Best Western Plus Bayside Inn &rarr;</a></p>
+  </div>
+</div>
+<p><a href="https://us.trip.com/hotels/list?city=698&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=san-diego-cruise-port&amp;trip_sub3=browse-all" target="_blank" rel="sponsored nofollow noopener">Browse every San Diego hotel on Trip.com &rarr;</a></p>
+
+<h2 id="park-cruise"><span>&#128663;</span>Park&#8209;and&#8209;cruise packages &mdash; the Arizona reader&rsquo;s section</h2>
+<p>If you are driving in from Phoenix or Tucson &mdash; and a great many of our readers are &mdash; this is the arithmetic that decides your week. A park&#8209;and&#8209;cruise package bundles one night&rsquo;s room, your parking for the whole voyage, and usually a ride to the pier, into a single price. Against San Diego&rsquo;s private lots at $15 to $30 a day, the good ones pay for themselves before you have unpacked.</p>
+
+<div class="callout">
+<p><b>Comfort Inn San Diego Airport at the Harbor &mdash; about $129</b><br>Up to seven days&rsquo; parking, free shuttle. The cheapest genuine package in the city and, on a week&rsquo;s cruise, better value than parking alone at most downtown lots.<br><a href="https://us.trip.com/hotels/detail/?cityId=698&amp;hotelId=2471150&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=san-diego-cruise-port&amp;trip_sub3=pc-comfort" target="_blank" rel="sponsored nofollow noopener">Book Me &mdash; Comfort Inn at the Harbor &rarr;</a></p>
+<p><b>The Dana on Mission Bay &mdash; about $239</b><br>Up to ten days&rsquo; parking with round&#8209;trip transport, out on Mission Bay rather than downtown. The pick if you want a garden and a pool the night before rather than a city block.<br><a href="https://us.trip.com/hotels/detail/?cityId=698&amp;hotelId=2980094&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=san-diego-cruise-port&amp;trip_sub3=pc-dana" target="_blank" rel="sponsored nofollow noopener">Book Me &mdash; The Dana on Mission Bay &rarr;</a></p>
+<p><b>Wyndham San Diego Bayside &mdash; about $263</b><br>Seven&#8209;day package, and packages sold for stays up to thirty days &mdash; the longest cover in the city, which matters if you are taking one of Holland America&rsquo;s long Panama Canal or Hawaii runs. Shuttle included, though you are across the road anyway.<br><a href="https://us.trip.com/hotels/detail/?cityId=698&amp;hotelId=2199436&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=san-diego-cruise-port&amp;trip_sub3=pc-bayside" target="_blank" rel="sponsored nofollow noopener">Book Me &mdash; Wyndham San Diego Bayside &rarr;</a></p>
+<p><b>Two more worth knowing about, which we cannot book for you.</b> The <b>Holiday Inn Express San Diego Airport</b> advertises about $205 with parking up to fourteen days and a free shuttle &mdash; the longest&#8209;parking package at the low end. <b>Pacific Inn San Diego</b> advertises about $189. Trip.com does not carry either property, so we have no booking button to give you; book them direct. We would rather tell you they exist than pretend they do not.</p>
+</div>
+
+<p>One trap worth naming. The park&#8209;and&#8209;cruise rate and the hotel&rsquo;s ordinary overnight parking rate are two different products. At the Wyndham, cruise parking runs $30 a day while an ordinary guest pays $50 a night to leave a car. Ask for the cruise package by name, and get it in writing.</p>
+
+<h2 id="shuttle"><span>&#128652;</span>Getting to the ship on sailing morning</h2>
+<p>Here is where San Diego differs from every other port in this collection, and it is worth understanding before you book anything.</p>
+
+<p><b>Almost no downtown hotel runs a cruise shuttle, and that is not neglect.</b> We checked the big waterfront hotels directly. The Wyndham says in its own guest information that it operates no cruise shuttle and no airport shuttle, because the terminal is across the street. The others are close enough that a shuttle has no market. Treat any &ldquo;free cruise shuttle&rdquo; claim in downtown San Diego marketing as unconfirmed until the hotel says it to you in writing. The shuttles that genuinely exist belong to the park&#8209;and&#8209;cruise hotels above and to the parking operators, not to the downtown towers.</p>
+
+<div class="callout">
+<p><b>The Guild math, worked for San Diego.</b> The airport is 2.4 miles from the pier. That short hop makes the flat taxi fare unusually low &mdash; roughly $15 to $25 metered, $12 to $20 by rideshare &mdash; and it changes the answer completely.</p>
+<p><span class="tick">&#10003;</span> <b>One traveller:</b> a $12&#8209;a&#8209;head shuttle against a $15&ndash;$20 car. Line ball, slight edge to the shuttle.<br>
+<span class="tick">&#10003;</span> <b>Two travellers:</b> $24 against $20. <b>The car already wins.</b><br>
+<span class="tick">&#10003;</span> <b>Four travellers:</b> $48 against one $20 car. <b>The car saves $28 each way &mdash; $56 on the round trip.</b></p>
+<p>At Fort Lauderdale or Rome a long transfer keeps a per&#8209;head shuttle competitive up to three or four people. At San Diego the break&#8209;even sits below two. <b>If there are two or more of you, take the car.</b> That is the whole rule at this port.</p>
+</div>
+
+<p><b>For drivers.</b> The cheapest lot in the city is Ace Parking at 501 West Broadway, at about $15 a day &mdash; roughly $120 for a seven&#8209;night cruise. The catch is that it runs no shuttle, so it leaves you a third of a mile on foot with your luggage. Against the pier&#8209;adjacent lots at $30 a day, walking that third of a mile saves you about $105 on a week. Only you know whether that trade is worth making; we would rather set it out plainly than decide it for you.</p>
+
+<h2 id="stepping-off"><span>&#9875;</span>Arriving at the terminal &mdash; what it is like</h2>
+<p><b>Do not arrive before ten in the morning.</b> The Port of San Diego is unusually firm about this and there is nowhere to wait if you ignore it. Come at the boarding time your cruise line assigned you. Drop&#8209;off happens beyond the gate, on the pier itself.</p>
+<p><b>Confirm your berth before you travel.</b> San Diego has two working piers &mdash; B Street, which takes almost everything, and Broadway Pier one block south, which comes into use when the port is busy. Which one you sail from is decided by how many ships are in that day, not by what was printed on a document months ago. A booking paper printed in March is not authority in November.</p>
+<p>Bring photo identification, your boarding document, and a passport or birth certificate. <b>A passport is required for the Mexico sailings</b>, and Mexico is where most ships from here are going.</p>
+
+<h2 id="money"><span>&#128181;</span>Money, parking and tipping</h2>
+<p><b>The port runs no parking.</b> That sentence is the single most useful thing on this page for a driver. The Port of San Diego states it plainly &mdash; it neither owns nor operates cruise parking, and you may not leave a car on the pier. Everything advertised as &ldquo;cruise parking&rdquo; is a private business.</p>
+<div class="callout">
+<p><span class="tick">&#10003;</span> <b>Ace Parking, 501 W Broadway &mdash; about $15 a day.</b> Cheapest. No shuttle; a third of a mile on foot.<br>
+<span class="tick">&#10003;</span> <b>Park, Shuttle &amp; Fly, Pacific Highway &mdash; about $19 a day with a coupon.</b> A mile and a half out, free shuttle.<br>
+<span class="tick">&#10003;</span> <b>Aladdin Airport &amp; Cruise Parking &mdash; $21 to $23 a day.</b> A mile out, shuttle with tracking.<br>
+<span class="tick">&#10003;</span> <b>The lot beside the Wyndham &mdash; about $30 a day.</b> Across the road from the berth, free shuttle. The convenient one and the dear one.</p>
+</div>
+<p>Tipping in California follows the ordinary American pattern: fifteen to twenty per cent in restaurants, a dollar or two a bag for porters at the pier. Porters at the terminal are not cruise&#8209;line staff and work for tips.</p>
+
+<h2 id="what-to-do"><span>&#127965;&#65039;</span>A spare day in San Diego</h2>
+<p>If you have a few hours before boarding, San Diego rewards them better than almost any departure port in the country, because everything worth seeing is on the same flat mile of waterfront.</p>
+<p><span class="tick">&#10003;</span> <b>USS Midway Museum</b> &mdash; a five to seven minute walk south of the B Street Pier. An aircraft carrier you can walk the flight deck of. If you see one thing, see this.<br>
+<span class="tick">&#10003;</span> <b>Maritime Museum and the Star of India</b> &mdash; about a third of a mile north. The oldest active sailing ship in the world.<br>
+<span class="tick">&#10003;</span> <b>Seaport Village</b> &mdash; roughly fifteen minutes south along the water. Shops and lunch, flat the whole way.<br>
+<span class="tick">&#10003;</span> <b>The Gaslamp Quarter</b> &mdash; the dinner and evening district. See the walking note below before you set off.</p>
+
+<div class="callout">
+<p><b>An honest correction to something you will read elsewhere.</b> Guidebooks and cruise-line pages routinely describe the Gaslamp Quarter as a ten&#8209;minute walk from the pier. Measured properly, it is about nine tenths of a mile to the near edge at Fifth and Broadway &mdash; eighteen to twenty minutes &mdash; and around a mile and a quarter to the heart of it at Fifth and Market, which is closer to twenty&#8209;five. It is flat and pleasant the entire way, so it is a fine walk. It is not a ten&#8209;minute one, and a reader with a suitcase or a hip that complains deserves to know that before setting out. Santa Fe Depot genuinely is about ten minutes.</p>
+</div>
+
+<h2 id="lines"><span>&#128674;</span>Who sails from here, and when</h2>
+<p><b>San Diego is an autumn&#8209;to&#8209;spring port.</b> The season runs roughly October to April; summer is thin and mostly repositioning voyages passing through. Plan around that before you plan anything else.</p>
+<p><span class="tick">&#10003;</span> <b>Holland America</b> carries the broadest programme &mdash; three&#8209;night runs to Ensenada right up to thirty&#8209;five&#8209;night voyages, the Panama Canal, Hawaii circles and the Mexico coast.<br>
+<span class="tick">&#10003;</span> <b>Disney Cruise Line</b> sails short Baja and Mexican Riviera itineraries, with Halloween and Christmas sailings that book early.<br>
+<span class="tick">&#10003;</span> <b>Royal Caribbean, Norwegian and Princess</b> all run Mexican Riviera round trips &mdash; Cabo San Lucas, Puerto Vallarta, Ensenada, La Paz.<br>
+<span class="tick">&#10003;</span> <b>Crystal and MSC</b> use San Diego for long repositioning voyages, some of them a month or more.</p>
+
+<h2 id="access"><span>&#9855;</span>Accessibility and families</h2>
+<p>The B Street Pier has lifts and an accessible passenger gangway, and the whole waterfront is flat. <b>But the terminal does not lend or provide wheelchairs.</b> That is the port&rsquo;s own instruction, not our caution: bring your own, hire from a specialist, or arrange assistance through your cruise line before you leave home. Do not travel on the assumption that help will appear on the day, because it will not.</p>
+
+<h2 id="dont-miss"><span>&#9200;</span>Don&rsquo;t miss the ship</h2>
+<p>All aboard is normally half an hour to an hour before the advertised sailing time, and it is the all&#8209;aboard time that matters, not the sailing time. On the morning itself, San Diego is forgiving &mdash; the airport is ten minutes away and the pier is downtown &mdash; so the usual disasters do not really happen here. The one that does: passengers who booked a flight home on the last morning too early, and had to leave the ship before it cleared. Give yourself until midday.</p>
+
+<h2 id="emergency"><span>&#127482;&#127480;</span>Emergency numbers</h2>
+<p><b>911</b> for police, fire or ambulance anywhere in the United States. <b>Harbor Police</b> patrol the port itself. Your ship&rsquo;s own emergency number is printed on your boarding card &mdash; photograph it before you sail, because the card is the thing people lose.</p>
+
+<h2 id="faq"><span>&#10067;</span>Good to know &mdash; quick answers</h2>
+<p><b>Can I walk into town from the ship?</b> Yes, and it is flat. The Midway is five to seven minutes, Seaport Village about fifteen, Santa Fe Depot about ten. The Gaslamp Quarter is twenty to twenty&#8209;five, whatever else you may read.</p>
+<p><b>Do any hotels offer a free shuttle to the ship?</b> Almost none downtown, and that is honest rather than unhelpful &mdash; the hotels are too close to the pier for a shuttle to be worth running. The shuttles that do exist belong to the park&#8209;and&#8209;cruise hotels and the parking operators.</p>
+<p><b>Where do I park, and what does it cost?</b> The port itself operates no parking at all. Private lots run from about $15 a day at Ace on West Broadway to about $30 a day beside the pier. A park&#8209;and&#8209;cruise package from about $129 usually beats paying by the day on a week&#8209;long cruise.</p>
+<p><b>How far is the airport?</b> Two and a half miles, about ten minutes. It is one of the shortest airport&#8209;to&#8209;pier journeys in the country.</p>
+<p><b>Do I need a passport?</b> For the Mexico sailings, yes &mdash; and most ships from San Diego are going to Mexico.</p>
+<p><b>When should I arrive at the terminal?</b> At your assigned boarding time, and not before ten in the morning. There is nowhere to wait.</p>
+
+<p class="libnote">Part of the Guild Travel Library &mdash; our Cruise Companion series of departure&#8209;port guides. <a href="cruises.html">See every cruise guide &rarr;</a> &middot; <a href="library.html">Open the Library &rarr;</a></p>
+
+</div>
+
+<footer>© 2026 Destinations Guild · A project of Guild Companies USA · <a href="cruises.html">The Cruise Companion</a> · <a href="caribbean-cruises.html">Caribbean</a></footer>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  var el=document.getElementById('harborMap'); if(!el||!window.L) return;
+  var map=L.map(el,{scrollWheelZoom:false}).setView([32.7173,-117.1753],14);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap'}).addTo(map);
+  var pts=[
+[32.7173,-117.1753,"&#9875; <b>B Street Pier Cruise Terminal</b> &mdash; 1140 N Harbor Drive<br>The main berth, and where almost every San Diego sailing goes from. Lifts and an accessible gangway. The USS Midway is a five-to-seven minute flat walk south.","pier"],
+[32.7156,-117.175,"&#9875; <b>Broadway Pier / Port Pavilion</b> &mdash; 1000 N Harbor Drive<br>The second berth, one block south. Used when more than two ships are in port or B Street is unavailable. <b>Confirm which pier you sail from before travel day</b> &mdash; it is decided by traffic, not by your booking document.","pier2"],
+[32.714,-117.1749,"&#128674; <b>USS Midway Museum</b> &mdash; Navy Pier<br>The most visited stop in the city and about a quarter of a mile from the B Street Pier, five to seven minutes on flat pavement. An aircraft carrier you walk the flight deck of."],
+[32.7206,-117.1734,"&#9973; <b>Maritime Museum &mdash; Star of India</b><br>About a third of a mile north along the Embarcadero. The oldest active sailing ship in the world, and a short stroll if you have an hour."],
+[32.7092,-117.1711,"&#128717;&#65039; <b>Seaport Village</b><br>Waterfront shops and lunch, roughly seven tenths of a mile south of the pier &mdash; about fifteen minutes, flat the whole way."],
+[32.7119,-117.1603,"&#127860; <b>Gaslamp Quarter</b><br>The dinner and evening district. <b>Not the ten-minute walk the guidebooks claim:</b> about nine tenths of a mile to the near edge (18&ndash;20 min) and a mile and a quarter to the heart of it (about 25 min). Flat and pleasant, but budget the time."],
+[32.7336,-117.1897,"&#9992;&#65039; <b>San Diego International Airport (SAN)</b><br>2.4 miles from the pier, about ten minutes by car &mdash; one of the shortest airport-to-ship hops in the country. Taxi $15&ndash;$25, rideshare $12&ndash;$20."]
+];
+  var g=[],pier=[],firstPier=null;
+  pts.forEach(function(p){
+    var isPier=(p[3]==='pier');
+    var opt=isPier?{icon:L.divIcon({className:'hm-ship',html:'<span>&#128674;</span>',iconSize:[34,34],iconAnchor:[17,17],popupAnchor:[0,-16]}),zIndexOffset:1000}:{};
+    var m=L.marker([p[0],p[1]],opt).addTo(map).bindPopup(p[2]);
+    g.push(m.getLatLng());
+    if(isPier){ pier.push(m.getLatLng()); if(!firstPier) firstPier=m; }
+  });
+  var allB=L.latLngBounds(g).pad(0.18), closeB=L.latLngBounds(pier.length?pier:g).pad(0.35);
+  function show(which){
+    try{ map.fitBounds(which==='all'?allB:closeB,{maxZoom:which==='all'?18:15}); }catch(e){}
+    var bs=document.querySelectorAll('.hm-b');
+    for(var i=0;i<bs.length;i++){ bs[i].classList.toggle('is-on', bs[i].getAttribute('data-hm')===which); }
+  }
+  show('close');
+  if(firstPier) firstPier.openPopup();
+  var bs=document.querySelectorAll('.hm-b');
+  for(var i=0;i<bs.length;i++){ bs[i].addEventListener('click',function(){ show(this.getAttribute('data-hm')); }); }
+})();
+</script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
+<script>/* DG affiliate-click tracking -> GA4 */(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();</script>
+<script id="dg-mobile-sticky">/* Destinations Guild — sticky mobile action bar (one-thumb primary action). Idempotent. */
+(function(){
+  if(window.__dgBar) return; window.__dgBar=1;
+  function run(){
+    try{
+      if(!window.matchMedia || !window.matchMedia('(max-width:820px)').matches) return;
+      if(document.querySelector('.dg-sticky-cta')) return;
+      var href='', label='';
+      if(document.querySelector('.searchrow')){            // homepage
+        href='https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=home&trip_sub3=stickybar';
+        label='Find your stay';
+      } else {
+        var band=document.querySelector('a[href*="us.trip.com/hotels/list"]')
+              || document.querySelector('a.btn[href*="us.trip.com/hotels"]')
+              || document.querySelector('a[href*="us.trip.com/hotels"]')
+              || document.querySelector('.band a.btn[href*="trip.com"]')
+              || document.querySelector('a.hbtn[href*="trip.com"]')
+              || document.querySelector('a[href*="us.trip.com"]');
+        if(band){ href=band.href; label='Book on Trip.com'; }
+      }
+      if(!href) return;
+      var a=document.createElement('a');
+      a.className='dg-sticky-cta'; a.href=href; a.target='_blank';
+      a.rel='sponsored nofollow noopener'; a.textContent=label; a.setAttribute('aria-label',label);
+      a.style.cssText='position:fixed;left:0;right:0;bottom:0;z-index:9998;display:flex;align-items:center;'
+        +'justify-content:center;min-height:56px;background:#2F76D8;color:#fff;'
+        +'font:700 17px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;'
+        +'text-decoration:none;box-shadow:0 -3px 14px rgba(0,0,0,.28);';
+      document.body.appendChild(a);
+      document.body.classList.add('dg-has-bar');
+      document.body.style.paddingBottom='68px';
+    }catch(e){}
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',run); else run();
+})();
+</script>
+</body></html>
