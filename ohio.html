@@ -362,7 +362,7 @@ html{scroll-behavior:smooth}
     {n:'Columbus', d:'State capital', lat:39.9612, lng:-82.9988, cap:true, url:'https://us.trip.com/hotels/detail/?hotelId=2888754&Allianceid=8217189&SID=317113714&trip_sub1=ohio&trip_sub3=columbus-map'},
     {n:'Cleveland', d:'Lakefront city', lat:41.4993, lng:-81.6944, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2127424&Allianceid=8217189&SID=317113714&trip_sub1=ohio&trip_sub3=cleveland-map'},
     {n:'Cedar Point', d:'Amusement park', lat:41.4822, lng:-82.6829, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2905896&Allianceid=8217189&SID=317113714&trip_sub1=ohio&trip_sub3=cedar-point-map'},
-    {n:'Hocking Hills', d:'Nature region', lat:39.4437, lng:-82.541, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Inn%20and%20Spa%20at%20Cedar%20Falls%20Hocking%20Hills&Allianceid=8217189&SID=317113714&trip_sub1=ohio&trip_sub3=hocking-hills-map'}
+    {n:'Hocking Hills', d:'Nature region', lat:39.4437, lng:-82.541, cap:false, url:'https://us.trip.com/hotels/list?cityId=77680&crn=1&adult=2&curr=USD&locale=en-US&Allianceid=8217189&SID=317113714&trip_sub1=ohio&trip_sub3=hocking-hills-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>

@@ -362,7 +362,7 @@ html{scroll-behavior:smooth}
     {n:'Baton Rouge', d:'State capital', lat:30.4515, lng:-91.1871, cap:true, url:'https://us.trip.com/hotels/detail/?hotelId=2239828&Allianceid=8217189&SID=317113714&trip_sub1=louisiana&trip_sub3=baton-rouge-map'},
     {n:'New Orleans', d:'French Quarter city', lat:29.9511, lng:-90.0715, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2226004&Allianceid=8217189&SID=317113714&trip_sub1=louisiana&trip_sub3=new-orleans-map'},
     {n:'Cajun Country', d:'Bayou region', lat:30.2241, lng:-92.0198, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=70279992&locale=en-US&curr=USD&Allianceid=8217189&SID=317113714&trip_sub1=louisiana&trip_sub3=cajun-country-map'},
-    {n:'River Road', d:'Plantation route', lat:30.0338, lng:-90.8073, cap:false, url:'https://us.trip.com/hotels/list?searchWord=Oak%20Alley%20Plantation%20Cottages%20Vacherie&Allianceid=8217189&SID=317113714&trip_sub1=louisiana&trip_sub3=river-road-map'}
+    {n:'River Road', d:'Plantation route', lat:30.0338, lng:-90.8073, cap:false, url:'https://us.trip.com/hotels/list?cityId=3363&crn=1&adult=2&curr=USD&locale=en-US&Allianceid=8217189&SID=317113714&trip_sub1=louisiana&trip_sub3=river-road-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>

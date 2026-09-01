@@ -1352,7 +1352,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
   // results with the traveler's dates. Falls back to a pre-filled Trip search.
   const kwFallback = 'https://us.trip.com/hotels/list?searchWord=' + encodeURIComponent(raw) + '&searchType=D&crn=1&adult=' + guests + '&curr=USD&locale=en-US&' + AFF + '&trip_sub1=sitesearch&trip_sub3=' + slug + '-kw' + dates;
   const ctrl = new AbortController();
-  const to = setTimeout(() => ctrl.abort(), 4000);
+  const to = setTimeout(() => ctrl.abort(), 9000);
   fetch('/.netlify/functions/resolve-city?q=' + encodeURIComponent(key), { signal: ctrl.signal })
     .then(r => r.json())
     .then(d => { clearTimeout(to);

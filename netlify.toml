@@ -42,3 +42,94 @@
   to = "/friends-of-guild-hospitality.html"
   status = 301
   force = true
+
+# ── Superseded drafts, 1 Sep 2026 ──────────────────────────────────────────
+# These 13 old files are still in the repo but were being served as live pages
+# with no noindex, so Google could rank them against the real guide. Each one now
+# permanently forwards to the page that replaced it. force = true makes the
+# redirect win over the file that is still sitting there.
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-TRUNCATED-sao-paulo-hotels-2026-08-04-DO-NOT-USE.html"
+  to = "/sao-paulo-hotels.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-costa-rica-2026-08-15-DO-NOT-USE.html"
+  to = "/costa-rica.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-cruises-2026-08-17-DO-NOT-USE.html"
+  to = "/cruises.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-cruises-2026-08-29-DO-NOT-USE.html"
+  to = "/cruises.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-cuba-2026-08-29-v2-DO-NOT-USE.html"
+  to = "/cuba.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-cuba-2026-08-29-v3-DO-NOT-USE.html"
+  to = "/cuba.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-dominican-republic-2026-08-16-DO-NOT-USE.html"
+  to = "/dominican-republic.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-jamaica-2026-08-17-DO-NOT-USE.html"
+  to = "/jamaica.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-lisbon-hotels-2026-08-17-DO-NOT-USE.html"
+  to = "/lisbon-hotels.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-miami-cruise-port-2026-08-17-DO-NOT-USE.html"
+  to = "/miami-cruise-port.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-porto-hotels-2026-08-17-DO-NOT-USE.html"
+  to = "/porto-hotels.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-porto-hotels-2026-08-18a-DO-NOT-USE.html"
+  to = "/porto-hotels.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/zz-SUPERSEDED-porto-hotels-2026-08-18b-DO-NOT-USE.html"
+  to = "/porto-hotels.html"
+  status = 301
+  force = true
+
+# Anything else beginning zz-SUPERSEDED goes back to the bookcase.
+[[redirects]]
+  from = "/zz-SUPERSEDED-*"
+  to = "/library.html"
+  status = 301
+  force = true

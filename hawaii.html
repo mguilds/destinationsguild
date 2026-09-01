@@ -367,7 +367,7 @@ html{scroll-behavior:smooth}
     {n:'Oahu / Waikiki', d:'Beach &amp; city', lat:21.2793, lng:-157.8293, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=1565894&Allianceid=8217189&SID=317113714&trip_sub1=hawaii&trip_sub3=oahu-waikiki-map'},
     {n:'Maui', d:'Resort island', lat:20.7984, lng:-156.3319, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=1460915&Allianceid=8217189&SID=317113714&trip_sub1=hawaii&trip_sub3=maui-map'},
     {n:'Big Island', d:'Volcanoes island', lat:19.6, lng:-155.4833, cap:false, url:'https://us.trip.com/hotels/detail/?hotelId=2105357&Allianceid=8217189&SID=317113714&trip_sub1=hawaii&trip_sub3=big-island-map'},
-    {n:'Kauai', d:'Garden Isle', lat:22.0964, lng:-159.5261, cap:false, url:'https://us.trip.com/hotels/list?searchWord=St.%20Regis%20Princeville%20Resort%20Kauai&Allianceid=8217189&SID=317113714&trip_sub1=hawaii&trip_sub3=kauai-map'}
+    {n:'Kauai', d:'Garden Isle', lat:22.0964, lng:-159.5261, cap:false, url:'https://us.trip.com/hotels/list?cityId=19841&crn=1&adult=2&curr=USD&locale=en-US&Allianceid=8217189&SID=317113714&trip_sub1=hawaii&trip_sub3=kauai-map'}
 ];var g=[];places.forEach(function(p){var m=L.marker([p.lat,p.lng]).addTo(map);m.bindPopup('<b>'+(p.cap?'&#9733; ':'')+p.n+'</b><br>'+p.d+'<br><a href="'+p.url+'" target="_blank" rel="sponsored nofollow noopener">Find hotels &rsaquo;</a>');g.push([p.lat,p.lng]);});map.fitBounds(g,{padding:[40,40]});})();</script><script defer="" src="dg-lang.js"></script>
 <script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 </body>
