@@ -1,0 +1,9 @@
+GUILD LINK LEDGER - count for 2026-09-05
+
+{ date:"2026-09-05", real:8, realPages:1, total:160, totalPages:11, pages:360 }
+
+The ledger calendar could NOT be updated today - Claude could not open it.
+This line still needs to be added.
+
+Where the 8 are: all on index.html (three cruise-line buttons plus repeats).
+The other 152 are on old "zz-SUPERSEDED ... DO-NOT-USE" pages, which readers never see.
