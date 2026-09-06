@@ -132,7 +132,7 @@ footer a{color:var(--gold);text-decoration:none}
 <meta name="twitter:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Symphony%20of%20the%20Seas%20Nassau.jpg?width=1600">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Cruises","description":"Not sure which cruise? Take the Guild's 4-question Cruise Finder and we'll match you to the perfect sailing — Caribbean, Alaska, Mediterranean and more. Book on Trip.com.","url":"https://destinationsguild.com/cruises.html","dateModified":"2026-09-01","isPartOf":{"@type":"WebSite","name":"Destinations Guild","url":"https://destinationsguild.com/"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://destinationsguild.com/"},{"@type":"ListItem","position":2,"name":"Cruises","item":"https://destinationsguild.com/cruises.html"}]}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the Guild sell cruises?","acceptedAnswer":{"@type":"Answer","text":"No. We are a travel library, not a booking agent. Trip.com, our booking partner, sells hotels and flights but does not currently sell cruise sailings in a form we can link you to honestly — so you will not find a \"book this sailing\" button anywhere in the Cruise Companion. Book the sailing itself with a travel agent or the cruise line direct. Where we can genuinely help is the hotel for the night before you board, and the ports you will walk off into."}},{"@type":"Question","name":"Should I fly in the day before my cruise?","acceptedAnswer":{"@type":"Answer","text":"Yes, and it is the single best piece of advice in this book. A delayed connection is the most common reason people miss a ship, and the cruise line owes you nothing if you booked the flight yourself. Come in the night before, sleep near the port, and start the holiday calm. Our port guides list hotels near each terminal for exactly this."}},{"@type":"Question","name":"Do I need a passport to cruise?","acceptedAnswer":{"@type":"Answer","text":"For any cruise that flies you to or from a foreign port, yes. On a closed-loop sailing that leaves from and returns to the same U.S. port, U.S. citizens may be permitted to board with a birth certificate and photo ID — but that will not fly you home if you have to leave the ship early, and some destinations require a passport whatever the itinerary. The Guild's advice is to carry one. Confirm the current rule with your cruise line."}},{"@type":"Question","name":"What is not included in the cruise fare?","acceptedAnswer":{"@type":"Answer","text":"Usually: gratuities, drinks beyond water, tea and basic coffee, specialty restaurants, shore excursions, wi-fi, the spa, and anything on a private island beyond the beach and the buffet. Gratuities are the one that surprises people most — they are charged per person per day and add up over a week. Read what your line includes before you compare two fares, because the cheaper one is not always cheaper."}},{"@type":"Question","name":"Which cruise region should I pick first?","acceptedAnswer":{"@type":"Answer","text":"If you have never cruised, the Caribbean or the Bahamas: short, warm, close to home, and forgiving if you discover you do not love it. Alaska is the one people describe as the trip of a lifetime, but the season is short and it is not a swimming holiday. The Mediterranean is the most rewarding and the most tiring — a different city almost every day. The Cruise Finder at the top of this page will point you at one in about a minute."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I book my cruise here?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every \"Browse sailings\" button on these pages goes straight through to live fares on Trip.com, the Guild’s booking partner — real dates, real cabins, and the Guild is credited when you book, at no extra cost to you. Trip.com carries Carnival, Disney, Norwegian, Princess, Holland America, Celebrity, Cunard, MSC and Costa. The one exception is Royal Caribbean, which Trip.com does not sell — book that with the line or your travel agent. We also book the hotel for the night before you sail and in every port you walk off into."}},{"@type":"Question","name":"Should I fly in the day before my cruise?","acceptedAnswer":{"@type":"Answer","text":"Yes, and it is the single best piece of advice in this book. A delayed connection is the most common reason people miss a ship, and the cruise line owes you nothing if you booked the flight yourself. Come in the night before, sleep near the port, and start the holiday calm. Our port guides list hotels near each terminal for exactly this."}},{"@type":"Question","name":"Do I need a passport to cruise?","acceptedAnswer":{"@type":"Answer","text":"For any cruise that flies you to or from a foreign port, yes. On a closed-loop sailing that leaves from and returns to the same U.S. port, U.S. citizens may be permitted to board with a birth certificate and photo ID — but that will not fly you home if you have to leave the ship early, and some destinations require a passport whatever the itinerary. The Guild's advice is to carry one. Confirm the current rule with your cruise line."}},{"@type":"Question","name":"What is not included in the cruise fare?","acceptedAnswer":{"@type":"Answer","text":"Usually: gratuities, drinks beyond water, tea and basic coffee, specialty restaurants, shore excursions, wi-fi, the spa, and anything on a private island beyond the beach and the buffet. Gratuities are the one that surprises people most — they are charged per person per day and add up over a week. Read what your line includes before you compare two fares, because the cheaper one is not always cheaper."}},{"@type":"Question","name":"Which cruise region should I pick first?","acceptedAnswer":{"@type":"Answer","text":"If you have never cruised, the Caribbean or the Bahamas: short, warm, close to home, and forgiving if you discover you do not love it. Alaska is the one people describe as the trip of a lifetime, but the season is short and it is not a swimming holiday. The Mediterranean is the most rewarding and the most tiring — a different city almost every day. The Cruise Finder at the top of this page will point you at one in about a minute."}}]}</script>
 </head>
 <body>
 
@@ -165,12 +165,41 @@ footer a{color:var(--gold);text-decoration:none}
     <div style="font-size:34px">🚢✨</div>
     <div class="rsum" id="rsum">Your cruise awaits.</div>
     <p class="rsub" id="rsub"></p>
-    <a class="cta" id="cta" href="#" target="_blank" rel="sponsored nofollow noopener">See these cruises on Trip.com →</a>
+    <a class="cta" id="cta" href="#" target="_blank" rel="sponsored nofollow noopener">Browse these sailings on Trip.com →</a>
+    <div style="margin:12px 0 0"><a id="ctaguide" href="library.html" style="color:#12467f;font-weight:700;text-decoration:none;font-size:15px">Or read our cruise guide &rarr;</a></div>
     <button class="restart" onclick="restart()">↺ Start over</button>
   </div>
 </div>
 
 <div class="wrap">
+
+
+  <!-- BOOK A SAILING -->
+  <section class="blk" id="book-a-sailing">
+    <h2>Book your sailing</h2>
+    <p class="lead">Live fares, dates and cabins on Trip.com, the Guild&rsquo;s booking partner. Every button here books the sailing itself &mdash; the Guild is credited, and it costs you nothing extra.</p>
+    <div style="background:#fffdf7;border:1px solid var(--gold);border-left:6px solid var(--gold);border-radius:14px;padding:22px 24px 20px;margin:0 0 22px;box-shadow:0 6px 18px rgba(60,45,15,.10)">
+      <div style="font:800 12px/1 'DM Sans',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b98a2e;margin:0 0 8px">Closest to home</div>
+      <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.75rem;color:var(--navy);margin:0 0 8px">Sail from the West Coast</h3>
+      <p style="margin:0 0 16px;color:#4a4132;max-width:660px">Alaska and the Mexican Riviera without an east&#8209;coast flight. Long Beach, San Diego, San Francisco, Seattle and Vancouver &mdash; and from Phoenix you can drive to the dock, sleep near the terminal and board rested. <a href="west-coast-cruises.html" style="color:#12467f;font-weight:700">Read the West Coast guide &rsaquo;</a></p>
+      <div class="chips">
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Long%20Beach&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-long-beach" target="_blank" rel="sponsored nofollow noopener"><span>Long Beach<small>Drive it from Phoenix in about six hours</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=San%20Diego&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-san-diego" target="_blank" rel="sponsored nofollow noopener"><span>San Diego<small>Mexican Riviera &amp; repositioning sailings</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=San%20Francisco&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-san-francisco" target="_blank" rel="sponsored nofollow noopener"><span>San Francisco<small>Alaska and the Pacific Coast</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Seattle&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-seattle" target="_blank" rel="sponsored nofollow noopener"><span>Seattle<small>The busiest Alaska departure port</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Vancouver&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-vancouver" target="_blank" rel="sponsored nofollow noopener"><span>Vancouver<small>Inside Passage sailings start here</small></span><span class="ar">&rsaquo;</span></a>
+      </div>
+    </div>
+
+    <div class="chips">
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Alaska&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-alaska" target="_blank" rel="sponsored nofollow noopener"><span>Alaska<small>Inside Passage &amp; the glaciers</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Caribbean&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-caribbean" target="_blank" rel="sponsored nofollow noopener"><span>Caribbean<small>Eastern, Western &amp; Southern</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Bahamas&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-bahamas" target="_blank" rel="sponsored nofollow noopener"><span>Bahamas<small>Nassau &amp; the private islands</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Mediterranean&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-mediterranean" target="_blank" rel="sponsored nofollow noopener"><span>Mediterranean<small>Rome, Barcelona &amp; the Greek Isles</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Cabo%20San%20Lucas&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-mexican-riviera" target="_blank" rel="sponsored nofollow noopener"><span>Mexican Riviera<small>Cabo, Vallarta &amp; Mazatl&aacute;n</small></span><span class="ar">&rsaquo;</span></a>
+      <a class="chip" href="https://us.trip.com/cruises/list?kwd=Long%20Beach&amp;locale=en-US&amp;curr=USD&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=cruises&amp;trip_sub3=sailings-west-coast-all" target="_blank" rel="sponsored nofollow noopener"><span>West Coast<small>Five ports, no east-coast flight</small></span><span class="ar">&rsaquo;</span></a>
+    </div>
+  </section>
 
   <!-- DESTINATIONS -->
   <section class="blk">
@@ -197,7 +226,7 @@ footer a{color:var(--gold);text-decoration:none}
   <!-- LINES -->
   <section class="blk">
     <h2>Cruise lines</h2>
-    <p class="lead">The lines that sail these waters, and who each one suits. Trip.com carries Carnival, Disney, Norwegian, Princess, Holland America, Celebrity, Cunard, MSC and Costa &mdash; but not Royal Caribbean, so book that one with the line or your travel agent.</p>
+    <p class="lead">Every line below is one you can book right here &mdash; tap it for live sailings and fares. Trip.com does not carry Royal Caribbean or Virgin Voyages, so you will not find a button for them; book those with the line or your travel agent.</p>
     <div class="chips" id="lineGrid"></div>
   </section>
 
@@ -220,7 +249,7 @@ footer a{color:var(--gold);text-decoration:none}
 <style id="dg-faq-css">.dgfaq{max-width:760px;margin:0 auto}.dgfaq p{margin:0 0 16px;line-height:1.65}.dgfaq b{color:#1B3A6B;display:block;margin-bottom:3px}</style>
 <h2>Common questions</h2>
 <div class="dgfaq">
-<p><b>Does the Guild sell cruises?</b>No. We are a travel library, not a booking agent. Trip.com, our booking partner, sells hotels and flights but does not currently sell cruise sailings in a form we can link you to honestly — so you will not find a "book this sailing" button anywhere in the Cruise Companion. Book the sailing itself with a travel agent or the cruise line direct. Where we can genuinely help is the hotel for the night before you board, and the ports you will walk off into.</p>
+<p><b>Can I book my cruise here?</b>Yes. Every "Browse sailings" button on these pages goes straight through to live fares on Trip.com, the Guild’s booking partner — real dates, real cabins, and the Guild is credited when you book, at no extra cost to you. Trip.com carries Carnival, Disney, Norwegian, Princess, Holland America, Celebrity, Cunard, MSC and Costa. The one exception is Royal Caribbean, which Trip.com does not sell — book that with the line or your travel agent. We also book the hotel for the night before you sail and in every port you walk off into.</p>
 <p><b>Should I fly in the day before my cruise?</b>Yes, and it is the single best piece of advice in this book. A delayed connection is the most common reason people miss a ship, and the cruise line owes you nothing if you booked the flight yourself. Come in the night before, sleep near the port, and start the holiday calm. Our port guides list hotels near each terminal for exactly this.</p>
 <p><b>Do I need a passport to cruise?</b>For any cruise that flies you to or from a foreign port, yes. On a closed-loop sailing that leaves from and returns to the same U.S. port, U.S. citizens may be permitted to board with a birth certificate and photo ID — but that will not fly you home if you have to leave the ship early, and some destinations require a passport whatever the itinerary. The Guild's advice is to carry one. Confirm the current rule with your cruise line.</p>
 <p><b>What is not included in the cruise fare?</b>Usually: gratuities, drinks beyond water, tea and basic coffee, specialty restaurants, shore excursions, wi-fi, the spa, and anything on a private island beyond the beach and the buffet. Gratuities are the one that surprises people most — they are charged per person per day and add up over a week. Read what your line includes before you compare two fares, because the cheaper one is not always cheaper.</p>
@@ -410,6 +439,7 @@ var QS=[
    {em:'🏔️',t:'Alaska',v:'alaska'},
    {em:'🏛️',t:'Mediterranean',v:'mediterranean'},
    {em:'🌵',t:'Mexican Riviera',v:'mexico'},
+    {em:'🌉',t:'West Coast',v:'westcoast'},
    {em:'✨',t:'Surprise me',v:'anywhere'}]},
  {k:'when',q:'When are you thinking?',opts:[
    {em:'⏱️',t:'In the next 60 days',v:'soon'},
@@ -424,7 +454,7 @@ var QS=[
    {em:'🎡',t:'Family‑friendly',v:'familyfun'}]}
 ];
 var LABEL={couple:'for two',family:'for the family',friends:'with friends',solo:'solo',
- caribbean:'Caribbean',bahamas:'Bahamas',alaska:'Alaska',mediterranean:'Mediterranean',mexico:'Mexican Riviera',anywhere:'somewhere wonderful',
+ caribbean:'Caribbean',bahamas:'Bahamas',alaska:'Alaska',mediterranean:'Mediterranean',mexico:'Mexican Riviera',westcoast:'West Coast',anywhere:'somewhere wonderful',
  soon:'in the next 60 days',season:'this season',later:'later this year',flex:'whenever suits you',
  relaxed:'relaxed and easy',adventure:'full of adventure',luxury:'pure luxury',lively:'fun and lively',familyfun:'family‑friendly'};
 var ans={},step=0;
@@ -446,9 +476,16 @@ function showResult(){
   var sum='A '+LABEL[ans.style]+' '+(ans.where==='anywhere'?'getaway':LABEL[ans.where]+' cruise')+' '+LABEL[ans.who]+', '+LABEL[ans.when]+'.';
   document.getElementById('rsum').textContent='Here’s your cruise 🧭';
   document.getElementById('rsub').textContent=sum;
-  var WPAGE={caribbean:'caribbean-cruises.html',bahamas:'bahamas-cruises.html',alaska:'alaska-cruises.html',mediterranean:'mediterranean-cruises.html',mexico:'mexican-riviera-cruises.html',anywhere:'library.html'};
-  var c=document.getElementById('cta');c.href=WPAGE[ans.where]||'library.html';
-  c.removeAttribute('target');c.removeAttribute('rel');c.textContent='Read our '+(LABEL[ans.where]||'cruise')+' guide →';
+  var WPAGE={caribbean:'caribbean-cruises.html',bahamas:'bahamas-cruises.html',alaska:'alaska-cruises.html',mediterranean:'mediterranean-cruises.html',mexico:'mexican-riviera-cruises.html',westcoast:'west-coast-cruises.html',anywhere:'library.html'};
+   var SAIL={caribbean:'Caribbean',bahamas:'Bahamas',alaska:'Alaska',mediterranean:'Mediterranean',mexico:'Cabo San Lucas',westcoast:'Long Beach',anywhere:'Caribbean'};
+   var SAFF='&locale=en-US&curr=USD&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=finder-';
+  var w=ans.where||'anywhere';
+   var c=document.getElementById('cta');
+   c.href='https://us.trip.com/cruises/list?kwd='+encodeURIComponent(SAIL[w]||'Caribbean')+SAFF+w;
+   c.setAttribute('target','_blank');c.setAttribute('rel','sponsored nofollow noopener');
+   c.textContent='Browse these sailings on Trip.com →';
+   var g=document.getElementById('ctaguide');
+   if(g){g.href=WPAGE[w]||'library.html';g.textContent='Or read our '+(LABEL[w]||'cruise')+' guide →';}
   document.getElementById('result').classList.add('show');
 }
 function restart(){ans={};step=0;document.getElementById('result').classList.remove('show');document.getElementById('qwrap').style.display='';document.getElementById('dots').style.display='';renderStep();}
@@ -484,19 +521,22 @@ var DEST=[
 
 // ---- LINES ----
 var LINES=[
- {n:'Royal Caribbean',kw:'Royal Caribbean',s:'Big ships, big fun',t:'line-royal-caribbean'},
- {n:'Carnival',kw:'Carnival Cruise Line',s:'The fun ships',t:'line-carnival'},
- {n:'Norwegian (NCL)',kw:'Norwegian Cruise Line',s:'Freestyle cruising',t:'line-norwegian'},
- {n:'Princess',kw:'Princess Cruises',s:'Classic & refined',t:'line-princess'},
- {n:'Celebrity',kw:'Celebrity Cruises',s:'Modern luxury',t:'line-celebrity'},
- {n:'MSC',kw:'MSC Cruises',s:'European flair',t:'line-msc'},
- {n:'Holland America',kw:'Holland America Line',s:'Timeless voyages',t:'line-holland-america'},
- {n:'Disney',kw:'Disney Cruise Line',s:'Magic at sea',t:'line-disney'},
- {n:'Virgin Voyages',kw:'Virgin Voyages',s:'Adults‑only, stylish',t:'line-virgin'}
+  {n:'Carnival',kw:'Carnival Cruise Line',s:'The fun ships',t:'line-carnival'},
+  {n:'Princess',kw:'Princess Cruises',s:'Classic & refined',t:'line-princess'},
+  {n:'Holland America',kw:'Holland America Line',s:'Timeless voyages',t:'line-holland-america'},
+  {n:'Norwegian (NCL)',kw:'Norwegian Cruise Line',s:'Freestyle cruising',t:'line-norwegian'},
+  {n:'Celebrity',kw:'Celebrity Cruises',s:'Modern luxury',t:'line-celebrity'},
+  {n:'Disney',kw:'Disney Cruise Line',s:'Magic at sea',t:'line-disney'},
+  {n:'Cunard',kw:'Cunard',s:'Ocean liners, properly',t:'line-cunard'},
+  {n:'MSC',kw:'MSC Cruises',s:'European flair',t:'line-msc'},
+  {n:'Costa',kw:'Costa Cruises',s:'Italian style at sea',t:'line-costa'}
 ];
-(function(){var g=document.getElementById('lineGrid');LINES.forEach(function(l){
- var a=document.createElement('span');a.className='chip soon';
- a.innerHTML='<span>'+l.n+'<small>'+l.s+'</small></span>';g.appendChild(a);});})();
+(function(){var g=document.getElementById('lineGrid');var A='&locale=en-US&curr=USD&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=';LINES.forEach(function(l){
+  var a=document.createElement('a');a.className='chip';
+  a.href='https://us.trip.com/cruises/list?kwd='+encodeURIComponent(l.kw)+A+l.t;
+  a.target='_blank';a.rel='sponsored nofollow noopener';
+  a.innerHTML='<span>'+l.n+'<small>'+l.s+'</small></span><span class="ar">\u203A</span>';
+  g.appendChild(a);});})();
 
 // ---- PORTS ----
 var PORTS=[
