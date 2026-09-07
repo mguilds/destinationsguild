@@ -2489,5 +2489,111 @@ document.querySelectorAll('.ccard').forEach(card => {
   .dg-doors .dg-door .dg-door-name,
   .dg-doors .dg-door .dg-door-sub{text-shadow:0 2px 10px rgba(6,14,30,.9) !important;}
 </style>
+
+  <!-- ===== POLO & POLLY BY THE SEARCH BOX — start (delete this block to remove them) ===== -->
+  <script>
+  (function(){
+    'use strict';
+    var MIN_WIDTH=900, ART_H=142, GAP=26;
+    var row=document.querySelector('.searchrow'), wrap=document.querySelector('.search-wrap');
+    if(!row||!wrap) return;
+    if(document.getElementById('dgBirds')) return;
+
+    function parrot(name,body,wing,tailA,tailB){
+      return '<svg viewBox="0 0 50 86" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="'+name+' the parrot">'
+      +'<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.6;0 0" keyTimes="0;0.5;1" dur="1.6s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/>'
+      +'<g><animateTransform attributeName="transform" type="rotate" values="-6 28 44;6 28 44;-6 28 44" keyTimes="0;0.5;1" dur="1.9s" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" repeatCount="indefinite"/>'
+      +'<path d="M26 43 Q31 58 37 74 Q35 58 29 45 Z" fill="'+tailA+'"/>'
+      +'<path d="M28 44 Q38 62 47 78 Q41 60 31 46 Z" fill="#7A3FB0"/>'
+      +'<path d="M24 43 Q28 55 33 67 Q31 55 27 45 Z" fill="#F2B600"/>'
+      +'<path d="M26 43 Q33 60 44 81 Q39 60 30 45 Z" fill="'+tailB+'"/></g>'
+      +'<path d="M27 41 Q31 42 33 46 Q29 48 26 45 Z" fill="#F2B600"/>'
+      +'<ellipse cx="25" cy="33" rx="9.5" ry="14" fill="'+body+'"/>'
+      +'<g class="dgb-wing"><animateTransform attributeName="transform" type="rotate" values="0 28 24;-24 28 24;0 28 24;-24 28 24;0 28 24;0 28 24" keyTimes="0;0.07;0.15;0.22;0.3;1" dur="2.9s" repeatCount="indefinite"/>'
+      +'<path d="M27 22 C33 25 34 38 30 47 C28 41 26 30 27 22 Z" fill="'+wing+'"/>'
+      +'<path d="M28 29 C31 31 31 37 30 42 C28 38 28 33 28 29 Z" fill="#F2B600"/></g>'
+      +'<circle cx="23" cy="15" r="11.5" fill="'+body+'"/>'
+      +'<path d="M30 6 C33 3 36 5 34 8 C32 7 30 8 30 9 Z" fill="'+body+'"/>'
+      +'<ellipse cx="18" cy="16" rx="6.8" ry="7.8" fill="#ffffff"/>'
+      +'<ellipse cx="17" cy="14" rx="2.4" ry="2.4" fill="#1a1a1a"><animate attributeName="ry" values="2.4;2.4;0.3;2.4" keyTimes="0;0.82;0.9;1" dur="3.2s" repeatCount="indefinite"/></ellipse>'
+      +'<circle cx="17.9" cy="13.1" r="0.8" fill="#ffffff"/>'
+      +'<path d="M15 10 C8 10 5 17 9 21 C11 23 14 22 14 19 C13 16 14 12 15 10 Z" fill="#2b2b2b"/>'
+      +'<path d="M9 20 C10 23 14 23 14 20 C12 21 10 21 9 20 Z" fill="#8a8a8a"/></g></svg>';
+    }
+    var POLLY=parrot('Polly','#12A8A0','#E23B3B','#E23B3B','#B0308A');
+    var POLO =parrot('Polo','#D8382C','#6B3FA0','#6B3FA0','#2F93E2');
+
+    var css='#dgBirds{position:absolute;inset:0;z-index:6;pointer-events:none;}'
+    +'#dgBirds .dgb{position:absolute;pointer-events:auto;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;padding:0;font:inherit;}'
+    +'#dgBirds .dgb-art{--dir:1;--rise:1;height:'+ART_H+'px;filter:drop-shadow(0 8px 12px rgba(20,30,50,.45));will-change:transform;}'
+    +'#dgBirds .dgb-art svg{display:block;height:100%;width:auto;overflow:visible;transition:transform .18s ease;}'
+    +'#dgBirds .dgb-left .dgb-art svg{transform:scaleX(-1);}'
+    +'#dgBirds .dgb-right .dgb-art svg{transform:scaleX(1);}'
+    +'#dgBirds .dgb-left .dgb-art.out svg{transform:scaleX(1);}'
+    +'#dgBirds .dgb-right .dgb-art.out svg{transform:scaleX(-1);}'
+    +'#dgBirds .dgb-left .dgb-art{--dir:-1;}'
+    +'#dgBirds .dgb-right .dgb-art{--dir:1;}'
+    +'#dgBirds .dgb-name{font-family:"Cormorant Garamond",Georgia,serif;font-size:16px;font-weight:600;letter-spacing:.06em;line-height:1;color:#3E2E12;text-align:center;white-space:nowrap;padding:4px 10px;border:1px solid rgba(120,92,38,.5);border-radius:2px;background:rgba(255,252,242,.88);transition:opacity .3s,border-color .2s;}'
+    +'#dgBirds .dgb-name small{display:block;font-family:"DM Sans",-apple-system,"Segoe UI",sans-serif;font-size:8.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7C5F2A;margin-top:3px;}'
+    +'#dgBirds .dgb-art.out ~ .dgb-name{opacity:.35;}'
+    +'#dgBirds .dgb:hover .dgb-name{border-color:#C9A84C;}'
+    +'#dgBirds .dgb:focus-visible{outline:2px solid #2F93E2;outline-offset:4px;border-radius:4px;}'
+    +'#dgBirds .dgb-line{position:absolute;left:50%;transform:translateX(-50%);max-width:620px;margin:0;text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:16px;line-height:1.4;color:#3E2E12;background:rgba(255,252,242,.86);border:1px solid rgba(120,92,38,.35);border-radius:3px;padding:6px 14px;pointer-events:none;}'
+    +'@keyframes dgbOut{0%{transform:translate(0,0) rotate(0deg);}14%{transform:translate(calc(var(--dir) * 16px),-12px) rotate(calc(var(--dir) * -4deg));}34%{transform:translate(calc(var(--dir) * 92px),-16px) rotate(calc(var(--dir) * -4deg));}62%{transform:translate(calc(var(--dir) * 196px),calc(-96px * var(--rise) - 18px)) rotate(calc(var(--dir) * -11deg));}100%{transform:translate(calc(var(--dir) * 420px),calc(-340px * var(--rise) - 22px)) rotate(calc(var(--dir) * -14deg));opacity:.1;}}'
+    +'@keyframes dgbBack{0%{transform:translate(calc(var(--dir) * 420px),calc(-340px * var(--rise) - 22px)) rotate(calc(var(--dir) * -14deg));opacity:.1;}38%{transform:translate(calc(var(--dir) * 172px),calc(-88px * var(--rise) - 14px)) rotate(calc(var(--dir) * 7deg));opacity:1;}78%{transform:translate(calc(var(--dir) * 34px),-13px) rotate(calc(var(--dir) * 4deg));}100%{transform:translate(0,0) rotate(0deg);}}'
+    +'@keyframes dgbFlap{0%,100%{transform:rotate(-40deg);}50%{transform:rotate(26deg);}}'
+    +'#dgBirds .dgb-art.out{animation:dgbOut 1.7s cubic-bezier(.34,.02,.62,1) forwards;}'
+    +'#dgBirds .dgb-art.back{animation:dgbBack 1.5s cubic-bezier(.32,.28,.4,1) forwards;}'
+    +'#dgBirds .dgb-art.out .dgb-wing,#dgBirds .dgb-art.back .dgb-wing{transform-box:view-box;transform-origin:28px 24px;animation:dgbFlap .2s linear infinite;}'
+    +'@media (max-width:'+(MIN_WIDTH-1)+'px){#dgBirds{display:none;}}'
+    +'@media (prefers-reduced-motion:reduce){#dgBirds .dgb-art.out{animation:none;opacity:0;transition:opacity .4s;}#dgBirds .dgb-art.back{animation:none;opacity:1;transition:opacity .4s;}#dgBirds .dgb-art.out .dgb-wing,#dgBirds .dgb-art.back .dgb-wing{animation:none;}}';
+    var st=document.createElement('style'); st.id='dgBirdsCss'; st.appendChild(document.createTextNode(css)); document.head.appendChild(st);
+
+    function bird(side,svg,name,title){
+      var b=document.createElement('button'); b.type='button'; b.className='dgb dgb-'+side;
+      b.setAttribute('aria-label','Send Polo and Polly off to find an answer, and open the chat');
+      b.innerHTML='<span class="dgb-art">'+svg+'</span><span class="dgb-name">'+name+'<small>'+title+'</small></span>';
+      return b;
+    }
+    var host=document.createElement('div'); host.id='dgBirds';
+    var left=bird('left',POLLY,'Polly','Guild Travel Concierge');
+    var right=bird('right',POLO,'Polo','The Guild\u2019s Navigator');
+    var line=document.createElement('p'); line.className='dgb-line';
+    line.textContent='Tap Polo or Polly and the Guild\u2019s birds will go and fetch your answer.';
+    host.appendChild(left); host.appendChild(right); host.appendChild(line); row.appendChild(host);
+
+    function place(){
+      if(window.innerWidth<MIN_WIDTH) return;
+      var r=row.getBoundingClientRect(), w=wrap.getBoundingClientRect();
+      if(!w.width||!r.width) return;
+      var top=(w.bottom-r.top)-left.offsetHeight+4;
+      left.style.top=top+'px'; right.style.top=top+'px';
+      left.style.left=Math.max(6,(w.left-r.left)-GAP-left.offsetWidth)+'px';
+      right.style.left=Math.min(r.width-right.offsetWidth-6,(w.right-r.left)+GAP)+'px';
+      var la=left.querySelector('.dgb-art').getBoundingClientRect();
+      var ra=right.querySelector('.dgb-art').getBoundingClientRect();
+      left.style.left=(parseFloat(left.style.left)+((w.left-GAP)-la.right))+'px';
+      right.style.left=(parseFloat(right.style.left)+((w.right+GAP)-ra.left))+'px';
+      line.style.top=Math.min(r.height-44,(w.bottom-r.top)+14)+'px';
+    }
+    place();
+    var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(place,120);});
+    window.addEventListener('load',place);
+    if(document.fonts&&document.fonts.ready){document.fonts.ready.then(place);}
+    var mapImg=document.querySelector('.searchrow-map');
+    if(mapImg&&!mapImg.complete){mapImg.addEventListener('load',place);}
+
+    var arts=[left.querySelector('.dgb-art'),right.querySelector('.dgb-art')], busy=false;
+    function send(){
+      if(busy) return; busy=true;
+      arts.forEach(function(a){a.classList.remove('back');a.classList.add('out');});
+      setTimeout(function(){ try{ if(typeof window.openChat==='function'){window.openChat();} }catch(e){} },1500);
+      setTimeout(function(){ arts.forEach(function(a){a.classList.remove('out');a.classList.add('back');}); },2500);
+      setTimeout(function(){ arts.forEach(function(a){a.classList.remove('back');}); busy=false; },4100);
+    }
+    left.addEventListener('click',send); right.addEventListener('click',send);
+  })();
+  </script>
+  <!-- ===== POLO & POLLY BY THE SEARCH BOX — end ===== -->
 </body>
 </html>
