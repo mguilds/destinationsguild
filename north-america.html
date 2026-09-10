@@ -193,8 +193,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
     <h1 class="h1">North America</h1>
     <p>From the national parks and city lights of the United States to the beaches and pyramids of Mexico and the islands of the Caribbean &mdash; the Guild's chapter on North America.</p>
     <div class="hero-btns">
-      <a class="hbtn" onclick="window.open('https://us.trip.com/hotels/?Allianceid=8217189&SID=317113714&trip_sub1=north-america&trip_sub3=hero-hotels','_blank')">Find hotels in North America</a>
-      <a class="hbtn alt" onclick="window.open('https://us.trip.com/flights/?Allianceid=8217189&SID=317113714&trip_sub1=north-america&trip_sub3=hero-flights','_blank')">Search flights</a>
+      <a class="hbtn" href="https://us.trip.com/hotels/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=north-america&amp;trip_sub3=hero-hotels" target="_blank" rel="sponsored nofollow noopener">Find hotels in North America</a>
+      <a class="hbtn alt" href="https://us.trip.com/flights/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=north-america&amp;trip_sub3=hero-flights" target="_blank" rel="sponsored nofollow noopener">Search flights</a>
     </div>
   </div>
 
@@ -234,5 +234,5 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 </div>
 
 <script src="dg-lang.js" defer></script>
-</body>
+<script>/* DG affiliate-click tracking -> GA4 */(function(){if(window.__dgTrack)return;window.__dgTrack=1;document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest('a[href*="trip.com"]'):null;if(a&&typeof gtag==="function"){try{var s3="";try{s3=new URL(a.href).searchParams.get("trip_sub3")||"";}catch(_){}gtag("event","affiliate_click",{link_url:a.href,page_path:location.pathname,placement:s3});}catch(_){}}},true);})();</script></body>
 </html>
