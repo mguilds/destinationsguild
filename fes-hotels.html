@@ -41,6 +41,46 @@
  {"@type":"ListItem","position":2,"name":"Morocco","item":"https://destinationsguild.com/morocco.html"},
  {"@type":"ListItem","position":3,"name":"Fes Hotels","item":"https://destinationsguild.com/fes-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I stay in a riad inside the medina or a hotel in the Ville Nouvelle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A riad in Fes el-Bali is the experience most visitors come for: a courtyard house behind a plain door, with a fountain, a roof terrace and breakfast under the sky. The trade-off is that cars cannot reach most riad doors, so you will be met at a gate and your bags carried the last stretch on foot or by handcart. The Ville Nouvelle has larger conventional hotels with parking and pools, and works better if you are driving or want a straightforward base."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will I get lost in the Fes medina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost certainly, and that is part of it. Fes el-Bali is one of the largest car-free urban areas in the world and its lanes were never laid out on a grid. Riads are used to this and will send someone to meet you on arrival. For your first proper walk, an official guide is genuinely worth it, and after a day or two the main arteries start to make sense."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fes or Marrakech, if I only have time for one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fes is the older and more scholarly city, home to the Qarawiyyin and the tanneries, with a medina that feels lived-in rather than staged and fewer concessions to visitors. Marrakech is livelier, sunnier in winter, better supplied with hotels and easier to reach. Travellers who want atmosphere and history most often prefer Fes; those who want comfort, nightlife and easy day trips usually prefer Marrakech."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many nights should I give Fes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two nights is the minimum that lets you see the medina properly, and three is better if you want to add the Merenid tombs above the city, the Jewish quarter and the Ville Nouvelle, or take a day out to Volubilis and Meknes. A single night here is nearly always regretted."
+      }
+    }
+  ]
+}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -82,6 +122,13 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+    .faq{ margin:30px 0; }
+    .faq details{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:2px 18px; margin-bottom:10px; }
+    .faq summary{ font-weight:700; color:var(--navy); cursor:pointer; padding:14px 2px; font-size:16px; list-style:none; }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq details[open] summary{ border-bottom:1px solid var(--line); }
+    .faq p{ font-size:15px; color:#3f4a57; margin:12px 2px 14px; }
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -126,7 +173,7 @@
   <div style="position:relative;border-radius:16px;overflow:hidden;margin:6px 0 20px;height:200px;background:linear-gradient(135deg,#b98a54,#6a3f22);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Medina%20of%20Fes,%20Marocco.jpg?width=1200" alt="Rooftops of the ancient medina of Fes" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7;" onerror="this.style.display='none'"><div style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,40,80,.5),rgba(12,40,80,.1));"></div><div style="position:absolute;left:26px;bottom:20px;color:#fff;font-weight:800;font-size:22px;text-shadow:0 2px 10px rgba(0,0,0,.4);">Fes&rsquo;s Best Places to Stay</div></div>
   <div class="pagehead">
     <h1>Where to Stay in Fes — Best Areas &amp; Hotels</h1>
-      <p class="dg-explorers" style="display:inline-block;margin:10px 0 0;background:rgba(12,20,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated August 2026</p>
+      <p class="dg-explorers" style="display:inline-block;margin:10px 0 0;background:rgba(12,20,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated September 2026</p>
     <p>Fes is really two cities. The magic is inside <strong>Fes el-Bali</strong>, the vast medieval medina, where restored riads hide behind studded doors on lanes too narrow for cars &mdash; atmospheric, but you&rsquo;ll walk (and porters will carry your bags). The <strong>Ville Nouvelle</strong>, the French-built new town, offers larger hotels with pools, parking and easy taxis. We&rsquo;ve grouped the best-run places to stay by style and budget, each with an honest note and a <strong>Book Me</strong> link that opens that exact property on Trip.com.</p>
     <div class="jump">
       <a href="#luxury">Luxury</a>
@@ -204,6 +251,14 @@
     <h2>Pet-friendly</h2>
     <p class="catnote">A pet is easier to manage from a Ville Nouvelle hotel or a riad with vehicle access than deep in the car-free medina, where you would carry both bags and dog through the crowds. Always confirm the pet policy, size limit and any fee directly before booking.</p>
     <p class="catnote">Pet policies in Fes vary by property and are decided case by case, so rather than name a hotel we cannot currently verify for pets, we point you to the live, filterable selection. <a href="https://us.trip.com/hotels/list?city=3683&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=fes-hotels&amp;trip_sub3=browse-pets" target="_blank" rel="sponsored nofollow noopener">Browse pet-friendly hotels in Fes &rsaquo;</a></p>
+  </section>
+
+  <section class="faq">
+    <h2>Common questions about where to stay in Fes</h2>
+    <details><summary>Should I stay in a riad inside the medina or a hotel in the Ville Nouvelle?</summary><p>A riad in Fes el-Bali is the experience most visitors come for: a courtyard house behind a plain door, with a fountain, a roof terrace and breakfast under the sky. The trade-off is that cars cannot reach most riad doors, so you will be met at a gate and your bags carried the last stretch on foot or by handcart. The Ville Nouvelle has larger conventional hotels with parking and pools, and works better if you are driving or want a straightforward base.</p></details>
+    <details><summary>Will I get lost in the Fes medina?</summary><p>Almost certainly, and that is part of it. Fes el-Bali is one of the largest car-free urban areas in the world and its lanes were never laid out on a grid. Riads are used to this and will send someone to meet you on arrival. For your first proper walk, an official guide is genuinely worth it, and after a day or two the main arteries start to make sense.</p></details>
+    <details><summary>Fes or Marrakech, if I only have time for one?</summary><p>Fes is the older and more scholarly city, home to the Qarawiyyin and the tanneries, with a medina that feels lived-in rather than staged and fewer concessions to visitors. Marrakech is livelier, sunnier in winter, better supplied with hotels and easier to reach. Travellers who want atmosphere and history most often prefer Fes; those who want comfort, nightlife and easy day trips usually prefer Marrakech.</p></details>
+    <details><summary>How many nights should I give Fes?</summary><p>Two nights is the minimum that lets you see the medina properly, and three is better if you want to add the Merenid tombs above the city, the Jewish quarter and the Ville Nouvelle, or take a day out to Volubilis and Meknes. A single night here is nearly always regretted.</p></details>
   </section>
 
   <section class="band">
