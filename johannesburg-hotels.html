@@ -41,6 +41,46 @@
  {"@type":"ListItem","position":2,"name":"South Africa","item":"https://destinationsguild.com/south-africa.html"},
  {"@type":"ListItem","position":3,"name":"Johannesburg Hotels","item":"https://destinationsguild.com/johannesburg-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which part of Johannesburg should I stay in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost all visitors stay in the northern suburbs. Sandton is the business and shopping district, built around Nelson Mandela Square, the most walkable pocket in the city and the safest-feeling. Rosebank is a little smaller and more relaxed, with galleries and a Sunday market, and has its own Gautrain station. Melrose, Morningside and Westcliff offer quieter, leafier hotels and guesthouses. The old central business district is not where visitors stay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How safe is Johannesburg?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Johannesburg’s reputation is not baseless, and the sensible approach is to treat it as a city where you do not wander. Stay in the northern suburbs, use ride-hailing rather than walking between areas, keep your phone away in the street, lock car doors and do not leave belongings visible in a vehicle. Township and city-centre tours are worth doing with a reputable operator rather than alone. Visitors who follow that advice generally have an excellent time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a car, and how do I get in from the airport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do not need a car. The Gautrain runs from OR Tambo International Airport to Sandton and Rosebank in around fifteen to twenty-five minutes and is the easiest way in, and ride-hailing apps are widely used and inexpensive for everything else. A hire car is worth it only if you plan to drive out to Pretoria, the Cradle of Humankind or further afield."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Johannesburg only a stopover for Kruger and safari?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many people treat it that way, but the city repays a day or two. The Apartheid Museum and Constitution Hill are among the most powerful museums in the country, the Cradle of Humankind is an hour away, and Maboneng and Braamfontein have a strong food and gallery scene. If you are connecting to Kruger or Cape Town anyway, build in a full day rather than an overnight."
+      }
+    }
+  ]
+}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -86,6 +126,13 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+    .faq{ margin:30px 0; }
+    .faq details{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:2px 18px; margin-bottom:10px; }
+    .faq summary{ font-weight:700; color:var(--navy); cursor:pointer; padding:14px 2px; font-size:16px; list-style:none; }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq details[open] summary{ border-bottom:1px solid var(--line); }
+    .faq p{ font-size:15px; color:#3f4a57; margin:12px 2px 14px; }
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -214,7 +261,7 @@
 
   <section id="pet">
     <h2>Pet-friendly</h2>
-    <p class="catnote">Bringing the dog? These hotels welcome pets through dedicated pet programmes &mdash; always confirm size limits and any fee when you book.</p>
+    <p class="catnote">Bringing the dog? We checked each of these properties against its own published policy rather than its brand&rsquo;s, and we say plainly below what we could and could not confirm. Always confirm size limits and any fee directly with the hotel when you book.</p>
     <div class="hotel"><h3><a href="https://us.trip.com/hotels/list?city=684&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=johannesburg-hotels&amp;trip_sub3=pet-1" target="_blank" rel="sponsored nofollow noopener">Southern Sun Katherine Street, Sandton</a></h3>
       <div class="tags"><span class="tag price">$$$ Upscale</span><span class="tag">Sandton</span><span class="tag">Pet-friendly</span><span class="tag">Pool &amp; gym</span></div>
       <p>A polished business-and-leisure hotel just off Sandton&rsquo;s Katherine Street, with comfortable rooms, a pool and a gym &mdash; and a dedicated pet-friendly programme that welcomes dogs. Its handy location keeps you close to the malls and the Gautrain. A reliable, well-run choice for travellers who want to bring their four-legged companion to the city.</p>
@@ -226,6 +273,14 @@
       <p class="dg-verify" style="margin:10px 0;padding:9px 11px;background:#fbf2f1;border-left:3px solid #a8443a;border-radius:3px;font-size:14px;line-height:1.55;color:#26302a;"><strong>We could not confirm this hotel&rsquo;s pet policy as of 10 September 2026.</strong> <span style="color:#6b4a45;">The hotel publishes no pet policy either way. Please check with them before you book if you are travelling with an animal.</span></p>
       <a class="btn" href="https://us.trip.com/hotels/list?city=684&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=johannesburg-hotels&amp;trip_sub3=pet-2" target="_blank" rel="sponsored nofollow noopener">Browse Johannesburg hotels on Trip.com &rsaquo;</a></div>
     <a class="browse" href="https://us.trip.com/hotels/list?city=684&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=johannesburg-hotels&amp;trip_sub3=browse-pet" target="_blank" rel="sponsored nofollow noopener">Browse all pet-friendly hotels in Johannesburg &rsaquo;</a>
+  </section>
+
+  <section class="faq">
+    <h2>Common questions about where to stay in Johannesburg</h2>
+    <details><summary>Which part of Johannesburg should I stay in?</summary><p>Almost all visitors stay in the northern suburbs. Sandton is the business and shopping district, built around Nelson Mandela Square, the most walkable pocket in the city and the safest-feeling. Rosebank is a little smaller and more relaxed, with galleries and a Sunday market, and has its own Gautrain station. Melrose, Morningside and Westcliff offer quieter, leafier hotels and guesthouses. The old central business district is not where visitors stay.</p></details>
+    <details><summary>How safe is Johannesburg?</summary><p>Johannesburg&rsquo;s reputation is not baseless, and the sensible approach is to treat it as a city where you do not wander. Stay in the northern suburbs, use ride-hailing rather than walking between areas, keep your phone away in the street, lock car doors and do not leave belongings visible in a vehicle. Township and city-centre tours are worth doing with a reputable operator rather than alone. Visitors who follow that advice generally have an excellent time.</p></details>
+    <details><summary>Do I need a car, and how do I get in from the airport?</summary><p>You do not need a car. The Gautrain runs from OR Tambo International Airport to Sandton and Rosebank in around fifteen to twenty-five minutes and is the easiest way in, and ride-hailing apps are widely used and inexpensive for everything else. A hire car is worth it only if you plan to drive out to Pretoria, the Cradle of Humankind or further afield.</p></details>
+    <details><summary>Is Johannesburg only a stopover for Kruger and safari?</summary><p>Many people treat it that way, but the city repays a day or two. The Apartheid Museum and Constitution Hill are among the most powerful museums in the country, the Cradle of Humankind is an hour away, and Maboneng and Braamfontein have a strong food and gallery scene. If you are connecting to Kruger or Cape Town anyway, build in a full day rather than an overnight.</p></details>
   </section>
 
   <section class="band">
