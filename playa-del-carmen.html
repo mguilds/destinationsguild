@@ -254,7 +254,7 @@
     <div class="hero-body">
       <div class="hero-kicker">Mexico &middot; Riviera Maya</div>
       <h1>Playa del Carmen Travel &amp; Adventure Guide</h1>
-      <p class="dg-explorers" style="display:inline-block;margin:10px 0 0;background:rgba(12,20,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated July 2026</p>
+      <p class="dg-explorers" style="display:inline-block;margin:10px 0 0;background:rgba(12,20,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated September 2026</p>
       <p>The walkable heart of the Riviera Maya — a pedestrian avenue of restaurants and bars that runs a block from a Caribbean beach, with cenotes, Maya ruins and the Cozumel ferry all within reach.</p>
       <div class="cta-row">
         <a class="btn" href="https://us.trip.com/hotels/list?city=3700&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=playa-del-carmen&amp;trip_sub3=hero-hotels" target="_blank" rel="sponsored nofollow noopener">Find Playa del Carmen Hotels</a>
@@ -289,8 +289,8 @@
     <div style="background:#fffdf6;border:1px solid #e0d3ad;border-radius:12px;padding:18px 22px;margin:16px 0;">
       <div style="font-family:'Dancing Script',cursive;font-size:25px;color:#173a78;">What your money&rsquo;s worth today</div>
       <div style="display:flex;flex-wrap:wrap;gap:6px 28px;margin:8px 0 12px;font-family:'EB Garamond',serif;font-size:21px;color:#1e46c8;">
-        <div>US&nbsp;$1 = <strong id="usdrate">19.0</strong> Mexican pesos</div>
-        <div>CA&nbsp;$1 = <strong id="cadrate">13.8</strong> Mexican pesos</div>
+        <div>US&nbsp;$1 = <strong id="usdrate">17.1</strong> Mexican pesos</div>
+        <div>CA&nbsp;$1 = <strong id="cadrate">12.3</strong> Mexican pesos</div>
       </div>
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:9px;font-family:'EB Garamond',serif;font-size:20px;color:#2b3a4a;">
         <input id="fxamt" type="number" value="100" min="0" style="width:92px;padding:7px 10px;border:1px solid #cbb98e;border-radius:8px;font-size:17px;">
@@ -298,10 +298,11 @@
           <option value="USD">US dollars</option>
           <option value="CAD">Canadian dollars</option>
         </select>
-        <span>=&nbsp;<strong id="fxout" style="color:#1e46c8;">1,900</strong>&nbsp;Mexican pesos</span>
+        <span>=&nbsp;<strong id="fxout" style="color:#1e46c8;">1,710</strong>&nbsp;Mexican pesos</span>
       </div>
       <div style="font-family:-apple-system,Segoe UI,sans-serif;font-size:12px;color:#9a8a63;margin-top:10px;">Live mid-market rate, refreshed when the page loads. Banks, cards, and ATMs add their own margins, so treat it as a guide.</div>
     </div>
+    <p class="body"><strong>One charge that catches people out.</strong> Quintana Roo levies its own visitor tax, <strong>Visitax</strong>, on foreign visitors &mdash; Canc&uacute;n, Playa del Carmen, Tulum, Cozumel and Isla Mujeres are all in the state. It is paid once per trip, online, and you are asked for the QR receipt on the way home, usually at the airport. Pay it at the state&rsquo;s own site, <strong>visitax.gob.mx</strong>, and nowhere else &mdash; a crowd of look-alike sites charge several times the official amount for exactly the same receipt. We are not printing a figure here because the published amounts disagree with one another and the rate is revised; it is a few hundred pesos a head, and the official site shows the current one before you pay. Note that the state&rsquo;s own FAQ says all foreign tourists pay, with no exemption for children, so budget for everyone travelling. (Checked 15 September 2026.)</p>
 
     <p class="body">The town is laid out on a simple grid, which makes it hard to get lost: numbered avenidas run parallel to the sea and numbered calles run down to it. Quinta Avenida — Fifth Avenue — is the pedestrian one, and almost everything a visitor wants sits within a few blocks either side of it. South of the centre lies Playacar, a gated district of golf, big resorts and quieter beach; north of Calle 38 the streets get leafier and the restaurants more local.</p>
   </section>
@@ -425,7 +426,7 @@
 (function(){var Q=[["I have not told half of what I saw.","Marco Polo"],["Travel is fatal to prejudice, bigotry, and narrow-mindedness.","Mark Twain"],["Travel and change of place impart new vigor to the mind.","Seneca"],["Life is either a daring adventure or nothing at all.","Helen Keller"],["To awaken alone in a strange town is one of the pleasantest sensations.","Freya Stark"],["A good traveler has no fixed plans, and is not intent on arriving.","Lao Tzu"]];var i=0,el=document.getElementById('wq');function show(){if(!el)return;el.style.opacity=0;setTimeout(function(){el.innerHTML='“'+Q[i][0]+'” <span style=\'font-style:normal;font-weight:600;color:#12467f;\'>— '+Q[i][1]+'</span>';el.style.opacity=1;i=(i+1)%Q.length;},450);}show();setInterval(show,7000);})();
 </script>
 <script>
-(function(){var U=19.0,C=13.8;function set(){var u=document.getElementById('usdrate'),c=document.getElementById('cadrate');if(u)u.textContent=U.toFixed(1);if(c)c.textContent=C.toFixed(1);conv();}
+(function(){var U=17.1,C=12.3;function set(){var u=document.getElementById('usdrate'),c=document.getElementById('cadrate');if(u)u.textContent=U.toFixed(1);if(c)c.textContent=C.toFixed(1);conv();}
 function conv(){var a=parseFloat((document.getElementById('fxamt')||{}).value)||0;var s=(document.getElementById('fxcur')||{}).value;var r=s==='CAD'?C:U;var o=document.getElementById('fxout');if(o)o.textContent=Math.round(a*r).toLocaleString();}
 var amt=document.getElementById('fxamt'),cur=document.getElementById('fxcur');if(amt)amt.addEventListener('input',conv);if(cur)cur.addEventListener('change',conv);set();
 fetch('https://open.er-api.com/v6/latest/USD').then(function(r){return r.json();}).then(function(d){if(d&&d.rates&&d.rates['MXN']){U=d.rates['MXN'];if(d.rates.CAD)C=d.rates['MXN']/d.rates.CAD;set();}}).catch(function(){});})();
