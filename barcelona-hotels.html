@@ -41,6 +41,9 @@
  {"@type":"ListItem","position":2,"name":"Spain","item":"https://destinationsguild.com/spain.html"},
  {"@type":"ListItem","position":3,"name":"Barcelona Hotels","item":"https://destinationsguild.com/barcelona-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which neighbourhood should I stay in for a first visit to Barcelona?", "acceptedAnswer": {"@type": "Answer", "text": "The Eixample is the easiest first base: Cerda's elegant nineteenth-century grid of chamfered blocks around the boulevard of Passeig de Gracia, with Gaudi's Casa Batllo on the doorstep and wide, level pavements. If you would rather be in the old city, the Gothic Quarter is a shadowed maze of medieval lanes, hidden squares and the great cathedral, all built on Roman foundations, which is atmospheric but narrow and uneven underfoot."}}, {"@type": "Question", "name": "Where should I stay in Barcelona to be near the beach?", "acceptedAnswer": {"@type": "Answer", "text": "Barceloneta, the old fishermen's quarter turned beach neighbourhood, where a grid of narrow streets and seafood tavernas gives way to a broad Mediterranean shore. It suits anyone whose trip is built around the sea. If you want the city first and the beach occasionally, the Eixample keeps you within a short metro ride of both."}}, {"@type": "Question", "name": "Which part of Barcelona feels most local?", "acceptedAnswer": {"@type": "Answer", "text": "Gracia. Once an independent town, it still feels like a village within the city, with a warren of low-rise streets, leafy plazas full of cafe tables and a proudly local, bohemian character. It is further from the marquee sights, which is exactly why it stays calm."}}, {"@type": "Question", "name": "Where is the best value in Barcelona?", "acceptedAnswer": {"@type": "Answer", "text": "Poble Sec and the outer Eixample. You trade a marquee address for a short metro ride or a simpler room, and Barcelona's transport makes that an easy trade to accept."}}, {"@type": "Question", "name": "What is El Born like to stay in?", "acceptedAnswer": {"@type": "Answer", "text": "El Born, just east of the Gothic Quarter, is the old city's most fashionable corner: a tangle of narrow lanes threaded with tapas bars, boutiques and the Picasso Museum. It suits travellers who want the medieval texture of the old city with a livelier, more contemporary evening at the door."}}]}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -82,6 +85,15 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;margin-bottom:8px;}
+  .faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+  .faq details:last-child{border-bottom:none;}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15.5px;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"+";color:#b08d3f;font-weight:800;margin-right:8px;}
+  .faq details[open] summary::before{content:"\2013";}
+  .faq p{font-size:15px;color:#4a5563;margin-top:.5rem;padding-left:18px;}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -242,6 +254,32 @@
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?city=40795&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=barcelona-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse all Barcelona hotels</a>
       <a class="btn" href="spain.html" style="background:rgba(255,255,255,.16);box-shadow:none;border:1.5px solid rgba(255,255,255,.6);">&lsaquo; Back to Spain Guide</a>
+    </div>
+  </section>
+
+    <section id="faq">
+    <h2>Barcelona &mdash; common questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>Which neighbourhood should I stay in for a first visit to Barcelona?</summary>
+        <p>The Eixample is the easiest first base: Cerda's elegant nineteenth-century grid of chamfered blocks around the boulevard of Passeig de Gracia, with Gaudi's Casa Batllo on the doorstep and wide, level pavements. If you would rather be in the old city, the Gothic Quarter is a shadowed maze of medieval lanes, hidden squares and the great cathedral, all built on Roman foundations, which is atmospheric but narrow and uneven underfoot.</p>
+      </details>
+      <details>
+        <summary>Where should I stay in Barcelona to be near the beach?</summary>
+        <p>Barceloneta, the old fishermen's quarter turned beach neighbourhood, where a grid of narrow streets and seafood tavernas gives way to a broad Mediterranean shore. It suits anyone whose trip is built around the sea. If you want the city first and the beach occasionally, the Eixample keeps you within a short metro ride of both.</p>
+      </details>
+      <details>
+        <summary>Which part of Barcelona feels most local?</summary>
+        <p>Gracia. Once an independent town, it still feels like a village within the city, with a warren of low-rise streets, leafy plazas full of cafe tables and a proudly local, bohemian character. It is further from the marquee sights, which is exactly why it stays calm.</p>
+      </details>
+      <details>
+        <summary>Where is the best value in Barcelona?</summary>
+        <p>Poble Sec and the outer Eixample. You trade a marquee address for a short metro ride or a simpler room, and Barcelona's transport makes that an easy trade to accept.</p>
+      </details>
+      <details>
+        <summary>What is El Born like to stay in?</summary>
+        <p>El Born, just east of the Gothic Quarter, is the old city's most fashionable corner: a tangle of narrow lanes threaded with tapas bars, boutiques and the Picasso Museum. It suits travellers who want the medieval texture of the old city with a livelier, more contemporary evening at the door.</p>
+      </details>
     </div>
   </section>
 

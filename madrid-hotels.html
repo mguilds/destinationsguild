@@ -38,6 +38,9 @@
  {"@type":"ListItem","position":2,"name":"Spain","item":"https://destinationsguild.com/spain.html"},
  {"@type":"ListItem","position":3,"name":"Madrid Hotels","item":"https://destinationsguild.com/madrid-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which neighbourhood should I stay in for a first visit to Madrid?", "acceptedAnswer": {"@type": "Answer", "text": "Barrio de las Letras, the old writers' district between Plaza de Santa Ana and the Paseo del Prado, is the most atmospheric first base: narrow streets paved with lines of verse, tapas bars at the end of them and the great museums a short walk away. If you would rather be at the literal centre of things, Puerta del Sol and the Gran Via put everything within reach."}}, {"@type": "Question", "name": "Is Madrid walkable?", "acceptedAnswer": {"@type": "Answer", "text": "The centre is dense and walkable, and where it is not, the Metro is fast and cheap. That combination is why the neighbourhood matters more than the exact address: pick the barrio whose rhythm you want and the rest of the city is a short ride away."}}, {"@type": "Question", "name": "Where should I stay in Madrid for the museums?", "acceptedAnswer": {"@type": "Answer", "text": "Along the Paseo del Prado. It and the green expanse of Retiro Park form Madrid's cultural spine, home to the Prado, the Reina Sofia and the Thyssen, the famed Art Triangle. Staying there puts the galleries and the park at your door, and it is level, handsome walking between them."}}, {"@type": "Question", "name": "Which part of Madrid is quietest?", "acceptedAnswer": {"@type": "Answer", "text": "Salamanca, a grid of wide, leafy streets lined with designer boutiques, embassies and grand apartment blocks. It is calmer and more residential than the centre, which suits travellers who want to come back to quiet in the evening and do not mind a short Metro ride to the old quarters."}}, {"@type": "Question", "name": "Where is the best value in Madrid?", "acceptedAnswer": {"@type": "Answer", "text": "La Latina and Lavapies. They deliver Sunday markets, the city's densest tapas crawl along the Cava Baja and a great deal of character for the money, which is why we point budget-minded travellers there first."}}]}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -79,6 +82,15 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;margin-bottom:8px;}
+  .faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+  .faq details:last-child{border-bottom:none;}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15.5px;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"+";color:#b08d3f;font-weight:800;margin-right:8px;}
+  .faq details[open] summary::before{content:"\2013";}
+  .faq p{font-size:15px;color:#4a5563;margin-top:.5rem;padding-left:18px;}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -243,6 +255,32 @@
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?city=357&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=madrid-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse all Madrid hotels</a>
       <a class="btn" href="spain.html" style="background:rgba(255,255,255,.16);box-shadow:none;border:1.5px solid rgba(255,255,255,.6);">&lsaquo; Back to Spain Guide</a>
+    </div>
+  </section>
+
+    <section id="faq">
+    <h2>Madrid &mdash; common questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>Which neighbourhood should I stay in for a first visit to Madrid?</summary>
+        <p>Barrio de las Letras, the old writers' district between Plaza de Santa Ana and the Paseo del Prado, is the most atmospheric first base: narrow streets paved with lines of verse, tapas bars at the end of them and the great museums a short walk away. If you would rather be at the literal centre of things, Puerta del Sol and the Gran Via put everything within reach.</p>
+      </details>
+      <details>
+        <summary>Is Madrid walkable?</summary>
+        <p>The centre is dense and walkable, and where it is not, the Metro is fast and cheap. That combination is why the neighbourhood matters more than the exact address: pick the barrio whose rhythm you want and the rest of the city is a short ride away.</p>
+      </details>
+      <details>
+        <summary>Where should I stay in Madrid for the museums?</summary>
+        <p>Along the Paseo del Prado. It and the green expanse of Retiro Park form Madrid's cultural spine, home to the Prado, the Reina Sofia and the Thyssen, the famed Art Triangle. Staying there puts the galleries and the park at your door, and it is level, handsome walking between them.</p>
+      </details>
+      <details>
+        <summary>Which part of Madrid is quietest?</summary>
+        <p>Salamanca, a grid of wide, leafy streets lined with designer boutiques, embassies and grand apartment blocks. It is calmer and more residential than the centre, which suits travellers who want to come back to quiet in the evening and do not mind a short Metro ride to the old quarters.</p>
+      </details>
+      <details>
+        <summary>Where is the best value in Madrid?</summary>
+        <p>La Latina and Lavapies. They deliver Sunday markets, the city's densest tapas crawl along the Cava Baja and a great deal of character for the money, which is why we point budget-minded travellers there first.</p>
+      </details>
     </div>
   </section>
 

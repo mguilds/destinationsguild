@@ -303,8 +303,8 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money's worth in Brazil today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdbrl">5.4</strong>&nbsp;R$</div>
-      <div>CA&nbsp;$1 = <strong id="cadbrl">3.9</strong>&nbsp;R$</div>
+      <div>US&nbsp;$1 = <strong id="usdbrl">5.1</strong>&nbsp;R$</div>
+      <div>CA&nbsp;$1 = <strong id="cadbrl">3.7</strong>&nbsp;R$</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="1000" min="0">
@@ -313,7 +313,7 @@ html{scroll-behavior:smooth}
         <option value="USD">US dollars</option>
         <option value="CAD">Canadian dollars</option>
       </select>
-      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">185</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">196</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
     <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins — and many Brazilian ATMs charge a fee per foreign-card withdrawal, so take out larger amounts less often.</div>
   </div>
@@ -456,7 +456,7 @@ html{scroll-behavior:smooth}
 <script>
 /* BRL ⇄ USD / CAD converter */
 (function(){
-  var U=5.4,C=3.9;                 // reais per US$1, reais per CA$1 — fallbacks until live rates load
+  var U=5.1,C=3.7;                 // reais per US$1, reais per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdbrl'), b=document.getElementById('cadbrl');
     if(a) a.textContent=U.toFixed(1);

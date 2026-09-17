@@ -32,6 +32,7 @@
 <meta property="og:site_name" content="Destinations Guild">
 <meta property="og:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Valle%20de%20Cocora%20banner.jpg?width=1200">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Valle%20de%20Cocora%20banner.jpg?width=1200">
 <meta name="twitter:title" content="The Best Time to Visit Colombia">
 <meta name="twitter:description" content="A country on the equator has no winter &mdash; only wet and dry. Here is which months are which, region by region.">
 <script type="application/ld+json">
@@ -179,8 +180,8 @@
   <div class="fx">
     <div class="fx-t">What your money&rsquo;s worth in Colombia today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdloc">3,900</strong>&nbsp;COP</div>
-      <div>CA&nbsp;$1 = <strong id="cadloc">2,830</strong>&nbsp;COP</div>
+      <div>US&nbsp;$1 = <strong id="usdloc">3,110</strong>&nbsp;COP</div>
+      <div>CA&nbsp;$1 = <strong id="cadloc">2,240</strong>&nbsp;COP</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="100000" min="0">
@@ -189,9 +190,9 @@
         <option value="USD">US dollars</option>
         <option value="CAD">Canadian dollars</option>
       </select>
-      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">26</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">32</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
-    <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins. Colombian prices run in the thousands, so the quick shortcut is to knock four zeros off and multiply by two and a half. US dollars are not generally accepted as payment; draw pesos from a bank ATM inside a bank or a shopping centre, and decline any terminal that offers to charge you in dollars.</div>
+    <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins. Colombian prices run in the thousands, so the quick shortcut is to knock four zeros off and multiply by three. US dollars are not generally accepted as payment; draw pesos from a bank ATM inside a bank or a shopping centre, and decline any terminal that offers to charge you in dollars.</div>
   </div>
 
   <section id="months">
@@ -321,7 +322,7 @@
 <script>
 /* COP converter */
 (function(){
-  var U=3900,C=2830;
+  var U=3110,C=2240;
   function fmt(n){ return n.toLocaleString(undefined,{maximumFractionDigits:0}); }
   function paint(){
     var a=document.getElementById("usdloc"), b=document.getElementById("cadloc");

@@ -38,6 +38,9 @@
  {"@type":"ListItem","position":2,"name":"Italy","item":"https://destinationsguild.com/italy.html"},
  {"@type":"ListItem","position":3,"name":"Rome Hotels","item":"https://destinationsguild.com/rome-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which neighbourhood is best for a first visit to Rome?", "acceptedAnswer": {"@type": "Answer", "text": "The centro storico, the tangle of cobbled lanes around the Pantheon and Piazza Navona. You wake in the middle of everything and walk to most of it, which is the whole point of a first Roman trip. Expect steep prices and few cars. If the ancient monuments are your priority instead, Monti puts the Colosseum and the Forum on your doorstep."}}, {"@type": "Question", "name": "Is Rome walkable?", "acceptedAnswer": {"@type": "Answer", "text": "The historic core is compact and gloriously walkable, which is why we group our hotels by neighbourhood rather than by the sight you want to see. Be realistic about the surface, though: much of the centre is cobbled, and cobbles are hard work with a suitcase or an uncertain knee. Trastevere is only a short walk or tram ride from the centre but feels a world apart."}}, {"@type": "Question", "name": "Where should I stay near the Colosseum?", "acceptedAnswer": {"@type": "Answer", "text": "Monti. Ancient Rome's greatest hits, the Colosseum, the Forum and the Palatine, sit right there, and just uphill Monti itself is a village-like neighbourhood of artisan workshops and wine bars where Romans actually eat. It suits anyone who wants the monuments on the doorstep by day and a less touristy dinner at night."}}, {"@type": "Question", "name": "Where is the best value in Rome?", "acceptedAnswer": {"@type": "Answer", "text": "Around Termini and Esquilino. You trade a marquee address for a short tram ride or a simpler room, and in return you get the easiest transport links in the city, which is useful if you are arriving by train or heading out on day trips. That leaves more of the budget for gelato and museums."}}, {"@type": "Question", "name": "Is it a good idea to stay near the Vatican?", "acceptedAnswer": {"@type": "Answer", "text": "It is a smart choice if you want to beat the crowds to St Peter's and the Museums on foot. The surrounding Prati district is elegant, orderly and refreshingly residential, with wide boulevards, excellent food shops and calmer evenings, which makes it a sensible base for families and for anyone who wants a breather from the centre. The trade is being a little further from the ancient sites."}}]}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -79,6 +82,15 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;margin-bottom:8px;}
+  .faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+  .faq details:last-child{border-bottom:none;}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15.5px;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"+";color:#b08d3f;font-weight:800;margin-right:8px;}
+  .faq details[open] summary::before{content:"\2013";}
+  .faq p{font-size:15px;color:#4a5563;margin-top:.5rem;padding-left:18px;}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -243,6 +255,32 @@
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?city=343&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=rome-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse All Rome Hotels</a>
       <a class="btn" href="italy.html" style="background:rgba(255,255,255,.16);box-shadow:none;border:1.5px solid rgba(255,255,255,.6);">&lsaquo; Back to Italy Guide</a>
+    </div>
+  </section>
+
+    <section id="faq">
+    <h2>Rome &mdash; common questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>Which neighbourhood is best for a first visit to Rome?</summary>
+        <p>The centro storico, the tangle of cobbled lanes around the Pantheon and Piazza Navona. You wake in the middle of everything and walk to most of it, which is the whole point of a first Roman trip. Expect steep prices and few cars. If the ancient monuments are your priority instead, Monti puts the Colosseum and the Forum on your doorstep.</p>
+      </details>
+      <details>
+        <summary>Is Rome walkable?</summary>
+        <p>The historic core is compact and gloriously walkable, which is why we group our hotels by neighbourhood rather than by the sight you want to see. Be realistic about the surface, though: much of the centre is cobbled, and cobbles are hard work with a suitcase or an uncertain knee. Trastevere is only a short walk or tram ride from the centre but feels a world apart.</p>
+      </details>
+      <details>
+        <summary>Where should I stay near the Colosseum?</summary>
+        <p>Monti. Ancient Rome's greatest hits, the Colosseum, the Forum and the Palatine, sit right there, and just uphill Monti itself is a village-like neighbourhood of artisan workshops and wine bars where Romans actually eat. It suits anyone who wants the monuments on the doorstep by day and a less touristy dinner at night.</p>
+      </details>
+      <details>
+        <summary>Where is the best value in Rome?</summary>
+        <p>Around Termini and Esquilino. You trade a marquee address for a short tram ride or a simpler room, and in return you get the easiest transport links in the city, which is useful if you are arriving by train or heading out on day trips. That leaves more of the budget for gelato and museums.</p>
+      </details>
+      <details>
+        <summary>Is it a good idea to stay near the Vatican?</summary>
+        <p>It is a smart choice if you want to beat the crowds to St Peter's and the Museums on foot. The surrounding Prati district is elegant, orderly and refreshingly residential, with wide boulevards, excellent food shops and calmer evenings, which makes it a sensible base for families and for anyone who wants a breather from the centre. The trade is being a little further from the ancient sites.</p>
+      </details>
     </div>
   </section>
 

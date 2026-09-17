@@ -41,6 +41,9 @@
  {"@type":"ListItem","position":2,"name":"France","item":"https://destinationsguild.com/france.html"},
  {"@type":"ListItem","position":3,"name":"Paris Hotels","item":"https://destinationsguild.com/paris-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which arrondissement should I stay in for a first visit to Paris?", "acceptedAnswer": {"@type": "Answer", "text": "For a first visit the Louvre, Tuileries and Opera quarter is the easiest base. You wake within walking distance of the great museums and the department stores, the Metro is everywhere, and most of what you came to see is either a stroll or two stops away. You pay handsomely for that convenience. If you would rather have character than convenience, the Marais gives you medieval lanes and the Place des Vosges, and the Left Bank around Saint-Germain and the Latin Quarter is the classic literary Paris, livelier and more affordable the further east you go."}}, {"@type": "Question", "name": "How much is the tourist tax in Paris?", "acceptedAnswer": {"@type": "Answer", "text": "Paris adds a taxe de sejour to your room rate, charged per adult per night and collected by the hotel at check-out rather than shown in the price you booked, so it is easy to be caught out by it. In 2026 it runs about 2.60 euros a night in a one-star or hostel, 3.25 in a two-star, 5.53 in a three-star, 8.45 in a four-star and 11.70 in a five-star, with the palace category at 15.93. Those figures already include the regional and departmental levies added on top of the city's own share. Under-18s are exempt."}}, {"@type": "Question", "name": "Is Paris walkable, or do I need the Metro?", "acceptedAnswer": {"@type": "Answer", "text": "Both, and that is the pleasure of it. Nearly every quarter is walkable in itself and the Metro stitches them together, so you can walk all morning and ride home when your feet have had enough. That is why we group our hotels by neighbourhood rather than by distance from a single sight: choose the quarter you want to wake up in, and the rest of the city is a short ride away."}}, {"@type": "Question", "name": "Where should I stay in Paris on a budget?", "acceptedAnswer": {"@type": "Answer", "text": "The north-eastern quarters around the Canal Saint-Martin, Belleville and the Grands Boulevards give the best value and excellent transport. You trade a marquee address for a livelier fringe or a smaller room, and you free the budget for museums, markets and meals rather than for the nightly rate."}}, {"@type": "Question", "name": "Is Montmartre a good place to stay?", "acceptedAnswer": {"@type": "Answer", "text": "Choose it for atmosphere, views and quiet rather than for convenience. On its hill above the city Montmartre keeps a village feel, with winding stairs, the white domes of Sacre-Coeur, artists' squares and vineyards that predate the tourists. It is more residential and further from the central sights than the other quarters here, and being on a hill means real stairs and slopes, which is worth weighing if that matters to you."}}]}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -82,6 +85,15 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;margin-bottom:8px;}
+  .faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+  .faq details:last-child{border-bottom:none;}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15.5px;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"+";color:#b08d3f;font-weight:800;margin-right:8px;}
+  .faq details[open] summary::before{content:"\2013";}
+  .faq p{font-size:15px;color:#4a5563;margin-top:.5rem;padding-left:18px;}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -247,6 +259,32 @@
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?city=192&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=paris-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse all Paris hotels</a>
       <a class="btn" href="france.html" style="background:rgba(255,255,255,.16);box-shadow:none;border:1.5px solid rgba(255,255,255,.6);">&lsaquo; Back to France Guide</a>
+    </div>
+  </section>
+
+    <section id="faq">
+    <h2>Paris &mdash; common questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>Which arrondissement should I stay in for a first visit to Paris?</summary>
+        <p>For a first visit the Louvre, Tuileries and Opera quarter is the easiest base. You wake within walking distance of the great museums and the department stores, the Metro is everywhere, and most of what you came to see is either a stroll or two stops away. You pay handsomely for that convenience. If you would rather have character than convenience, the Marais gives you medieval lanes and the Place des Vosges, and the Left Bank around Saint-Germain and the Latin Quarter is the classic literary Paris, livelier and more affordable the further east you go.</p>
+      </details>
+      <details>
+        <summary>How much is the tourist tax in Paris?</summary>
+        <p>Paris adds a taxe de sejour to your room rate, charged per adult per night and collected by the hotel at check-out rather than shown in the price you booked, so it is easy to be caught out by it. In 2026 it runs about 2.60 euros a night in a one-star or hostel, 3.25 in a two-star, 5.53 in a three-star, 8.45 in a four-star and 11.70 in a five-star, with the palace category at 15.93. Those figures already include the regional and departmental levies added on top of the city's own share. Under-18s are exempt.</p>
+      </details>
+      <details>
+        <summary>Is Paris walkable, or do I need the Metro?</summary>
+        <p>Both, and that is the pleasure of it. Nearly every quarter is walkable in itself and the Metro stitches them together, so you can walk all morning and ride home when your feet have had enough. That is why we group our hotels by neighbourhood rather than by distance from a single sight: choose the quarter you want to wake up in, and the rest of the city is a short ride away.</p>
+      </details>
+      <details>
+        <summary>Where should I stay in Paris on a budget?</summary>
+        <p>The north-eastern quarters around the Canal Saint-Martin, Belleville and the Grands Boulevards give the best value and excellent transport. You trade a marquee address for a livelier fringe or a smaller room, and you free the budget for museums, markets and meals rather than for the nightly rate.</p>
+      </details>
+      <details>
+        <summary>Is Montmartre a good place to stay?</summary>
+        <p>Choose it for atmosphere, views and quiet rather than for convenience. On its hill above the city Montmartre keeps a village feel, with winding stairs, the white domes of Sacre-Coeur, artists' squares and vineyards that predate the tourists. It is more residential and further from the central sights than the other quarters here, and being on a hill means real stairs and slopes, which is worth weighing if that matters to you.</p>
+      </details>
     </div>
   </section>
 
