@@ -38,6 +38,9 @@
  {"@type":"ListItem","position":2,"name":"United Kingdom","item":"https://destinationsguild.com/united-kingdom.html"},
  {"@type":"ListItem","position":3,"name":"Edinburgh","item":"https://destinationsguild.com/edinburgh-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much is Edinburgh's visitor levy?", "acceptedAnswer": {"@type": "Answer", "text": "Since 24 July 2026 Edinburgh charges a visitor levy of 5 per cent on the room rate, applied to the first five nights of a stay, with VAT on top. It applies to hotels, guesthouses, apartments and hostels alike, and it comes in addition to the nightly rate you see quoted, so allow for it when you are comparing prices."}}, {"@type": "Question", "name": "Should I stay in the Old Town or the New Town?", "acceptedAnswer": {"@type": "Answer", "text": "That is the real Edinburgh question. The Old Town is the postcard: the Castle on its crag, the Royal Mile running down to Holyrood, and a warren of stone closes and stairs on either side. The New Town, laid out in the eighteenth century as a model of Georgian planning, is all wide streets, symmetrical terraces and elegant garden squares. Both are compact and walkable, but if stairs and steep closes are a consideration, the New Town is the gentler ground."}}, {"@type": "Question", "name": "Where should I stay in Edinburgh for a quieter, villagey feel?", "acceptedAnswer": {"@type": "Answer", "text": "Stockbridge, a short walk downhill from the New Town, with indie shops, a Sunday market and cafes along the Water of Leith. The West End is the other calm choice, blending the New Town's Georgian elegance with independent boutiques, cafes and theatres along leafy streets, and Haymarket station is close by."}}, {"@type": "Question", "name": "Is Leith worth staying in?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, if food and drink are a large part of why you travel. Once a working port, Leith is now one of Edinburgh's most exciting quarters, mixing historic docks with a celebrated food-and-drink scene and the Royal Yacht Britannia. It sits outside the centre, so allow for the tram or the bus."}}, {"@type": "Question", "name": "Where is the best value in Edinburgh?", "acceptedAnswer": {"@type": "Answer", "text": "The Grassmarket, just below the Castle, and the Southside. They offer character and a central location without the marquee price tags. The Grassmarket is a lively square of pubs, which is either a recommendation or a warning depending on how lightly you sleep."}}]}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -79,6 +82,15 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;margin-bottom:8px;}
+  .faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+  .faq details:last-child{border-bottom:none;}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15.5px;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"+";color:#b08d3f;font-weight:800;margin-right:8px;}
+  .faq details[open] summary::before{content:"\2013";}
+  .faq p{font-size:15px;color:#4a5563;margin-top:.5rem;padding-left:18px;}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -240,6 +252,32 @@
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?city=706&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=edinburgh-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse All Edinburgh Hotels</a>
       <a class="btn" href="united-kingdom.html" style="background:rgba(255,255,255,.16);box-shadow:none;border:1.5px solid rgba(255,255,255,.6);">&lsaquo; Back to United Kingdom Guide</a>
+    </div>
+  </section>
+
+    <section id="faq">
+    <h2>Edinburgh &mdash; common questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>How much is Edinburgh's visitor levy?</summary>
+        <p>Since 24 July 2026 Edinburgh charges a visitor levy of 5 per cent on the room rate, applied to the first five nights of a stay, with VAT on top. It applies to hotels, guesthouses, apartments and hostels alike, and it comes in addition to the nightly rate you see quoted, so allow for it when you are comparing prices.</p>
+      </details>
+      <details>
+        <summary>Should I stay in the Old Town or the New Town?</summary>
+        <p>That is the real Edinburgh question. The Old Town is the postcard: the Castle on its crag, the Royal Mile running down to Holyrood, and a warren of stone closes and stairs on either side. The New Town, laid out in the eighteenth century as a model of Georgian planning, is all wide streets, symmetrical terraces and elegant garden squares. Both are compact and walkable, but if stairs and steep closes are a consideration, the New Town is the gentler ground.</p>
+      </details>
+      <details>
+        <summary>Where should I stay in Edinburgh for a quieter, villagey feel?</summary>
+        <p>Stockbridge, a short walk downhill from the New Town, with indie shops, a Sunday market and cafes along the Water of Leith. The West End is the other calm choice, blending the New Town's Georgian elegance with independent boutiques, cafes and theatres along leafy streets, and Haymarket station is close by.</p>
+      </details>
+      <details>
+        <summary>Is Leith worth staying in?</summary>
+        <p>Yes, if food and drink are a large part of why you travel. Once a working port, Leith is now one of Edinburgh's most exciting quarters, mixing historic docks with a celebrated food-and-drink scene and the Royal Yacht Britannia. It sits outside the centre, so allow for the tram or the bus.</p>
+      </details>
+      <details>
+        <summary>Where is the best value in Edinburgh?</summary>
+        <p>The Grassmarket, just below the Castle, and the Southside. They offer character and a central location without the marquee price tags. The Grassmarket is a lively square of pubs, which is either a recommendation or a warning depending on how lightly you sleep.</p>
+      </details>
     </div>
   </section>
 

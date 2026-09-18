@@ -41,6 +41,9 @@
  {"@type":"ListItem","position":2,"name":"France","item":"https://destinationsguild.com/france.html"},
  {"@type":"ListItem","position":3,"name":"Nice & the French Riviera","item":"https://destinationsguild.com/nice-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much is the tourist tax in Nice?", "acceptedAnswer": {"@type": "Answer", "text": "Nice adds a taxe de sejour to the room rate, charged per adult per night and collected by the hotel at check-out rather than shown in the price you booked. For 2026 the Metropole Nice Cote d'Azur rates run about 1.07 euros a night for a one-star hotel or B&B, 1.34 for a two-star, 2.28 for a three-star, 3.48 for a four-star and 4.69 for a five-star, with palaces at 6.43; unclassified places charge 6.70 per cent of the nightly cost. Under-18s are exempt."}}, {"@type": "Question", "name": "Is Nice a good base for the French Riviera?", "acceptedAnswer": {"@type": "Answer", "text": "It is an unbeatable one. Nice is a real city with an airport, a train line and a beach, and from it the great Riviera names are all a short hop away: Cannes about half an hour west by train, Monaco about twenty minutes east, with Antibes and the hill villages in between. You can see a great deal of the coast without ever moving hotels."}}, {"@type": "Question", "name": "Should I stay on the seafront or in the old town in Nice?", "acceptedAnswer": {"@type": "Answer", "text": "The Promenade des Anglais is the classic first-visit base: you wake to the blue of the Baie des Anges and have the beach clubs and gardens at the door. Vieux Nice, tucked beneath the green Colline du Chateau, is the vivid alternative, with ochre lanes, the Cours Saleya flower market, baroque churches and socca stands. The seafront is the easier walking; the old town has more life in the evening."}}, {"@type": "Question", "name": "Is it better to stay in Cannes or Monaco instead of Nice?", "acceptedAnswer": {"@type": "Answer", "text": "Only if that is the trip you want. Cannes trades Nice's lived-in bustle for pure glamour, with the palm-lined Croisette, private beaches and designer boutiques. Monaco is the Riviera's stage for high glamour, with the casino square and a harbour full of yachts. Both are easy day trips from Nice, so basing yourself there is a choice about atmosphere and budget rather than about access."}}, {"@type": "Question", "name": "Where should I stay for a quieter Riviera?", "acceptedAnswer": {"@type": "Answer", "text": "Beyond the cities, in the coast's most romantic retreats: the pine-shaded Cap d'Antibes, the Jazz Age seafront of Juan-les-Pins and the perched art village of Saint-Paul-de-Vence. The trade is mobility, since you will either want a car or will lean more heavily on the trains and buses."}}]}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -82,6 +85,15 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;margin-bottom:8px;}
+  .faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+  .faq details:last-child{border-bottom:none;}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15.5px;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"+";color:#b08d3f;font-weight:800;margin-right:8px;}
+  .faq details[open] summary::before{content:"\2013";}
+  .faq p{font-size:15px;color:#4a5563;margin-top:.5rem;padding-left:18px;}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -243,6 +255,32 @@
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?city=775&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=nice-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse all Nice &amp; the French Riviera hotels</a>
       <a class="btn" href="france.html" style="background:rgba(255,255,255,.16);box-shadow:none;border:1.5px solid rgba(255,255,255,.6);">&lsaquo; Back to France Guide</a>
+    </div>
+  </section>
+
+    <section id="faq">
+    <h2>Nice &amp; the Riviera &mdash; common questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>How much is the tourist tax in Nice?</summary>
+        <p>Nice adds a taxe de sejour to the room rate, charged per adult per night and collected by the hotel at check-out rather than shown in the price you booked. For 2026 the Metropole Nice Cote d'Azur rates run about 1.07 euros a night for a one-star hotel or B&amp;B, 1.34 for a two-star, 2.28 for a three-star, 3.48 for a four-star and 4.69 for a five-star, with palaces at 6.43; unclassified places charge 6.70 per cent of the nightly cost. Under-18s are exempt.</p>
+      </details>
+      <details>
+        <summary>Is Nice a good base for the French Riviera?</summary>
+        <p>It is an unbeatable one. Nice is a real city with an airport, a train line and a beach, and from it the great Riviera names are all a short hop away: Cannes about half an hour west by train, Monaco about twenty minutes east, with Antibes and the hill villages in between. You can see a great deal of the coast without ever moving hotels.</p>
+      </details>
+      <details>
+        <summary>Should I stay on the seafront or in the old town in Nice?</summary>
+        <p>The Promenade des Anglais is the classic first-visit base: you wake to the blue of the Baie des Anges and have the beach clubs and gardens at the door. Vieux Nice, tucked beneath the green Colline du Chateau, is the vivid alternative, with ochre lanes, the Cours Saleya flower market, baroque churches and socca stands. The seafront is the easier walking; the old town has more life in the evening.</p>
+      </details>
+      <details>
+        <summary>Is it better to stay in Cannes or Monaco instead of Nice?</summary>
+        <p>Only if that is the trip you want. Cannes trades Nice's lived-in bustle for pure glamour, with the palm-lined Croisette, private beaches and designer boutiques. Monaco is the Riviera's stage for high glamour, with the casino square and a harbour full of yachts. Both are easy day trips from Nice, so basing yourself there is a choice about atmosphere and budget rather than about access.</p>
+      </details>
+      <details>
+        <summary>Where should I stay for a quieter Riviera?</summary>
+        <p>Beyond the cities, in the coast's most romantic retreats: the pine-shaded Cap d'Antibes, the Jazz Age seafront of Juan-les-Pins and the perched art village of Saint-Paul-de-Vence. The trade is mobility, since you will either want a car or will lean more heavily on the trains and buses.</p>
+      </details>
     </div>
   </section>
 

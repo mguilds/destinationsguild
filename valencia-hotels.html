@@ -38,6 +38,9 @@
  {"@type":"ListItem","position":2,"name":"Spain","item":"https://destinationsguild.com/spain.html"},
  {"@type":"ListItem","position":3,"name":"Valencia Hotels","item":"https://destinationsguild.com/valencia-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which part of Valencia should I stay in?", "acceptedAnswer": {"@type": "Answer", "text": "It depends which Valencia you want, because the city spreads from a walkable medieval core to a long Mediterranean beach and Calatrava's gleaming City of Arts. The Ciutat Vella puts the Cathedral, the silk-era Lonja and the Mercat Central at your door; the Malvarrosa and Cabanyal seafront is a short tram or taxi away; and the elegant grid of L'Eixample sits between the two."}}, {"@type": "Question", "name": "Is Valencia easy to get around on foot?", "acceptedAnswer": {"@type": "Answer", "text": "Unusually so. The centre is flat and easy on foot, or by bike along the Turia, the green park laid out in the old riverbed that runs through the city. That flatness is one of the quiet reasons Valencia suits older travellers better than several of Spain's hill cities."}}, {"@type": "Question", "name": "Where should I stay in Valencia for the beach?", "acceptedAnswer": {"@type": "Answer", "text": "La Malvarrosa and Cabanyal, a short tram or taxi from the centre, where the long golden beach, a palm-lined promenade and the paella houses sit together. It is the right base if the sea and the food are the point of the trip; the old town is the better choice if the monuments are."}}, {"@type": "Question", "name": "Should I stay near the City of Arts and Sciences?", "acceptedAnswer": {"@type": "Answer", "text": "It suits families doing the Oceanografic aquarium and the science museum. Calatrava's white, sail-like complex sits at the southern end of the Turia park, close to the green space and pleasant for walking, but it is a ride from the old town's restaurants, so it is a base built around one kind of day."}}, {"@type": "Question", "name": "What is the most central base in Valencia?", "acceptedAnswer": {"@type": "Answer", "text": "The grand oval of the Plaza del Ayuntamiento, the city's pivot, ringed by belle-epoque facades and a short walk from the market, the station and the old town. It is the practical choice when you want everything within reach."}}]}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -79,6 +82,15 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;margin-bottom:8px;}
+  .faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+  .faq details:last-child{border-bottom:none;}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15.5px;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"+";color:#b08d3f;font-weight:800;margin-right:8px;}
+  .faq details[open] summary::before{content:"\2013";}
+  .faq p{font-size:15px;color:#4a5563;margin-top:.5rem;padding-left:18px;}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -123,7 +135,7 @@
   <div style="position:relative;border-radius:16px;overflow:hidden;margin:6px 0 20px;height:200px;background:linear-gradient(135deg,#4a9fc4,#1a5a86);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ciudad%20de%20las%20Artes%20y%20las%20Ciencias.JPG?width=1600" alt="The City of Arts and Sciences in Valencia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7;" onerror="this.style.display='none'"><div style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,40,80,.5),rgba(12,40,80,.1));"></div><div style="position:absolute;left:26px;bottom:20px;color:#fff;font-weight:800;font-size:22px;text-shadow:0 2px 10px rgba(0,0,0,.4);">Valencia&rsquo;s Best Places to Stay</div></div>
   <div class="pagehead">
     <h1>Where to Stay in Valencia &mdash; Best Neighborhoods &amp; Hotels</h1>
-      <p class="dg-explorers" style="display:inline-block;margin:10px 0 0;background:rgba(12,20,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated August 2026</p>
+      <p class="dg-explorers" style="display:inline-block;margin:10px 0 0;background:rgba(12,20,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated September 2026</p>
     <p>Valencia spreads from a walkable medieval core to a long Mediterranean beach and Calatrava&rsquo;s gleaming City of Arts, so where you unpack shapes your trip more than in most Spanish cities &mdash; old-town lanes, elegant shopping avenues, or sand and sea air. The centre is flat and easy on foot or by bike along the old riverbed park, and where you stay decides which Valencia you wake up in. We&rsquo;ve grouped the city&rsquo;s most characterful and well-loved hotels by <strong>neighborhood</strong>, each with an honest note and a <strong>Book Me</strong> link that opens that exact property on Trip.com so you can simply choose your dates.</p>
     <div class="jump">
       <a href="#oldtown">Ciutat Vella</a>
@@ -209,6 +221,32 @@
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?city=1351&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=valencia-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse all Valencia hotels</a>
       <a class="btn" href="spain.html" style="background:rgba(255,255,255,.16);box-shadow:none;border:1.5px solid rgba(255,255,255,.6);">&lsaquo; Back to Spain Guide</a>
+    </div>
+  </section>
+
+    <section id="faq">
+    <h2>Valencia &mdash; common questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>Which part of Valencia should I stay in?</summary>
+        <p>It depends which Valencia you want, because the city spreads from a walkable medieval core to a long Mediterranean beach and Calatrava's gleaming City of Arts. The Ciutat Vella puts the Cathedral, the silk-era Lonja and the Mercat Central at your door; the Malvarrosa and Cabanyal seafront is a short tram or taxi away; and the elegant grid of L'Eixample sits between the two.</p>
+      </details>
+      <details>
+        <summary>Is Valencia easy to get around on foot?</summary>
+        <p>Unusually so. The centre is flat and easy on foot, or by bike along the Turia, the green park laid out in the old riverbed that runs through the city. That flatness is one of the quiet reasons Valencia suits older travellers better than several of Spain's hill cities.</p>
+      </details>
+      <details>
+        <summary>Where should I stay in Valencia for the beach?</summary>
+        <p>La Malvarrosa and Cabanyal, a short tram or taxi from the centre, where the long golden beach, a palm-lined promenade and the paella houses sit together. It is the right base if the sea and the food are the point of the trip; the old town is the better choice if the monuments are.</p>
+      </details>
+      <details>
+        <summary>Should I stay near the City of Arts and Sciences?</summary>
+        <p>It suits families doing the Oceanografic aquarium and the science museum. Calatrava's white, sail-like complex sits at the southern end of the Turia park, close to the green space and pleasant for walking, but it is a ride from the old town's restaurants, so it is a base built around one kind of day.</p>
+      </details>
+      <details>
+        <summary>What is the most central base in Valencia?</summary>
+        <p>The grand oval of the Plaza del Ayuntamiento, the city's pivot, ringed by belle-epoque facades and a short walk from the market, the station and the old town. It is the practical choice when you want everything within reach.</p>
+      </details>
     </div>
   </section>
 

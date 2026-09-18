@@ -38,6 +38,9 @@
  {"@type":"ListItem","position":2,"name":"Germany","item":"https://destinationsguild.com/germany.html"},
  {"@type":"ListItem","position":3,"name":"Munich","item":"https://destinationsguild.com/munich-hotels.html"}]}
 </script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which area should I stay in for a first visit to Munich?", "acceptedAnswer": {"@type": "Answer", "text": "The Altstadt around Marienplatz. It is the postcard Munich and the easiest base for a first visit: you step out into the pedestrian heart of the city, within a short walk of most of what you came to see. The historic core is compact and walkable, and the rest of the city is minutes away by U-Bahn or tram."}}, {"@type": "Question", "name": "Where should I stay in Munich for day trips to the Alps or Neuschwanstein?", "acceptedAnswer": {"@type": "Answer", "text": "The district around the Hauptbahnhof. It is Munich's transport hub and its best-value central address, with trains to the airport, the Alps and Neuschwanstein leaving from your doorstep. It is not the prettiest quarter in the city, and that is precisely the trade: you are buying convenience and a lower rate rather than charm."}}, {"@type": "Question", "name": "Where should I stay in Munich for the museums?", "acceptedAnswer": {"@type": "Answer", "text": "Maxvorstadt, the university and museum quarter, which wraps around the Kunstareal with the Pinakothek galleries, the Glyptothek and Konigsplatz, and hums with students and bookshops. It is central without being in the thick of the Altstadt crowds."}}, {"@type": "Question", "name": "Which part of Munich is leafiest?", "acceptedAnswer": {"@type": "Answer", "text": "Schwabing, once the bohemian artists' quarter and now a leafy, well-heeled neighbourhood of tree-lined avenues, cafes and boutiques stretching up from the university. Lehel is the other genteel choice, flanking the old town along the Isar, with museums, quiet streets and the Altstadt a short walk away."}}, {"@type": "Question", "name": "Is Munich expensive?", "acceptedAnswer": {"@type": "Answer", "text": "It is not a cheap city, but you can stay central without overspending by choosing a smart design-budget hotel or a well-run hostel near the transport hubs. The area around the main station is where that value concentrates."}}]}
+</script>
 <style>
   :root{ --navy:#1B3A6B; --blue:#2F93E2; --blue-btn:#4f8bd0; --blue-btn-hi:#3f79bd; --ink:#1c2733; --muted:#5b6675; --line:#e3e7ee; --bg:#FAF9F6; --card:#fff; }
   *{ box-sizing:border-box; }
@@ -79,6 +82,15 @@
   .foot-inner{ max-width:1080px; margin:0 auto; padding:26px 20px; font-size:13px; }
   .foot-inner a{ color:#9fc2f0; }
   .catnote{ font-size:13px; color:var(--muted); margin:-6px 0 14px; }
+
+  .faq{background:#fff;border:1px solid var(--line);border-radius:12px;padding:.4rem 1.2rem;margin-bottom:8px;}
+  .faq details{border-bottom:1px solid #f0f0ee;padding:.85rem 0;}
+  .faq details:last-child{border-bottom:none;}
+  .faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:15.5px;list-style:none;}
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::before{content:"+";color:#b08d3f;font-weight:800;margin-right:8px;}
+  .faq details[open] summary::before{content:"\2013";}
+  .faq p{font-size:15px;color:#4a5563;margin-top:.5rem;padding-left:18px;}
 </style>
 <style id="dg-mobile-inline">
 /* ===== Destinations Guild — mobile & inclusive pass (Jul 2026): >=44px tap targets, legible captions, clear focus ===== */
@@ -243,6 +255,32 @@
     <div class="cta-row">
       <a class="btn" href="https://us.trip.com/hotels/list?city=363&amp;Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=munich-hotels&amp;trip_sub3=band-all" target="_blank" rel="sponsored nofollow noopener">Browse All Munich Hotels</a>
       <a class="btn" href="germany.html" style="background:rgba(255,255,255,.16);box-shadow:none;border:1.5px solid rgba(255,255,255,.6);">&lsaquo; Back to Germany Guide</a>
+    </div>
+  </section>
+
+    <section id="faq">
+    <h2>Munich &mdash; common questions</h2>
+    <div class="faq">
+      <details open>
+        <summary>Which area should I stay in for a first visit to Munich?</summary>
+        <p>The Altstadt around Marienplatz. It is the postcard Munich and the easiest base for a first visit: you step out into the pedestrian heart of the city, within a short walk of most of what you came to see. The historic core is compact and walkable, and the rest of the city is minutes away by U-Bahn or tram.</p>
+      </details>
+      <details>
+        <summary>Where should I stay in Munich for day trips to the Alps or Neuschwanstein?</summary>
+        <p>The district around the Hauptbahnhof. It is Munich's transport hub and its best-value central address, with trains to the airport, the Alps and Neuschwanstein leaving from your doorstep. It is not the prettiest quarter in the city, and that is precisely the trade: you are buying convenience and a lower rate rather than charm.</p>
+      </details>
+      <details>
+        <summary>Where should I stay in Munich for the museums?</summary>
+        <p>Maxvorstadt, the university and museum quarter, which wraps around the Kunstareal with the Pinakothek galleries, the Glyptothek and Konigsplatz, and hums with students and bookshops. It is central without being in the thick of the Altstadt crowds.</p>
+      </details>
+      <details>
+        <summary>Which part of Munich is leafiest?</summary>
+        <p>Schwabing, once the bohemian artists' quarter and now a leafy, well-heeled neighbourhood of tree-lined avenues, cafes and boutiques stretching up from the university. Lehel is the other genteel choice, flanking the old town along the Isar, with museums, quiet streets and the Altstadt a short walk away.</p>
+      </details>
+      <details>
+        <summary>Is Munich expensive?</summary>
+        <p>It is not a cheap city, but you can stay central without overspending by choosing a smart design-budget hotel or a well-run hostel near the transport hubs. The area around the main station is where that value concentrates.</p>
+      </details>
     </div>
   </section>
 
