@@ -296,14 +296,14 @@ html{scroll-behavior:smooth}
     <div class="ft"><b>Currency</b><span>Moroccan dirham (MAD, DH)</span></div>
     <div class="ft"><b>Language</b><span>Arabic &amp; Amazigh (French widely spoken)</span></div>
     <div class="ft"><b>Main gateway</b><span>Casablanca Mohammed V (CMN); also Marrakech Menara (RAK)</span></div>
-    <div class="ft"><b>Time zone</b><span>Western European Time (UTC+1; UTC+0 during Ramadan)</span></div>
+    <div class="ft"><b>Time zone</b><span>Greenwich Mean Time (UTC+0) all year &mdash; Morocco dropped GMT+1 on 20 September 2026</span></div>
   </div>
 
   <!-- CURRENCY -->
   <div class="fx">
     <div class="fx-t">What your money's worth in Morocco today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdmad">9.3</strong>&nbsp;DH</div>
+      <div>US&nbsp;$1 = <strong id="usdmad">9.5</strong>&nbsp;DH</div>
       <div>CA&nbsp;$1 = <strong id="cadmad">6.8</strong>&nbsp;DH</div>
     </div>
     <div class="fx-row">
@@ -452,7 +452,7 @@ html{scroll-behavior:smooth}
 <script>
 /* MAD ⇄ USD / CAD converter */
 (function(){
-  var U=9.3,C=6.8;                 // Moroccan dirhams per US$1, per CA$1 — fallbacks until live rates load
+  var U=9.5,C=6.8;                 // Moroccan dirhams per US$1, per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdmad'), b=document.getElementById('cadmad');
     if(a) a.textContent=U.toFixed(1);
