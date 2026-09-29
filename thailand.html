@@ -295,8 +295,8 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money's worth in Thailand today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdthb">36.0</strong>&nbsp;&#3647;</div>
-      <div>CA&nbsp;$1 = <strong id="cadthb">26.0</strong>&nbsp;&#3647;</div>
+      <div>US&nbsp;$1 = <strong id="usdthb">33.5</strong>&nbsp;&#3647;</div>
+      <div>CA&nbsp;$1 = <strong id="cadthb">23.6</strong>&nbsp;&#3647;</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="1000" min="0">
@@ -307,7 +307,7 @@ html{scroll-behavior:smooth}
       </select>
       <span>=&nbsp;<strong id="fxout" style="color:#12467f;">28</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
-    <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins — and Thai ATMs charge a fixed fee per foreign-card withdrawal, so take out larger amounts less often.</div>
+    <div class="fx-note">Mid-market rate, refreshed from a live feed when the page loads &mdash; if the feed does not answer, the figures above are recent approximations rather than today&rsquo;s rate. Banks, cards and ATMs add their own margins — and Thai ATMs charge a fixed fee per foreign-card withdrawal, so take out larger amounts less often.</div>
   </div>
 
   <!-- REGIONS -->
@@ -450,7 +450,7 @@ html{scroll-behavior:smooth}
 <script>
 /* THB ⇄ USD / CAD converter */
 (function(){
-  var U=36.0,C=26.0;                 // baht per US$1, baht per CA$1 — fallbacks until live rates load
+  var U=33.5,C=23.6;                 // baht per US$1, baht per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdthb'), b=document.getElementById('cadthb');
     if(a) a.textContent=U.toFixed(1);

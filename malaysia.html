@@ -293,8 +293,8 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money&rsquo;s worth in Malaysia today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdloc">4.7</strong>&nbsp;RM</div>
-      <div>CA&nbsp;$1 = <strong id="cadloc">3.4</strong>&nbsp;RM</div>
+      <div>US&nbsp;$1 = <strong id="usdloc">4.08</strong>&nbsp;RM</div>
+      <div>CA&nbsp;$1 = <strong id="cadloc">2.88</strong>&nbsp;RM</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="100" min="0">
@@ -305,7 +305,7 @@ html{scroll-behavior:smooth}
       </select>
       <span>=&nbsp;<strong id="fxout" style="color:#12467f;">2</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
-    <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in Malaysian ringgit to avoid a poor built-in rate.</div>
+    <div class="fx-note">Mid-market rate, refreshed from a live feed when the page loads &mdash; if the feed does not answer, the figures above are recent approximations rather than today&rsquo;s rate. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in Malaysian ringgit to avoid a poor built-in rate.</div>
   </div>
 
   <h2 id="the-regions-of-malaysia">The regions of Malaysia</h2>
@@ -435,7 +435,7 @@ html{scroll-behavior:smooth}
 <script>
 /* MYR converter */
 (function(){
-  var U=4.7,C=3.4;
+  var U=4.08,C=2.88;
   function paint(){
     var a=document.getElementById("usdloc"), b=document.getElementById("cadloc");
     if(a) a.textContent=U.toFixed(2);

@@ -299,8 +299,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   <div class="fx">
     <div class="fx-t">What your money's worth in China today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdcny">7.1</strong>&nbsp;&yen;</div>
-      <div>CA&nbsp;$1 = <strong id="cadcny">5.2</strong>&nbsp;&yen;</div>
+      <div>US&nbsp;$1 = <strong id="usdcny">6.7</strong>&nbsp;&yen;</div>
+      <div>CA&nbsp;$1 = <strong id="cadcny">4.7</strong>&nbsp;&yen;</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="100" min="0">
@@ -311,7 +311,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
       </select>
       <span>=&nbsp;<strong id="fxout" style="color:#12467f;">2</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
-    <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in Chinese yuan to avoid a poor built-in rate.</div>
+    <div class="fx-note">Mid-market rate, refreshed from a live feed when the page loads &mdash; if the feed does not answer, the figures above are recent approximations rather than today&rsquo;s rate. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in Chinese yuan to avoid a poor built-in rate.</div>
   </div>
 
   <!-- REGIONS -->
@@ -452,7 +452,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 <script>
 /* CNY ⇄ USD / CAD converter */
 (function(){
-  var U=7.1,C=5.2;                 // Chinese yuan per US$1, per CA$1 — fallbacks until live rates load
+  var U=6.7,C=4.7;                 // Chinese yuan per US$1, per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdcny'), b=document.getElementById('cadcny');
     if(a) a.textContent=U.toFixed(1);

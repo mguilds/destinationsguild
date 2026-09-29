@@ -309,8 +309,8 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money's worth in Australia today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdaud">1.53</strong>&nbsp;A$</div>
-      <div>CA&nbsp;$1 = <strong id="cadaud">1.12</strong>&nbsp;A$</div>
+      <div>US&nbsp;$1 = <strong id="usdaud">1.42</strong>&nbsp;A$</div>
+      <div>CA&nbsp;$1 = <strong id="cadaud">1.01</strong>&nbsp;A$</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="1000" min="0">
@@ -321,7 +321,7 @@ html{scroll-behavior:smooth}
       </select>
       <span>=&nbsp;<strong id="fxout" style="color:#12467f;">28</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
-    <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins. Australia is largely cashless — cards and tap-to-pay work almost everywhere — but keep a little cash for markets and remote towns.</div>
+    <div class="fx-note">Mid-market rate, refreshed from a live feed when the page loads &mdash; if the feed does not answer, the figures above are recent approximations rather than today&rsquo;s rate. Banks, cards and ATMs add their own margins. Australia is largely cashless — cards and tap-to-pay work almost everywhere — but keep a little cash for markets and remote towns.</div>
   </div>
 
   <!-- REGIONS -->
@@ -335,7 +335,7 @@ html{scroll-behavior:smooth}
       <ul class="cities">
         <li><a href="sydney-hotels.html">Sydney</a> <span class="live">guide</span></li>
         <li><a href="https://us.trip.com/hotels/list?city=9422&Allianceid=8217189&SID=317113714&trip_sub1=australia&trip_sub3=byron-bay" target="_blank" rel="sponsored nofollow noopener">Byron Bay</a> <span class="soon">soon</span></li>
-        <li><a href="https://us.trip.com/hotels/list?city=9422&Allianceid=8217189&SID=317113714&trip_sub1=australia&trip_sub3=blue-mountains" target="_blank" rel="sponsored nofollow noopener">Blue Mountains</a> <span class="soon">soon</span></li>
+        <li><a href="https://us.trip.com/hotels/list?city=24811738&Allianceid=8217189&SID=317113714&trip_sub1=australia&trip_sub3=blue-mountains" target="_blank" rel="sponsored nofollow noopener">Blue Mountains</a> <span class="soon">soon</span></li>
       </ul>
     </div>
 
@@ -364,7 +364,7 @@ html{scroll-behavior:smooth}
       <div class="ch-top"><span class="ch-name">The Red Centre &amp; the Outback</span><span class="ch-no">PART IV</span></div>
       <p class="ch-note">The ancient interior — Uluru and the desert monoliths, the frontier town of Alice Springs, and the tropical Top End beyond.</p>
       <ul class="cities">
-        <li><a href="https://us.trip.com/hotels/list?city=9422&Allianceid=8217189&SID=317113714&trip_sub1=australia&trip_sub3=uluru" target="_blank" rel="sponsored nofollow noopener">Uluru (Ayers Rock)</a> <span class="soon">soon</span></li>
+        <li><a href="https://us.trip.com/hotels/list?city=2079&Allianceid=8217189&SID=317113714&trip_sub1=australia&trip_sub3=uluru" target="_blank" rel="sponsored nofollow noopener">Uluru (Ayers Rock)</a> <span class="soon">soon</span></li>
         <li><a href="https://us.trip.com/hotels/list?city=3404&Allianceid=8217189&SID=317113714&trip_sub1=australia&trip_sub3=alice-springs" target="_blank" rel="sponsored nofollow noopener">Alice Springs</a> <span class="soon">soon</span></li>
         <li><a href="https://us.trip.com/hotels/list?city=682&Allianceid=8217189&SID=317113714&trip_sub1=australia&trip_sub3=darwin" target="_blank" rel="sponsored nofollow noopener">Darwin</a> <span class="soon">soon</span></li>
       </ul>
@@ -462,7 +462,7 @@ html{scroll-behavior:smooth}
 <script>
 /* AUD ⇄ USD / CAD converter */
 (function(){
-  var U=1.53,C=1.12;                 // A$ per US$1, A$ per CA$1 — fallbacks until live rates load
+  var U=1.42,C=1.01;                 // A$ per US$1, A$ per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdaud'), b=document.getElementById('cadaud');
     if(a) a.textContent=U.toFixed(2);
