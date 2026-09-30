@@ -305,8 +305,8 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money's worth in Japan today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdjpy">150</strong>&nbsp;&yen;</div>
-      <div>CA&nbsp;$1 = <strong id="cadjpy">110</strong>&nbsp;&yen;</div>
+      <div>US&nbsp;$1 = <strong id="usdjpy">158</strong>&nbsp;&yen;</div>
+      <div>CA&nbsp;$1 = <strong id="cadjpy">111</strong>&nbsp;&yen;</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="1000" min="0">
@@ -317,7 +317,7 @@ html{scroll-behavior:smooth}
       </select>
       <span>=&nbsp;<strong id="fxout" style="color:#12467f;">6.67</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
-    <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in yen to avoid a poor built-in rate.</div>
+    <div class="fx-note">Mid-market rate, refreshed from a live feed when the page loads — if the feed does not answer, the figures above are recent approximations rather than today’s rate. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in yen to avoid a poor built-in rate.</div>
   </div>
 
   <!-- REGIONS -->
@@ -461,7 +461,7 @@ html{scroll-behavior:smooth}
 <script>
 /* JPY ⇄ USD / CAD converter */
 (function(){
-  var U=150,C=110;                 // yen per US$1, yen per CA$1 — fallbacks until live rates load
+  var U=158,C=111;                 // yen per US$1, yen per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdjpy'), b=document.getElementById('cadjpy');
     if(a) a.textContent=Math.round(U);

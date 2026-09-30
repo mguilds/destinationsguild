@@ -302,8 +302,8 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
   <div class="fx">
     <div class="fx-t">What your money's worth in Singapore today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdsgd">1.34</strong>&nbsp;S$</div>
-      <div>CA&nbsp;$1 = <strong id="cadsgd">0.98</strong>&nbsp;S$</div>
+      <div>US&nbsp;$1 = <strong id="usdsgd">1.28</strong>&nbsp;S$</div>
+      <div>CA&nbsp;$1 = <strong id="cadsgd">0.90</strong>&nbsp;S$</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="100" min="0">
@@ -314,7 +314,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
       </select>
       <span>=&nbsp;<strong id="fxout" style="color:#12467f;">2</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
-    <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in Singapore dollars to avoid a poor built-in rate.</div>
+    <div class="fx-note">Mid-market rate, refreshed from a live feed when the page loads &mdash; if the feed does not answer, the figures above are recent approximations rather than today&rsquo;s rate. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in Singapore dollars to avoid a poor built-in rate.</div>
   </div>
 
   <!-- NEIGHBOURHOODS -->
@@ -450,7 +450,7 @@ h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3.4vw,2.1rem);f
 <script>
 /* SGD ⇄ USD / CAD converter */
 (function(){
-  var U=1.34,C=0.98;                 // Singapore dollars per US$1, per CA$1 — fallbacks until live rates load
+  var U=1.28,C=0.90;                 // Singapore dollars per US$1, per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdsgd'), b=document.getElementById('cadsgd');
     if(a) a.textContent=U.toFixed(2);
