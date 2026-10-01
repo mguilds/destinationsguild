@@ -74,6 +74,12 @@
   .spine .band-top, .spine .band-bot{ position:absolute; left:0; right:0; height:16px; background:rgba(212,180,110,.55); border-top:1px solid rgba(255,240,200,.4); border-bottom:1px solid rgba(0,0,0,.15); }
   .spine .band-top{ top:14px; } .spine .band-bot{ bottom:16px; }
   .spine .dot{ position:absolute; bottom:5px; left:50%; transform:translateX(-50%); font-size:9px; color:rgba(244,234,208,.75); }
+  .shelf-photo{ position:relative; flex:1 1 240px; min-width:220px; height:190px; align-self:flex-end; border-radius:4px 4px 0 0; overflow:hidden; display:block; background:#2f4a33; box-shadow:0 3px 6px rgba(0,0,0,.18); text-decoration:none; }
+  .shelf-photo img{ width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block; transition:transform .4s; }
+  .shelf-photo:hover img{ transform:scale(1.04); }
+  .shelf-photo .sp-cap{ position:absolute; left:0; right:0; bottom:0; padding:22px 12px 8px; background:linear-gradient(transparent,rgba(10,25,15,.78)); color:#f4ead0; font-family:'EB Garamond',Georgia,serif; font-size:15px; line-height:1.2; }
+  .shelf-photo .sp-cap b{ font-family:'Cinzel',serif; font-weight:600; font-size:14px; letter-spacing:.04em; display:block; }
+  .shelf-photo .sp-credit{ position:absolute; top:6px; right:8px; font-family:'EB Garamond',Georgia,serif; font-size:10.5px; color:rgba(255,255,255,.85); text-shadow:0 1px 2px rgba(0,0,0,.6); }
   .shelf-board{ height:16px; background:linear-gradient(#8a6a3f,#6f5230); border-radius:0 0 10px 10px; box-shadow:0 6px 12px rgba(0,0,0,.3); border:1px solid #5c4326; border-top:none; }
   .shelf-note{ text-align:center; font-family:'EB Garamond',Georgia,serif; font-size:15px; color:#5b6675; margin:12px 0 0; }
   .ask{ background:linear-gradient(#efe6cf,#e7dcc0); border:1px solid rgba(120,90,40,.3); border-radius:16px; padding:18px 20px; margin:20px 0 0; }
@@ -240,6 +246,7 @@
     <div class="loc-title">&#128218; Find any book in the Library</div>
     <div class="loc-search"><span class="loc-ic">&#128269;</span><input id="libSearch" type="text" autocomplete="off" spellcheck="false" placeholder="Search a country or city &mdash; Rome, Thailand, Canc&uacute;n&hellip;"><span id="libCount" class="loc-count"></span></div>
     <div class="loc-chips"><button type="button" class="lib-chip" data-go="all">All</button>
+      <button type="button" class="lib-chip" data-go="fly-fishing">🎣 Fly Fishing</button>
       <button type="button" class="lib-chip" data-go="asia">🌏 Asia</button>
       <button type="button" class="lib-chip" data-go="europe">🌍 Europe</button>
       <button type="button" class="lib-chip" data-go="north-america">🌎 North America</button>
@@ -267,6 +274,18 @@
         <a class="spine" data-nm="mexican riviera cruise ports" data-open="1" href="mexican-riviera-cruises.html" style="background:#c9432b;"><span class="band-top"></span><span class="title">MEXICAN RIVIERA</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
         <a class="spine" data-nm="west coast cruise ports los angeles san diego san francisco seattle vancouver" data-open="1" href="west-coast-cruises.html" style="background:#2f6f5e;"><span class="band-top"></span><span class="title">WEST COAST</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
       <a class="spine" data-nm="aruba oranjestad cruise port day guide harbour map" data-open="1" href="aruba-cruise-port.html" style="background:#0a6e8a;"><span class="band-top"></span><span class="title">ARUBA PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="cozumel san miguel cruise port day guide harbour map" data-open="1" href="cozumel-cruise-port.html" style="background:#12557e;"><span class="band-top"></span><span class="title">COZUMEL PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="barcelona moll adossat cruise port day guide harbour map spain" data-open="1" href="barcelona-cruise-port.html" style="background:#b4462f;"><span class="band-top"></span><span class="title">BARCELONA PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="rome civitavecchia cruise port day guide train harbour map italy" data-open="1" href="civitavecchia-cruise-port.html" style="background:#8c3b2e;"><span class="band-top"></span><span class="title">ROME PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="naples napoli stazione marittima cruise port day guide pompeii italy" data-open="1" href="naples-cruise-port.html" style="background:#1f6f8b;"><span class="band-top"></span><span class="title">NAPLES PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="santorini fira skala tender cruise port day guide greece" data-open="1" href="santorini-cruise-port.html" style="background:#1d6fa5;"><span class="band-top"></span><span class="title">SANTORINI PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="miami portmiami dodge island cruise port day guide harbour map florida" data-open="1" href="miami-cruise-port.html" style="background:#0f7ba8;"><span class="band-top"></span><span class="title">MIAMI PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="fort lauderdale port everglades cruise port day guide florida" data-open="1" href="fort-lauderdale-cruise-port.html" style="background:#146b8c;"><span class="band-top"></span><span class="title">FT LAUDERDALE PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="port canaveral cape canaveral space coast cruise port day guide florida" data-open="1" href="port-canaveral-cruise-port.html" style="background:#12406b;"><span class="band-top"></span><span class="title">PORT CANAVERAL</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="port journal printable cruise keepsake" data-open="1" href="port-journal.html" style="background:#5a7387;"><span class="band-top"></span><span class="title">PORT JOURNAL</span><span class="band-bot"></span><span class="dot">&#9670;</span></a><a class="spine" data-nm="san diego b street pier cruise port day guide california" data-open="1" href="san-diego-cruise-port.html" style="background:#0a6e8a;"><span class="band-top"></span><span class="title">SAN DIEGO PORT</span><span class="band-bot"></span><span class="dot">&#9670;</span></a></div><div class="shelf-board"></div>
+    </div>
+  </section>
+
+  <section class="lib-cont" id="cont-fly-fishing">
+    <h2 class="cont-h">🎣 Fly Fishing <span class="cont-n">Guild Outfitters &mdash; streams, rivers &amp; lakes</span></h2>
+    <div class="shelf-unit">
+      <div class="shelf-label"><a href="fly-fishing.html">🎣 <strong>Guild Outfitters</strong> &mdash; pick a month, pick a water, find out what is hatching</a></div>
+      <div class="shelf">
+        <a class="spine cover" data-nm="fly fishing guild outfitters trout river stream lake montana idaho utah arkansas arizona where are they biting hatch" data-open="1" href="fly-fishing.html" style="background:#2f5d3a;"><span class="cflag">🎣</span><span class="band-top"></span><span class="title">FLY FISHING</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="spine" data-nm="fly fishing guides outfitters directory list your business guild outfitters" data-open="1" href="fly-fishing-guides.html" style="background:#6b5a2e;"><span class="band-top"></span><span class="title">GUIDES</span><span class="band-bot"></span><span class="dot">&#9670;</span></a>
+        <a class="shelf-photo" href="fly-fishing.html" aria-label="Fly fishing — open the Guild Outfitters book"><img src="https://www.fws.gov/sites/default/files/styles/scale_width_992/public/2022-02/10-KenaiRefuge-AK-FlyFishingRussianRiver-BerkleyBedellUSFWS.jpg" alt="A fly fisherman casting a long looping line across the Russian River, Kenai National Wildlife Refuge, Alaska" loading="lazy" decoding="async" width="992" height="661"><span class="sp-credit">Photo: Berkley Bedell / USFWS</span><span class="sp-cap"><b>WHERE ARE THEY BITING?</b>Russian River, Alaska &mdash; open the book &rsaquo;</span></a>
+      </div><div class="shelf-board"></div>
     </div>
   </section>
 
@@ -1089,7 +1108,7 @@
 
   <section id="lib-catalog" class="cardcat">
   <h2>The Card Catalog</h2>
-  <p class="lede">Every open book, A&ndash;Z. Tap a card and Polly will pull it off the shelf. <strong>271 guides on the shelf today.</strong> <span class="lib-updated" style="color:#6b6355;font-style:italic;">Updated 30 September 2026.</span></p>
+  <p class="lede">Every open book, A&ndash;Z. Tap a card and Polly will pull it off the shelf. <strong>273 guides on the shelf today.</strong> <span class="lib-updated" style="color:#6b6355;font-style:italic;">Updated 1 October 2026.</span></p>
   <div class="cat-grid">
     <a class="catf" data-nm="agadir morocco africa" href="agadir-hotels.html"><span class="cf-flag">🇲🇦</span><span class="cf-name">Agadir</span><span class="cf-parent">Morocco</span></a>
     <a class="catf" data-nm="aguas calientes machu picchu peru south america" href="aguas-calientes-hotels.html"><span class="cf-flag">🇵🇪</span><span class="cf-name">Aguas Calientes</span><span class="cf-parent">Peru</span></a>
@@ -1183,6 +1202,8 @@
     <a class="catf" data-nm="egypt africa cairo pyramids nile luxor" href="egypt.html"><span class="cf-flag">🇪🇬</span><span class="cf-name">Egypt</span><span class="cf-parent">Africa</span></a>
     <a class="catf" data-nm="exuma great exuma george town emerald bay cays bahamas caribbean" href="exuma-hotels.html"><span class="cf-flag">🇧🇸</span><span class="cf-name">Exuma</span><span class="cf-parent">Bahamas</span></a>
     <a class="catf" data-nm="fes fez morocco africa" href="fes-hotels.html"><span class="cf-flag">🇲🇦</span><span class="cf-name">Fes</span><span class="cf-parent">Morocco</span></a>
+    <a class="catf" data-nm="fly fishing guild outfitters trout river montana idaho utah arkansas arizona" href="fly-fishing.html"><span class="cf-flag">🎣</span><span class="cf-name">Fly Fishing</span><span class="cf-parent">Guild Outfitters</span></a>
+    <a class="catf" data-nm="fly fishing guides outfitters directory guild outfitters" href="fly-fishing-guides.html"><span class="cf-flag">🎣</span><span class="cf-name">Fly Fishing Guides</span><span class="cf-parent">Guild Outfitters</span></a>
     <a class="catf" data-nm="france europe" href="france.html"><span class="cf-flag">🇫🇷</span><span class="cf-name">France</span><span class="cf-parent">Europe</span></a>
     <a class="catf" data-nm="freeport lucaya grand bahama bahamas caribbean" href="freeport-hotels.html"><span class="cf-flag">🇧🇸</span><span class="cf-name">Freeport</span><span class="cf-parent">Bahamas</span></a>
     <a class="catf" data-nm="funchal madeira lido old town seafront portugal europe" href="funchal-hotels.html"><span class="cf-flag">🇵🇹</span><span class="cf-name">Funchal</span><span class="cf-parent">Portugal</span></a>
