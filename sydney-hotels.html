@@ -256,8 +256,8 @@
     <div class="fx">
       <div class="fx-t">What your money&rsquo;s worth in Sydney today</div>
       <div class="fx-rates">
-        <div>US&nbsp;$1 = <strong id="usdaud">1.53</strong>&nbsp;A$</div>
-        <div>CA&nbsp;$1 = <strong id="cadaud">1.12</strong>&nbsp;A$</div>
+        <div>US&nbsp;$1 = <strong id="usdaud">1.42</strong>&nbsp;A$</div>
+        <div>CA&nbsp;$1 = <strong id="cadaud">1.01</strong>&nbsp;A$</div>
       </div>
       <div class="fx-row">
         <input id="fxamt" type="number" value="1000" min="0" aria-label="Amount to convert">
@@ -266,9 +266,9 @@
           <option value="USD">US dollars</option>
           <option value="CAD">Canadian dollars</option>
         </select>
-        <span>=&nbsp;<strong id="fxout" style="color:#12467f;">653</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+        <span>=&nbsp;<strong id="fxout" style="color:#12467f;">704</strong>&nbsp;<span id="fxunit">US dollars</span></span>
       </div>
-      <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins. Sydney is almost entirely cashless &mdash; cards and tap-to-pay work on ferries, buses, taxis and market stalls alike &mdash; but a little cash is still handy at small country stops if you head out of town. Hotel rates quoted on Trip.com already include Australia&rsquo;s GST; there is no tipping expectation in Australian hotels.</div>
+      <div class="fx-note">Mid-market rate, refreshed from a live feed when the page loads &mdash; if the feed does not answer, the figures above are recent approximations rather than today&rsquo;s rate. Banks, cards and ATMs add their own margins. Sydney is almost entirely cashless &mdash; cards and tap-to-pay work on ferries, buses, taxis and market stalls alike &mdash; but a little cash is still handy at small country stops if you head out of town. Hotel rates quoted on Trip.com already include Australia&rsquo;s GST; there is no tipping expectation in Australian hotels.</div>
     </div>
   </section>
 
@@ -310,7 +310,7 @@
 <script>
 /* AUD ⇄ USD / CAD converter */
 (function(){
-  var U=1.53,C=1.12;                 // A$ per US$1, A$ per CA$1 — fallbacks until live rates load
+  var U=1.42,C=1.01;                 // A$ per US$1, A$ per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdaud'), b=document.getElementById('cadaud');
     if(a) a.textContent=U.toFixed(2);

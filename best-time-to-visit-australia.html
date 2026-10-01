@@ -285,8 +285,8 @@
     <div class="fx">
       <div class="fx-t">What your money&rsquo;s worth in Australia today</div>
       <div class="fx-rates">
-        <div>US&nbsp;$1 = <strong id="usdaud">1.53</strong>&nbsp;A$</div>
-        <div>CA&nbsp;$1 = <strong id="cadaud">1.12</strong>&nbsp;A$</div>
+        <div>US&nbsp;$1 = <strong id="usdaud">1.42</strong>&nbsp;A$</div>
+        <div>CA&nbsp;$1 = <strong id="cadaud">1.01</strong>&nbsp;A$</div>
       </div>
       <div class="fx-row">
         <input id="fxamt" type="number" value="1000" min="0" aria-label="Amount to convert">
@@ -295,9 +295,9 @@
           <option value="USD">US dollars</option>
           <option value="CAD">Canadian dollars</option>
         </select>
-        <span>=&nbsp;<strong id="fxout" style="color:#12467f;">653</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+        <span>=&nbsp;<strong id="fxout" style="color:#12467f;">704</strong>&nbsp;<span id="fxunit">US dollars</span></span>
       </div>
-      <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins. Australia is largely cashless &mdash; cards and tap-to-pay work almost everywhere &mdash; but keep a little cash for markets and remote towns. Prices displayed in Australian shops and on hotel booking pages already include GST, and tipping is not expected, so the number you see is the number you pay.</div>
+      <div class="fx-note">Mid-market rate, refreshed from a live feed when the page loads &mdash; if the feed does not answer, the figures above are recent approximations rather than today&rsquo;s rate. Banks, cards and ATMs add their own margins. Australia is largely cashless &mdash; cards and tap-to-pay work almost everywhere &mdash; but keep a little cash for markets and remote towns. Prices displayed in Australian shops and on hotel booking pages already include GST, and tipping is not expected, so the number you see is the number you pay.</div>
     </div>
   </section>
 
@@ -340,7 +340,7 @@
 <script>
 /* AUD ⇄ USD / CAD converter */
 (function(){
-  var U=1.53,C=1.12;                 // A$ per US$1, A$ per CA$1 — fallbacks until live rates load
+  var U=1.42,C=1.01;                 // A$ per US$1, A$ per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdaud'), b=document.getElementById('cadaud');
     if(a) a.textContent=U.toFixed(2);

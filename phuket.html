@@ -285,8 +285,8 @@
     <div style="background:#fffdf6;border:1px solid #e0d3ad;border-radius:12px;padding:18px 22px;margin:16px 0;">
       <div style="font-family:'Dancing Script',cursive;font-size:25px;color:#173a78;">What your money&rsquo;s worth today</div>
       <div style="display:flex;flex-wrap:wrap;gap:6px 28px;margin:8px 0 12px;font-family:'EB Garamond',serif;font-size:21px;color:#1e46c8;">
-        <div>US&nbsp;$1 = <strong id="usdrate">36.0</strong> Thai baht</div>
-        <div>CA&nbsp;$1 = <strong id="cadrate">26.0</strong> Thai baht</div>
+        <div>US&nbsp;$1 = <strong id="usdrate">33.5</strong> Thai baht</div>
+        <div>CA&nbsp;$1 = <strong id="cadrate">23.6</strong> Thai baht</div>
       </div>
       <div style="display:flex;flex-wrap:wrap;align-items:center;gap:9px;font-family:'EB Garamond',serif;font-size:20px;color:#2b3a4a;">
         <input id="fxamt" type="number" value="100" min="0" style="width:92px;padding:7px 10px;border:1px solid #cbb98e;border-radius:8px;font-size:17px;">
@@ -294,9 +294,9 @@
           <option value="USD">US dollars</option>
           <option value="CAD">Canadian dollars</option>
         </select>
-        <span>=&nbsp;<strong id="fxout" style="color:#1e46c8;">3,600</strong>&nbsp;Thai baht</span>
+        <span>=&nbsp;<strong id="fxout" style="color:#1e46c8;">3,350</strong>&nbsp;Thai baht</span>
       </div>
-      <div style="font-family:-apple-system,Segoe UI,sans-serif;font-size:12px;color:#9a8a63;margin-top:10px;">Live mid-market rate, refreshed when the page loads. Banks, cards, and ATMs add their own margins, so treat it as a guide.</div>
+      <div style="font-family:-apple-system,Segoe UI,sans-serif;font-size:12px;color:#9a8a63;margin-top:10px;">Mid-market rate, refreshed from a live feed when the page loads &mdash; if the feed does not answer, the figures above are recent approximations rather than today&rsquo;s rate. Banks, cards, and ATMs add their own margins, so treat it as a guide.</div>
     </div>
 
     <p class="body">Thailand runs on cash more than you might expect — carry baht for markets, long-tail boats and street food, even though hotels and bigger restaurants take cards. Phuket is pricier than the Thai mainland, especially on the beach and in high season, but by international resort standards it still stretches a budget a long way. The island keeps Indochina Time (UTC+7) year-round, with no daylight saving to track.</p>
@@ -416,7 +416,7 @@
 (function(){var Q=[["I have not told half of what I saw.","Marco Polo"],["Travel is fatal to prejudice, bigotry, and narrow-mindedness.","Mark Twain"],["Travel and change of place impart new vigor to the mind.","Seneca"],["Life is either a daring adventure or nothing at all.","Helen Keller"],["To awaken alone in a strange town is one of the pleasantest sensations.","Freya Stark"],["A good traveler has no fixed plans, and is not intent on arriving.","Lao Tzu"]];var i=0,el=document.getElementById('wq');function show(){if(!el)return;el.style.opacity=0;setTimeout(function(){el.innerHTML='“'+Q[i][0]+'” <span style=\'font-style:normal;font-weight:600;color:#12467f;\'>— '+Q[i][1]+'</span>';el.style.opacity=1;i=(i+1)%Q.length;},450);}show();setInterval(show,7000);})();
 </script>
 <script>
-(function(){var U=36.0,C=26.0;function set(){var u=document.getElementById('usdrate'),c=document.getElementById('cadrate');if(u)u.textContent=U.toFixed(1);if(c)c.textContent=C.toFixed(1);conv();}
+(function(){var U=33.5,C=23.6;function set(){var u=document.getElementById('usdrate'),c=document.getElementById('cadrate');if(u)u.textContent=U.toFixed(1);if(c)c.textContent=C.toFixed(1);conv();}
 function conv(){var a=parseFloat((document.getElementById('fxamt')||{}).value)||0;var s=(document.getElementById('fxcur')||{}).value;var r=s==='CAD'?C:U;var o=document.getElementById('fxout');if(o)o.textContent=Math.round(a*r).toLocaleString();}
 var amt=document.getElementById('fxamt'),cur=document.getElementById('fxcur');if(amt)amt.addEventListener('input',conv);if(cur)cur.addEventListener('change',conv);set();
 fetch('https://open.er-api.com/v6/latest/USD').then(function(r){return r.json();}).then(function(d){if(d&&d.rates&&d.rates['THB']){U=d.rates['THB'];if(d.rates.CAD)C=d.rates['THB']/d.rates.CAD;set();}}).catch(function(){});})();
