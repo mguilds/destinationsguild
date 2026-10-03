@@ -121,6 +121,31 @@
   body.dg-has-bar{ padding-bottom:68px !important; }
 }
 </style>
+<style id="fb-book-css">
+/* FISH IT, BOOK IT — booking strip (Expedia) — start */
+.fb-book{margin:22px 0 26px;padding:22px 20px 18px;border-radius:14px;background:linear-gradient(160deg,#12403f 0%,#1f6f6b 100%);color:#fff;box-shadow:0 6px 22px rgba(18,64,63,.18);}
+.fb-book h2{margin:0 0 6px;color:#fff;font-size:26px;line-height:1.2;}
+.fb-book .fb-sub{margin:0 0 14px;color:#e6f2f0;font-size:15.5px;line-height:1.5;max-width:60em;}
+.fb-book .fb-sub b{color:#FAEEDA;}
+.fb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;}
+.fb-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:12px 13px;}
+.fb-card .fb-w{display:block;font-weight:700;font-size:15.5px;color:#fff;}
+.fb-card .fb-t{display:block;font-size:13px;color:#cfe5e1;margin:2px 0 9px;}
+.fb-btns{display:flex;gap:7px;flex-wrap:wrap;}
+.fb-btn{flex:1 1 auto;text-align:center;text-decoration:none;font-weight:700;font-size:13.5px;padding:8px 10px;border-radius:8px;white-space:nowrap;}
+.fb-btn.h{background:#C9A84C;color:#1c2733;}
+.fb-btn.v{background:#fff;color:#12403f;}
+.fb-btn:hover{filter:brightness(1.07);}
+.fb-note{margin:12px 0 0;font-size:12.5px;color:#cfe5e1;}
+.fb-inline{display:inline-flex;gap:6px;flex-wrap:wrap;margin-top:.5rem;}
+.fb-inline a{display:inline-block;font-weight:700;font-size:14px;text-decoration:none;padding:8px 13px;border-radius:8px;}
+.fb-inline a.h{background:#C9A84C;color:#1c2733;}
+.fb-inline a.v{background:#12403f;color:#fff;}
+.fb-mini{display:block;margin-top:5px;font-size:12.5px;}
+.fb-mini a{font-weight:700;}
+@media (max-width:520px){.fb-book{padding:18px 14px 14px;}.fb-book h2{font-size:22px;}}
+/* FISH IT, BOOK IT — end */
+</style>
 </head>
 <body>
 <header class="topbar"><div class="topbar-inner">
@@ -146,6 +171,15 @@
       <a href="#value">Budget &amp; Value</a>
     </div>
   </div>
+
+  <!-- BOOK YOUR STAY strip — start -->
+<section class="fb-book" id="book" aria-labelledby="fb-h">
+<h2 id="fb-h">Book your stay in Madrid</h2>
+<p class="fb-sub"><b>Destinations Guild is a travel reservation site as well as a travel library.</b> Read the neighbourhoods below, then book right here: a hotel, or a vacation home &mdash; an apartment or house with a kitchen and room to spread out, often the better value for families and groups.</p>
+<div class="fb-btns" style="max-width:560px;"><a class="fb-btn h" href="https://expedia.com/affiliates/hotel-search-madrid-dateless.fsnSjJ3" rel="sponsored nofollow noopener" target="_blank">Hotels in Madrid</a><a class="fb-btn v" href="https://expedia.com/affiliates/hotel-search-madrid-dateless.6nWPsbb" rel="sponsored nofollow noopener" target="_blank">Vacation homes in Madrid</a></div>
+<p class="fb-note">Rooms and homes are booked through our partner Expedia. Destinations Guild earns a small commission when you book, at no extra cost to you.</p>
+</section>
+<!-- BOOK YOUR STAY strip — end -->
 
   <section id="letras">
     <h2>Barrio de Las Letras &mdash; The Literary Quarter</h2>
@@ -284,7 +318,7 @@
     </div>
   </section>
 
-  <div class="aff-note">Destinations Guild is an affiliate of Trip.com. Hotel details are compiled from public sources and current at the time of writing; always confirm inclusions, room type, and total price on the booking page before paying. When you book through our links, we may earn a commission at no additional cost to you.</div>
+  <div class="aff-note">Destinations Guild is an affiliate of Trip.com and Expedia. Hotel details are compiled from public sources and current at the time of writing; always confirm inclusions, room type, and total price on the booking page before paying. When you book through our links, we may earn a commission at no additional cost to you.</div>
 </main>
 
 <footer><div class="foot-inner">
