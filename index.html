@@ -686,6 +686,10 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 #site-index .cr-pull{ width:42px; height:13px; box-shadow:0 3px 8px rgba(0,0,0,.6), inset 0 1px 1px rgba(255,255,255,.6); }
 #site-index .cr-tray{ border-radius:8px; margin-top:6px; }
 @media (max-width:680px){ #site-index .cr-intro{ margin-bottom:60px !important; } }
+/* the picture file has a black band along its bottom; keep it out of view */
+#site-index{ background-position:0 0, center top !important;
+  background-size:100% 100%, max(100%, 880px) auto !important; padding-bottom:44px !important; }
+@media (max-width:680px){ #site-index{ background-size:100% 100%, auto 112% !important; } }
 </style>
 </head>
 <body>
