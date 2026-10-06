@@ -691,6 +691,28 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   background-size:100% 100%, max(100%, 880px) auto !important; padding-bottom:20px !important; }
 @media (max-width:680px){ #site-index{ background-size:100% 100%, auto 112% !important; } }
 </style>
+<style id="dg-2026-10-06">
+/* ============================================================
+   Destinations Guild — 6 October 2026 (Mark's notes)
+   1. Chart Room drawers a little wider, lettering a little bigger
+   2. gold pull-handles beside each drawer removed
+   3. the whole library picture shown, down to the floor
+   Purely additive. Delete this whole block to put it all back.
+   ============================================================ */
+#site-index .cr-pull{ display:none !important; }
+#site-index .cr-drawer{ max-width:640px !important; }
+#site-index .cr-front{ zoom:.72 !important; gap:0 !important; }
+#site-index .cr-plate{ min-width:600px; }
+/* show the full picture: the chest is as tall as the picture is */
+#site-index{ aspect-ratio:1600 / 1010; background-color:#2a1d10 !important;
+  background-position:0 0, center top !important;
+  background-size:100% 100%, 100% auto !important; }
+@media (max-width:680px){
+  #site-index{ aspect-ratio:auto; background-size:100% 100%, auto 112% !important; }
+  #site-index .cr-front{ zoom:.62 !important; }
+  #site-index .cr-plate{ min-width:0; }
+}
+</style>
 </head>
 <body>
 <div class="lang-float noi18n"><a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Cambiar a Español"><svg class="mxflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#ffffff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg>ES</a><a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="Switch to English"><svg class="usflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="24" height="1.85" fill="#B22234"/><rect width="24" height="1.85" y="3.7" fill="#B22234"/><rect width="24" height="1.85" y="7.4" fill="#B22234"/><rect width="24" height="1.85" y="11.1" fill="#B22234"/><rect width="24" height="1.85" y="14.15" fill="#B22234"/><rect width="11" height="8.6" fill="#3C3B6E"/></svg>EN</a><a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Passer au français (Canada)"><svg class="caflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#ffffff"/><rect width="6" height="16" fill="#D52B1E"/><rect x="18" width="6" height="16" fill="#D52B1E"/><path d="M12 3.2l.7 1.7 1.8-.4-.8 1.5 1.3.7-1.6.5.3 1.8-1.5-1-1.5 1 .3-1.8-1.6-.5 1.3-.7-.8-1.5 1.8.4z" fill="#D52B1E"/></svg>FR</a></div>
