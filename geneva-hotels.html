@@ -175,7 +175,7 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money is worth in Switzerland today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdchf">0.80</strong>&nbsp;CHF</div>
+      <div>US&nbsp;$1 = <strong id="usdchf">0.83</strong>&nbsp;CHF</div>
       <div>CA&nbsp;$1 = <strong id="cadchf">0.58</strong>&nbsp;CHF</div>
     </div>
     <div class="fx-row">
@@ -185,7 +185,7 @@ html{scroll-behavior:smooth}
         <option value="USD">US dollars</option>
         <option value="CAD">Canadian dollars</option>
       </select>
-      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">125</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">120</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
     <div class="fx-note">Live mid-market rate, refreshed when the page loads. Switzerland is <strong>not</strong> a euro country &mdash; the Swiss franc is the currency, and shops that accept euros give your change back in francs at their own poor rate. Pay by card or in francs, and when a card machine offers to charge you in US dollars, decline politely and pay in francs.</div>
   </div>
@@ -403,7 +403,7 @@ html{scroll-behavior:smooth}
 <script id="dg-fx">
 /* CHF converter — Swiss francs per US$1 and per CA$1. Switzerland is not a euro country. */
 (function(){
-  var U=0.80,C=0.58;
+  var U=0.83,C=0.58;
   function paint(){
     var a=document.getElementById('usdchf'), b=document.getElementById('cadchf');
     if(a) a.textContent=U.toFixed(2);

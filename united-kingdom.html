@@ -308,8 +308,8 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money's worth in the UK today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdgbp">0.79</strong>&nbsp;&pound;</div>
-      <div>CA&nbsp;$1 = <strong id="cadgbp">0.57</strong>&nbsp;&pound;</div>
+      <div>US&nbsp;$1 = <strong id="usdgbp">0.76</strong>&nbsp;&pound;</div>
+      <div>CA&nbsp;$1 = <strong id="cadgbp">0.53</strong>&nbsp;&pound;</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="100" min="0">
@@ -318,7 +318,7 @@ html{scroll-behavior:smooth}
         <option value="USD">US dollars</option>
         <option value="CAD">Canadian dollars</option>
       </select>
-      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">127</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">132</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
     <div class="fx-note">Live mid-market rate, refreshed when the page loads. Banks, cards and ATMs add their own margins — and when a machine or terminal offers to charge you in your home currency, decline and pay in pounds to avoid a poor built-in rate.</div>
   </div>
@@ -465,7 +465,7 @@ html{scroll-behavior:smooth}
 <script>
 /* GBP ⇄ USD / CAD converter */
 (function(){
-  var U=0.79,C=0.57;                 // pounds per US$1, pounds per CA$1 — fallbacks until live rates load
+  var U=0.76,C=0.53;                 // pounds per US$1, pounds per CA$1 — fallbacks until live rates load
   function paint(){
     var a=document.getElementById('usdgbp'), b=document.getElementById('cadgbp');
     if(a) a.textContent=U.toFixed(2);

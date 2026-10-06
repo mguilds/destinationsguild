@@ -181,8 +181,8 @@
   <div class="fx">
     <div class="fx-t">What your money is worth in Croatia today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdeur">0.92</strong>&nbsp;&euro;</div>
-      <div>CA&nbsp;$1 = <strong id="cadeur">0.66</strong>&nbsp;&euro;</div>
+      <div>US&nbsp;$1 = <strong id="usdeur">0.88</strong>&nbsp;&euro;</div>
+      <div>CA&nbsp;$1 = <strong id="cadeur">0.62</strong>&nbsp;&euro;</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="100" min="0" aria-label="Amount to convert">
@@ -191,7 +191,7 @@
         <option value="USD">US dollars</option>
         <option value="CAD">Canadian dollars</option>
       </select>
-      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">108.70</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">113.64</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
     <div class="fx-note">Croatia adopted the <strong>euro</strong> on 1 January 2023 and joined the Schengen area the same day, so the old kuna is gone and there is no border check when you arrive from another Schengen country. If a price list still shows kuna, it is out of date. Cards are accepted almost everywhere, including in small konobas, though a few island cash-only places survive and the ferry ticket window sometimes prefers cash. Tipping is modest: rounding up, or ten per cent for a good dinner. Decline any machine that offers to charge you in dollars &mdash; pay in euros and let your own bank do the conversion.</div>
   </div>
@@ -417,7 +417,7 @@
 <script id="dg-fx">
 /* EUR converter &mdash; euros per US$1 and per CA$1 */
 (function(){
-  var U=0.92,C=0.66;
+  var U=0.88,C=0.62;
   function paint(){
     var a=document.getElementById('usdeur'), b=document.getElementById('cadeur');
     if(a) a.textContent=U.toFixed(2);

@@ -172,8 +172,8 @@
   <div class="fx">
     <div class="fx-t">What your money is worth in Dubrovnik today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdeur">0.92</strong>&nbsp;&euro;</div>
-      <div>CA&nbsp;$1 = <strong id="cadeur">0.66</strong>&nbsp;&euro;</div>
+      <div>US&nbsp;$1 = <strong id="usdeur">0.88</strong>&nbsp;&euro;</div>
+      <div>CA&nbsp;$1 = <strong id="cadeur">0.62</strong>&nbsp;&euro;</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="100" min="0" aria-label="Amount to convert">
@@ -182,7 +182,7 @@
         <option value="USD">US dollars</option>
         <option value="CAD">Canadian dollars</option>
       </select>
-      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">108.70</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">113.64</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
     <div class="fx-note">Croatia uses the <strong>euro</strong>. Dubrovnik is the most expensive town in the country and prices in July and August are roughly double what they are in October. A nightly city tourist tax of one to two euros per person is normally collected at check-out and is not usually included in the room rate you booked. Cards are taken everywhere; decline the machine&rsquo;s offer to charge you in dollars and pay in euros.</div>
   </div>
@@ -387,7 +387,7 @@
 <script id="dg-fx">
 /* EUR converter &mdash; euros per US$1 and per CA$1 */
 (function(){
-  var U=0.92,C=0.66;
+  var U=0.88,C=0.62;
   function paint(){
     var a=document.getElementById('usdeur'), b=document.getElementById('cadeur');
     if(a) a.textContent=U.toFixed(2);

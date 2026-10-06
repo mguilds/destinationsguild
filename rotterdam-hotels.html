@@ -175,7 +175,7 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money is worth in the Netherlands today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdeur">0.86</strong>&nbsp;EUR</div>
+      <div>US&nbsp;$1 = <strong id="usdeur">0.88</strong>&nbsp;EUR</div>
       <div>CA&nbsp;$1 = <strong id="cadeur">0.62</strong>&nbsp;EUR</div>
     </div>
     <div class="fx-row">
@@ -185,7 +185,7 @@ html{scroll-behavior:smooth}
         <option value="USD">US dollars</option>
         <option value="CAD">Canadian dollars</option>
       </select>
-      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">117</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">114</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
     <div class="fx-note">Live mid-market rate, refreshed when the page loads. The Netherlands uses the <strong>euro</strong>. The thing to know is not the rate but the plastic: Dutch shops are built around contactless <strong>debit</strong> cards, and a good many bakeries, cafes, market stalls and parking machines still show a &ldquo;PIN only&rdquo; sign. American Express is close to useless outside the airport and the chain hotels. Carry a contactless Visa or Mastercard debit card, a Visa or Mastercard credit card behind it, both loaded into your phone as well, and fifty or a hundred euros in small notes &mdash; and when a terminal offers to charge you in dollars, decline and pay in euros.</div>
   </div>
@@ -369,7 +369,7 @@ html{scroll-behavior:smooth}
 <script id="dg-fx">
 /* EUR converter - euros per US$1 and per CA$1. The Netherlands is a euro country. */
 (function(){
-  var U=0.86,C=0.62;
+  var U=0.88,C=0.62;
   function paint(){
     var a=document.getElementById('usdeur'), b=document.getElementById('cadeur');
     if(a) a.textContent=U.toFixed(2);

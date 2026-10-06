@@ -175,7 +175,7 @@ html{scroll-behavior:smooth}
   <div class="fx">
     <div class="fx-t">What your money is worth in Austria today</div>
     <div class="fx-rates">
-      <div>US&nbsp;$1 = <strong id="usdeur">0.86</strong>&nbsp;EUR</div>
+      <div>US&nbsp;$1 = <strong id="usdeur">0.88</strong>&nbsp;EUR</div>
       <div>CA&nbsp;$1 = <strong id="cadeur">0.62</strong>&nbsp;EUR</div>
     </div>
     <div class="fx-row">
@@ -185,7 +185,7 @@ html{scroll-behavior:smooth}
         <option value="USD">US dollars</option>
         <option value="CAD">Canadian dollars</option>
       </select>
-      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">117</strong>&nbsp;<span id="fxunit">US dollars</span></span>
+      <span>=&nbsp;<strong id="fxout" style="color:#12467f;">114</strong>&nbsp;<span id="fxunit">US dollars</span></span>
     </div>
     <div class="fx-note">Live mid-market rate, refreshed when the page loads. Austria uses the <strong>euro</strong>. Innsbruck is noticeably cheaper than Zurich or Lucerne for the same mountain views, which is the quiet argument for choosing the Tyrol over Switzerland. Cards work almost everywhere, but keep cash for mountain huts, small cafes and the cable-car kiosks. Tipping is modest: round up or add five to ten per cent, handed to the waiter. If a card machine offers to charge you in dollars, decline politely and pay in euros.</div>
   </div>
@@ -388,7 +388,7 @@ html{scroll-behavior:smooth}
 <script id="dg-fx">
 /* EUR converter - euros per US$1 and per CA$1. Austria is a euro country. */
 (function(){
-  var U=0.86,C=0.62;
+  var U=0.88,C=0.62;
   function paint(){
     var a=document.getElementById('usdeur'), b=document.getElementById('cadeur');
     if(a) a.textContent=U.toFixed(2);

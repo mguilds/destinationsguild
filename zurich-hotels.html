@@ -176,7 +176,7 @@ html{scroll-behavior:smooth}
     <div class="fx-t">What your money is worth in Switzerland today</div>
     <div class="fx-rates">
       <div>US&nbsp;$1 = <strong id="usdchf">0.83</strong>&nbsp;CHF</div>
-      <div>CA&nbsp;$1 = <strong id="cadchf">0.59</strong>&nbsp;CHF</div>
+      <div>CA&nbsp;$1 = <strong id="cadchf">0.58</strong>&nbsp;CHF</div>
     </div>
     <div class="fx-row">
       <input id="fxamt" type="number" value="100" min="0" aria-label="Amount to convert">
@@ -404,7 +404,7 @@ html{scroll-behavior:smooth}
 <script id="dg-fx">
 /* CHF converter — Swiss francs per US$1 and per CA$1. Switzerland is not a euro country. */
 (function(){
-  var U=0.83,C=0.59;
+  var U=0.83,C=0.58;
   function paint(){
     var a=document.getElementById('usdchf'), b=document.getElementById('cadchf');
     if(a) a.textContent=U.toFixed(2);
