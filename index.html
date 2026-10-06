@@ -713,6 +713,43 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   #site-index .cr-plate{ min-width:0; }
 }
 </style>
+<style id="dg-2026-10-06-phone-header">
+/* ============================================================
+   Destinations Guild - 6 October 2026
+   The blue header slimmed on PHONES AND TABLETS (980px and down).
+   Companion to the 5 October block "dg-2026-10-05", which slimmed
+   it on wide screens only and deliberately left narrow screens
+   alone. This finishes that job.
+   Purely additive. Delete this whole block to put it all back.
+   ============================================================ */
+@media (max-width:980px){
+  .dg-nav{ border-bottom-width:2px !important; }
+  .dg-nav-in{ padding:5px 12px !important; gap:4px 10px !important;
+    align-items:center !important; }
+  .dg-brand{ font-size:15px !important; line-height:1.2 !important;
+    white-space:nowrap !important; }
+  .dg-nav .lang-group{ margin-left:auto !important; gap:3px !important; }
+  .dg-nav .lang-group .lang-tgl{ font-size:9.5px !important;
+    padding:1px 5px !important; }
+  /* the seven links: one row that slides sideways instead of stacking */
+  .dg-nav-links{ order:3 !important; flex:1 0 100% !important;
+    flex-wrap:nowrap !important; overflow-x:auto !important;
+    -webkit-overflow-scrolling:touch !important;
+    scrollbar-width:none !important; -ms-overflow-style:none !important;
+    gap:0 12px !important; margin:0 !important; padding:0 0 1px !important; }
+  .dg-nav-links::-webkit-scrollbar{ display:none !important; }
+  .dg-nav-links a{ font-size:12px !important; padding:1px 0 !important;
+    line-height:1.3 !important; white-space:nowrap !important;
+    border-radius:0 !important; }
+  .dg-nav-links a:hover{ background:transparent !important; }
+}
+@media (max-width:680px){
+  .dg-brand{ font-size:14px !important; }
+  .dg-nav-links a{ font-size:11.5px !important; }
+}
+/* belt and braces: the Cruises box heading can never go white-on-white again */
+.ci-txt h4{ color:#1B3A6B; }
+</style>
 </head>
 <body>
 <div class="lang-float noi18n"><a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Cambiar a Español"><svg class="mxflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#ffffff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg>ES</a><a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="Switch to English"><svg class="usflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="24" height="1.85" fill="#B22234"/><rect width="24" height="1.85" y="3.7" fill="#B22234"/><rect width="24" height="1.85" y="7.4" fill="#B22234"/><rect width="24" height="1.85" y="11.1" fill="#B22234"/><rect width="24" height="1.85" y="14.15" fill="#B22234"/><rect width="11" height="8.6" fill="#3C3B6E"/></svg>EN</a><a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Passer au français (Canada)"><svg class="caflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#ffffff"/><rect width="6" height="16" fill="#D52B1E"/><rect x="18" width="6" height="16" fill="#D52B1E"/><path d="M12 3.2l.7 1.7 1.8-.4-.8 1.5 1.3.7-1.6.5.3 1.8-1.5-1-1.5 1 .3-1.8-1.6-.5 1.3-.7-.8-1.5 1.8.4z" fill="#D52B1E"/></svg>FR</a></div>
@@ -1066,7 +1103,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 /* FISH IT, BOOK IT — end */
 </style>
 <section class="fb-book" id="fish-book" aria-labelledby="fb-h">
-<h2 id="fb-h">Book it. Then fish it.</h2>
+<h2 id="fb-h">Book it. Then <s>Hook</s> it. <span style="font-size:.72em;font-style:italic;white-space:nowrap;">(Catch &amp; Release)</span></h2>
 <p class="fb-sub"><b>Destinations Guild is a travel reservation site as well as a fishing library.</b> Every water we write about has two buttons here: hotels in the river town, and vacation homes &mdash; the cabins and houses a party of three or four actually wants, with a kitchen for the pre-dawn breakfast and somewhere to hang the waders.</p>
 <div class="fb-grid">
 <div class="fb-card"><span class="fb-w">Bighorn River</span><span class="fb-t">Stay in Fort Smith, Montana</span><div class="fb-btns"><a class="fb-btn h" href="https://expedia.com/affiliates/hotel-search-fort-smith-dateless.qZmL438" rel="sponsored nofollow noopener" target="_blank">Hotels</a><a class="fb-btn v" href="https://expedia.com/affiliates/hotel-search-fort-smith-dateless.qzJPAh8" rel="sponsored nofollow noopener" target="_blank">Vacation homes</a></div></div>
@@ -1164,13 +1201,9 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
       </span>
     </a>
 
-    <div class="sec-hdr" id="cruises" style="scroll-margin-top:14px;">
-    <div><h2 class="slbl" style="margin-bottom:0;">Featured Cruises</h2><p style="font-size:12px;color:var(--txt2);margin-top:3px;">Sail with the world&rsquo;s favorite cruise lines &mdash; Alaska, the Mexican Riviera, the Caribbean &amp; the Gulf</p></div>
-    <span style="font-size:22px;">&#9875;</span>
-  </div>
-  <div class="cruise-info">
+  <div class="cruise-info" id="cruises" style="scroll-margin-top:14px;">
     <div class="ci-ico"><i class="ti ti-anchor"></i></div>
-    <div class="ci-txt"><h4>One Voyage, Many Worlds</h4><p>From the Mediterranean's ancient ports to the Caribbean's beaches and the Baltic's capitals &mdash; many itineraries weave several countries into a single sailing.</p></div>
+    <div class="ci-txt"><h4 style="color:#1B3A6B;">Featured Cruises &mdash; One Voyage, Many Worlds</h4><p>Sail with the world&rsquo;s favorite cruise lines &mdash; Alaska, the Mexican Riviera, the Caribbean and the Gulf. From the Mediterranean&rsquo;s ancient ports to the Caribbean&rsquo;s beaches and the Baltic&rsquo;s capitals, many itineraries weave several countries into a single sailing.</p></div>
     <button class="ci-btn" onclick="window.open('https://us.trip.com/cruises/list?locale=en-US&curr=USD&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=all-sailings','_blank')">View all sailings &rarr;</button>
   </div>
 
