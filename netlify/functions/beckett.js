@@ -46,18 +46,19 @@ async function loadShelves() {
     .then((r) => (r.ok ? r.text() : '')).catch(() => '');
   const [lib, us] = await Promise.all([get('/library.html'), get('/us-states-library.html')]);
   const books = new Map();
-  const reCat = /<a class="catf[^"]*" data-nm="([^"]*)" href="\/?([a-z0-9-]+)(?:\.html)?"[^>]*>([\s\S]*?)<\/a>/g;
+  // Netlify serves the live pages with single quotes; the files on GitHub use double quotes. Accept both.
+  const reCat = /<a class=["']catf[^"']*["'] data-nm=["']([^"']*)["'] href=["']\/?([a-z0-9-]+)(?:\.html)?["'][^>]*>([\s\S]*?)<\/a>/g;
   let m;
   while ((m = reCat.exec(lib))) {
     const inner = m[3];
-    const name = decode((inner.match(/class="cf-name">([^<]*)</) || [])[1]);
-    const where = decode((inner.match(/class="cf-parent">([^<]*)</) || [])[1]);
-    const flag = (inner.match(/class="cf-flag">([^<]*)</) || [])[1] || '';
+    const name = decode((inner.match(/class=["']cf-name["']>([^<]*)</) || [])[1]);
+    const where = decode((inner.match(/class=["']cf-parent["']>([^<]*)</) || [])[1]);
+    const flag = (inner.match(/class=["']cf-flag["']>([^<]*)</) || [])[1] || '';
     if (!name) continue;
     const id = m[2];
     books.set(id, { id, name, where, flag, nm: clean(m[1] + ' ' + name + ' ' + where), kind: kindOf(id), shelf: 'library' });
   }
-  const reUs = /<a class="spine"[^>]*href="\/?([a-z0-9-]+)(?:\.html)?"[^>]*title="([^"]+)"/g;
+  const reUs = /<a class=["']spine["'][^>]*href=["']\/?([a-z0-9-]+)(?:\.html)?["'][^>]*title=["']([^"']+)["']/g;
   while ((m = reUs.exec(us))) {
     const id = m[1];
     if (books.has(id)) continue;
