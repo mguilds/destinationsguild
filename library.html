@@ -556,11 +556,17 @@
   }
   function at(p, x, y){ return { x: p.ox + x * p.k, y: p.oy + y * p.k }; }
   function size(){
-    var W = sec.clientWidth, w = Math.max(48, Math.min(92, W * 0.075));
+    /* 7 Oct 2026, Mark: Beckett sits on TOP of the chest of drawers, 4 times his old size.
+       The space between the Chart Room line and the drawers opens up to fit him, so he covers no lettering. */
+    var W = sec.clientWidth, w = 4 * Math.max(48, Math.min(92, W * 0.075));
+    w = Math.min(w, W * 0.6);
+    var ph = w * 1.15 * 23 / 68, oh = w * 102 / 100;
+    var intro = sec.querySelector('.cr-intro');
+    if (intro) intro.style.setProperty('margin-bottom', Math.round(oh + ph + 18) + 'px', 'important');
+    var d = sec.querySelector('.cr-drawer .cr-plate') || sec.querySelector('.cr-drawer'), s = sec.getBoundingClientRect(), r = d.getBoundingClientRect();
     owl.style.width = w + 'px'; perch.style.width = (w * 1.15) + 'px';
-    var p = pic(), c = at(p, PERCH.x, PERCH.y);
-    var x = Math.max(W * 0.03 + w * 0.6, Math.min(c.x, W * 0.24));
-    perch.style.left = (x - w * 0.575) + 'px'; perch.style.top = (p.H - 6 - w * 1.15 * 23 / 68) + 'px';
+    var x = r.left - s.left + r.width / 2;
+    perch.style.left = (x - w * 0.575) + 'px'; perch.style.top = (r.top - s.top - ph + 2) + 'px';
   }
   function perchSpot(){
     var s = sec.getBoundingClientRect(), r = perch.getBoundingClientRect();
@@ -637,7 +643,7 @@
       sp.style.cssText = 'left:' + (t.c.x - w / 2) + 'px;top:' + (t.c.y) + 'px;width:' + w + 'px;height:' + h + 'px;background:' + COLORS[hash(first.id) % COLORS.length];
       sp.style.opacity = '0'; sec.appendChild(sp);
       bubble.hidden = true; hoot(); wings('bk-flap');
-      var dest = { x: t.c.x - owl.offsetWidth / 2, y: t.c.y + h * 0.9 - owl.offsetHeight, s: 0.6 };
+      var dest = { x: t.c.x - owl.offsetWidth / 2, y: t.c.y + h * 0.9 - owl.offsetHeight, s: 0.3 };
       await fly(dest, 1500);
       sp.style.opacity = '1'; await wait(350); sp.classList.add('bk-pulled'); await wait(500);
       sp.remove(); carry.style.background = COLORS[hash(first.id) % COLORS.length]; owl.classList.add('bk-has-book');
