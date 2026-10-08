@@ -538,7 +538,8 @@
       actx = actx || new (window.AudioContext || window.webkitAudioContext)();
       if (actx.state === 'suspended') actx.resume();
       var t0 = actx.currentTime + 0.02;
-      [[0, 0.22, 430, 380], [0.30, 0.55, 410, 330]].forEach(function(n){
+      /* 8 Oct 2026, Mark: Beckett hoots twice (hoo-hoooo ... hoo-hoooo) */
+      [[0, 0.22, 430, 380], [0.30, 0.55, 410, 330], [1.05, 0.22, 430, 380], [1.35, 0.55, 410, 330]].forEach(function(n){
         var o = actx.createOscillator(), g = actx.createGain(), f = actx.createBiquadFilter(), lfo = actx.createOscillator(), lg = actx.createGain();
         o.type = 'sine'; f.type = 'lowpass'; f.frequency.value = 1100;
         var st = t0 + n[0], en = st + n[1];
