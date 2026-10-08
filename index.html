@@ -2835,7 +2835,7 @@ document.querySelectorAll('.ccard').forEach(card => {
     var left=bird('left',POLLY,'Polly','Guild Travel Concierge');
     var right=bird('right',POLO,'Zander','The Guild\u2019s Navigator');
     var line=document.createElement('p'); line.className='dgb-line';
-    line.textContent='Tap Zander or Polly and the Guild\u2019s birds will go and fetch your answer.';
+    line.textContent='Tap Zander or Polly and they\u2019ll fly off to fetch Beckett, the Guild Librarian, to answer your question.';
     host.appendChild(left); host.appendChild(right); host.appendChild(line); row.appendChild(host);
 
     function place(){
@@ -2863,7 +2863,10 @@ document.querySelectorAll('.ccard').forEach(card => {
     function send(){
       if(busy) return; busy=true;
       arts.forEach(function(a){a.classList.remove('back');a.classList.add('out');});
-      setTimeout(function(){ try{ if(typeof window.openChat==='function'){window.openChat();} }catch(e){} },1500);
+      /* 8 Oct 2026, Mark: the old Polly chat is retired, so the birds now fetch Beckett, the Guild Librarian */
+      setTimeout(function(){ try{ var f=document.getElementById('bk-form'), q=document.getElementById('bk-q');
+        if(f){ f.scrollIntoView({behavior:'smooth',block:'center'}); }
+        if(q){ setTimeout(function(){ try{ q.focus({preventScroll:true}); }catch(e){ q.focus(); } },700); } }catch(e){} },1500);
       setTimeout(function(){ arts.forEach(function(a){a.classList.remove('out');a.classList.add('back');}); },2500);
       setTimeout(function(){ arts.forEach(function(a){a.classList.remove('back');}); busy=false; },4100);
     }
@@ -3055,7 +3058,8 @@ document.querySelectorAll('.ccard').forEach(card => {
       actx = actx || new (window.AudioContext || window.webkitAudioContext)();
       if (actx.state === 'suspended') actx.resume();
       var t0 = actx.currentTime + 0.02;
-      [[0, 0.22, 430, 380], [0.30, 0.55, 410, 330]].forEach(function(n){
+      /* 8 Oct 2026, Mark: Beckett hoots twice (hoo-hoooo ... hoo-hoooo) */
+      [[0, 0.22, 430, 380], [0.30, 0.55, 410, 330], [1.05, 0.22, 430, 380], [1.35, 0.55, 410, 330]].forEach(function(n){
         var o = actx.createOscillator(), g = actx.createGain(), f = actx.createBiquadFilter(), lfo = actx.createOscillator(), lg = actx.createGain();
         o.type = 'sine'; f.type = 'lowpass'; f.frequency.value = 1100;
         var st = t0 + n[0], en = st + n[1];
