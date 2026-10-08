@@ -2876,6 +2876,8 @@ document.querySelectorAll('.ccard').forEach(card => {
      shelf, pulls it out and brings it back. His answers come from /.netlify/functions/beckett, which only
      ever returns books that are really on our shelves (library.html and us-states-library.html). -->
 <style id="beckett-css">
+/* 8 Oct 2026: keep Beckett in front of the Ask Beckett desk when he sits on his perch there */
+#site-index{z-index:2;}
 #site-index .bk-perch{position:absolute;z-index:4;pointer-events:none;}
 #site-index .bk-perch svg{display:block;width:100%;height:auto;}
 #site-index #bk-owl{position:absolute;left:0;top:0;z-index:6;transform-origin:50% 100%;will-change:transform;cursor:pointer;visibility:hidden;}
@@ -2903,6 +2905,9 @@ document.querySelectorAll('.ccard').forEach(card => {
 .bk-desk{max-width:1000px;margin:14px auto 26px;padding:20px 22px 22px;background:linear-gradient(#f6efdc,#efe6cf);border:1px solid #d8cba6;border-radius:16px;
   box-shadow:0 8px 26px rgba(30,18,6,.22);font-family:'EB Garamond',Georgia,serif;color:#2a3444;display:flex;flex-direction:column;gap:14px;box-sizing:border-box;}
 .bk-desk *{box-sizing:border-box;}
+.bk-desk{position:relative;}
+.bk-desk .bk-perch{position:absolute;z-index:1;pointer-events:none;}
+.bk-desk .bk-perch svg{display:block;width:100%;height:auto;}
 .bk-desk .bk-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;}
 .bk-desk h2{font-family:'Cinzel',Georgia,serif;font-weight:700;font-size:clamp(1.3rem,3vw,1.7rem);color:#173a78;margin:0;letter-spacing:.04em;}
 .bk-desk .bk-sub{flex:0 0 100%;max-width:none;padding-right:12%;margin:0;font-size:17px;line-height:1.5;color:#3a4756;}
@@ -3073,11 +3078,22 @@ document.querySelectorAll('.ccard').forEach(card => {
   }
   function at(p, x, y){ return { x: p.ox + x * p.k, y: p.oy + y * p.k }; }
   function size(){
-    var W = sec.clientWidth, w = Math.max(48, Math.min(92, W * 0.075));
-    owl.style.width = w + 'px'; perch.style.width = (w * 1.15) + 'px';
-    var p = pic(), c = at(p, PERCH.x, PERCH.y);
-    var x = Math.max(W * 0.03 + w * 0.6, Math.min(c.x, W * 0.24));
-    perch.style.left = (x - w * 0.575) + 'px'; perch.style.top = (p.H - 6 - w * 1.15 * 23 / 68) + 'px';
+    /* 7 Oct 2026, Mark: Beckett is 3 times his old size, and his book perch sits at the
+       Ask Beckett desk, where the questions are asked. He flies up into the library from there. */
+    var W = sec.clientWidth, w = 3 * Math.max(48, Math.min(92, W * 0.075));
+    var ph = w * 1.15 * 23 / 68, oh = w * 102 / 100, pw = w * 1.15;
+    if (perch.parentNode !== desk) desk.appendChild(perch);
+    owl.style.width = w + 'px'; perch.style.width = pw + 'px';
+    if (window.innerWidth <= 680) {          /* phone: perch centred at the top of the desk */
+      desk.style.paddingRight = ''; desk.style.minHeight = '';
+      desk.style.paddingTop = Math.round(oh + ph + 22) + 'px';
+      perch.style.left = ((desk.clientWidth - pw) / 2) + 'px'; perch.style.top = Math.round(oh + 12) + 'px';
+    } else {                                  /* computer: perch at the right-hand end of the desk */
+      desk.style.paddingTop = '';
+      desk.style.paddingRight = Math.round(pw + 44) + 'px';
+      desk.style.minHeight = Math.round(oh + ph + 44) + 'px';
+      perch.style.left = (desk.clientWidth - pw - 22) + 'px'; perch.style.top = Math.round(oh + 18) + 'px';
+    }
   }
   function perchSpot(){
     var s = sec.getBoundingClientRect(), r = perch.getBoundingClientRect();
@@ -3154,7 +3170,7 @@ document.querySelectorAll('.ccard').forEach(card => {
       sp.style.cssText = 'left:' + (t.c.x - w / 2) + 'px;top:' + (t.c.y) + 'px;width:' + w + 'px;height:' + h + 'px;background:' + COLORS[hash(first.id) % COLORS.length];
       sp.style.opacity = '0'; sec.appendChild(sp);
       bubble.hidden = true; hoot(); wings('bk-flap');
-      var dest = { x: t.c.x - owl.offsetWidth / 2, y: t.c.y + h * 0.9 - owl.offsetHeight, s: 0.6 };
+      var dest = { x: t.c.x - owl.offsetWidth / 2, y: t.c.y + h * 0.9 - owl.offsetHeight, s: 0.3 };
       await fly(dest, 1500);
       sp.style.opacity = '1'; await wait(350); sp.classList.add('bk-pulled'); await wait(500);
       sp.remove(); carry.style.background = COLORS[hash(first.id) % COLORS.length]; owl.classList.add('bk-has-book');

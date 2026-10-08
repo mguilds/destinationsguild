@@ -359,6 +359,8 @@
      shelf, pulls it out and brings it back. His answers come from /.netlify/functions/beckett, which only
      ever returns books that are really on our shelves (library.html and us-states-library.html). -->
 <style id="beckett-css">
+/* 8 Oct 2026: keep Beckett in front of the Ask Beckett desk when he sits on his perch there */
+#site-index{z-index:2;}
 #site-index .bk-perch{position:absolute;z-index:4;pointer-events:none;}
 #site-index .bk-perch svg{display:block;width:100%;height:auto;}
 #site-index #bk-owl{position:absolute;left:0;top:0;z-index:6;transform-origin:50% 100%;will-change:transform;cursor:pointer;visibility:hidden;}
@@ -681,6 +683,9 @@
 </script>
 <!-- ===== BECKETT, THE GUILD LIBRARIAN — end ===== -->
 <!-- ===== THE CHART ROOM & BECKETT on the Library page — end ===== -->
+<!-- 8 Oct 2026, Mark: the Trip.com booking link that was in the old parrot menu, put back under Ask Beckett -->
+<p class="bk-book-trip" style="max-width:1000px;margin:-12px auto 22px;text-align:center;font-family:'EB Garamond',Georgia,serif;font-size:17px;"><a href="https://us.trip.com/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=library&amp;trip_sub3=beckett-desk" target="_blank" rel="sponsored nofollow noopener" style="color:#1e46c8;font-weight:600;">&#128205;&nbsp; Ready to go? Browse &amp; book on Trip.com &rsaquo;</a></p>
+
 
 
   <!-- ===== THE LIBRARY LOCATOR (search + card catalog) ===== -->
@@ -1153,21 +1158,6 @@
 
     <div class="shelf-unit">
 
-      <div class="shelf-label soon-label">More of Europe &mdash; <em>in the works</em></div>
-
-      <div class="shelf soon-shelf">
-
-        <div class="spine soon" data-nm="netherlands europe" data-open="0"><span class="title">NETHERLANDS</span><span class="soon-tag">soon</span></div>
-
-
-
-        <div class="spine soon" data-nm="croatia europe" data-open="0"><span class="title">CROATIA</span><span class="soon-tag">soon</span></div>
-
-      </div><div class="shelf-board"></div>
-
-    </div>
-    <div class="shelf-unit">
-
       <div class="shelf-label"><a href="iceland.html">🇮🇸 <strong>Iceland</strong></a></div>
 
       <div class="shelf">
@@ -1337,7 +1327,6 @@
 
         <div class="spine soon" data-nm="canada north america" data-open="0"><span class="title">CANADA</span><span class="soon-tag">soon</span></div>
 
-        <div class="spine soon" data-nm="cuba north america" data-open="0"><span class="title">CUBA</span><span class="soon-tag">soon</span></div>
 
       </div><div class="shelf-board"></div>
 
@@ -1386,13 +1375,10 @@
 
       <div class="shelf soon-shelf">
 
-        <div class="spine soon" data-nm="argentina south america" data-open="0"><span class="title">ARGENTINA</span><span class="soon-tag">soon</span></div>
 
-        <div class="spine soon" data-nm="peru south america" data-open="0"><span class="title">PERU</span><span class="soon-tag">soon</span></div>
 
         <div class="spine soon" data-nm="chile south america" data-open="0"><span class="title">CHILE</span><span class="soon-tag">soon</span></div>
 
-        <div class="spine soon" data-nm="colombia south america" data-open="0"><span class="title">COLOMBIA</span><span class="soon-tag">soon</span></div>
 
       </div><div class="shelf-board"></div>
 
