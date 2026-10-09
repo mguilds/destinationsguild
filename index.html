@@ -2835,7 +2835,7 @@ document.querySelectorAll('.ccard').forEach(card => {
     var left=bird('left',POLLY,'Polly','Guild Travel Concierge');
     var right=bird('right',POLO,'Zander','The Guild\u2019s Navigator');
     var line=document.createElement('p'); line.className='dgb-line';
-    line.textContent='Tap Zander or Polly and they\u2019ll fly off to fetch Beckett, the Guild Librarian, to answer your question.';
+    line.textContent='Tap Zander or Polly and they\u2019ll fly you down to the Ask Beckett desk, where Beckett, the Guild Librarian, will answer your question.';
     host.appendChild(left); host.appendChild(right); host.appendChild(line); row.appendChild(host);
 
     function place(){
@@ -2859,18 +2859,67 @@ document.querySelectorAll('.ccard').forEach(card => {
     var mapImg=document.querySelector('.searchrow-map');
     if(mapImg&&!mapImg.complete){mapImg.addEventListener('load',place);}
 
-    var arts=[left.querySelector('.dgb-art'),right.querySelector('.dgb-art')], busy=false;
-    function send(){
-      if(busy) return; busy=true;
-      arts.forEach(function(a){a.classList.remove('back');a.classList.add('out');});
-      /* 8 Oct 2026, Mark: the old Polly chat is retired, so the birds now fetch Beckett, the Guild Librarian */
-      setTimeout(function(){ try{ var f=document.getElementById('bk-form'), q=document.getElementById('bk-q');
-        if(f){ f.scrollIntoView({behavior:'smooth',block:'center'}); }
-        if(q){ setTimeout(function(){ try{ q.focus({preventScroll:true}); }catch(e){ q.focus(); } },700); } }catch(e){} },1500);
-      setTimeout(function(){ arts.forEach(function(a){a.classList.remove('out');a.classList.add('back');}); },2500);
-      setTimeout(function(){ arts.forEach(function(a){a.classList.remove('back');}); busy=false; },4100);
+    /* 9 Oct 2026, Mark: only the bird you tap flies, slowly, and lands on the Ask box under Beckett */
+    var FLY_MS=4600, PERCH_H=80, perched=null, busy=false;
+    var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var bcss='#dgFlyer{position:fixed;left:0;top:0;z-index:9999;pointer-events:none;will-change:transform;filter:drop-shadow(0 10px 14px rgba(20,30,50,.45));}'
+      +'#dgFlyer svg,.dgb-perched svg{display:block;height:100%;width:auto;overflow:visible;}'
+      +'#dgFlyer .dgb-wing{transform-box:view-box;transform-origin:28px 24px;animation:dgbFlap .34s linear infinite;}'
+      +'#dgFlyer.glide .dgb-wing{animation-duration:.6s;}'
+      +'#dgBirds .dgb.away .dgb-art{visibility:hidden;}#dgBirds .dgb.away .dgb-name{opacity:.45;}'
+      +'#bk-form{position:relative;}'
+      +'.dgb-perched{position:absolute;bottom:100%;height:'+PERCH_H+'px;margin-bottom:-6px;z-index:3;pointer-events:none;filter:drop-shadow(0 6px 8px rgba(20,30,50,.35));transform-origin:50% 100%;animation:dgbSettle .5s ease-out;}'
+      +'@keyframes dgbSettle{0%{transform:translateY(-6px) scaleY(.94);}60%{transform:translateY(1px) scaleY(1.03);}100%{transform:none;}}';
+    var bst=document.createElement('style'); bst.id='dgBirdsFlightCss'; bst.appendChild(document.createTextNode(bcss)); document.head.appendChild(bst);
+    left.setAttribute('aria-label','Send Polly to the Ask Beckett box'); right.setAttribute('aria-label','Send Zander to the Ask Beckett box');
+
+    function askSpot(){ /* where the bird's feet go: on top of the Ask button */
+      var go=document.getElementById('bk-go'), f=document.getElementById('bk-form');
+      if(!go||!f) return null; var g=go.getBoundingClientRect(); return {x:g.left+g.width/2, y:g.top+6};
     }
-    left.addEventListener('click',send); right.addEventListener('click',send);
+    function placePerch(el){
+      var go=document.getElementById('bk-go'), f=document.getElementById('bk-form'); if(!go||!f) return;
+      var w=el.offsetWidth||Math.round(PERCH_H*0.58);
+      el.style.left=Math.round(go.offsetLeft+go.offsetWidth/2-w/2)+'px';
+    }
+    window.addEventListener('resize',function(){ if(perched) placePerch(perched.el); });
+    function focusAsk(){ var q=document.getElementById('bk-q'); if(q){ try{ q.focus({preventScroll:true}); }catch(e){ q.focus(); } } }
+    function goHome(){ if(!perched) return; perched.el.remove(); perched.btn.classList.remove('away'); perched=null; }
+    function land(btn,svg){
+      var f=document.getElementById('bk-form'); if(!f) return;
+      var el=document.createElement('span'); el.className='dgb-perched'; el.setAttribute('aria-hidden','true');
+      el.innerHTML=svg; var s=el.querySelector('svg'); if(s) s.style.transform='scaleX(1)';
+      f.appendChild(el); placePerch(el); perched={btn:btn,el:el}; focusAsk();
+    }
+    function send(btn,svg){
+      if(busy) return;
+      if(perched && perched.btn===btn){ var f0=document.getElementById('bk-form'); if(f0) f0.scrollIntoView({behavior:'smooth',block:'center'}); focusAsk(); return; }
+      goHome();
+      var desk=document.getElementById('beckett-desk'), spot=askSpot(); if(!desk||!spot) return;
+      var art=btn.querySelector('.dgb-art'), a=art.getBoundingClientRect();
+      var y0=window.scrollY, dr=desk.getBoundingClientRect();
+      var y1=Math.max(0, Math.min(document.documentElement.scrollHeight-window.innerHeight, y0+dr.top+dr.height/2-window.innerHeight/2));
+      btn.classList.add('away');
+      if(reduceMotion){ window.scrollTo(0,y1); land(btn,svg); return; }
+      busy=true;
+      var fl=document.createElement('div'); fl.id='dgFlyer'; fl.setAttribute('aria-hidden','true'); fl.innerHTML=svg; document.body.appendChild(fl);
+      var fsvg=fl.querySelector('svg'), H0=a.height, sx=a.left+a.width/2, sy=a.bottom, t0=null;
+      function ease(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+      function frame(now){
+        if(t0===null) t0=now; var t=Math.min(1,(now-t0)/FLY_MS);
+        var st=ease(Math.min(1,t/0.9)); window.scrollTo(0, y0+(y1-y0)*st);
+        var sp=askSpot()||spot, e=ease(t);
+        var x=sx+(sp.x-sx)*e, y=sy+(sp.y-sy)*e - Math.sin(Math.PI*t)*140 - (t<.12 ? Math.sin(t/.12*Math.PI/2)*30 : 0)*(1-t);
+        var h=H0+(PERCH_H-H0)*e, w=h*0.58;
+        fsvg.style.transform='scaleX('+(t>.94 ? 1 : (sp.x>=sx ? -1 : 1))+')';
+        fl.classList.toggle('glide', t>.35 && t<.75);
+        fl.style.height=h+'px';
+        fl.style.transform='translate('+(x-w/2)+'px,'+(y-h)+'px) rotate('+(Math.sin(t*Math.PI*6)*3*(1-t))+'deg)';
+        if(t<1){ requestAnimationFrame(frame); } else { fl.remove(); land(btn,svg); busy=false; }
+      }
+      requestAnimationFrame(frame);
+    }
+    left.addEventListener('click',function(){ send(left,POLLY); }); right.addEventListener('click',function(){ send(right,POLO); });
   })();
   </script>
   <!-- ===== POLO & POLLY BY THE SEARCH BOX — end ===== -->
