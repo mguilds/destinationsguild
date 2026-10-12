@@ -2112,4 +2112,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://destinationsguild.com/fly-fishing-patagonia.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/fly-fishing-chile.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/fly-fishing-bc-alaska.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/fly-fishing-the-flats.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/fly-fishing-new-zealand.html</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/fly-fishing-chalk-streams.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/fly-fishing-iceland-scandinavia.html</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
