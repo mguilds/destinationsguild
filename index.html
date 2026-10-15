@@ -2957,7 +2957,8 @@ document.querySelectorAll('.ccard').forEach(card => {
 <style id="dg-chartroom-left-css">
 /* 15 Oct 2026, Mark: move the gold Chart Room drawers to the left of the library picture, so Beckett sits beside them */
 @media (min-width:681px){
-  #site-index .cr-drawer{ margin-left:5% !important; margin-right:auto !important; }
+  #site-index .cr-drawer{ margin-left:4% !important; margin-right:auto !important; }
+  #site-index .cr-front{ justify-content:flex-start !important; }
 }
 </style>
 <style id="beckett-css">
@@ -3170,7 +3171,7 @@ document.querySelectorAll('.ccard').forEach(card => {
     var ph = w * 1.15 * 23 / 68, oh = w * 102 / 100, pw = w * 1.15;
     /* 15 Oct 2026, Mark: on a computer Beckett sits up beside the gold Chart Room drawers on the library
        picture, on his two leather books, instead of down at the Ask Beckett desk. */
-    var drs = [].slice.call(sec.querySelectorAll('.cr-drawer'));
+    var drs = [].slice.call(sec.querySelectorAll('.cr-drawer .cr-plate')); if (!drs.length) drs = [].slice.call(sec.querySelectorAll('.cr-drawer'));
     if (window.innerWidth > 680 && drs.length) {
       var sr = sec.getBoundingClientRect(), right = 0, bottom = 0, top = 1e9;
       drs.forEach(function(d){ var r = d.getBoundingClientRect(); right = Math.max(right, r.right - sr.left); bottom = Math.max(bottom, r.bottom - sr.top); top = Math.min(top, r.top - sr.top); });
