@@ -1021,9 +1021,31 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     .dg-bw-credit a{color:inherit;}
     .dg-bw .dg-cta{text-decoration:none;}
     .dg-bw .dg-cta:hover{background:#dcbb59;}
+    .dg-bw-chains{background:#ececec;border:1px solid #dcdcdc;border-radius:16px;padding:12px 16px 14px;margin:0 0 12px;text-align:center;}
+    .dg-bw-exp{font:700 12px/1 'DM Sans',Arial,sans-serif;letter-spacing:.32em;text-transform:uppercase;color:#17253d;margin:2px 0 10px;}
+    .dg-bw-row{display:flex;justify-content:center;align-items:stretch;gap:12px;flex-wrap:wrap;}
+    .dg-bw-chain{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:180px;flex:1 1 180px;max-width:300px;
+      background:#fff;border:1px solid #d6d6d6;border-radius:12px;padding:12px 14px;text-decoration:none;transition:transform .15s,box-shadow .15s;}
+    .dg-bw-chain:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(10,30,60,.16);}
+    .dg-bw-chain .wm{line-height:1.05;}
+    .dg-bw-chain .go{margin-top:6px;font:600 11px/1 'DM Sans',Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#8a6420;}
+    .dg-bw-chain.wh .wm{font:400 21px Georgia,'Times New Roman',serif;font-variant:small-caps;letter-spacing:.06em;color:#3a3a3a;}
+    .dg-bw-chain.bw .wm{font:700 22px Georgia,'Times New Roman',serif;color:#003c7f;}
+    .dg-bw-chain.bw .wm small{display:block;font:600 11px 'DM Sans',Arial,sans-serif;color:#003c7f;letter-spacing:.04em;margin-top:2px;}
+    .dg-bw-chain.ss .wm{font:600 22px Georgia,'Times New Roman',serif;color:#1d6fa8;}
+    .dg-bw-chain.ss .wm small{display:block;font:700 10px 'DM Sans',Arial,sans-serif;color:#1d6fa8;letter-spacing:.2em;margin-top:2px;}
+    @media(max-width:600px){.dg-bw-chain{min-width:100%;}}
     @media(max-width:820px){.dg-bw-credit{display:none;}.dg-bw .dg-door-sub{font-size:13px;}}
   </style>
   <div class="dg-bw" id="best-western">
+    <div class="dg-bw-chains" role="navigation" aria-label="Best Western family of hotel brands">
+      <div class="dg-bw-exp">Experience</div>
+      <div class="dg-bw-row">
+        <a class="dg-bw-chain wh" href="https://www.worldhotels.com/content/luxury-hotels/en_US.html" target="_blank" rel="noopener" onclick="try{gtag('event','bw_chain_click',{chain:'worldhotels'})}catch(e){}"><span class="wm">WorldHotels</span><span class="go">Luxury &amp; upscale &rsaquo;</span></a>
+        <a class="dg-bw-chain bw" href="https://www.bestwestern.com/en_US/book/hotel-search.html" target="_blank" rel="noopener" onclick="try{gtag('event','bw_chain_click',{chain:'best-western'})}catch(e){}"><span class="wm">Best Western<small>Hotels &amp; Resorts</small></span><span class="go">Find a hotel &rsaquo;</span></a>
+        <a class="dg-bw-chain ss" href="https://www.bestwestern.com/content/best-western/en_US/hotels/surestay.html" target="_blank" rel="noopener" onclick="try{gtag('event','bw_chain_click',{chain:'surestay'})}catch(e){}"><span class="wm">SureStay<small>HOTELS</small></span><span class="go">Value stays &rsaquo;</span></a>
+      </div>
+    </div>
     <div class="dg-door hero" role="region" aria-label="Best Western Hotels and Resorts — coming soon">
       <img referrerpolicy="no-referrer" loading="eager"
            src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunset%20on%20Interstate%2040%20Near%20Kingman%2C%20Arizona%20(15629027465).jpg?width=1600"
