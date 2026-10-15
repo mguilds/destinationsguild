@@ -2859,13 +2859,17 @@ document.querySelectorAll('.ccard').forEach(card => {
     var mapImg=document.querySelector('.searchrow-map');
     if(mapImg&&!mapImg.complete){mapImg.addEventListener('load',place);}
 
-    /* 9 Oct 2026, Mark: only the bird you tap flies, slowly, and lands on the Ask box under Beckett */
-    var FLY_MS=4600, PERCH_H=80, perched=null, busy=false;
+    /* 9 Oct 2026, Mark: only the bird you tap flies, slowly, and lands on the Ask box under Beckett.
+       15 Oct 2026, Mark: Zander flew backward. Now the bird first flies OUT a little (Zander east, Polly west),
+       turns, and comes down FORWARD to the Ask box, slower, beating its wings, banking and gliding. */
+    var FLY_MS=7800, PERCH_H=80, perched=null, busy=false;
     var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var bcss='#dgFlyer{position:fixed;left:0;top:0;z-index:9999;pointer-events:none;will-change:transform;filter:drop-shadow(0 10px 14px rgba(20,30,50,.45));}'
       +'#dgFlyer svg,.dgb-perched svg{display:block;height:100%;width:auto;overflow:visible;}'
-      +'#dgFlyer .dgb-wing{transform-box:view-box;transform-origin:28px 24px;animation:dgbFlap .34s linear infinite;}'
-      +'#dgFlyer.glide .dgb-wing{animation-duration:.6s;}'
+      +'#dgFlyer svg{transition:transform .32s ease-in-out;}'
+      +'#dgFlyer .dgb-wing{transform-box:view-box;transform-origin:28px 24px;animation:dgbFlap .22s linear infinite;}'
+      +'#dgFlyer.glide .dgb-wing{animation-duration:.7s;}'
+      +'#dgFlyer.flare .dgb-wing{animation-duration:.18s;}'
       +'#dgBirds .dgb.away .dgb-art{visibility:hidden;}#dgBirds .dgb.away .dgb-name{opacity:.45;}'
       +'#bk-form{position:relative;}'
       +'.dgb-perched{position:absolute;bottom:100%;height:'+PERCH_H+'px;margin-bottom:-6px;z-index:3;pointer-events:none;filter:drop-shadow(0 6px 8px rgba(20,30,50,.35));transform-origin:50% 100%;animation:dgbSettle .5s ease-out;}'
@@ -2885,10 +2889,10 @@ document.querySelectorAll('.ccard').forEach(card => {
     window.addEventListener('resize',function(){ if(perched) placePerch(perched.el); });
     function focusAsk(){ var q=document.getElementById('bk-q'); if(q){ try{ q.focus({preventScroll:true}); }catch(e){ q.focus(); } } }
     function goHome(){ if(!perched) return; perched.el.remove(); perched.btn.classList.remove('away'); perched=null; }
-    function land(btn,svg){
+    function land(btn,svg,face){
       var f=document.getElementById('bk-form'); if(!f) return;
       var el=document.createElement('span'); el.className='dgb-perched'; el.setAttribute('aria-hidden','true');
-      el.innerHTML=svg; var s=el.querySelector('svg'); if(s) s.style.transform='scaleX(1)';
+      el.innerHTML=svg; var s=el.querySelector('svg'); if(s) s.style.transform='scaleX('+(face>0?-1:1)+')';
       f.appendChild(el); placePerch(el); perched={btn:btn,el:el}; focusAsk();
     }
     function send(btn,svg){
@@ -2897,25 +2901,48 @@ document.querySelectorAll('.ccard').forEach(card => {
       goHome();
       var desk=document.getElementById('beckett-desk'), spot=askSpot(); if(!desk||!spot) return;
       var art=btn.querySelector('.dgb-art'), a=art.getBoundingClientRect();
-      var y0=window.scrollY, dr=desk.getBoundingClientRect();
-      var y1=Math.max(0, Math.min(document.documentElement.scrollHeight-window.innerHeight, y0+dr.top+dr.height/2-window.innerHeight/2));
       btn.classList.add('away');
-      if(reduceMotion){ window.scrollTo(0,y1); land(btn,svg); return; }
+      if(reduceMotion){ desk.scrollIntoView({block:'center'}); land(btn,svg,-1); return; }
       busy=true;
       var fl=document.createElement('div'); fl.id='dgFlyer'; fl.setAttribute('aria-hidden','true'); fl.innerHTML=svg; document.body.appendChild(fl);
-      var fsvg=fl.querySelector('svg'), H0=a.height, sx=a.left+a.width/2, sy=a.bottom, t0=null;
-      function ease(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; }
+      var fsvg=fl.querySelector('svg'), H0=a.height;
+      var out=(btn===right)?1:-1;                       /* Zander heads east first, Polly west */
+      var P0={x:a.left+a.width/2, y:a.bottom+window.scrollY};
+      function tgt(){ var s=askSpot()||spot; return {x:s.x, y:s.y+window.scrollY}; }
+      var T=tgt();
+      var E={x:P0.x+out*150, y:P0.y-120};                /* leg 1: out (east for Zander) and up a little */
+      var LEG=0.24, face=out, lastX=P0.x, lastY=P0.y, roll=0, scr=window.scrollY, t0=null;
+      var dir2=(Math.abs(T.x-E.x)>10)?((T.x>E.x)?1:-1):out;   /* leg 2 heads straight for the Ask box */
+      fsvg.style.transform='scaleX('+(face>0?-1:1)+')';
+      function bz(p0,p1,p2,p3,u){ var v=1-u; return v*v*v*p0+3*v*v*u*p1+3*v*u*u*p2+u*u*u*p3; }
+      function ease(t){ return 0.5-0.5*Math.cos(Math.PI*t); }
       function frame(now){
-        if(t0===null) t0=now; var t=Math.min(1,(now-t0)/FLY_MS);
-        var st=ease(Math.min(1,t/0.9)); window.scrollTo(0, y0+(y1-y0)*st);
-        var sp=askSpot()||spot, e=ease(t);
-        var x=sx+(sp.x-sx)*e, y=sy+(sp.y-sy)*e - Math.sin(Math.PI*t)*140 - (t<.12 ? Math.sin(t/.12*Math.PI/2)*30 : 0)*(1-t);
-        var h=H0+(PERCH_H-H0)*e, w=h*0.58;
-        fsvg.style.transform='scaleX('+(t>.94 ? 1 : (sp.x>=sx ? -1 : 1))+')';
-        fl.classList.toggle('glide', t>.35 && t<.75);
+        if(t0===null) t0=now;
+        var t=Math.min(1,(now-t0)/FLY_MS), u=ease(t), x, y, nf; T=tgt();
+        if(t<LEG){ var k=t/LEG, k2=1-(1-k)*(1-k);
+          x=P0.x+(E.x-P0.x)*k2; y=P0.y+(E.y-P0.y)*Math.sin(k*Math.PI/2); nf=out; }
+        else { var k=ease((t-LEG)/(1-LEG));
+          x=bz(E.x,E.x+(T.x-E.x)*0.15,T.x,T.x,k); y=bz(E.y,E.y+60,T.y-420,T.y,k); nf=dir2; }
+        x=Math.max(70,Math.min(window.innerWidth-70,x));               /* never off the edge of the screen */
+        /* the page follows the bird down so he never leaves the screen */
+        var maxS=document.documentElement.scrollHeight-window.innerHeight;
+        var want=Math.max(0,Math.min(maxS, y-window.innerHeight*0.55));
+        scr+=(want-scr)*(t>0.92?0.35:0.12); window.scrollTo(0,scr);
+        /* face the way he is flying; turning is a visible flip, never backwards */
+        var vx=x-lastX, vy=y-lastY;
+        if(nf!==face){ face=nf; fsvg.style.transform='scaleX('+(face>0?-1:1)+')'; }
+        /* bank: nose down when diving, nose up when climbing, plus a little flutter */
+        var ang=Math.atan2(vy,Math.max(0.5,Math.abs(vx)))*180/Math.PI;
+        var tilt=Math.max(-16,Math.min(26,ang*0.32));
+        roll+=(face*tilt-roll)*0.15;
+        var flutter=Math.sin(now/90)*(fl.classList.contains('glide')?0.8:2.4);
+        lastX=x; lastY=y;
+        fl.classList.toggle('glide', t>0.38 && t<0.82);
+        fl.classList.toggle('flare', t>=0.82);
+        var h=H0+(PERCH_H-H0)*u, w=h*0.58, bob=fl.classList.contains('glide')?0:Math.sin(now/120)*3;
         fl.style.height=h+'px';
-        fl.style.transform='translate('+(x-w/2)+'px,'+(y-h)+'px) rotate('+(Math.sin(t*Math.PI*6)*3*(1-t))+'deg)';
-        if(t<1){ requestAnimationFrame(frame); } else { fl.remove(); land(btn,svg); busy=false; }
+        fl.style.transform='translate('+(x-w/2)+'px,'+(y-window.scrollY-h+bob)+'px) rotate('+(roll+flutter)+'deg)';
+        if(t<1){ requestAnimationFrame(frame); } else { fl.remove(); land(btn,svg,face); busy=false; }
       }
       requestAnimationFrame(frame);
     }
@@ -2927,6 +2954,12 @@ document.querySelectorAll('.ccard').forEach(card => {
      Beckett perches on the library picture behind the Chart Room. Ask him for a book and he flies to the
      shelf, pulls it out and brings it back. His answers come from /.netlify/functions/beckett, which only
      ever returns books that are really on our shelves (library.html and us-states-library.html). -->
+<style id="dg-chartroom-left-css">
+/* 15 Oct 2026, Mark: move the gold Chart Room drawers to the left of the library picture, so Beckett sits beside them */
+@media (min-width:681px){
+  #site-index .cr-drawer{ margin-left:5% !important; margin-right:auto !important; }
+}
+</style>
 <style id="beckett-css">
 /* 8 Oct 2026: keep Beckett in front of the Ask Beckett desk when he sits on his perch there */
 #site-index{z-index:2;}
@@ -3135,6 +3168,23 @@ document.querySelectorAll('.ccard').forEach(card => {
        Ask Beckett desk, where the questions are asked. He flies up into the library from there. */
     var W = sec.clientWidth, w = 3 * Math.max(48, Math.min(92, W * 0.075));
     var ph = w * 1.15 * 23 / 68, oh = w * 102 / 100, pw = w * 1.15;
+    /* 15 Oct 2026, Mark: on a computer Beckett sits up beside the gold Chart Room drawers on the library
+       picture, on his two leather books, instead of down at the Ask Beckett desk. */
+    var drs = [].slice.call(sec.querySelectorAll('.cr-drawer'));
+    if (window.innerWidth > 680 && drs.length) {
+      var sr = sec.getBoundingClientRect(), right = 0, bottom = 0, top = 1e9;
+      drs.forEach(function(d){ var r = d.getBoundingClientRect(); right = Math.max(right, r.right - sr.left); bottom = Math.max(bottom, r.bottom - sr.top); top = Math.min(top, r.top - sr.top); });
+      var room = sec.clientWidth - right - 14;
+      if (room >= 110) {
+        w = Math.min(w, room - 6); pw = Math.min(w * 1.1, room); ph = pw * 23 / 68; oh = w * 102 / 100;
+        if (perch.parentNode !== sec) sec.appendChild(perch);
+        desk.style.paddingTop = ''; desk.style.paddingRight = ''; desk.style.minHeight = '';
+        owl.style.width = w + 'px'; perch.style.width = pw + 'px';
+        perch.style.left = Math.round(right + 8 + (room - pw) / 2) + 'px';
+        perch.style.top = Math.round(Math.max(top + oh - 10, bottom - ph)) + 'px';
+        return;
+      }
+    }
     if (perch.parentNode !== desk) desk.appendChild(perch);
     owl.style.width = w + 'px'; perch.style.width = pw + 'px';
     if (window.innerWidth <= 680) {          /* phone: perch centred at the top of the desk */
