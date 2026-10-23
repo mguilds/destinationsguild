@@ -1980,7 +1980,7 @@ document.querySelectorAll('.ccard').forEach(card => {
   (fld||dest.parentNode).appendChild(list);
   var active=-1, matches=[];
   function render(){
-    if(!matches.length){ list.innerHTML='<div class=\"ac-empty\">Type any city \u2014 we\u2019ll take you to live results.</div>'; list.classList.add('open'); return; }
+    if(!matches.length){ list.innerHTML=''; list.classList.remove('open'); return; }
     list.innerHTML = matches.map(function(c,i){
       var parts=c.split(', '); var city=parts[0]; var sub=parts.slice(1).join(', ');
       return '<div class=\"ac-item'+(i===active?' active':'')+'\" data-v=\"'+c.replace(/\"/g,'&quot;')+'\"><i class=\"ti ti-map-pin ac-pin\"></i><span>'+city+'</span>'+(sub?'<span class=\"ac-sub\">'+sub+'</span>':'')+'</div>';
