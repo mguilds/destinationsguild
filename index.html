@@ -3327,5 +3327,64 @@ document.querySelectorAll('.ccard').forEach(card => {
 })();
 </script>
 <!-- ===== BECKETT, THE GUILD LIBRARIAN — end ===== -->
+<!-- PHONE APP BUTTON — start (Mark 2026-10-24). Delete from here to "PHONE APP BUTTON — end" to remove it; nothing else changes. -->
+<style>
+#dgApp,#dgAppHelp{display:none}
+@media (max-width:680px){
+#dgApp.show{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#16305c;color:#fff;font-family:"DM Sans",sans-serif;border-bottom:2px solid #c9a24a}
+#dgApp img{width:42px;height:42px;border-radius:10px;flex:none}
+#dgApp .dga-t{flex:1;min-width:0;font-size:14px;font-weight:700;line-height:1.2}
+#dgApp .dga-t small{display:block;font-size:12px;font-weight:400;opacity:.85;margin-top:2px}
+#dgApp .dga-go{flex:none;background:#fff;color:#16305c;border:0;border-radius:22px;padding:10px 15px;font:700 14px "DM Sans",sans-serif;cursor:pointer}
+#dgApp .dga-x{flex:none;background:none;border:0;color:#fff;font-size:24px;line-height:1;padding:8px 4px;opacity:.75;cursor:pointer}
+#dgAppHelp.show{display:flex;position:fixed;inset:0;z-index:100000;background:rgba(0,0,0,.55);align-items:flex-end}
+#dgAppHelp .dga-card{background:#fff;color:#1b2c4d;width:100%;border-radius:18px 18px 0 0;padding:22px 22px 30px;font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.45}
+#dgAppHelp h3{margin:0 0 12px;font-size:19px;color:#16305c}
+#dgAppHelp ol{margin:0 0 18px;padding-left:22px}
+#dgAppHelp li{margin-bottom:10px}
+#dgAppHelp .dga-ic{display:inline-block;vertical-align:-4px;width:20px;height:20px;stroke:#2F76D8;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#dgAppHelp .dga-ok{display:block;width:100%;background:#16305c;color:#fff;border:0;border-radius:24px;padding:13px;font:700 16px "DM Sans",sans-serif;cursor:pointer}
+}
+</style>
+<script>
+(function(){
+  var KEY='dgAppHideUntil', deferred=null;
+  if ((window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone) return;
+  try { if (Date.now() < +localStorage.getItem(KEY)) return; } catch(e) {}
+  var ios=/iPhone|iPad|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  function track(a){ try { gtag('event','phone_app_button',{action:a}); } catch(e) {} }
+  window.addEventListener('beforeinstallprompt',function(e){ e.preventDefault(); deferred=e; });
+  function init(){
+    var bar=document.createElement('div'); bar.id='dgApp'; bar.className='noi18n';
+    bar.innerHTML='<img src="/icons/icon-192.png" alt="">'+
+      '<div class="dga-t">Put Destinations Guild on your phone<small>One tap from your home screen. Free.</small></div>'+
+      '<button type="button" class="dga-go">Add</button>'+
+      '<button type="button" class="dga-x" aria-label="Close">&times;</button>';
+    var help=document.createElement('div'); help.id='dgAppHelp'; help.className='noi18n';
+    var share='<svg class="dga-ic" viewBox="0 0 24 24"><path d="M12 3v12M8 7l4-4 4 4M6 11H5v10h14V11h-1"/></svg>';
+    var dots='<svg class="dga-ic" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></svg>';
+    help.innerHTML='<div class="dga-card"><h3>Add Destinations Guild to your home screen</h3><ol>'+
+      (ios
+        ? '<li>Tap the <b>Share</b> button '+share+' at the bottom (or top) of Safari.</li><li>Scroll down and tap <b>Add to Home Screen</b>.</li><li>Tap <b>Add</b>. The parrot-and-globe icon appears on your phone.</li>'
+        : '<li>Tap your browser\'s <b>menu</b> '+dots+' (top right).</li><li>Tap <b>Add to Home screen</b> or <b>Install app</b>.</li><li>Tap <b>Add</b> or <b>Install</b>. The parrot-and-globe icon appears on your phone.</li>')+
+      '</ol><button type="button" class="dga-ok">Got it</button></div>';
+    var nav=document.querySelector('header.dg-nav');
+    if (nav && nav.parentNode) nav.parentNode.insertBefore(bar, nav.nextSibling); else document.body.insertBefore(bar, document.body.firstChild);
+    document.body.appendChild(help);
+    function hide(days){ bar.classList.remove('show'); try { localStorage.setItem(KEY, Date.now()+days*864e5); } catch(e) {} }
+    bar.querySelector('.dga-go').onclick=function(){
+      track('add');
+      if (deferred) { deferred.prompt(); deferred.userChoice.then(function(r){ if (r.outcome==='accepted') hide(3650); }); deferred=null; }
+      else help.classList.add('show');
+    };
+    bar.querySelector('.dga-x').onclick=function(){ track('close'); hide(30); };
+    help.onclick=function(e){ if (e.target===help || e.target.className==='dga-ok') help.classList.remove('show'); };
+    window.addEventListener('appinstalled',function(){ hide(3650); });
+    bar.classList.add('show');
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- PHONE APP BUTTON — end -->
 </body>
 </html>
