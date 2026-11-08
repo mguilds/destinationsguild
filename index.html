@@ -1009,6 +1009,90 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
       <div class="fld"><span class="flbl">Check-out</span><div class="ico-w"><i class="ti ti-calendar-check"></i><input class="inp" type="date" id="checkout"></div></div>
       <button class="srch-btn" id="searchBtn"><i class="ti ti-compass"></i>Check Availability</button>
     </div>
+    <!-- HOLIDAY DATES under the search box — added 8 Nov 2026 by the GM on Mark's order ("I don't know what the holiday dates are").
+         Phone and browser calendars can't be marked, so the next holidays are shown as buttons that fill in the dates. Delete this block to remove. -->
+    <style>
+      .dg-hol{margin:12px 0 2px;}
+      .dg-hol-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+      .dg-hol-lbl{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:#0b1c33;letter-spacing:.02em;}
+      .dg-hol-row{display:flex;gap:7px;overflow-x:auto;padding:2px 2px 6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch;}
+      .dg-hol-chip{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:6px 12px;border-radius:20px;border:1px solid #c9a84c;background:#fff8e4;color:#2b2208;font:600 13px/1.2 'DM Sans',Arial,sans-serif;cursor:pointer;white-space:nowrap;}
+      .dg-hol-chip:hover{background:#ffefc2;}
+      .dg-hol-chip.on{background:#1B3A6B;border-color:#1B3A6B;color:#fff;}
+      .dg-hol-chip small{font-weight:500;opacity:.8;font-size:12px;}
+      .dg-hol-note{margin:4px 0 0;font:600 13.5px/1.45 'DM Sans',Arial,sans-serif;color:#7a1f1f;min-height:0;}
+      .dg-hol-note:empty{display:none;}
+      @media(max-width:820px){.dg-hol-chip{min-height:44px;}}
+    </style>
+    <div class="dg-hol" id="dgHol" hidden>
+      <div class="dg-hol-top"><span class="dg-hol-lbl">&#128467;&#65039; Holiday dates &mdash; tap one to fill in your stay:</span></div>
+      <div class="dg-hol-row" id="dgHolRow"></div>
+      <p class="dg-hol-note" id="dgHolNote" aria-live="polite"></p>
+    </div>
+    <script>
+    (function(){
+      try{
+        var ci=document.getElementById('checkin'), co=document.getElementById('checkout'), box=document.getElementById('dgHol'),
+            row=document.getElementById('dgHolRow'), note=document.getElementById('dgHolNote');
+        if(!ci||!co||!box) return;
+        var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], DAY=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+        function D(y,m,d){return new Date(y,m,d);}
+        function nth(y,m,wd,n){var d=D(y,m,1),off=(wd-d.getDay()+7)%7;return D(y,m,1+off+7*(n-1));}
+        function last(y,m,wd){var d=D(y,m+1,0);return D(y,m,d.getDate()-((d.getDay()-wd+7)%7));}
+        function easter(y){var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),
+          h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;return D(y,mo-1,da);}
+        function add(d,n){return D(d.getFullYear(),d.getMonth(),d.getDate()+n);}
+        function iso(d){return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);}
+        function nice(d){return DAY[d.getDay()]+' '+MON[d.getMonth()]+' '+d.getDate();}
+        function list(y){return [
+          ['\u{1F54A}\uFE0F','MLK Day weekend',nth(y,0,1,3),-3,0],
+          ['❤️',"Valentine’s Day",D(y,1,14),-1,1],
+          ['\u{1F1FA}\u{1F1F8}',"Presidents’ Day weekend",nth(y,1,1,3),-3,0],
+          ['☘️',"St. Patrick’s Day",D(y,2,17),-1,1],
+          ['\u{1F423}','Easter',easter(y),-2,1],
+          ['\u{1F490}',"Mother’s Day",nth(y,4,0,2),-2,0],
+          ['\u{1F1FA}\u{1F1F8}','Memorial Day weekend',last(y,4,1),-3,0],
+          ['\u{1F454}',"Father’s Day",nth(y,5,0,3),-2,0],
+          ['✊\u{1F3FE}','Juneteenth',D(y,5,19),-1,1],
+          ['\u{1F386}','Fourth of July',D(y,6,4),-1,1],
+          ['\u{1F1FA}\u{1F1F8}','Labor Day weekend',nth(y,8,1,1),-3,0],
+          ['\u{1F341}','Columbus / Indigenous Peoples’ Day',nth(y,9,1,2),-3,0],
+          ['\u{1F383}','Halloween',D(y,9,31),-1,1],
+          ['\u{1F396}️','Veterans Day',D(y,10,11),-1,1],
+          ['\u{1F983}','Thanksgiving',nth(y,10,4,4),-1,3],
+          ['\u{1F384}','Christmas',D(y,11,25),-2,2],
+          ['\u{1F942}',"New Year’s Eve",D(y,11,31),-1,2]
+        ];}
+        var skip=false, t0=new Date(); t0=D(t0.getFullYear(),t0.getMonth(),t0.getDate());
+        var all=list(t0.getFullYear()).concat(list(t0.getFullYear()+1)).filter(function(h){return h[2]>=t0;}).sort(function(a,b){return a[2]-b[2];});
+        var horizon=add(t0,360); all=all.filter(function(h){return h[2]<=horizon;});
+        all.forEach(function(h){
+          var b=document.createElement('button'); b.type='button'; b.className='dg-hol-chip';
+          b.innerHTML='<span aria-hidden="true">'+h[0]+'</span>'+h[1]+' <small>&middot; '+nice(h[2])+'</small>';
+          b.addEventListener('click',function(){
+            var a=add(h[2],h[3]), z=add(h[2],h[4]); if(a<t0) a=t0; if(z<=a) z=add(a,1);
+            ci.value=iso(a); co.min=ci.value; co.value=iso(z);
+            skip=true; ci.dispatchEvent(new Event('change',{bubbles:true}));
+            co.value=iso(z);
+            [].forEach.call(row.children,function(c){c.classList.remove('on');}); b.classList.add('on');
+            show(h[1]+' is '+nice(h[2])+'. We filled in '+nice(a)+' to '+nice(z)+' — change the dates if you like, then tap Check Availability.');
+            try{gtag('event','holiday_chip',{holiday:h[1]});}catch(e){}
+          });
+          row.appendChild(b);
+        });
+        function show(t){note.textContent=t;}
+        function check(){
+          if(skip){skip=false;return;}
+          if(!ci.value||!co.value){return;}
+          var a=new Date(ci.value+'T00:00:00'), z=new Date(co.value+'T00:00:00'), hits=[];
+          all.forEach(function(h){ if(h[2]>=a && h[2]<=z) hits.push(h[1]+' ('+nice(h[2])+')'); });
+          show(hits.length ? 'Your dates include '+hits.join(' and ')+'. Holiday dates book up early.' : '');
+        }
+        ci.addEventListener('change',function(){setTimeout(check,0);}); co.addEventListener('change',check);
+        box.hidden=false;
+      }catch(e){}
+    })();
+    </script>
     <p class="powered"><i class="ti ti-external-link" style="font-size:12px;color:#378ADD;"></i>Availability powered by Trip.com &mdash; you'll be taken directly to live results</p>
     </div>
     <div class="dg-trust" style="margin-top:11px;padding-top:9px;border-top:1px solid rgba(11,28,51,.28);text-align:center;font-family:'DM Sans',Arial,sans-serif;font-size:13.5px;color:#0b1c33;font-weight:600;letter-spacing:.02em;">&#9733; Free to use&nbsp;&nbsp;&middot;&nbsp;&nbsp;&#128274; Secured Bookings&nbsp;&nbsp;&middot;&nbsp;&nbsp;Powered by Trip.com&nbsp;&nbsp;&middot;&nbsp;&nbsp;Curated by Career Hoteliers&nbsp;&nbsp;&middot;&nbsp;&nbsp;140+ Travel Guides &amp; growing</div>
