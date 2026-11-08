@@ -849,7 +849,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
         <h2><a href="library.html">The Guild Travel Library</a></h2>
         <p class="lede">EVERY BOOK ON THE SHELF</p>
         <ul>
-          <li><a href="library.html">Countries <span class="cnt">&middot; 40 of 240 written</span></a></li>
+          <li><a href="library.html">Countries <span class="cnt">&middot; <span id="dg-country-count-n">41</span> of 240 written</span></a></li>
           <li><a href="us-states-library.html">The United States <span class="cnt">&middot; 56 guides</span></a></li>
           <li><a href="seven-wonders.html">7 Wonders of the World</a></li>
         </ul>
@@ -3410,5 +3410,45 @@ document.querySelectorAll('.ccard').forEach(card => {
 })();
 </script>
 <!-- PHONE APP BUTTON — end -->
+<script id="dg-country-count">/* Counts the country books listed in sitemap.xml and updates "N of 240 written" in Browse the Guild.
+   Added 8 Nov 2026 by the GM on Mark's order. If anything fails, the number already written in the page stays.
+   A country counts when its hub page (e.g. norway.html) is in the sitemap. The United States and its
+   territories have their own shelf and are not counted here. "georgia" is the US state, so the country
+   must be georgia-country.html. Add a new spelling to the list below if a desk names a hub differently. */
+(function(){
+  var C = ('afghanistan albania algeria andorra angola anguilla antigua-and-barbuda argentina armenia aruba australia austria azerbaijan '
+   +'bahamas bahrain bangladesh barbados belarus belgium belize benin bermuda bhutan bolivia bonaire bosnia-and-herzegovina botswana brazil '
+   +'british-virgin-islands brunei bulgaria burkina-faso burundi cabo-verde cape-verde cambodia cameroon canada cayman-islands '
+   +'central-african-republic chad chile china colombia comoros congo democratic-republic-of-the-congo cook-islands costa-rica '
+   +'cote-divoire ivory-coast croatia cuba curacao cyprus czechia czech-republic denmark djibouti dominica dominican-republic ecuador egypt '
+   +'el-salvador equatorial-guinea eritrea estonia eswatini ethiopia faroe-islands fiji finland france french-guiana french-polynesia tahiti gabon '
+   +'gambia georgia-country germany ghana gibraltar greece greenland grenada guadeloupe guatemala guinea guinea-bissau guyana haiti honduras hongkong hong-kong hungary '
+   +'iceland india indonesia iran iraq ireland israel italy jamaica japan jordan kazakhstan kenya kiribati kosovo kuwait kyrgyzstan laos latvia '
+   +'lebanon lesotho liberia libya liechtenstein lithuania luxembourg macau macao madagascar malawi malaysia maldives mali malta '
+   +'marshall-islands martinique mauritania mauritius mexico micronesia moldova monaco mongolia montenegro montserrat morocco mozambique myanmar '
+   +'namibia nauru nepal netherlands new-caledonia new-zealand nicaragua niger nigeria north-korea north-macedonia norway oman pakistan palau '
+   +'palestine panama papua-new-guinea paraguay peru philippines poland portugal qatar reunion romania russia rwanda saint-kitts-and-nevis '
+   +'st-kitts-and-nevis saint-lucia st-lucia saint-martin sint-maarten saint-vincent-and-the-grenadines st-vincent-and-the-grenadines samoa '
+   +'san-marino sao-tome-and-principe saudi-arabia senegal serbia seychelles sierra-leone singapore slovakia slovenia solomon-islands somalia '
+   +'south-africa south-korea south-sudan spain sri-lanka sudan suriname sweden switzerland syria taiwan tajikistan tanzania thailand '
+   +'timor-leste east-timor togo tonga trinidad-and-tobago tunisia turkey turkiye turkmenistan turks-and-caicos tuvalu uganda ukraine '
+   +'united-arab-emirates uae united-kingdom england scotland wales northern-ireland uruguay uzbekistan vanuatu vatican-city venezuela vietnam '
+   +'yemen zambia zimbabwe').split(' ');
+  var set = {}; for (var i = 0; i < C.length; i++) set[C[i]] = 1;
+  /* one book per country: count each country once even if two spellings are live */
+  var same = {'czech-republic':'czechia','cape-verde':'cabo-verde','ivory-coast':'cote-divoire','hong-kong':'hongkong','macao':'macau',
+    'tahiti':'french-polynesia','st-kitts-and-nevis':'saint-kitts-and-nevis','st-lucia':'saint-lucia','east-timor':'timor-leste',
+    'st-vincent-and-the-grenadines':'saint-vincent-and-the-grenadines','turkiye':'turkey','uae':'united-arab-emirates'};
+  function run(){
+    var el = document.getElementById('dg-country-count-n'); if (!el || !window.fetch) return;
+    fetch('/sitemap.xml', {cache: 'no-cache'}).then(function(r){ return r.ok ? r.text() : ''; }).then(function(t){
+      if (!t) return;
+      var re = /<loc>\s*https?:\/\/(?:www\.)?destinationsguild\.com\/([a-z0-9-]+)(?:\.html)?\s*<\/loc>/g, m, seen = {}, n = 0;
+      while ((m = re.exec(t))) { var s = m[1]; if (set[s]) { s = same[s] || s; if (!seen[s]) { seen[s] = 1; n++; } } }
+      if (n > 0) el.textContent = n;
+    }).catch(function(){});
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();</script>
 </body>
 </html>
