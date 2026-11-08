@@ -3412,7 +3412,7 @@ document.querySelectorAll('.ccard').forEach(card => {
 <!-- PHONE APP BUTTON — end -->
 <script id="dg-country-count">/* Counts the country books listed in sitemap.xml and updates "N of 240 written" in Browse the Guild.
    Added 8 Nov 2026 by the GM on Mark's order. If anything fails, the number already written in the page stays.
-   A country counts when its hub page (e.g. norway.html) is in the sitemap. The United States and its
+   A new address each day (?d=date) gets past the site service worker, which would otherwise hand back an old saved sitemap. A country counts when its hub page (e.g. norway.html) is in the sitemap. The United States and its
    territories have their own shelf and are not counted here. "georgia" is the US state, so the country
    must be georgia-country.html. Add a new spelling to the list below if a desk names a hub differently. */
 (function(){
@@ -3441,7 +3441,7 @@ document.querySelectorAll('.ccard').forEach(card => {
     'st-vincent-and-the-grenadines':'saint-vincent-and-the-grenadines','turkiye':'turkey','uae':'united-arab-emirates'};
   function run(){
     var el = document.getElementById('dg-country-count-n'); if (!el || !window.fetch) return;
-    fetch('/sitemap.xml', {cache: 'no-cache'}).then(function(r){ return r.ok ? r.text() : ''; }).then(function(t){
+    fetch('/sitemap.xml?d=' + new Date().toISOString().slice(0,10), {cache: 'no-cache'}).then(function(r){ return r.ok ? r.text() : ''; }).then(function(t){
       if (!t) return;
       var re = /<loc>\s*https?:\/\/(?:www\.)?destinationsguild\.com\/([a-z0-9-]+)(?:\.html)?\s*<\/loc>/g, m, seen = {}, n = 0;
       while ((m = re.exec(t))) { var s = m[1]; if (set[s]) { s = same[s] || s; if (!seen[s]) { seen[s] = 1; n++; } } }
