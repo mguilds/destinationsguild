@@ -38,7 +38,7 @@
 <meta name="twitter:image" content="https://commons.wikimedia.org/wiki/Special:FilePath/Skyscrapers%20of%20Shinjuku%202009%20January.jpg?width=1200">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The Travel Log", "description": "Short, dated notes from the road by our Guild Explorers — the more personal half of what Destinations Guild publishes.", "url": "https://destinationsguild.com/travel-log.html", "dateModified": "2026-09-30", "isPartOf": {"@type": "WebSite", "name": "Destinations Guild", "url": "https://destinationsguild.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "The Travel Log", "description": "Short, dated notes from the road by our Guild Explorers — the more personal half of what Destinations Guild publishes.", "url": "https://destinationsguild.com/travel-log.html", "dateModified": "2026-11-24", "isPartOf": {"@type": "WebSite", "name": "Destinations Guild", "url": "https://destinationsguild.com/"}}</script>
 <script type="application/ld+json">
 { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
  {"@type":"ListItem","position":1,"name":"Home","item":"https://destinationsguild.com/"},
@@ -178,7 +178,7 @@
   .lauthor { font-size:10px; color:var(--muted); display:flex; align-items:center; gap:5px; }
   .lau-dot { width:18px; height:18px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:9px; }
   .llink { font-size:11px; font-weight:500; color:var(--gold-mid); text-decoration:none; display:flex; align-items:center; gap:3px; }
-  .view-all-btn { font-size:12px; font-weight:500; color:var(--navy); background:#EEF2F9; border:.5px solid #C5D5EE; border-radius:8px; padding:8px 20px; cursor:pointer; transition:background .12s; }
+  .view-all-btn { font-size:12px; font-weight:500; color:var(--navy); background:#EEF2F9; border:.5px solid #C5D5EE; border-radius:8px; padding:8px 20px; cursor:pointer; transition:background .12s; display:inline-block; text-decoration:none; }
   .view-all-btn:hover { background:#D8E5F5; }
   .lcard-body p { margin:0; }
   .lcard img { filter:brightness(1.12) saturate(1.06) contrast(1.02); }
@@ -205,7 +205,7 @@
   .logbook-hd { display:flex; align-items:center; }
   .logbook-hd .ti-feather { font-size:30px; color:#7a531f; transform:rotate(-8deg); }
   .logbook-title { font-family:'Cormorant Garamond',serif !important; font-size:1.85rem !important; font-weight:700; color:#5a3c17 !important; letter-spacing:.3px; margin:0 !important; line-height:1.12; }
-  .logbook-allposts { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:14px; color:#8a6225; font-weight:600; cursor:pointer; white-space:nowrap; }
+  .logbook-allposts { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:14px; color:#8a6225; font-weight:600; cursor:pointer; white-space:nowrap; text-decoration:none; }
   .logbook-allposts:hover { color:#5a3c17; }
   .logbook-rule { height:0; border:0; border-top:1.6px solid rgba(120,80,30,.4); margin:.85rem 0 1.2rem; }
   .logbook-rule::after { content:'\2766'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background:#ecdcb4; padding:0 12px; color:#8a6225; font-size:15px; }
@@ -223,7 +223,7 @@
 
   <div class="pagehead">
     <h1>The Travel Log &mdash; Dispatches from Everywhere</h1>
-      <p class="dg-explorers" style="display:inline-block;margin:10px 0 0;background:rgba(12,20,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated September 2026</p>
+      <p class="dg-explorers" style="display:inline-block;margin:10px 0 0;background:rgba(12,20,40,.34);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:20px;color:#fff;font:600 13.5px/1.3 -apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:.2px;">Curated by Our Guild Explorers &middot; Updated November 2026</p>
     <p>This is the more personal half of what we publish. The books in the Guild Travel Library are researched over weeks and written to be read before you go; the Log is what our Explorers send back while they are still on the road &mdash; shorter, dated, and usually about one thing rather than a whole country. A neighbourhood that turned out to be the right place to sleep. A ferry timetable that quietly rearranged a week. A month that was the wrong month for the migration, and the one that would have been right.</p>
     <div class="jump">
       <a href="#dispatches">The Dispatches</a>
@@ -255,7 +255,7 @@
   </svg></div>
   <div class="logbook-hd" style="justify-content:space-between;flex-wrap:wrap;gap:10px;">
     <span style="display:flex;align-items:center;gap:13px;"><i class="ti ti-feather"></i><h2 class="logbook-title">The Travel Log &mdash; Dispatches from Everywhere</h2></span>
-    <span class="logbook-allposts" onclick="window.open('https://us.trip.com/travel-guide/?Allianceid=8217189&SID=317113714&trip_sub1=travel-log&trip_sub3=allguides', '_blank')">View all posts &rarr;</span>
+    <a class="logbook-allposts" href="https://us.trip.com/travel-guide/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=travel-log&amp;trip_sub3=allguides" target="_blank" rel="sponsored nofollow noopener">View all posts &rarr;</a>
   </div>
   <hr class="logbook-rule">
   <div class="log-grid">
@@ -279,7 +279,7 @@
     </div>
   </div>
   <div style="text-align:center;margin-top:.5rem;">
-    <button class="view-all-btn" onclick="window.open('https://us.trip.com/travel-guide/?Allianceid=8217189&SID=317113714&trip_sub1=travel-log&trip_sub3=allguides', '_blank')"><i class="ti ti-books" style="vertical-align:-2px;margin-right:6px;"></i>Browse all travel guides</button>
+    <a class="view-all-btn" href="https://us.trip.com/travel-guide/?Allianceid=8217189&amp;SID=317113714&amp;trip_sub1=travel-log&amp;trip_sub3=allguides" target="_blank" rel="sponsored nofollow noopener"><i class="ti ti-books" style="vertical-align:-2px;margin-right:6px;"></i>Browse all travel guides</a>
   </div>
   </div>
   <!-- /logbook -->
