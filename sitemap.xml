@@ -1471,6 +1471,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://destinationsguild.com/friends-of-the-guild.html</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://destinationsguild.com/sintra-hotels.html</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -4389,6 +4395,96 @@
   <url>
     <loc>https://destinationsguild.com/lake-fishing-mid-atlantic.html</loc>
     <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/best-time-to-visit-romania.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/brasov-hotels.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/bucharest-hotels.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/charleston-hotels.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/cluj-napoca-hotels.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/historic-hotels-maine.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/historic-hotels-maryland.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/historic-hotels-michigan.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/historic-hotels-minnesota.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/historic-hotels-missouri.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/lake-fishing-midwest.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/romania.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/sibiu-hotels.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/timisoara-hotels.html</loc>
+    <lastmod>2026-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://destinationsguild.com/washington-dc-hotels.html</loc>
+    <lastmod>2026-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
