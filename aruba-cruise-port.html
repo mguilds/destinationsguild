@@ -327,7 +327,7 @@ footer{background:var(--navy);color:#cdd6e4;text-align:center;padding:24px 20px;
 (function(){
   var f=document.getElementById('dg-stay-box'); if(!f) return;
   var area=document.getElementById('sb-area'), ci=document.getElementById('sb-in'), co=document.getElementById('sb-out'), g=document.getElementById('sb-guests');
-  var today=new Date().toISOString().split('T')[0]; ci.min=today; co.min=today;
+  var _d=new Date(), today=_d.getFullYear()+'-'+('0'+(_d.getMonth()+1)).slice(-2)+'-'+('0'+_d.getDate()).slice(-2); ci.min=today; co.min=today;
   ci.addEventListener('change',function(){ if(ci.value){ co.min=ci.value; if(co.value&&co.value<=ci.value) co.value=''; } });
   var TAG={'20008':'stay-oranjestad','59568':'stay-palm-beach','62098':'stay-eagle-beach'};
   [].forEach.call(document.querySelectorAll('.staycard a[data-area]'),function(a){
