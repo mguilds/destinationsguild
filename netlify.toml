@@ -3,6 +3,11 @@
   publish = "."
   functions = "netlify/functions"
 
+# One address per page: keep links as written (x.html). Netlify's "Pretty URLs"
+# rewrote them to /x, giving Google two addresses for every guide. (25 Nov 2026)
+[build.processing.html]
+  pretty_urls = false
+
 # Concierge helper: pretty address /api/polo-polly -> function
 [[redirects]]
   from = "/api/polo-polly"
