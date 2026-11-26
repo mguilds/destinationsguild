@@ -1008,8 +1008,10 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
       <div class="fld"><span class="flbl">Check-in</span><div class="ico-w"><i class="ti ti-calendar-event"></i><input class="inp" type="date" id="checkin"></div></div>
       <div class="fld"><span class="flbl">Check-out</span><div class="ico-w"><i class="ti ti-calendar-check"></i><input class="inp" type="date" id="checkout"></div></div>
       <button class="srch-btn" id="searchBtn" title="See hotels on Trip.com"><i class="ti ti-compass"></i>Trip.com</button>
-      <!-- BOOKING.COM BUTTON — added 25 Nov 2026 on Mark's order: same place and dates, through our CJ Booking.com link. An Expedia button goes beside it once we have our Expedia affiliate link. -->
+      <!-- BOOKING.COM BUTTON — added 25 Nov 2026 on Mark's order: same place and dates, through our CJ Booking.com link. -->
       <button class="srch-btn" id="searchBtnBk" title="See hotels on Booking.com" style="background:#003b95;"><i class="ti ti-building"></i>Booking.com</button>
+      <!-- EXPEDIA BUTTON — added 26 Nov 2026: same place and dates, through our Expedia Travel Creator link (the format Expedia's own link builder makes). -->
+      <button class="srch-btn" id="searchBtnEx" title="See hotels on Expedia" style="background:#191e3b;"><i class="ti ti-plane-departure"></i>Expedia</button>
     </div>
     <!-- HOLIDAY DATES under the search box — added 8 Nov 2026 by the GM on Mark's order ("I don't know what the holiday dates are").
          Phone and browser calendars can't be marked, so the next holidays are shown as buttons that fill in the dates. Delete this block to remove. -->
@@ -1077,7 +1079,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
             skip=true; ci.dispatchEvent(new Event('change',{bubbles:true}));
             co.value=iso(z);
             [].forEach.call(row.children,function(c){c.classList.remove('on');}); b.classList.add('on');
-            show(h[1]+' is '+nice(h[2])+'. We filled in '+nice(a)+' to '+nice(z)+' — change the dates if you like, then tap Trip.com or Booking.com.');
+            show(h[1]+' is '+nice(h[2])+'. We filled in '+nice(a)+' to '+nice(z)+' — change the dates if you like, then tap Trip.com, Booking.com or Expedia.');
             try{gtag('event','holiday_chip',{holiday:h[1]});}catch(e){}
           });
           row.appendChild(b);
@@ -1852,6 +1854,19 @@ document.getElementById('searchBtnBk').addEventListener('click', () => {
   const slug = raw.split(',')[0].trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'any';
   try { if (window.gtag) window.gtag('event','site_search_booking',{ destination: slug }); } catch(e){}
   window.open('https://www.anrdoezrs.net/click-101888556-17293132?sid=home-search-' + slug + '&url=' + encodeURIComponent(u), '_blank');
+});
+
+// ── EXPEDIA BUTTON (26 Nov 2026) — same place, dates and guests, through our Expedia Travel Creator account ──
+document.getElementById('searchBtnEx').addEventListener('click', () => {
+  const raw = (window.__pickedCity || document.getElementById('dest').value || '').trim();
+  const guests = document.getElementById('guests').value;
+  let u = 'https://www.expedia.com/Hotel-Search?adults=' + guests;
+  if (raw) u += '&destination=' + encodeURIComponent(raw);
+  if (ci.value) u += '&startDate=' + ci.value;
+  if (co.value) u += '&endDate=' + co.value;
+  const slug = raw.split(',')[0].trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || 'any';
+  try { if (window.gtag) window.gtag('event','site_search_expedia',{ destination: slug }); } catch(e){}
+  window.open('https://expedia.com/affiliate?siteid=1&landingPage=' + encodeURIComponent(u) + '&camref=1100l5L3gV&creativeref=1100l68075&adref=PZ3G4_qtKB', '_blank');
 });
 
 // ── STAY22 FILTERS ──
