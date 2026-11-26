@@ -157,7 +157,7 @@ img { display:block; width:100%; object-fit:cover; }
 .searchrow .search-wrap{margin:0;}
 .searchrow .mh-globe{position:absolute;right:100%;top:0;margin-right:1.3rem;}
 @media(max-width:1080px){.searchrow{display:flex;flex-direction:column;align-items:center;}.searchrow .mh-globe{position:static;margin:0 auto .6rem;}}
-.search-wrap { background:linear-gradient(rgba(245,236,214,.93),rgba(238,228,203,.95)), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat; position:relative; overflow:hidden; border:0.5px solid #c7a86a; border-radius:14px; padding:1.5rem 1.75rem; margin:2.4rem auto 1.5rem; max-width:800px; }
+.search-wrap { background:linear-gradient(rgba(245,236,214,.93),rgba(238,228,203,.95)), url('/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9c%2FCantino_planisphere_%25281502%2529.jpg&w=1400&q=60') center/cover no-repeat; position:relative; overflow:hidden; border:0.5px solid #c7a86a; border-radius:14px; padding:1.5rem 1.75rem; margin:2.4rem auto 1.5rem; max-width:800px; }
 .search-wrap::before { content:''; position:absolute; inset:0; z-index:0; pointer-events:none; opacity:0; }
 .search-wrap > * { position:relative; z-index:1; }
 .search-hdr { color:#0c2444; font-size:1.7rem; font-weight:700; margin-bottom:1rem; display:flex; align-items:center; gap:.5rem; font-family:'Cormorant Garamond',serif; }
@@ -756,9 +756,9 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 <body>
 <div class="lang-float noi18n"><a class="lang-tgl" data-lang="es" onclick="setLang('es')" role="button" tabindex="0" aria-label="Cambiar a Español"><svg class="mxflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="8" height="16" fill="#006847"/><rect x="8" width="8" height="16" fill="#ffffff"/><rect x="16" width="8" height="16" fill="#CE1126"/></svg>ES</a><a class="lang-tgl active" data-lang="en" onclick="setLang('en')" role="button" tabindex="0" aria-label="Switch to English"><svg class="usflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect width="24" height="1.85" fill="#B22234"/><rect width="24" height="1.85" y="3.7" fill="#B22234"/><rect width="24" height="1.85" y="7.4" fill="#B22234"/><rect width="24" height="1.85" y="11.1" fill="#B22234"/><rect width="24" height="1.85" y="14.15" fill="#B22234"/><rect width="11" height="8.6" fill="#3C3B6E"/></svg>EN</a><a class="lang-tgl" data-lang="fr" onclick="setLang('fr')" role="button" tabindex="0" aria-label="Passer au français (Canada)"><svg class="caflag" viewBox="0 0 24 16" width="16" height="11" aria-hidden="true"><rect width="24" height="16" fill="#ffffff"/><rect width="6" height="16" fill="#D52B1E"/><rect x="18" width="6" height="16" fill="#D52B1E"/><path d="M12 3.2l.7 1.7 1.8-.4-.8 1.5 1.3.7-1.6.5.3 1.8-1.5-1-1.5 1 .3-1.8-1.6-.5 1.3-.7-.8-1.5 1.8.4z" fill="#D52B1E"/></svg>FR</a></div>
 <style>
-  body{background:url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center center / cover no-repeat fixed, radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f); min-height:100vh;}
+  body{background:url('/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9c%2FCantino_planisphere_%25281502%2529.jpg&w=1400&q=60') center center / cover no-repeat fixed, radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f); min-height:100vh;}
   .page{background:rgba(249,243,226,.93); border:1px solid rgba(120,90,40,.35); border-radius:16px; box-shadow:0 10px 38px rgba(30,20,5,.32); padding:12px 26px 34px; margin:18px auto 34px; max-width:1120px;}
-  .search-wrap{zoom:0.776;background:linear-gradient(rgba(107,140,166,.95) 0%,rgba(107,140,166,.95) 34%,rgba(223,233,240,.95) 100%), url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center/cover no-repeat !important; border:1px solid #c7a86a !important; border-top:4px solid #C9A84C; border-radius:16px; box-shadow:0 10px 30px rgba(20,40,70,.16); padding:8px 20px 14px !important; transform:translateY(-8px) !important;}
+  .search-wrap{zoom:0.776;background:linear-gradient(rgba(107,140,166,.95) 0%,rgba(107,140,166,.95) 34%,rgba(223,233,240,.95) 100%), url('/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9c%2FCantino_planisphere_%25281502%2529.jpg&w=1400&q=60') center/cover no-repeat !important; border:1px solid #c7a86a !important; border-top:4px solid #C9A84C; border-radius:16px; box-shadow:0 10px 30px rgba(20,40,70,.16); padding:8px 20px 14px !important; transform:translateY(-8px) !important;}
   .legacy-search{background:transparent !important;}
   .legacy-search .inp, .legacy-search .sel{border:1.6px solid #1c1c1c !important;}
   /* Header removed — compact floating language switch, top-right */
@@ -935,7 +935,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 
   <!-- 02 SEARCH -->
   <div class="searchrow">
-    <img class="searchrow-map" referrerpolicy="no-referrer" alt="Antique world map" src="https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600" onerror="this.style.display='none'">
+    <img class="searchrow-map" referrerpolicy="no-referrer" alt="Antique world map" src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9c%2FCantino_planisphere_%25281502%2529.jpg&amp;w=1200&amp;q=70" srcset="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9c%2FCantino_planisphere_%25281502%2529.jpg&amp;w=640&amp;q=70 640w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9c%2FCantino_planisphere_%25281502%2529.jpg&amp;w=960&amp;q=70 960w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9c%2FCantino_planisphere_%25281502%2529.jpg&amp;w=1400&amp;q=70 1400w" sizes="100vw" fetchpriority="high" onerror="this.style.display='none'">
     <div class="mh-globe"><div class="globe-wrap">
           <div class="globe-glow"></div>
           <div class="globe">
@@ -1149,7 +1149,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
     </div>
     <div class="dg-door hero" role="region" aria-label="Best Western Hotels and Resorts">
       <img referrerpolicy="no-referrer" loading="eager"
-           src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunset%20on%20Interstate%2040%20Near%20Kingman%2C%20Arizona%20(15629027465).jpg?width=1600"
+           src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa5%2FSunset_on_Interstate_40_Near_Kingman%252C_Arizona_%252815629027465%2529.jpg&amp;w=1200&amp;q=70" srcset="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa5%2FSunset_on_Interstate_40_Near_Kingman%252C_Arizona_%252815629027465%2529.jpg&amp;w=640&amp;q=70 640w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa5%2FSunset_on_Interstate_40_Near_Kingman%252C_Arizona_%252815629027465%2529.jpg&amp;w=960&amp;q=70 960w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa5%2FSunset_on_Interstate_40_Near_Kingman%252C_Arizona_%252815629027465%2529.jpg&amp;w=1400&amp;q=70 1400w" sizes="100vw"
            alt="Sunset over Interstate 40 near Kingman, Arizona" onerror="this.style.display='none'">
       <span class="dg-door-veil"></span>
       <span class="dg-bw-badge">Guild partner &middot; Now booking</span>
@@ -1325,7 +1325,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 
     <a class="dg-door hero" href="cruises.html">
       <img referrerpolicy="no-referrer" loading="eager"
-           src="https://commons.wikimedia.org/wiki/Special:FilePath/RCI%20Sovereign%20of%20the%20Seas.jpg?width=1600"
+           src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fb8%2FRCI_Sovereign_of_the_Seas.jpg&amp;w=1200&amp;q=70" srcset="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fb8%2FRCI_Sovereign_of_the_Seas.jpg&amp;w=640&amp;q=70 640w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fb8%2FRCI_Sovereign_of_the_Seas.jpg&amp;w=960&amp;q=70 960w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fb8%2FRCI_Sovereign_of_the_Seas.jpg&amp;w=1400&amp;q=70 1400w" sizes="100vw"
            alt="A cruise ship at sea" onerror="this.style.display='none'">
       <span class="dg-door-veil"></span>
       <span class="dg-door-txt">
@@ -1345,19 +1345,19 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
 
       <div class="cruise-grid">
     <div class="ccard" onclick="window.location.href='west-coast-cruises.html'">
-      <div class="ccard-img" style="background:linear-gradient(135deg,#0a3d7a,#1565d8);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20in%20Long%20Beach%20(Carnival%20Panorama).jpg?width=680" alt="A cruise ship at the Long Beach terminal" onerror="this.style.display='none'"><span class="cline-badge">West Coast</span><span class="cnights">4&ndash;9 nights</span></div>
+      <div class="ccard-img" style="background:linear-gradient(135deg,#0a3d7a,#1565d8);"><img referrerpolicy="no-referrer" src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F0e%2FPanorama_in_Long_Beach_%2528Carnival_Panorama%2529.jpg&amp;w=680&amp;q=70" alt="A cruise ship at the Long Beach terminal" onerror="this.style.display='none'"><span class="cline-badge">West Coast</span><span class="cnights">4&ndash;9 nights</span></div>
       <div class="ccard-body"><p class="cname">Sail from the West Coast</p><p class="croute">Long Beach &middot; San Diego &middot; San Francisco &middot; Seattle &middot; Vancouver</p>
         <div class="cports"><span class="cport hi">Alaska</span><span class="cport hi">Mexican Riviera</span><span class="cport ">Drive from Phoenix</span></div>
         <div class="ccard-ft"><div><p class="cprice">From $178</p><p class="csub">per person</p></div><button class="cview-btn">See all five ports</button></div></div>
     </div>
     <div class="ccard" onclick="window.open('https://us.trip.com/cruises/list?kwd=Disney%20Cruise%20Line&locale=en-US&curr=USD&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=disney-cruise','_blank')">
-      <div class="ccard-img" style="background:linear-gradient(135deg,#0b1f57,#2a63c4);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Disney%20Dream%20%28ship%2C%202011%29%20001.jpg?width=680" alt="Disney Cruise Line ship" onerror="this.style.display='none'"><span class="cline-badge">Disney Cruise Line</span><span class="cnights">4 nights</span></div>
+      <div class="ccard-img" style="background:linear-gradient(135deg,#0b1f57,#2a63c4);"><img referrerpolicy="no-referrer" src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fd%2Fd1%2FDisney_Dream_%2528ship%252C_2011%2529_001.jpg&amp;w=680&amp;q=70" alt="Disney Cruise Line ship" onerror="this.style.display='none'"><span class="cline-badge">Disney Cruise Line</span><span class="cnights">4 nights</span></div>
       <div class="ccard-body"><p class="cname">Bahamian Magic</p><p class="croute">Port Canaveral &rarr; Nassau &rarr; Castaway Cay &rarr; Port Canaveral</p>
         <div class="cports"><span class="cport hi">Nassau</span><span class="cport hi">Castaway Cay</span><span class="cport ">Orlando</span></div>
         <div class="ccard-ft"><div><p class="cprice">From $749</p><p class="csub">per person</p></div><button class="cview-btn">View sailings</button></div></div>
     </div>
     <div class="ccard" onclick="window.open('https://us.trip.com/cruises/list?kwd=Galveston&locale=en-US&curr=USD&Allianceid=8217189&SID=317113714&trip_sub1=cruises&trip_sub3=gulf-of-mexico','_blank')">
-      <div class="ccard-img" style="background:linear-gradient(135deg,#8e1414,#e0621e);"><img referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/2017-03-30%20CARNIVAL%20VISTA%20-%20IMO%209692569%2C%20off%20Oranjestad%2C%20Aruba.jpg?width=680" alt="Carnival cruise ship, Gulf of Mexico" onerror="this.style.display='none'"><span class="cline-badge">Carnival Cruise Line</span><span class="cnights">5 nights</span></div>
+      <div class="ccard-img" style="background:linear-gradient(135deg,#8e1414,#e0621e);"><img referrerpolicy="no-referrer" src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F0e%2F2017-03-30_CARNIVAL_VISTA_-_IMO_9692569%252C_off_Oranjestad%252C_Aruba.jpg&amp;w=680&amp;q=70" alt="Carnival cruise ship, Gulf of Mexico" onerror="this.style.display='none'"><span class="cline-badge">Carnival Cruise Line</span><span class="cnights">5 nights</span></div>
       <div class="ccard-body"><p class="cname">Gulf of Mexico Getaway</p><p class="croute">Galveston &rarr; Cozumel &rarr; Progreso &rarr; Galveston</p>
         <div class="cports"><span class="cport hi">Cozumel</span><span class="cport hi">Progreso</span><span class="cport ">Galveston</span></div>
         <div class="ccard-ft"><div><p class="cprice">From $449</p><p class="csub">per person</p></div><button class="cview-btn">View sailings</button></div></div>
@@ -1391,7 +1391,7 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   </style>
   <section class="wcb" aria-label="Sail from the West Coast">
     <img class="wcb-img" referrerpolicy="no-referrer" alt="" aria-hidden="true"
-         src="https://commons.wikimedia.org/wiki/Special:FilePath/Panorama%20in%20Long%20Beach%20(Carnival%20Panorama).jpg?width=1600"
+         src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F0e%2FPanorama_in_Long_Beach_%2528Carnival_Panorama%2529.jpg&amp;w=1200&amp;q=70" srcset="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F0e%2FPanorama_in_Long_Beach_%2528Carnival_Panorama%2529.jpg&amp;w=640&amp;q=70 640w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F0e%2FPanorama_in_Long_Beach_%2528Carnival_Panorama%2529.jpg&amp;w=960&amp;q=70 960w, /.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F0%2F0e%2FPanorama_in_Long_Beach_%2528Carnival_Panorama%2529.jpg&amp;w=1400&amp;q=70 1400w" sizes="100vw"
          onerror="this.style.display='none'">
     <div class="wcb-in">
       <p class="wcb-kick">The West Coast Port Project</p>
@@ -1452,19 +1452,19 @@ body.dg-has-bar .chat-fab{ bottom:calc(56px + 20px); }
   <p class="vhx-sub">Whole houses with room to spread out &mdash; beach houses, mountain cabins, condos and villas through Booking.com, one of the best-known names in travel. Choose a kind of stay, and book it here at no extra cost to you.</p>
   <div class="vhx-grid">
     <a class="vhx-tile" href="https://www.anrdoezrs.net/click-101888556-17293132?sid=home-beach-houses" target="_blank" rel="sponsored nofollow noopener">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rodanthe%20beach%2001.JPG?width=900" alt="A beach house on the sand at Rodanthe, North Carolina" loading="lazy" referrerpolicy="no-referrer" style="object-position:50% 45%" onerror="this.style.display='none'">
+      <img src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fcf%2FRodanthe_beach_01.JPG&amp;w=900&amp;q=70" alt="A beach house on the sand at Rodanthe, North Carolina" loading="lazy" referrerpolicy="no-referrer" style="object-position:50% 45%" onerror="this.style.display='none'">
       <span class="vhx-cap"><b>Beach Houses</b><i>Sand at the door</i><em>Find on Booking.com &rsaquo;</em></span>
     </a>
     <a class="vhx-tile" href="https://www.anrdoezrs.net/click-101888556-17293132?sid=home-cabins-lodges" target="_blank" rel="sponsored nofollow noopener">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Historic%20Log%20Cabin%20on%20Bennett%20Lake%20(16265840943).jpg?width=900" alt="A log cabin above Bennett Lake" loading="lazy" referrerpolicy="no-referrer" style="object-position:50% 60%" onerror="this.style.display='none'">
+      <img src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F72%2FHistoric_Log_Cabin_on_Bennett_Lake_%252816265840943%2529.jpg&amp;w=900&amp;q=70" alt="A log cabin above Bennett Lake" loading="lazy" referrerpolicy="no-referrer" style="object-position:50% 60%" onerror="this.style.display='none'">
       <span class="vhx-cap"><b>Cabins &amp; Lodges</b><i>Woods, lakes and quiet</i><em>Find on Booking.com &rsaquo;</em></span>
     </a>
     <a class="vhx-tile" href="https://www.anrdoezrs.net/click-101888556-17293132?sid=home-condos-apartments" target="_blank" rel="sponsored nofollow noopener">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Puerto%20Pe%C3%B1asco%20Rocky%20Point%201.jpg?width=900" alt="Beachfront condominiums at Rocky Point, Puerto Pe&ntilde;asco" loading="lazy" referrerpolicy="no-referrer" style="object-position:50% 55%" onerror="this.style.display='none'">
+      <img src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fc8%2FPuerto_Pe%25C3%25B1asco_Rocky_Point_1.jpg&amp;w=900&amp;q=70" alt="Beachfront condominiums at Rocky Point, Puerto Pe&ntilde;asco" loading="lazy" referrerpolicy="no-referrer" style="object-position:50% 55%" onerror="this.style.display='none'">
       <span class="vhx-cap"><b>Condos &amp; Apartments</b><i>A pool, a balcony, the beach below</i><em>Find on Booking.com &rsaquo;</em></span>
     </a>
     <a class="vhx-tile" href="https://www.anrdoezrs.net/click-101888556-17293132?sid=home-villas-large-homes" target="_blank" rel="sponsored nofollow noopener">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Swimming%20Pool%20of%20Lembongan%20Cliff%20Villas%20-%202015.03%20-%20panoramio.jpg?width=900" alt="A cliff-top villa pool above the sea" loading="lazy" referrerpolicy="no-referrer" style="object-position:50% 50%" onerror="this.style.display='none'">
+      <img src="/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F2%2F2c%2FSwimming_Pool_of_Lembongan_Cliff_Villas_-_2015.03_-_panoramio.jpg&amp;w=900&amp;q=70" alt="A cliff-top villa pool above the sea" loading="lazy" referrerpolicy="no-referrer" style="object-position:50% 50%" onerror="this.style.display='none'">
       <span class="vhx-cap"><b>Villas &amp; Large Homes</b><i>Room for everyone</i><em>Find on Booking.com &rsaquo;</em></span>
     </a>
   </div>
@@ -2282,7 +2282,7 @@ document.querySelectorAll('.ccard').forEach(card => {
   /* Map stays as the page (margin) background */
   body{
     background:
-      url('https://commons.wikimedia.org/wiki/Special:FilePath/Cantino%20planisphere%20(1502).jpg?width=1600') center center / cover no-repeat fixed,
+      url('/.netlify/images?url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F9%2F9c%2FCantino_planisphere_%25281502%2529.jpg&w=1400&q=60') center center / cover no-repeat fixed,
       radial-gradient(circle at 28% 18%, #ecdcb4, #cdba8b 55%, #b89f6f) !important;
     min-height:100vh;
   }
