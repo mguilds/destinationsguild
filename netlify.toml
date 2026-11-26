@@ -8,6 +8,11 @@
 [build.processing.html]
   pretty_urls = false
 
+# Phone speed (26 Nov 2026): Netlify's image service makes small, modern copies of our
+# Wikimedia photos and serves them from our own address. Only Wikimedia's file server is allowed.
+[images]
+  remote_images = ["https://upload\\.wikimedia\\.org/.*"]
+
 # Concierge helper: pretty address /api/polo-polly -> function
 [[redirects]]
   from = "/api/polo-polly"
